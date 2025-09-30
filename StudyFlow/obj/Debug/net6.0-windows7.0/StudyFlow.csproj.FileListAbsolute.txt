@@ -1,0 +1,17 @@
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\bin\Debug\net6.0-windows7.0\StudyFlow.exe
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\bin\Debug\net6.0-windows7.0\StudyFlow.deps.json
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\bin\Debug\net6.0-windows7.0\StudyFlow.runtimeconfig.json
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\bin\Debug\net6.0-windows7.0\StudyFlow.dll
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\bin\Debug\net6.0-windows7.0\StudyFlow.pdb
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net6.0-windows7.0\StudyFlow.LoginForm.resources
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net6.0-windows7.0\StudyFlow.csproj.GenerateResource.cache
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net6.0-windows7.0\StudyFlow.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net6.0-windows7.0\StudyFlow.AssemblyInfoInputs.cache
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net6.0-windows7.0\StudyFlow.AssemblyInfo.cs
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net6.0-windows7.0\StudyFlow.csproj.CoreCompileInputs.cache
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net6.0-windows7.0\StudyFlow.sourcelink.json
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net6.0-windows7.0\StudyFlow.dll
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net6.0-windows7.0\refint\StudyFlow.dll
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net6.0-windows7.0\StudyFlow.pdb
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net6.0-windows7.0\StudyFlow.genruntimeconfig.cache
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net6.0-windows7.0\ref\StudyFlow.dll
