@@ -1,11 +1,61 @@
 {
   "version": 3,
   "targets": {
-    "net8.0-windows7.0": {}
+    "net8.0-windows7.0": {
+      "Krypton.Toolkit/95.25.8.235": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows7.0/Krypton.Toolkit.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/Krypton.Toolkit.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Krypton.Toolkit/95.25.8.235": {
+      "sha512": "BE6IgKwqp+etzigqM6lsesOvTnrRxVehaQ/nTXoSeKVlmpFjXic6tLysKUCmbMS8NnRoAoKq41xLCvhiTDoIEA==",
+      "type": "package",
+      "path": "krypton.toolkit/95.25.8.235",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Krypton Stable.png",
+        "License.md",
+        "README.md",
+        "krypton.toolkit.95.25.8.235.nupkg.sha512",
+        "krypton.toolkit.nuspec",
+        "lib/net462/Krypton.Toolkit.dll",
+        "lib/net462/Krypton.Toolkit.xml",
+        "lib/net47/Krypton.Toolkit.dll",
+        "lib/net47/Krypton.Toolkit.xml",
+        "lib/net471/Krypton.Toolkit.dll",
+        "lib/net471/Krypton.Toolkit.xml",
+        "lib/net472/Krypton.Toolkit.dll",
+        "lib/net472/Krypton.Toolkit.xml",
+        "lib/net48/Krypton.Toolkit.dll",
+        "lib/net48/Krypton.Toolkit.xml",
+        "lib/net481/Krypton.Toolkit.dll",
+        "lib/net481/Krypton.Toolkit.xml",
+        "lib/net8.0-windows7.0/Krypton.Toolkit.dll",
+        "lib/net8.0-windows7.0/Krypton.Toolkit.xml",
+        "lib/net9.0-windows7.0/Krypton.Toolkit.dll",
+        "lib/net9.0-windows7.0/Krypton.Toolkit.xml"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0-windows7.0": []
+    "net8.0-windows7.0": [
+      "Krypton.Toolkit >= 95.25.8.235"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Usuário 1\\.nuget\\packages\\": {},
@@ -56,6 +106,12 @@
     "frameworks": {
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows7.0",
+        "dependencies": {
+          "Krypton.Toolkit": {
+            "target": "Package",
+            "version": "[95.25.8.235, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

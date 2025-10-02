@@ -49,6 +49,12 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows7.0",
+          "dependencies": {
+            "Krypton.Toolkit": {
+              "target": "Package",
+              "version": "[95.25.8.235, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

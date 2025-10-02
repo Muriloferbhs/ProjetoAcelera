@@ -9,4 +9,8 @@
     <StartupObject>StudyFlow.Program</StartupObject>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Krypton.Toolkit" Version="95.25.8.235" />
+  </ItemGroup>
+
 </Project>

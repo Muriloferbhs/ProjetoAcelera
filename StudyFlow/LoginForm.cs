@@ -59,7 +59,7 @@ namespace StudyFlow
 
             MessageBox.Show("Lógica de autenticação ficará para o grupo (List<User>).");
         }
-        
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -71,6 +71,15 @@ namespace StudyFlow
 
         }
 
-       
+        private void labelSenha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabelCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CadastroForm cadastro = new CadastroForm();
+            cadastro.ShowDialog();
+        }
     }
 }

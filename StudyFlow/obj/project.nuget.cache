@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1SoV4J22gz4=",
+  "dgSpecHash": "oTb8lqcah3M=",
   "success": true,
   "projectFilePath": "C:\\Users\\Usuário 1\\Desktop\\Acelera\\StudyFlow\\StudyFlow\\StudyFlow.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Usuário 1\\.nuget\\packages\\krypton.toolkit\\95.25.8.235\\krypton.toolkit.95.25.8.235.nupkg.sha512"
+  ],
   "logs": []
 }
