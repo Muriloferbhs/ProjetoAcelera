@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Krypton.Toolkit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace StudyFlow
 {
-    public partial class LoginForm : Form
+    public partial class LoginForm : KryptonForm
     {
         public LoginForm()
         {
@@ -22,34 +23,35 @@ namespace StudyFlow
 
         }
 
-        private void label1_Click(object sender, EventArgs e)//Usuario
+
+        private void LabelLogin_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textUserName_TextChanged(object sender, EventArgs e)
+        private void PanelDireita_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private void ButtonEntrar_Click(object sender, EventArgs e)
         {
-            string username = txtUserName.Text.Trim();
-            string password = txtPassword.Text;
+            string NomeUsuario = TextBoxUsuario.Text.Trim();
+            string Senha = TextBoxSenha.Text;
 
-            if (string.IsNullOrEmpty(username))
+            if (string.IsNullOrEmpty(NomeUsuario))
             {
                 MessageBox.Show("Digite o nome de usuário.", "Atenção",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtUserName.Focus();
+                TextBoxUsuario.Focus();
                 return;
             }
 
-            if (string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(Senha))
             {
                 MessageBox.Show("Digite a senha.", "Atenção",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtPassword.Focus();
+                TextBoxSenha.Focus();
                 return;
             }
 
@@ -60,26 +62,25 @@ namespace StudyFlow
             MessageBox.Show("Lógica de autenticação ficará para o grupo (List<User>).");
         }
 
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelSenha_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void linkLabelCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             CadastroForm cadastro = new CadastroForm();
             cadastro.ShowDialog();
+        }
+
+        private void TextBoxUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

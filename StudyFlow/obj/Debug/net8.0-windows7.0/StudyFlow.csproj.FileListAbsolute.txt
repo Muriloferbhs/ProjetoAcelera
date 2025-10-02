@@ -19,3 +19,5 @@ C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\bin\Debug\net8.0-windows
 C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.csproj.AssemblyReference.cache
 C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.csproj.Up2Date
 C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.CadastroForm.resources
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.Properties.Resources.resources
+C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.g.resources

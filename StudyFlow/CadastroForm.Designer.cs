@@ -82,7 +82,6 @@
             txtBoxConfirmSenha.PasswordChar = '●';
             txtBoxConfirmSenha.Size = new Size(132, 23);
             txtBoxConfirmSenha.TabIndex = 3;
-            txtBoxConfirmSenha.TextAlign = HorizontalAlignment.Center;
             txtBoxConfirmSenha.UseSystemPasswordChar = true;
             // 
             // LabelUsuario
