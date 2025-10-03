@@ -48,9 +48,13 @@ namespace StudyFlow
                 return;
             }
 
-            // ===============================
-            // AQUI: implementar usando List<User>
-            // ===============================
+            string username = txtUserName.Text.Trim();
+            string password = txtPassword.Text;
+
+            Usuario testeUsuario = new Usuario();
+            testeUsuario.NomeUser = "counter"; //teste
+            testeUsuario.Senha = "strike"; //teste
+            Usuario.DadosDoCadastroLogin.Add(testeUsuario); //teste
 
             MessageBox.Show("Lógica de autenticação ficará para o grupo (List<User>).");
         }
