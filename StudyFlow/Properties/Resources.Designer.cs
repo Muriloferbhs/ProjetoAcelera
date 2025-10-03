@@ -63,6 +63,26 @@ namespace StudyFlow.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hexagono_contorno_azul {
+            get {
+                object obj = ResourceManager.GetObject("hexagono_contorno_azul", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icone_senha {
+            get {
+                object obj = ResourceManager.GetObject("icone_senha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icone_usuario {
             get {
                 object obj = ResourceManager.GetObject("icone_usuario", resourceCulture);

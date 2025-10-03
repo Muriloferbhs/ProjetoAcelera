@@ -17,13 +17,6 @@ namespace StudyFlow
         {
             InitializeComponent();
         }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void LabelLogin_Click(object sender, EventArgs e)
         {
 
@@ -36,10 +29,10 @@ namespace StudyFlow
 
         private void ButtonEntrar_Click(object sender, EventArgs e)
         {
-            string NomeUsuario = TextBoxUsuario.Text.Trim();
-            string Senha = TextBoxSenha.Text;
+            string nomeUsuario = TextBoxUsuario.Text.Trim();
+            string senha = TextBoxSenha.Text;
 
-            if (string.IsNullOrEmpty(NomeUsuario))
+            if (string.IsNullOrEmpty(nomeUsuario))
             {
                 MessageBox.Show("Digite o nome de usuário.", "Atenção",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -47,7 +40,7 @@ namespace StudyFlow
                 return;
             }
 
-            if (string.IsNullOrEmpty(Senha))
+            if (string.IsNullOrEmpty(senha))
             {
                 MessageBox.Show("Digite a senha.", "Atenção",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -65,22 +58,42 @@ namespace StudyFlow
         private void linkLabelCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             CadastroForm cadastro = new CadastroForm();
-            cadastro.ShowDialog();
+            cadastro.Show();
+
+            this.Hide();
         }
 
         private void TextBoxUsuario_TextChanged(object sender, EventArgs e)
         {
 
         }
-
-        private void kryptonPictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                DialogResult resultado = MessageBox.Show(
+                    "Deseja realmente sair?",
+                    "Confirmação",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
 
+                if (resultado == DialogResult.No)
+                {
+                    e.Cancel = true; // Cancela o fechamento
+                }
+                else
+                {
+                    Application.Exit(); // Fecha toda a aplicação
+                }
+            }
         }
     }
 }
+
+

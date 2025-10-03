@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace StudyFlow
 {
-    partial class LoginForm
+    partial class LoginForm 
     {
         /// <summary>
         /// Required designer variable.
@@ -34,17 +34,21 @@ namespace StudyFlow
         {
             PanelEsquerda = new KryptonPanel();
             PanelDireita = new KryptonPanel();
+            PictureBoxSenha = new KryptonPictureBox();
+            pictureBoxHexagono = new PictureBox();
             TextBoxUsuario = new KryptonTextBox();
             linkLabelSenha = new LinkLabel();
             linkLabelCadastro = new LinkLabel();
             ButtonEntrar = new KryptonButton();
             TextBoxSenha = new KryptonTextBox();
+            pictureBoxUsuario = new PictureBox();
             LabelLogin = new KryptonLabel();
-            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)PanelEsquerda).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PanelDireita).BeginInit();
             PanelDireita.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PictureBoxSenha).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxHexagono).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxUsuario).BeginInit();
             SuspendLayout();
             // 
             // PanelEsquerda
@@ -52,26 +56,50 @@ namespace StudyFlow
             PanelEsquerda.Dock = DockStyle.Left;
             PanelEsquerda.Location = new Point(0, 0);
             PanelEsquerda.Name = "PanelEsquerda";
-            PanelEsquerda.Size = new Size(393, 549);
+            PanelEsquerda.Size = new Size(393, 555);
             PanelEsquerda.StateCommon.Color1 = Color.FromArgb(32, 0, 177);
             PanelEsquerda.TabIndex = 0;
             // 
             // PanelDireita
             // 
+            PanelDireita.Controls.Add(PictureBoxSenha);
+            PanelDireita.Controls.Add(pictureBoxHexagono);
             PanelDireita.Controls.Add(TextBoxUsuario);
             PanelDireita.Controls.Add(linkLabelSenha);
             PanelDireita.Controls.Add(linkLabelCadastro);
             PanelDireita.Controls.Add(ButtonEntrar);
             PanelDireita.Controls.Add(TextBoxSenha);
+            PanelDireita.Controls.Add(pictureBoxUsuario);
             PanelDireita.Controls.Add(LabelLogin);
-            PanelDireita.Controls.Add(pictureBox1);
             PanelDireita.Dock = DockStyle.Fill;
             PanelDireita.Location = new Point(393, 0);
             PanelDireita.Name = "PanelDireita";
-            PanelDireita.Size = new Size(395, 549);
+            PanelDireita.Size = new Size(393, 555);
             PanelDireita.StateCommon.Color1 = Color.White;
             PanelDireita.TabIndex = 1;
             PanelDireita.Paint += PanelDireita_Paint;
+            // 
+            // PictureBoxSenha
+            // 
+            PictureBoxSenha.Image = Properties.Resources.icone_senha;
+            PictureBoxSenha.Location = new Point(40, 234);
+            PictureBoxSenha.Name = "PictureBoxSenha";
+            PictureBoxSenha.Size = new Size(39, 34);
+            PictureBoxSenha.SizeMode = PictureBoxSizeMode.Zoom;
+            PictureBoxSenha.TabIndex = 7;
+            PictureBoxSenha.TabStop = false;
+            // 
+            // pictureBoxHexagono
+            // 
+            pictureBoxHexagono.BackColor = Color.Transparent;
+            pictureBoxHexagono.Image = Properties.Resources.hexagono_contorno_azul;
+            pictureBoxHexagono.Location = new Point(181, 33);
+            pictureBoxHexagono.Name = "pictureBoxHexagono";
+            pictureBoxHexagono.Size = new Size(61, 64);
+            pictureBoxHexagono.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxHexagono.TabIndex = 6;
+            pictureBoxHexagono.TabStop = false;
+            pictureBoxHexagono.Click += pictureBox1_Click_1;
             // 
             // TextBoxUsuario
             // 
@@ -164,46 +192,48 @@ namespace StudyFlow
             TextBoxSenha.TabIndex = 2;
             TextBoxSenha.UseSystemPasswordChar = true;
             // 
+            // pictureBoxUsuario
+            // 
+            pictureBoxUsuario.BackColor = Color.Transparent;
+            pictureBoxUsuario.Image = Properties.Resources.icone_usuario;
+            pictureBoxUsuario.Location = new Point(16, 165);
+            pictureBoxUsuario.Name = "pictureBoxUsuario";
+            pictureBoxUsuario.Size = new Size(88, 83);
+            pictureBoxUsuario.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxUsuario.TabIndex = 0;
+            pictureBoxUsuario.TabStop = false;
+            // 
             // LabelLogin
             // 
-            LabelLogin.Location = new Point(158, 81);
+            LabelLogin.Location = new Point(160, 87);
             LabelLogin.Name = "LabelLogin";
             LabelLogin.Size = new Size(96, 45);
+            LabelLogin.StateCommon.Image.ImageColorMap = Color.Transparent;
             LabelLogin.StateCommon.ShortText.Color1 = Color.Blue;
             LabelLogin.StateCommon.ShortText.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
             LabelLogin.TabIndex = 0;
             LabelLogin.Values.Text = "Login";
             LabelLogin.Click += LabelLogin_Click;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = Properties.Resources.icone_usuario;
-            pictureBox1.Location = new Point(23, 167);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(84, 74);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(788, 549);
+            ClientSize = new Size(786, 555);
             Controls.Add(PanelDireita);
             Controls.Add(PanelEsquerda);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
-            Load += LoginForm_Load;
+            FormClosing += LoginForm_FormClosing;
             ((System.ComponentModel.ISupportInitialize)PanelEsquerda).EndInit();
             ((System.ComponentModel.ISupportInitialize)PanelDireita).EndInit();
             PanelDireita.ResumeLayout(false);
             PanelDireita.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PictureBoxSenha).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxHexagono).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxUsuario).EndInit();
             ResumeLayout(false);
         }
 
@@ -217,6 +247,8 @@ namespace StudyFlow
         private Krypton.Toolkit.KryptonButton ButtonEntrar;
         private LinkLabel linkLabelSenha;
         private LinkLabel linkLabelCadastro;
-        private PictureBox pictureBox1;
+        private PictureBox pictureBoxUsuario;
+        private KryptonPictureBox PictureBoxSenha;
+        private PictureBox pictureBoxHexagono;
     }
 }

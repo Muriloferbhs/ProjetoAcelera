@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StudyFlow")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b9aeebbda1aab5cacc774d217a23580d2266dc1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29a55feefbb60a8029f5c20825985d14f9b510eb")]
 [assembly: System.Reflection.AssemblyProductAttribute("StudyFlow")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StudyFlow")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
