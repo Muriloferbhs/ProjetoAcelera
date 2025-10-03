@@ -51,7 +51,10 @@ namespace StudyFlow
             }
 
 
-            // logica para novo salvar novo usuario :P
+            Usuario novoUsuario = new Usuario();
+
+
+            Usuario.CadastrarUsuario(nomeUsuario, senha, novoUsuario);
 
 
             KryptonMessageBox.Show("Usuário cadastrado com sucesso!");
