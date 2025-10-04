@@ -21,3 +21,26 @@ C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net8.0-windows
 C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.CadastroForm.resources
 C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.Properties.Resources.resources
 C:\Users\Usuário 1\Desktop\Acelera\StudyFlow\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.g.resources
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.csproj.AssemblyReference.cache
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.g.resources
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.CadastroForm.resources
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.LoginForm.resources
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.Properties.Resources.resources
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.csproj.GenerateResource.cache
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.AssemblyInfoInputs.cache
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.AssemblyInfo.cs
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.csproj.CoreCompileInputs.cache
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.sourcelink.json
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.dll
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\obj\Debug\net8.0-windows7.0\refint\StudyFlow.dll
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.pdb
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.exe
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.deps.json
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.runtimeconfig.json
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.dll
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.pdb
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\bin\Debug\net8.0-windows7.0\Krypton.Toolkit.dll
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.csproj.Up2Date
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.genruntimeconfig.cache
+C:\Users\Murilo\Source\Repos\fds2\StudyFlow\obj\Debug\net8.0-windows7.0\ref\StudyFlow.dll

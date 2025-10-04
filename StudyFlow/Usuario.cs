@@ -1,6 +1,7 @@
 using Krypton.Toolkit;
 using System.Collections;
 using System.Web;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace StudyFlow
@@ -8,7 +9,7 @@ namespace StudyFlow
     internal class Usuario
     {
         public string NomeUser { get; set; }// parametro de login
-        public string Nome { get; set; }
+        public string NomeCompleto { get; set; }
         public string Cpf { get; set; }// parametro de login
         public string Telefone { get; set; }
         public string Email { get; set; }
@@ -26,37 +27,22 @@ namespace StudyFlow
         public Usuario()
         { }
 
-        public static void CadastrarUsuario(string nomeUsuario, string senha, Usuario novoUsuario)
+        public void AtribuirDadosDoUsuario(string nomeCompleto, string cpf, string telefone, string email, string nomeUsuario, string senha)
         {
-            int cont = 0;
-            foreach (Usuario u in Usuario.DadosDoCadastroLogin)
-            {
-                if (u.NomeUser == nomeUsuario)
-                {
-                    cont++;
-                }
-            }
-
-            if (cont == 0)
-            {
-                novoUsuario.AtribuirSenha(senha);
-                novoUsuario.NomeUser = nomeUsuario;
-                Usuario.DadosDoCadastroLogin.Add(novoUsuario);
-
-                KryptonMessageBox.Show("Conta cadastrada com sucesso!");
-            }
-            else
-            {
-                KryptonMessageBox.Show("Conta ja está cadastrada!");
-            }
+            NomeCompleto = nomeCompleto;
+            NomeUser = nomeUsuario;
+            Cpf = cpf;
+            Telefone = telefone;
+            Email = email;
+            AtribuirSenha(senha);
         }
 
-        public static void Logar(string username, string password)
+        public static void Logar(string nomeUsuario, string senha)
         {
             int cont = 0;
             foreach (Usuario u in Usuario.DadosDoCadastroLogin)
             {
-                if (u.NomeUser == username && u.Senha == password)
+                if (u.NomeUser == nomeUsuario && u.Senha == senha)
                 {
                     cont++;
                 }

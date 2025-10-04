@@ -48,15 +48,16 @@ namespace StudyFlow
                 return;
             }
 
-            string username = txtUserName.Text.Trim();
-            string password = txtPassword.Text;
+            nomeUsuario = TextBoxUsuario.Text.Trim();
+            senha = TextBoxSenha.Text;
 
             Usuario testeUsuario = new Usuario();
             testeUsuario.NomeUser = "counter"; //teste
             testeUsuario.Senha = "strike"; //teste
             Usuario.DadosDoCadastroLogin.Add(testeUsuario); //teste
 
-            MessageBox.Show("Lógica de autenticação ficará para o grupo (List<User>).");
+            Usuario.Logar(nomeUsuario, senha);
+
         }
 
         private void linkLabelCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

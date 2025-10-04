@@ -56,7 +56,7 @@ namespace StudyFlow
             PanelEsquerda.Dock = DockStyle.Left;
             PanelEsquerda.Location = new Point(0, 0);
             PanelEsquerda.Name = "PanelEsquerda";
-            PanelEsquerda.Size = new Size(393, 555);
+            PanelEsquerda.Size = new Size(393, 543);
             PanelEsquerda.StateCommon.Color1 = Color.FromArgb(32, 0, 177);
             PanelEsquerda.TabIndex = 0;
             // 
@@ -74,7 +74,7 @@ namespace StudyFlow
             PanelDireita.Dock = DockStyle.Fill;
             PanelDireita.Location = new Point(393, 0);
             PanelDireita.Name = "PanelDireita";
-            PanelDireita.Size = new Size(393, 555);
+            PanelDireita.Size = new Size(397, 543);
             PanelDireita.StateCommon.Color1 = Color.White;
             PanelDireita.TabIndex = 1;
             PanelDireita.Paint += PanelDireita_Paint;
@@ -219,7 +219,7 @@ namespace StudyFlow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(786, 555);
+            ClientSize = new Size(790, 543);
             Controls.Add(PanelDireita);
             Controls.Add(PanelEsquerda);
             MaximizeBox = false;

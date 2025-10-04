@@ -52,13 +52,27 @@ namespace StudyFlow
 
 
             Usuario novoUsuario = new Usuario();
+            int cont = 0;
+            foreach (Usuario u in Usuario.DadosDoCadastroLogin)
+            {
+                if (u.NomeUser == nomeUsuario)
+                {
+                    cont++;
+                }
+            }
 
+            if (cont == 0)
+            {
+                novoUsuario.AtribuirDadosDoUsuario(nomeCompleto, cpf, telefone, email, nomeUsuario, senha);
+                Usuario.DadosDoCadastroLogin.Add(novoUsuario);
+                KryptonMessageBox.Show("Conta cadastrada com sucesso!");
+            }
+            else
+            {
+                KryptonMessageBox.Show("Conta ja está cadastrada!");
+            }
+            Usuario.DadosDoCadastroLogin.Add(novoUsuario);
 
-            Usuario.CadastrarUsuario(nomeUsuario, senha, novoUsuario);
-
-
-            KryptonMessageBox.Show("Usuário cadastrado com sucesso!");
-            this.Close();
         }
 
         private void linkLabelLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
