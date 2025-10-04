@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fHd8VLdL8as=",
+  "dgSpecHash": "OGYLEYdYz1M=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Murilo\\Source\\Repos\\fds2\\StudyFlow\\StudyFlow.csproj",
+  "projectFilePath": "C:\\Users\\Murilo\\Documents\\Repositorios\\AceleraPrincipal\\StudyFlow\\StudyFlow.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Murilo\\.nuget\\packages\\krypton.toolkit\\95.25.8.235\\krypton.toolkit.95.25.8.235.nupkg.sha512"
   ],

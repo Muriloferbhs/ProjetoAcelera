@@ -50,9 +50,22 @@ namespace StudyFlow
                 return;
             }
 
+            if(Usuario.AutenticarCPF(cpf) == false)
+            {
+                return;
+            }
+            if(Usuario.AutenticarEmail(email) == false)
+            {
+                return;
+            }
+            if(Usuario.AutenticarTelefone(telefone) == false)
+            {
+                return;
+            }
 
             Usuario novoUsuario = new Usuario();
             int cont = 0;
+
             foreach (Usuario u in Usuario.DadosDoCadastroLogin)
             {
                 if (u.NomeUser == nomeUsuario)
@@ -60,6 +73,7 @@ namespace StudyFlow
                     cont++;
                 }
             }
+
 
             if (cont == 0)
             {
@@ -71,7 +85,7 @@ namespace StudyFlow
             {
                 KryptonMessageBox.Show("Conta ja está cadastrada!");
             }
-            Usuario.DadosDoCadastroLogin.Add(novoUsuario);
+
 
         }
 
@@ -105,6 +119,9 @@ namespace StudyFlow
             }
         }
 
+        private void kryptonPanelEsquerda_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
-

@@ -98,6 +98,11 @@ namespace StudyFlow
                 }
             }
         }
+
+        private void PanelEsquerda_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 

@@ -56,9 +56,10 @@
             kryptonPanelEsquerda.Dock = DockStyle.Left;
             kryptonPanelEsquerda.Location = new Point(0, 0);
             kryptonPanelEsquerda.Name = "kryptonPanelEsquerda";
-            kryptonPanelEsquerda.Size = new Size(392, 561);
+            kryptonPanelEsquerda.Size = new Size(392, 555);
             kryptonPanelEsquerda.StateNormal.Color1 = Color.White;
             kryptonPanelEsquerda.TabIndex = 0;
+            kryptonPanelEsquerda.Paint += kryptonPanelEsquerda_Paint;
             // 
             // TextBoxNome
             // 
@@ -98,7 +99,7 @@
             PanelDireita.Dock = DockStyle.Fill;
             PanelDireita.Location = new Point(392, 0);
             PanelDireita.Name = "PanelDireita";
-            PanelDireita.Size = new Size(392, 561);
+            PanelDireita.Size = new Size(394, 555);
             PanelDireita.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelDireita.TabIndex = 11;
             // 
@@ -341,7 +342,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(784, 561);
+            ClientSize = new Size(786, 555);
             Controls.Add(PanelDireita);
             Controls.Add(kryptonPanelEsquerda);
             Name = "CadastroForm";

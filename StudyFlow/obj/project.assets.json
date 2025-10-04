@@ -64,11 +64,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Murilo\\Source\\Repos\\fds2\\StudyFlow\\StudyFlow.csproj",
+      "projectUniqueName": "C:\\Users\\Murilo\\Documents\\Repositorios\\AceleraPrincipal\\StudyFlow\\StudyFlow.csproj",
       "projectName": "StudyFlow",
-      "projectPath": "C:\\Users\\Murilo\\Source\\Repos\\fds2\\StudyFlow\\StudyFlow.csproj",
+      "projectPath": "C:\\Users\\Murilo\\Documents\\Repositorios\\AceleraPrincipal\\StudyFlow\\StudyFlow.csproj",
       "packagesPath": "C:\\Users\\Murilo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Murilo\\Source\\Repos\\fds2\\StudyFlow\\obj\\",
+      "outputPath": "C:\\Users\\Murilo\\Documents\\Repositorios\\AceleraPrincipal\\StudyFlow\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
