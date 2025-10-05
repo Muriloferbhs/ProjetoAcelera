@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Murilo\\Documents\\Repositorios\\AceleraPrincipal\\StudyFlow\\StudyFlow.csproj": {}
+    "C:\\Users\\Murilo\\Documents\\Repositorios\\progeto todo\\StudyFlow\\StudyFlow.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Murilo\\Documents\\Repositorios\\AceleraPrincipal\\StudyFlow\\StudyFlow.csproj": {
+    "C:\\Users\\Murilo\\Documents\\Repositorios\\progeto todo\\StudyFlow\\StudyFlow.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Murilo\\Documents\\Repositorios\\AceleraPrincipal\\StudyFlow\\StudyFlow.csproj",
+        "projectUniqueName": "C:\\Users\\Murilo\\Documents\\Repositorios\\progeto todo\\StudyFlow\\StudyFlow.csproj",
         "projectName": "StudyFlow",
-        "projectPath": "C:\\Users\\Murilo\\Documents\\Repositorios\\AceleraPrincipal\\StudyFlow\\StudyFlow.csproj",
+        "projectPath": "C:\\Users\\Murilo\\Documents\\Repositorios\\progeto todo\\StudyFlow\\StudyFlow.csproj",
         "packagesPath": "C:\\Users\\Murilo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Murilo\\Documents\\Repositorios\\AceleraPrincipal\\StudyFlow\\obj\\",
+        "outputPath": "C:\\Users\\Murilo\\Documents\\Repositorios\\progeto todo\\StudyFlow\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,10 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows7.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Krypton.Toolkit": {
               "target": "Package",
               "version": "[95.25.8.235, )"

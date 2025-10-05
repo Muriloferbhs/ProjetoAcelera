@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace StudyFlow
 {
@@ -29,10 +30,10 @@ namespace StudyFlow
 
         private void ButtonEntrar_Click(object sender, EventArgs e)
         {
-            string nomeUsuario = TextBoxUsuario.Text.Trim();
-            string senha = TextBoxSenha.Text;
+            string dadosLogin = TextBoxUsuario.Text.Trim();
+            string senhaLogin = TextBoxSenha.Text;
 
-            if (string.IsNullOrEmpty(nomeUsuario))
+            if (string.IsNullOrEmpty(dadosLogin))
             {
                 MessageBox.Show("Digite o nome de usuário.", "Atenção",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -40,7 +41,7 @@ namespace StudyFlow
                 return;
             }
 
-            if (string.IsNullOrEmpty(senha))
+            if (string.IsNullOrEmpty(senhaLogin))
             {
                 MessageBox.Show("Digite a senha.", "Atenção",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -48,15 +49,28 @@ namespace StudyFlow
                 return;
             }
 
-            nomeUsuario = TextBoxUsuario.Text.Trim();
-            senha = TextBoxSenha.Text;
+
+
+            //login teste----------------------
+            //carlos 04/10---------------------
+            string nomeCompleto = "senhor batata da silva";
+            string cpf = "52998224725";
+            string telefone = "12991545412";
+            string email = "SenhorBatata@gmail.com";
+            string nomeUsuario1 = "srBatata";
+            string senha1 = "perdiMeuChapeu";
+            bool ativo = false;
 
             Usuario testeUsuario = new Usuario();
-            testeUsuario.NomeUser = "counter"; //teste
-            testeUsuario.Senha = "strike"; //teste
-            Usuario.DadosDoCadastroLogin.Add(testeUsuario); //teste
+            testeUsuario.AtribuirDadosDoUsuario(nomeCompleto, cpf, telefone, email, nomeUsuario1, senha1, ativo);
+            Usuario.DadosDoCadastroLogin.Add(testeUsuario); 
+            //teste
+            //---------------------------------
 
-            Usuario.Logar(nomeUsuario, senha);
+
+
+
+            Usuario.Logar(dadosLogin, senhaLogin);
 
         }
 

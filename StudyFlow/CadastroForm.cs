@@ -77,9 +77,16 @@ namespace StudyFlow
 
             if (cont == 0)
             {
-                novoUsuario.AtribuirDadosDoUsuario(nomeCompleto, cpf, telefone, email, nomeUsuario, senha);
+                bool ativo = true;//teste
+                novoUsuario.AtribuirDadosDoUsuario(nomeCompleto, cpf, telefone, email, nomeUsuario, senha, ativo);
                 Usuario.DadosDoCadastroLogin.Add(novoUsuario);
                 KryptonMessageBox.Show("Conta cadastrada com sucesso!");
+
+                //carlos 04/10---------------------
+                LoginForm login = new LoginForm();
+                login.Show();
+                this.Hide();
+
             }
             else
             {

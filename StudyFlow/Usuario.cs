@@ -1,5 +1,6 @@
 using Krypton.Toolkit;
 using System.Collections;
+using BCrypt.Net;//para usar hash
 using System.Web;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
@@ -20,12 +21,24 @@ namespace StudyFlow
         public bool Ativo { get; private set; } = true;// verificar se o usuario esta ativo
 
         public static ArrayList DadosDoCadastroLogin = new ArrayList();
+        
+        
+        
+        
         public void AtribuirSenha(string senha)
         {
-            Senha = senha;
+            //carlos 04/10--------------------------------------------------------------------------------------------
+            Senha = BCrypt.Net.BCrypt.HashPassword(senha);
         }
 
+
+
+
+
+
+
         //Murilo fez no dia 4/10 ----------------------------------------------------------------------------------
+        //genial, não tinha pensado em validar assim (Henrique falando)
         public static bool AutenticarCPF(string cpf)
         {
             int decimoIdeal = 0;
@@ -81,6 +94,8 @@ namespace StudyFlow
             }
 
         }             
+
+
         public static bool AutenticarEmail(string email)
         {
             if (!email.Contains("@"))
@@ -107,31 +122,75 @@ namespace StudyFlow
         }
         //Murilo fez no dia 4/10 ----------------------------------------------------------------------------------
 
-        public void AtribuirDadosDoUsuario(string nomeCompleto, string cpf, string telefone, string email, string nomeUsuario, string senha)
+        public void AtribuirDadosDoUsuario(string nomeCompleto, string cpf, string telefone, string email, string nomeUsuario, string senha, bool ativo)
         {
             NomeCompleto = nomeCompleto;
             NomeUser = nomeUsuario;
             Cpf = cpf;
             Telefone = telefone;
             Email = email;
+            Ativo = ativo;
             AtribuirSenha(senha);
         }
-        public static void Logar(string nomeUsuario, string senha)
+
+
+
+
+        public static void Logar(string dadosLogin, string senhaLogin)
         {
             foreach (Usuario u in Usuario.DadosDoCadastroLogin)
             {
-                if (u.NomeUser == nomeUsuario && u.Senha == senha)
+                
+                //carlos 04/10--------------------------------------------------------------------------------------------
+                if ((u.NomeUser == dadosLogin || u.Cpf == dadosLogin) && BCrypt.Net.BCrypt.Verify(senhaLogin, u.Senha) == true && u.Ativo == true)
                 {
                     KryptonMessageBox.Show("Login realizado com sucesso!");
                     return;
                 }
+                else if((u.NomeUser == dadosLogin || u.Cpf == dadosLogin) && BCrypt.Net.BCrypt.Verify(senhaLogin, u.Senha) == true && u.Ativo == false)
+                {
+                    //colocar caixa de sim/não
+                    KryptonMessageBox.Show("Este usuário está desativado. Deseja reativá-lo?");
+
+                    
+                    Usuario.DesativarAtivarUser(u.Ativo , u);
+                    return;
+                }
+
             }
             KryptonMessageBox.Show("Username ou senha incorretos");
         }
-        public void Desativar()
-        {
-            Ativo = false;
+
+
+
+
+
+        public static Usuario DesativarAtivarUser(bool ativo, Usuario u)
+        {   
+            
+            if (ativo == true)
+            {
+                u.Ativo = true;
+                return u;
+            }
+            else
+            {
+                u.Ativo = false;
+                return u;
+            }
+
+
+             
+
         }
+
+
+
+
+
+
+
+
 
     }
 }
