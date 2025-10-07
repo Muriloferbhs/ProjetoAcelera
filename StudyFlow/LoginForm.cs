@@ -63,7 +63,7 @@ namespace StudyFlow
 
             Usuario testeUsuario = new Usuario();
             testeUsuario.AtribuirDadosDoUsuario(nomeCompleto, cpf, telefone, email, nomeUsuario1, senha1, ativo);
-            Usuario.DadosDoCadastroLogin.Add(testeUsuario); 
+            Usuario.DadosDoCadastroLogin.Add(testeUsuario);
             //teste
             //---------------------------------
 
@@ -116,6 +116,23 @@ namespace StudyFlow
         private void PanelEsquerda_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private bool senhaVisivel = false;
+        private void pictureBoxMostrarSenha_Click(object sender, EventArgs e)
+        {
+            // Alterna o estado da senha
+            TextBoxSenha.UseSystemPasswordChar = !TextBoxSenha.UseSystemPasswordChar;
+
+            // Altera o icone
+            if (TextBoxSenha.UseSystemPasswordChar)
+            {
+                pictureBoxMostrarSenha.Image = Properties.Resources.closed_eye; // senha oculta
+            }
+            else
+            {
+                pictureBoxMostrarSenha.Image = Properties.Resources.open_eye; // senha visível
+            }
         }
     }
 }

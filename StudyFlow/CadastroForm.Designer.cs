@@ -31,6 +31,8 @@
             kryptonPanelEsquerda = new Krypton.Toolkit.KryptonPanel();
             TextBoxNome = new Krypton.Toolkit.KryptonTextBox();
             PanelDireita = new Krypton.Toolkit.KryptonPanel();
+            pictureBoxMostrarSenha2 = new PictureBox();
+            pictureBoxMostrarSenha = new PictureBox();
             ButtonSalvar = new Krypton.Toolkit.KryptonButton();
             linkLabelLogin = new LinkLabel();
             TextBoxSenha = new Krypton.Toolkit.KryptonTextBox();
@@ -49,6 +51,8 @@
             ((System.ComponentModel.ISupportInitialize)kryptonPanelEsquerda).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PanelDireita).BeginInit();
             PanelDireita.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMostrarSenha2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMostrarSenha).BeginInit();
             SuspendLayout();
             // 
             // kryptonPanelEsquerda
@@ -80,6 +84,8 @@
             // 
             // PanelDireita
             // 
+            PanelDireita.Controls.Add(pictureBoxMostrarSenha2);
+            PanelDireita.Controls.Add(pictureBoxMostrarSenha);
             PanelDireita.Controls.Add(ButtonSalvar);
             PanelDireita.Controls.Add(linkLabelLogin);
             PanelDireita.Controls.Add(TextBoxSenha);
@@ -102,6 +108,30 @@
             PanelDireita.Size = new Size(394, 555);
             PanelDireita.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelDireita.TabIndex = 11;
+            // 
+            // pictureBoxMostrarSenha2
+            // 
+            pictureBoxMostrarSenha2.BackColor = Color.FromArgb(200, 194, 231);
+            pictureBoxMostrarSenha2.Cursor = Cursors.Hand;
+            pictureBoxMostrarSenha2.Image = Properties.Resources.closed_eye;
+            pictureBoxMostrarSenha2.Location = new Point(324, 335);
+            pictureBoxMostrarSenha2.Name = "pictureBoxMostrarSenha2";
+            pictureBoxMostrarSenha2.Size = new Size(26, 23);
+            pictureBoxMostrarSenha2.TabIndex = 27;
+            pictureBoxMostrarSenha2.TabStop = false;
+            pictureBoxMostrarSenha2.Click += pictureBoxMostrarSenha2_Click;
+            // 
+            // pictureBoxMostrarSenha
+            // 
+            pictureBoxMostrarSenha.BackColor = Color.FromArgb(200, 194, 231);
+            pictureBoxMostrarSenha.Cursor = Cursors.Hand;
+            pictureBoxMostrarSenha.Image = Properties.Resources.closed_eye;
+            pictureBoxMostrarSenha.Location = new Point(158, 335);
+            pictureBoxMostrarSenha.Name = "pictureBoxMostrarSenha";
+            pictureBoxMostrarSenha.Size = new Size(26, 23);
+            pictureBoxMostrarSenha.TabIndex = 26;
+            pictureBoxMostrarSenha.TabStop = false;
+            pictureBoxMostrarSenha.Click += pictureBoxMostrarSenha_Click;
             // 
             // ButtonSalvar
             // 
@@ -153,11 +183,12 @@
             // TextBoxSenha
             // 
             TextBoxSenha.CueHint.Color1 = Color.DimGray;
-            TextBoxSenha.CueHint.CueHintText = "Digite sua senha";
+            TextBoxSenha.CueHint.CueHintText = "Digite a senha";
             TextBoxSenha.CueHint.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TextBoxSenha.Cursor = Cursors.IBeam;
             TextBoxSenha.Location = new Point(52, 330);
             TextBoxSenha.Name = "TextBoxSenha";
+            TextBoxSenha.PasswordChar = '●';
             TextBoxSenha.Size = new Size(135, 32);
             TextBoxSenha.StateCommon.Back.Color1 = Color.FromArgb(200, 194, 231);
             TextBoxSenha.StateCommon.Border.Rounding = 10F;
@@ -166,15 +197,17 @@
             TextBoxSenha.StateCommon.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             TextBoxSenha.StateNormal.Back.Color1 = Color.FromArgb(200, 194, 231);
             TextBoxSenha.TabIndex = 15;
+            TextBoxSenha.UseSystemPasswordChar = true;
             // 
             // TextBoxConfirmeSenha
             // 
             TextBoxConfirmeSenha.CueHint.Color1 = Color.DimGray;
-            TextBoxConfirmeSenha.CueHint.CueHintText = "Digite sua senha";
+            TextBoxConfirmeSenha.CueHint.CueHintText = "Digite a senha";
             TextBoxConfirmeSenha.CueHint.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TextBoxConfirmeSenha.Cursor = Cursors.IBeam;
             TextBoxConfirmeSenha.Location = new Point(218, 330);
             TextBoxConfirmeSenha.Name = "TextBoxConfirmeSenha";
+            TextBoxConfirmeSenha.PasswordChar = '●';
             TextBoxConfirmeSenha.Size = new Size(135, 32);
             TextBoxConfirmeSenha.StateCommon.Back.Color1 = Color.FromArgb(200, 194, 231);
             TextBoxConfirmeSenha.StateCommon.Border.Rounding = 10F;
@@ -183,6 +216,7 @@
             TextBoxConfirmeSenha.StateCommon.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             TextBoxConfirmeSenha.StateNormal.Back.Color1 = Color.FromArgb(200, 194, 231);
             TextBoxConfirmeSenha.TabIndex = 14;
+            TextBoxConfirmeSenha.UseSystemPasswordChar = true;
             // 
             // TextBoxCpf
             // 
@@ -227,12 +261,20 @@
             TextBoxEmail.Location = new Point(52, 205);
             TextBoxEmail.Name = "TextBoxEmail";
             TextBoxEmail.Size = new Size(301, 32);
+            TextBoxEmail.StateActive.Border.Color1 = Color.FromArgb(200, 194, 231);
+            TextBoxEmail.StateActive.Border.Color2 = Color.FromArgb(200, 194, 231);
+            TextBoxEmail.StateActive.Border.ColorStyle = Krypton.Toolkit.PaletteColorStyle.SolidInside;
             TextBoxEmail.StateCommon.Back.Color1 = Color.FromArgb(200, 194, 231);
+            TextBoxEmail.StateCommon.Border.Color1 = Color.FromArgb(200, 194, 231);
+            TextBoxEmail.StateCommon.Border.Color2 = Color.FromArgb(200, 194, 231);
             TextBoxEmail.StateCommon.Border.Rounding = 10F;
+            TextBoxEmail.StateCommon.Border.Width = 1;
             TextBoxEmail.StateCommon.Content.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TextBoxEmail.StateCommon.Content.Padding = new Padding(4, 3, 4, 3);
             TextBoxEmail.StateCommon.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             TextBoxEmail.StateNormal.Back.Color1 = Color.FromArgb(200, 194, 231);
+            TextBoxEmail.StateNormal.Border.Color1 = Color.FromArgb(200, 194, 231);
+            TextBoxEmail.StateNormal.Border.Color2 = Color.FromArgb(200, 194, 231);
             TextBoxEmail.TabIndex = 10;
             // 
             // TextBoxUsuario
@@ -279,7 +321,7 @@
             // 
             // LabelSenha
             // 
-            LabelSenha.Location = new Point(54, 308);
+            LabelSenha.Location = new Point(54, 309);
             LabelSenha.Name = "LabelSenha";
             LabelSenha.Size = new Size(46, 20);
             LabelSenha.StateCommon.ShortText.Color1 = Color.White;
@@ -340,8 +382,7 @@
             // 
             // CadastroForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(786, 555);
             Controls.Add(PanelDireita);
             Controls.Add(kryptonPanelEsquerda);
@@ -353,6 +394,8 @@
             ((System.ComponentModel.ISupportInitialize)PanelDireita).EndInit();
             PanelDireita.ResumeLayout(false);
             PanelDireita.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMostrarSenha2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMostrarSenha).EndInit();
             ResumeLayout(false);
         }
 
@@ -376,5 +419,7 @@
         private Krypton.Toolkit.KryptonLabel LabelNome;
         private LinkLabel linkLabelLogin;
         private Krypton.Toolkit.KryptonButton ButtonSalvar;
+        private PictureBox pictureBoxMostrarSenha2;
+        private PictureBox pictureBoxMostrarSenha;
     }
 }

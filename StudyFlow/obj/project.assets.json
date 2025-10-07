@@ -103,23 +103,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Murilo\\.nuget\\packages\\": {},
+    "C:\\Users\\Usuário 1\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Murilo\\Documents\\Repositorios\\progeto todo\\StudyFlow\\StudyFlow.csproj",
+      "projectUniqueName": "C:\\Users\\Usuário 1\\Desktop\\Acelera\\ProjetoAcelera\\StudyFlow\\StudyFlow.csproj",
       "projectName": "StudyFlow",
-      "projectPath": "C:\\Users\\Murilo\\Documents\\Repositorios\\progeto todo\\StudyFlow\\StudyFlow.csproj",
-      "packagesPath": "C:\\Users\\Murilo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Murilo\\Documents\\Repositorios\\progeto todo\\StudyFlow\\obj\\",
+      "projectPath": "C:\\Users\\Usuário 1\\Desktop\\Acelera\\ProjetoAcelera\\StudyFlow\\StudyFlow.csproj",
+      "packagesPath": "C:\\Users\\Usuário 1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Usuário 1\\Desktop\\Acelera\\ProjetoAcelera\\StudyFlow\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Murilo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Usuário 1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

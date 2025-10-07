@@ -34,18 +34,20 @@ namespace StudyFlow
         {
             PanelEsquerda = new KryptonPanel();
             PanelDireita = new KryptonPanel();
+            pictureBoxMostrarSenha = new PictureBox();
+            TextBoxSenha = new KryptonTextBox();
             PictureBoxSenha = new KryptonPictureBox();
             pictureBoxHexagono = new PictureBox();
             TextBoxUsuario = new KryptonTextBox();
             linkLabelSenha = new LinkLabel();
             linkLabelCadastro = new LinkLabel();
             ButtonEntrar = new KryptonButton();
-            TextBoxSenha = new KryptonTextBox();
             pictureBoxUsuario = new PictureBox();
             LabelLogin = new KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)PanelEsquerda).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PanelDireita).BeginInit();
             PanelDireita.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMostrarSenha).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PictureBoxSenha).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxHexagono).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxUsuario).BeginInit();
@@ -56,29 +58,60 @@ namespace StudyFlow
             PanelEsquerda.Dock = DockStyle.Left;
             PanelEsquerda.Location = new Point(0, 0);
             PanelEsquerda.Name = "PanelEsquerda";
-            PanelEsquerda.Size = new Size(393, 537);
+            PanelEsquerda.Size = new Size(393, 555);
             PanelEsquerda.StateCommon.Color1 = Color.FromArgb(32, 0, 177);
             PanelEsquerda.TabIndex = 0;
             PanelEsquerda.Paint += PanelEsquerda_Paint;
             // 
             // PanelDireita
             // 
+            PanelDireita.Controls.Add(pictureBoxMostrarSenha);
+            PanelDireita.Controls.Add(TextBoxSenha);
             PanelDireita.Controls.Add(PictureBoxSenha);
             PanelDireita.Controls.Add(pictureBoxHexagono);
             PanelDireita.Controls.Add(TextBoxUsuario);
             PanelDireita.Controls.Add(linkLabelSenha);
             PanelDireita.Controls.Add(linkLabelCadastro);
             PanelDireita.Controls.Add(ButtonEntrar);
-            PanelDireita.Controls.Add(TextBoxSenha);
             PanelDireita.Controls.Add(pictureBoxUsuario);
             PanelDireita.Controls.Add(LabelLogin);
             PanelDireita.Dock = DockStyle.Fill;
             PanelDireita.Location = new Point(393, 0);
             PanelDireita.Name = "PanelDireita";
-            PanelDireita.Size = new Size(399, 537);
+            PanelDireita.Size = new Size(393, 555);
             PanelDireita.StateCommon.Color1 = Color.White;
             PanelDireita.TabIndex = 1;
             PanelDireita.Paint += PanelDireita_Paint;
+            // 
+            // pictureBoxMostrarSenha
+            // 
+            pictureBoxMostrarSenha.BackColor = Color.FromArgb(173, 186, 255);
+            pictureBoxMostrarSenha.Cursor = Cursors.Hand;
+            pictureBoxMostrarSenha.Image = Properties.Resources.closed_eye;
+            pictureBoxMostrarSenha.Location = new Point(305, 240);
+            pictureBoxMostrarSenha.Name = "pictureBoxMostrarSenha";
+            pictureBoxMostrarSenha.Size = new Size(26, 23);
+            pictureBoxMostrarSenha.TabIndex = 8;
+            pictureBoxMostrarSenha.TabStop = false;
+            pictureBoxMostrarSenha.Click += pictureBoxMostrarSenha_Click;
+            // 
+            // TextBoxSenha
+            // 
+            TextBoxSenha.CueHint.Color1 = Color.White;
+            TextBoxSenha.CueHint.CueHintText = "Senha";
+            TextBoxSenha.CueHint.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TextBoxSenha.Cursor = Cursors.IBeam;
+            TextBoxSenha.Location = new Point(85, 234);
+            TextBoxSenha.Name = "TextBoxSenha";
+            TextBoxSenha.Size = new Size(250, 34);
+            TextBoxSenha.StateCommon.Back.Color1 = Color.FromArgb(173, 186, 255);
+            TextBoxSenha.StateCommon.Border.Color1 = Color.FromArgb(173, 186, 255);
+            TextBoxSenha.StateCommon.Border.Color2 = Color.FromArgb(173, 186, 255);
+            TextBoxSenha.StateCommon.Border.Rounding = 6F;
+            TextBoxSenha.StateCommon.Content.Font = new Font("Segoe UI", 9.75F);
+            TextBoxSenha.StateCommon.Content.Padding = new Padding(4, 5, 4, 5);
+            TextBoxSenha.TabIndex = 2;
+            TextBoxSenha.UseSystemPasswordChar = true;
             // 
             // PictureBoxSenha
             // 
@@ -111,6 +144,8 @@ namespace StudyFlow
             TextBoxUsuario.Name = "TextBoxUsuario";
             TextBoxUsuario.Size = new Size(250, 34);
             TextBoxUsuario.StateCommon.Back.Color1 = Color.FromArgb(173, 186, 255);
+            TextBoxUsuario.StateCommon.Border.Color1 = Color.FromArgb(173, 186, 255);
+            TextBoxUsuario.StateCommon.Border.Color2 = Color.FromArgb(173, 186, 255);
             TextBoxUsuario.StateCommon.Border.Rounding = 7F;
             TextBoxUsuario.StateCommon.Content.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TextBoxUsuario.StateCommon.Content.Padding = new Padding(4, 5, 4, 5);
@@ -122,6 +157,8 @@ namespace StudyFlow
             // 
             linkLabelSenha.ActiveLinkColor = Color.Gray;
             linkLabelSenha.AutoSize = true;
+            linkLabelSenha.BackColor = Color.White;
+            linkLabelSenha.Cursor = Cursors.Hand;
             linkLabelSenha.Font = new Font("Segoe UI", 9F);
             linkLabelSenha.LinkColor = Color.Gray;
             linkLabelSenha.Location = new Point(150, 271);
@@ -136,6 +173,8 @@ namespace StudyFlow
             // 
             linkLabelCadastro.ActiveLinkColor = Color.Blue;
             linkLabelCadastro.AutoSize = true;
+            linkLabelCadastro.BackColor = Color.White;
+            linkLabelCadastro.Cursor = Cursors.Hand;
             linkLabelCadastro.Font = new Font("Segoe UI", 11F);
             linkLabelCadastro.Location = new Point(89, 478);
             linkLabelCadastro.Name = "linkLabelCadastro";
@@ -176,23 +215,6 @@ namespace StudyFlow
             ButtonEntrar.Values.Text = "Entrar";
             ButtonEntrar.Click += ButtonEntrar_Click;
             // 
-            // TextBoxSenha
-            // 
-            TextBoxSenha.CueHint.Color1 = Color.White;
-            TextBoxSenha.CueHint.CueHintText = "Senha";
-            TextBoxSenha.CueHint.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TextBoxSenha.Cursor = Cursors.IBeam;
-            TextBoxSenha.Location = new Point(85, 234);
-            TextBoxSenha.Name = "TextBoxSenha";
-            TextBoxSenha.PasswordChar = '●';
-            TextBoxSenha.Size = new Size(250, 34);
-            TextBoxSenha.StateCommon.Back.Color1 = Color.FromArgb(173, 186, 255);
-            TextBoxSenha.StateCommon.Border.Rounding = 6F;
-            TextBoxSenha.StateCommon.Content.Font = new Font("Segoe UI", 9.75F);
-            TextBoxSenha.StateCommon.Content.Padding = new Padding(4, 5, 4, 5);
-            TextBoxSenha.TabIndex = 2;
-            TextBoxSenha.UseSystemPasswordChar = true;
-            // 
             // pictureBoxUsuario
             // 
             pictureBoxUsuario.BackColor = Color.Transparent;
@@ -220,7 +242,7 @@ namespace StudyFlow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(792, 537);
+            ClientSize = new Size(786, 555);
             Controls.Add(PanelDireita);
             Controls.Add(PanelEsquerda);
             MaximizeBox = false;
@@ -232,6 +254,7 @@ namespace StudyFlow
             ((System.ComponentModel.ISupportInitialize)PanelDireita).EndInit();
             PanelDireita.ResumeLayout(false);
             PanelDireita.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMostrarSenha).EndInit();
             ((System.ComponentModel.ISupportInitialize)PictureBoxSenha).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxHexagono).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxUsuario).EndInit();
@@ -251,5 +274,6 @@ namespace StudyFlow
         private PictureBox pictureBoxUsuario;
         private KryptonPictureBox PictureBoxSenha;
         private PictureBox pictureBoxHexagono;
+        private PictureBox pictureBoxMostrarSenha;
     }
 }

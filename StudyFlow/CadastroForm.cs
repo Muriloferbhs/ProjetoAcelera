@@ -50,15 +50,15 @@ namespace StudyFlow
                 return;
             }
 
-            if(Usuario.AutenticarCPF(cpf) == false)
+            if (Usuario.AutenticarCPF(cpf) == false)
             {
                 return;
             }
-            if(Usuario.AutenticarEmail(email) == false)
+            if (Usuario.AutenticarEmail(email) == false)
             {
                 return;
             }
-            if(Usuario.AutenticarTelefone(telefone) == false)
+            if (Usuario.AutenticarTelefone(telefone) == false)
             {
                 return;
             }
@@ -129,6 +129,38 @@ namespace StudyFlow
         private void kryptonPanelEsquerda_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBoxMostrarSenha_Click(object sender, EventArgs e)
+        {
+            // Alterna o estado da senha
+            TextBoxSenha.UseSystemPasswordChar = !TextBoxSenha.UseSystemPasswordChar;
+
+            // Altera o icone
+            if (TextBoxSenha.UseSystemPasswordChar)
+            {
+                pictureBoxMostrarSenha.Image = Properties.Resources.closed_eye; // senha oculta
+            }
+            else
+            {
+                pictureBoxMostrarSenha.Image = Properties.Resources.open_eye; // senha visível
+            }
+        }
+
+        private void pictureBoxMostrarSenha2_Click(object sender, EventArgs e)
+        {
+            // Alterna o estado da senha
+            TextBoxConfirmeSenha.UseSystemPasswordChar = !TextBoxConfirmeSenha.UseSystemPasswordChar;
+
+            // Altera o icone
+            if (TextBoxConfirmeSenha.UseSystemPasswordChar)
+            {
+                pictureBoxMostrarSenha2.Image = Properties.Resources.closed_eye; // senha oculta
+            }
+            else
+            {
+                pictureBoxMostrarSenha2.Image = Properties.Resources.open_eye; // senha visível
+            }
         }
     }
 }
