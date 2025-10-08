@@ -51,24 +51,6 @@ namespace StudyFlow
 
 
 
-            //login teste----------------------
-            //carlos 04/10---------------------
-            string nomeCompleto = "senhor batata da silva";
-            string cpf = "52998224725";
-            string telefone = "12991545412";
-            string email = "SenhorBatata@gmail.com";
-            string nomeUsuario1 = "srBatata";
-            string senha1 = "perdiMeuChapeu";
-            bool ativo = false;
-
-            Usuario testeUsuario = new Usuario();
-            testeUsuario.AtribuirDadosDoUsuario(nomeCompleto, cpf, telefone, email, nomeUsuario1, senha1, ativo);
-            Usuario.DadosDoCadastroLogin.Add(testeUsuario);
-            //teste
-            //---------------------------------
-
-
-
 
             Usuario.Logar(dadosLogin, senhaLogin);
 
