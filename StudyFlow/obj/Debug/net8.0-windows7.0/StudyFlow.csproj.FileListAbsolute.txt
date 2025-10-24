@@ -139,3 +139,4 @@ C:\Users\Usuário 1\Desktop\Acelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-wi
 C:\Users\Usuário 1\Desktop\Acelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.pdb
 C:\Users\Usuário 1\Desktop\Acelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.genruntimeconfig.cache
 C:\Users\Usuário 1\Desktop\Acelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\ref\StudyFlow.dll
+C:\Users\Usuário 1\Desktop\Acelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.BaseForm.resources

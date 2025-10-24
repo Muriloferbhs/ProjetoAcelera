@@ -188,7 +188,7 @@
             TextBoxSenha.Cursor = Cursors.IBeam;
             TextBoxSenha.Location = new Point(52, 330);
             TextBoxSenha.Name = "TextBoxSenha";
-            TextBoxSenha.PasswordChar = '●';
+            //TextBoxSenha.PasswordChar = '●';
             TextBoxSenha.Size = new Size(135, 32);
             TextBoxSenha.StateCommon.Back.Color1 = Color.FromArgb(200, 194, 231);
             TextBoxSenha.StateCommon.Border.Rounding = 10F;
@@ -207,7 +207,7 @@
             TextBoxConfirmeSenha.Cursor = Cursors.IBeam;
             TextBoxConfirmeSenha.Location = new Point(218, 330);
             TextBoxConfirmeSenha.Name = "TextBoxConfirmeSenha";
-            TextBoxConfirmeSenha.PasswordChar = '●';
+            //TextBoxConfirmeSenha.PasswordChar = '●';
             TextBoxConfirmeSenha.Size = new Size(135, 32);
             TextBoxConfirmeSenha.StateCommon.Back.Color1 = Color.FromArgb(200, 194, 231);
             TextBoxConfirmeSenha.StateCommon.Border.Rounding = 10F;
