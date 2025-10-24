@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace StudyFlow
+{
+    public partial class AjudaForm : BaseForm
+
+    {
+        public AjudaForm()
+        {
+            InitializeComponent();
+        }
+    }
+}

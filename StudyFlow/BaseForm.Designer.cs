@@ -47,7 +47,7 @@
             PanelCima.Dock = DockStyle.Top;
             PanelCima.Location = new Point(0, 0);
             PanelCima.Name = "PanelCima";
-            PanelCima.Size = new Size(1274, 80);
+            PanelCima.Size = new Size(1280, 80);
             PanelCima.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelCima.TabIndex = 0;
             // 
@@ -61,7 +61,7 @@
             PanelEsquerda.Dock = DockStyle.Left;
             PanelEsquerda.Location = new Point(0, 80);
             PanelEsquerda.Name = "PanelEsquerda";
-            PanelEsquerda.Size = new Size(213, 571);
+            PanelEsquerda.Size = new Size(213, 553);
             PanelEsquerda.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelEsquerda.TabIndex = 1;
             // 
@@ -88,6 +88,7 @@
             ButtonAjuda.Values.DropDownArrowColor = Color.Empty;
             ButtonAjuda.Values.Image = Properties.Resources.question;
             ButtonAjuda.Values.Text = "  AJUDA";
+            ButtonAjuda.Click += ButtonAjuda_Click;
             // 
             // ButtonQuestoes
             // 
@@ -112,6 +113,7 @@
             ButtonQuestoes.Values.DropDownArrowColor = Color.Empty;
             ButtonQuestoes.Values.Image = Properties.Resources.check;
             ButtonQuestoes.Values.Text = "  QUESTÕES";
+            ButtonQuestoes.Click += ButtonQuestoes_Click;
             // 
             // ButtonNivelamento
             // 
@@ -136,6 +138,7 @@
             ButtonNivelamento.Values.DropDownArrowColor = Color.Empty;
             ButtonNivelamento.Values.Image = Properties.Resources.open_book;
             ButtonNivelamento.Values.Text = "  NIVELAMENTO";
+            ButtonNivelamento.Click += ButtonNivelamento_Click;
             // 
             // ButtonRanking
             // 
@@ -160,6 +163,7 @@
             ButtonRanking.Values.DropDownArrowColor = Color.Empty;
             ButtonRanking.Values.Image = Properties.Resources.trophy;
             ButtonRanking.Values.Text = "  RANKING";
+            ButtonRanking.Click += ButtonRanking_Click;
             // 
             // ButtonHome
             // 
@@ -184,13 +188,14 @@
             ButtonHome.Values.DropDownArrowColor = Color.Empty;
             ButtonHome.Values.Image = Properties.Resources.house;
             ButtonHome.Values.Text = "  HOME";
+            ButtonHome.Click += ButtonHome_Click;
             // 
             // PanelConteudo
             // 
             PanelConteudo.Dock = DockStyle.Fill;
             PanelConteudo.Location = new Point(213, 80);
             PanelConteudo.Name = "PanelConteudo";
-            PanelConteudo.Size = new Size(1061, 571);
+            PanelConteudo.Size = new Size(1067, 553);
             PanelConteudo.StateNormal.Color1 = Color.White;
             PanelConteudo.TabIndex = 2;
             // 
@@ -198,13 +203,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1274, 651);
+            ClientSize = new Size(1280, 633);
             Controls.Add(PanelConteudo);
             Controls.Add(PanelEsquerda);
             Controls.Add(PanelCima);
             Name = "BaseForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "StudyFlow";
+            FormClosing += BaseForm_FormClosing;
             ((System.ComponentModel.ISupportInitialize)PanelCima).EndInit();
             ((System.ComponentModel.ISupportInitialize)PanelEsquerda).EndInit();
             PanelEsquerda.ResumeLayout(false);
@@ -216,7 +222,7 @@
 
         private Krypton.Toolkit.KryptonPanel PanelCima;
         private Krypton.Toolkit.KryptonPanel PanelEsquerda;
-        private Krypton.Toolkit.KryptonPanel PanelConteudo;
+        protected internal Krypton.Toolkit.KryptonPanel PanelConteudo;
         private Krypton.Toolkit.KryptonButton kryptonButton5;
         private Krypton.Toolkit.KryptonButton kryptonButton4;
         private Krypton.Toolkit.KryptonButton kryptonButton3;
