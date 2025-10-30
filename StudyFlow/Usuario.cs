@@ -18,6 +18,7 @@ namespace StudyFlow
         public string SenhaHash { get; private set; }//usar hash para senha ser segura
         public string Senha { get; set; } // apenas para teste
         public string Salt { get; private set; }// numero aleatorio para calcular o hash
+        public string Pontuacao { get; set; }
         public bool Ativo { get; private set; } = true;// verificar se o usuario esta ativo
 
         public static ArrayList DadosDoCadastroLogin = new ArrayList();
