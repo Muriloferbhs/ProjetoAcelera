@@ -50,6 +50,7 @@ namespace StudyFlow
             // 
             PanelConteudo.Controls.Add(panelCards);
             PanelConteudo.Controls.Add(panelBusca);
+            PanelConteudo.Size = new Size(1103, 583);
             PanelConteudo.StateNormal.Color1 = Color.White;
             // 
             // panelCards
@@ -63,14 +64,13 @@ namespace StudyFlow
             panelCards.Dock = DockStyle.Left;
             panelCards.Location = new Point(0, 0);
             panelCards.Name = "panelCards";
-            panelCards.Size = new Size(800, 595);
+            panelCards.Size = new Size(800, 583);
             panelCards.StateCommon.Color1 = Color.White;
             panelCards.StateDisabled.Color1 = Color.Transparent;
             panelCards.StateDisabled.Color2 = Color.Transparent;
             panelCards.StateNormal.Color1 = Color.Transparent;
             panelCards.StateNormal.Color2 = Color.Transparent;
             panelCards.TabIndex = 0;
-            panelCards.Paint += panelCards_Paint;
             // 
             // buttonProvaoP
             // 
@@ -284,15 +284,21 @@ namespace StudyFlow
             panelBusca.Dock = DockStyle.Fill;
             panelBusca.Location = new Point(0, 0);
             panelBusca.Name = "panelBusca";
-            panelBusca.Size = new Size(1099, 595);
+            panelBusca.Size = new Size(1103, 583);
             panelBusca.StateCommon.Color1 = Color.White;
             panelBusca.TabIndex = 1;
-
+            // 
+            // btnCard
+            // 
+            btnCard.Location = new Point(0, 0);
+            btnCard.Name = "btnCard";
+            btnCard.Size = new Size(90, 25);
+            btnCard.TabIndex = 0;
             // 
             // QuestoesForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            ClientSize = new Size(1266, 675);
+            ClientSize = new Size(1270, 663);
+            Location = new Point(0, 0);
             Name = "QuestoesForm";
             Text = "QuestoesForm";
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).EndInit();

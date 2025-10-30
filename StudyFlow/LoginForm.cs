@@ -18,16 +18,7 @@ namespace StudyFlow
         {
             InitializeComponent();
         }
-        private void LabelLogin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PanelDireita_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+ 
         private void ButtonEntrar_Click(object sender, EventArgs e)
         {
             string dadosLogin = TextBoxUsuario.Text.Trim();
@@ -49,9 +40,6 @@ namespace StudyFlow
                 return;
             }
 
-
-
-
             Usuario.Logar(dadosLogin, senhaLogin);
 
         }
@@ -62,15 +50,6 @@ namespace StudyFlow
             cadastro.Show();
 
             this.Hide();
-        }
-
-        private void TextBoxUsuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -93,11 +72,6 @@ namespace StudyFlow
                     Application.Exit(); // Fecha toda a aplicação
                 }
             }
-        }
-
-        private void PanelEsquerda_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private bool senhaVisivel = false;

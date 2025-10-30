@@ -21,11 +21,6 @@ namespace StudyFlow
 
         }
 
-        private void panelCards_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void buttonLinguagens_Click(object sender, EventArgs e)
         {
 

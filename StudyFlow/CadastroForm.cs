@@ -18,16 +18,6 @@ namespace StudyFlow
             InitializeComponent();
         }
 
-        private void kryptonLabel5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonLabel7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ButtonSalvar_Click(object sender, EventArgs e)
         {
             string nomeCompleto = TextBoxNome.Text.Trim();
@@ -125,11 +115,6 @@ namespace StudyFlow
                     Application.Exit(); // Fecha toda a aplicação
                 }
             }
-        }
-
-        private void kryptonPanelEsquerda_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void pictureBoxMostrarSenha_Click(object sender, EventArgs e)

@@ -58,10 +58,9 @@ namespace StudyFlow
             PanelEsquerda.Dock = DockStyle.Left;
             PanelEsquerda.Location = new Point(0, 0);
             PanelEsquerda.Name = "PanelEsquerda";
-            PanelEsquerda.Size = new Size(393, 555);
+            PanelEsquerda.Size = new Size(393, 564);
             PanelEsquerda.StateCommon.Color1 = Color.FromArgb(32, 0, 177);
             PanelEsquerda.TabIndex = 0;
-            PanelEsquerda.Paint += PanelEsquerda_Paint;
             // 
             // PanelDireita
             // 
@@ -78,10 +77,9 @@ namespace StudyFlow
             PanelDireita.Dock = DockStyle.Fill;
             PanelDireita.Location = new Point(393, 0);
             PanelDireita.Name = "PanelDireita";
-            PanelDireita.Size = new Size(393, 555);
+            PanelDireita.Size = new Size(419, 564);
             PanelDireita.StateCommon.Color1 = Color.White;
             PanelDireita.TabIndex = 1;
-            PanelDireita.Paint += PanelDireita_Paint;
             // 
             // pictureBoxMostrarSenha
             // 
@@ -103,6 +101,7 @@ namespace StudyFlow
             TextBoxSenha.Cursor = Cursors.IBeam;
             TextBoxSenha.Location = new Point(85, 234);
             TextBoxSenha.Name = "TextBoxSenha";
+            TextBoxSenha.PasswordChar = '●';
             TextBoxSenha.Size = new Size(250, 34);
             TextBoxSenha.StateCommon.Back.Color1 = Color.FromArgb(173, 186, 255);
             TextBoxSenha.StateCommon.Border.Color1 = Color.FromArgb(173, 186, 255);
@@ -133,7 +132,6 @@ namespace StudyFlow
             pictureBoxHexagono.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxHexagono.TabIndex = 6;
             pictureBoxHexagono.TabStop = false;
-            pictureBoxHexagono.Click += pictureBox1_Click_1;
             // 
             // TextBoxUsuario
             // 
@@ -151,7 +149,6 @@ namespace StudyFlow
             TextBoxUsuario.StateCommon.Content.Padding = new Padding(4, 5, 4, 5);
             TextBoxUsuario.StateCommon.Content.TextH = PaletteRelativeAlign.Near;
             TextBoxUsuario.TabIndex = 1;
-            TextBoxUsuario.TextChanged += TextBoxUsuario_TextChanged;
             // 
             // linkLabelSenha
             // 
@@ -236,15 +233,13 @@ namespace StudyFlow
             LabelLogin.StateCommon.ShortText.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
             LabelLogin.TabIndex = 0;
             LabelLogin.Values.Text = "Login";
-            LabelLogin.Click += LabelLogin_Click;
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(786, 555);
+            ClientSize = new Size(812, 564);
             Controls.Add(PanelDireita);
             Controls.Add(PanelEsquerda);
+            Location = new Point(0, 0);
             MaximizeBox = false;
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;

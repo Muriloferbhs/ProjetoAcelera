@@ -202,8 +202,8 @@
             // BaseForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1266, 675);
+            AutoScaleMode = AutoScaleMode.None;
+            ClientSize = new Size(1280, 720);
             Controls.Add(PanelConteudo);
             Controls.Add(PanelEsquerda);
             Controls.Add(PanelCima);
