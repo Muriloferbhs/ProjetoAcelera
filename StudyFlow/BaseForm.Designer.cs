@@ -47,7 +47,7 @@
             PanelCima.Dock = DockStyle.Top;
             PanelCima.Location = new Point(0, 0);
             PanelCima.Name = "PanelCima";
-            PanelCima.Size = new Size(1280, 80);
+            PanelCima.Size = new Size(1266, 80);
             PanelCima.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelCima.TabIndex = 0;
             // 
@@ -61,7 +61,7 @@
             PanelEsquerda.Dock = DockStyle.Left;
             PanelEsquerda.Location = new Point(0, 80);
             PanelEsquerda.Name = "PanelEsquerda";
-            PanelEsquerda.Size = new Size(213, 553);
+            PanelEsquerda.Size = new Size(167, 595);
             PanelEsquerda.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelEsquerda.TabIndex = 1;
             // 
@@ -72,7 +72,7 @@
             ButtonAjuda.Dock = DockStyle.Top;
             ButtonAjuda.Location = new Point(0, 280);
             ButtonAjuda.Name = "ButtonAjuda";
-            ButtonAjuda.Size = new Size(213, 70);
+            ButtonAjuda.Size = new Size(167, 70);
             ButtonAjuda.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
             ButtonAjuda.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
             ButtonAjuda.StateCommon.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -97,7 +97,7 @@
             ButtonQuestoes.Dock = DockStyle.Top;
             ButtonQuestoes.Location = new Point(0, 210);
             ButtonQuestoes.Name = "ButtonQuestoes";
-            ButtonQuestoes.Size = new Size(213, 70);
+            ButtonQuestoes.Size = new Size(167, 70);
             ButtonQuestoes.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
             ButtonQuestoes.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
             ButtonQuestoes.StateCommon.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -122,7 +122,7 @@
             ButtonNivelamento.Dock = DockStyle.Top;
             ButtonNivelamento.Location = new Point(0, 140);
             ButtonNivelamento.Name = "ButtonNivelamento";
-            ButtonNivelamento.Size = new Size(213, 70);
+            ButtonNivelamento.Size = new Size(167, 70);
             ButtonNivelamento.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
             ButtonNivelamento.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
             ButtonNivelamento.StateCommon.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -147,7 +147,7 @@
             ButtonRanking.Dock = DockStyle.Top;
             ButtonRanking.Location = new Point(0, 70);
             ButtonRanking.Name = "ButtonRanking";
-            ButtonRanking.Size = new Size(213, 70);
+            ButtonRanking.Size = new Size(167, 70);
             ButtonRanking.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
             ButtonRanking.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
             ButtonRanking.StateCommon.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -172,7 +172,7 @@
             ButtonHome.Dock = DockStyle.Top;
             ButtonHome.Location = new Point(0, 0);
             ButtonHome.Name = "ButtonHome";
-            ButtonHome.Size = new Size(213, 70);
+            ButtonHome.Size = new Size(167, 70);
             ButtonHome.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
             ButtonHome.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
             ButtonHome.StateCommon.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -193,9 +193,9 @@
             // PanelConteudo
             // 
             PanelConteudo.Dock = DockStyle.Fill;
-            PanelConteudo.Location = new Point(213, 80);
+            PanelConteudo.Location = new Point(167, 80);
             PanelConteudo.Name = "PanelConteudo";
-            PanelConteudo.Size = new Size(1067, 553);
+            PanelConteudo.Size = new Size(1099, 595);
             PanelConteudo.StateNormal.Color1 = Color.White;
             PanelConteudo.TabIndex = 2;
             // 
@@ -203,7 +203,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1280, 633);
+            ClientSize = new Size(1266, 675);
             Controls.Add(PanelConteudo);
             Controls.Add(PanelEsquerda);
             Controls.Add(PanelCima);

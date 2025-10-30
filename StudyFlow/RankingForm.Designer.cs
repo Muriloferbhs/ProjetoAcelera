@@ -36,7 +36,6 @@
             // PanelConteudo
             // 
             PanelConteudo.Controls.Add(kryptonLabel1);
-            PanelConteudo.Size = new Size(1055, 589);
             PanelConteudo.StateNormal.Color1 = Color.White;
             // 
             // kryptonLabel1
@@ -50,7 +49,7 @@
             // RankingForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
-            ClientSize = new Size(1268, 669);
+            ClientSize = new Size(1266, 675);
             Name = "RankingForm";
             Text = "RankingForm";
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).EndInit();

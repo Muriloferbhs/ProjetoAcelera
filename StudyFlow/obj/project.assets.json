@@ -15,7 +15,7 @@
           }
         }
       },
-      "Krypton.Toolkit/95.25.8.235": {
+      "Krypton.Toolkit/95.25.10.293": {
         "type": "package",
         "compile": {
           "lib/net8.0-windows7.0/Krypton.Toolkit.dll": {
@@ -65,17 +65,17 @@
         "readme.md"
       ]
     },
-    "Krypton.Toolkit/95.25.8.235": {
-      "sha512": "BE6IgKwqp+etzigqM6lsesOvTnrRxVehaQ/nTXoSeKVlmpFjXic6tLysKUCmbMS8NnRoAoKq41xLCvhiTDoIEA==",
+    "Krypton.Toolkit/95.25.10.293": {
+      "sha512": "CwdbmAeTe/0+vosPW8DBMojcKPdBqXmaCYVodpGpfJNOR2/BsV6qiw6YPQYZ2U8xPXedhtAiedxbhwogD+Uhqw==",
       "type": "package",
-      "path": "krypton.toolkit/95.25.8.235",
+      "path": "krypton.toolkit/95.25.10.293",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Krypton Stable.png",
         "License.md",
         "README.md",
-        "krypton.toolkit.95.25.8.235.nupkg.sha512",
+        "krypton.toolkit.95.25.10.293.nupkg.sha512",
         "krypton.toolkit.nuspec",
         "lib/net462/Krypton.Toolkit.dll",
         "lib/net462/Krypton.Toolkit.xml",
@@ -99,7 +99,7 @@
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "BCrypt.Net-Next >= 4.0.3",
-      "Krypton.Toolkit >= 95.25.8.235"
+      "Krypton.Toolkit >= 95.25.10.293"
     ]
   },
   "packageFolders": {
@@ -158,7 +158,7 @@
           },
           "Krypton.Toolkit": {
             "target": "Package",
-            "version": "[95.25.8.235, )"
+            "version": "[95.25.10.293, )"
           }
         },
         "imports": [

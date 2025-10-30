@@ -37,7 +37,6 @@ namespace StudyFlow
             // PanelConteudo
             // 
             PanelConteudo.Controls.Add(kryptonLabel1);
-            PanelConteudo.Size = new Size(1059, 577);
             PanelConteudo.StateNormal.Color1 = Color.White;
             // 
             // kryptonLabel1
@@ -51,7 +50,7 @@ namespace StudyFlow
             // HomeForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
-            ClientSize = new Size(1272, 657);
+            ClientSize = new Size(1266, 675);
             Name = "HomeForm";
             Text = "HomeForm";
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).EndInit();

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "I7MQWicRQUo=",
+  "dgSpecHash": "KBQeR0ymOIc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Usuário 1\\Desktop\\Acelera\\ProjetoAcelera\\StudyFlow\\StudyFlow.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuário 1\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
-    "C:\\Users\\Usuário 1\\.nuget\\packages\\krypton.toolkit\\95.25.8.235\\krypton.toolkit.95.25.8.235.nupkg.sha512"
+    "C:\\Users\\Usuário 1\\.nuget\\packages\\krypton.toolkit\\95.25.10.293\\krypton.toolkit.95.25.10.293.nupkg.sha512"
   ],
   "logs": []
 }

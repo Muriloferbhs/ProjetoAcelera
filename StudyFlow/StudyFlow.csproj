@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
-    <PackageReference Include="Krypton.Toolkit" Version="95.25.8.235" />
+    <PackageReference Include="Krypton.Toolkit" Version="95.25.10.293" />
   </ItemGroup>
 
   <ItemGroup>

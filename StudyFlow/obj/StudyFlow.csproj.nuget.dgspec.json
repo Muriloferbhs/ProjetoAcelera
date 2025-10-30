@@ -56,7 +56,7 @@
             },
             "Krypton.Toolkit": {
               "target": "Package",
-              "version": "[95.25.8.235, )"
+              "version": "[95.25.10.293, )"
             }
           },
           "imports": [

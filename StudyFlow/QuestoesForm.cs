@@ -16,5 +16,19 @@ namespace StudyFlow
         {
             InitializeComponent();
         }
+        private void buttonMatematica_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelCards_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonLinguagens_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
