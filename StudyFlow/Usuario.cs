@@ -32,11 +32,6 @@ namespace StudyFlow
         }
 
 
-
-
-
-
-
         //Murilo fez no dia 4/10 ----------------------------------------------------------------------------------
         //genial, não tinha pensado em validar assim (Henrique falando)
         public static bool AutenticarCPF(string cpf)
@@ -134,8 +129,6 @@ namespace StudyFlow
         }
 
 
-
-
         public static void Logar(string dadosLogin, string senhaLogin)
         {
 
@@ -167,9 +160,6 @@ namespace StudyFlow
             }
             KryptonMessageBox.Show("Username ou senha incorretos");
         }
-
-
-
 
 
         public static Usuario DesativarAtivarUser(bool ativo, Usuario u)
@@ -212,19 +202,8 @@ namespace StudyFlow
 
         }
 
-
         public static void RecuperarSenha() {
 
-
-
-
         }
-
-
-
-
-
-
-
     }
 }
