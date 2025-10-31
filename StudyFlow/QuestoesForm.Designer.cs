@@ -50,7 +50,7 @@ namespace StudyFlow
             // 
             PanelConteudo.Controls.Add(panelCards);
             PanelConteudo.Controls.Add(panelBusca);
-            PanelConteudo.Size = new Size(1103, 583);
+            PanelConteudo.Size = new Size(1117, 628);
             PanelConteudo.StateNormal.Color1 = Color.White;
             // 
             // panelCards
@@ -64,7 +64,7 @@ namespace StudyFlow
             panelCards.Dock = DockStyle.Left;
             panelCards.Location = new Point(0, 0);
             panelCards.Name = "panelCards";
-            panelCards.Size = new Size(800, 583);
+            panelCards.Size = new Size(800, 628);
             panelCards.StateCommon.Color1 = Color.White;
             panelCards.StateDisabled.Color1 = Color.Transparent;
             panelCards.StateDisabled.Color2 = Color.Transparent;
@@ -88,12 +88,12 @@ namespace StudyFlow
             buttonProvaoP.StateCommon.Border.Rounding = 10F;
             buttonProvaoP.StateCommon.Border.Width = 1;
             buttonProvaoP.StateCommon.Content.LongText.Color1 = Color.FromArgb(255, 102, 0);
-            buttonProvaoP.StateCommon.Content.LongText.Font = new Font("Segoe UI", 9F);
+            buttonProvaoP.StateCommon.Content.LongText.Font = new Font("Segoe UI", 10F);
             buttonProvaoP.StateCommon.Content.LongText.TextH = PaletteRelativeAlign.Center;
             buttonProvaoP.StateCommon.Content.LongText.TextV = PaletteRelativeAlign.Far;
             buttonProvaoP.StateCommon.Content.Padding = new Padding(-1, -1, -1, 15);
             buttonProvaoP.StateCommon.Content.ShortText.Color1 = Color.FromArgb(32, 0, 177);
-            buttonProvaoP.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonProvaoP.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             buttonProvaoP.StateCommon.Content.ShortText.TextH = PaletteRelativeAlign.Center;
             buttonProvaoP.StateCommon.Content.ShortText.TextV = PaletteRelativeAlign.Center;
             buttonProvaoP.StateNormal.Back.Color1 = Color.White;
@@ -123,12 +123,12 @@ namespace StudyFlow
             buttonLinguagens.StateCommon.Border.Rounding = 10F;
             buttonLinguagens.StateCommon.Border.Width = 1;
             buttonLinguagens.StateCommon.Content.LongText.Color1 = Color.FromArgb(255, 102, 0);
-            buttonLinguagens.StateCommon.Content.LongText.Font = new Font("Segoe UI", 9F);
+            buttonLinguagens.StateCommon.Content.LongText.Font = new Font("Segoe UI", 10F);
             buttonLinguagens.StateCommon.Content.LongText.TextH = PaletteRelativeAlign.Center;
             buttonLinguagens.StateCommon.Content.LongText.TextV = PaletteRelativeAlign.Far;
             buttonLinguagens.StateCommon.Content.Padding = new Padding(-1, -1, -1, 15);
             buttonLinguagens.StateCommon.Content.ShortText.Color1 = Color.FromArgb(32, 0, 177);
-            buttonLinguagens.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonLinguagens.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             buttonLinguagens.StateCommon.Content.ShortText.TextH = PaletteRelativeAlign.Center;
             buttonLinguagens.StateCommon.Content.ShortText.TextV = PaletteRelativeAlign.Center;
             buttonLinguagens.StatePressed.Back.Color1 = SystemColors.ButtonFace;
@@ -154,12 +154,12 @@ namespace StudyFlow
             buttonCienciasH.StateCommon.Border.Rounding = 10F;
             buttonCienciasH.StateCommon.Border.Width = 1;
             buttonCienciasH.StateCommon.Content.LongText.Color1 = Color.FromArgb(255, 102, 0);
-            buttonCienciasH.StateCommon.Content.LongText.Font = new Font("Segoe UI", 9F);
+            buttonCienciasH.StateCommon.Content.LongText.Font = new Font("Segoe UI", 10F);
             buttonCienciasH.StateCommon.Content.LongText.TextH = PaletteRelativeAlign.Center;
             buttonCienciasH.StateCommon.Content.LongText.TextV = PaletteRelativeAlign.Far;
             buttonCienciasH.StateCommon.Content.Padding = new Padding(-1, -1, -1, 15);
             buttonCienciasH.StateCommon.Content.ShortText.Color1 = Color.FromArgb(32, 0, 177);
-            buttonCienciasH.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonCienciasH.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             buttonCienciasH.StateCommon.Content.ShortText.TextH = PaletteRelativeAlign.Center;
             buttonCienciasH.StateCommon.Content.ShortText.TextV = PaletteRelativeAlign.Center;
             buttonCienciasH.StateNormal.Back.Color1 = Color.White;
@@ -189,12 +189,12 @@ namespace StudyFlow
             buttonEnem.StateCommon.Border.Rounding = 10F;
             buttonEnem.StateCommon.Border.Width = 1;
             buttonEnem.StateCommon.Content.LongText.Color1 = Color.FromArgb(255, 102, 0);
-            buttonEnem.StateCommon.Content.LongText.Font = new Font("Segoe UI", 9F);
+            buttonEnem.StateCommon.Content.LongText.Font = new Font("Segoe UI", 10F);
             buttonEnem.StateCommon.Content.LongText.TextH = PaletteRelativeAlign.Center;
             buttonEnem.StateCommon.Content.LongText.TextV = PaletteRelativeAlign.Far;
             buttonEnem.StateCommon.Content.Padding = new Padding(-1, -1, -1, 15);
             buttonEnem.StateCommon.Content.ShortText.Color1 = Color.FromArgb(32, 0, 177);
-            buttonEnem.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonEnem.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             buttonEnem.StateCommon.Content.ShortText.TextH = PaletteRelativeAlign.Center;
             buttonEnem.StateCommon.Content.ShortText.TextV = PaletteRelativeAlign.Center;
             buttonEnem.StateNormal.Back.Color1 = Color.White;
@@ -224,12 +224,12 @@ namespace StudyFlow
             buttonCienciasN.StateCommon.Border.Rounding = 10F;
             buttonCienciasN.StateCommon.Border.Width = 1;
             buttonCienciasN.StateCommon.Content.LongText.Color1 = Color.FromArgb(255, 102, 0);
-            buttonCienciasN.StateCommon.Content.LongText.Font = new Font("Segoe UI", 9F);
+            buttonCienciasN.StateCommon.Content.LongText.Font = new Font("Segoe UI", 10F);
             buttonCienciasN.StateCommon.Content.LongText.TextH = PaletteRelativeAlign.Center;
             buttonCienciasN.StateCommon.Content.LongText.TextV = PaletteRelativeAlign.Far;
             buttonCienciasN.StateCommon.Content.Padding = new Padding(-1, -1, -1, 15);
             buttonCienciasN.StateCommon.Content.ShortText.Color1 = Color.FromArgb(32, 0, 177);
-            buttonCienciasN.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonCienciasN.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             buttonCienciasN.StateCommon.Content.ShortText.TextH = PaletteRelativeAlign.Center;
             buttonCienciasN.StateCommon.Content.ShortText.TextV = PaletteRelativeAlign.Center;
             buttonCienciasN.StateNormal.Back.Color1 = Color.White;
@@ -259,12 +259,12 @@ namespace StudyFlow
             buttonMatematica.StateCommon.Border.Rounding = 10F;
             buttonMatematica.StateCommon.Border.Width = 1;
             buttonMatematica.StateCommon.Content.LongText.Color1 = Color.FromArgb(255, 102, 0);
-            buttonMatematica.StateCommon.Content.LongText.Font = new Font("Segoe UI", 9F);
+            buttonMatematica.StateCommon.Content.LongText.Font = new Font("Segoe UI", 10F);
             buttonMatematica.StateCommon.Content.LongText.TextH = PaletteRelativeAlign.Center;
             buttonMatematica.StateCommon.Content.LongText.TextV = PaletteRelativeAlign.Far;
             buttonMatematica.StateCommon.Content.Padding = new Padding(-1, -1, -1, 15);
             buttonMatematica.StateCommon.Content.ShortText.Color1 = Color.FromArgb(32, 0, 177);
-            buttonMatematica.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonMatematica.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             buttonMatematica.StateCommon.Content.ShortText.TextH = PaletteRelativeAlign.Center;
             buttonMatematica.StateCommon.Content.ShortText.TextV = PaletteRelativeAlign.Center;
             buttonMatematica.StateNormal.Back.Color1 = Color.White;
@@ -284,7 +284,7 @@ namespace StudyFlow
             panelBusca.Dock = DockStyle.Fill;
             panelBusca.Location = new Point(0, 0);
             panelBusca.Name = "panelBusca";
-            panelBusca.Size = new Size(1103, 583);
+            panelBusca.Size = new Size(1117, 628);
             panelBusca.StateCommon.Color1 = Color.White;
             panelBusca.TabIndex = 1;
             // 
@@ -297,7 +297,7 @@ namespace StudyFlow
             // 
             // QuestoesForm
             // 
-            ClientSize = new Size(1270, 663);
+            ClientSize = new Size(1284, 708);
             Location = new Point(0, 0);
             Name = "QuestoesForm";
             Text = "QuestoesForm";

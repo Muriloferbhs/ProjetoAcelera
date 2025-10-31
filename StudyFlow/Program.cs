@@ -11,7 +11,8 @@ namespace StudyFlow
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new LoginForm()); // inicia pelo Login
-            Application.Run(new BaseForm());
+            //Application.Run(new BaseForm());
+            Application.Run(new QuestoesForm());
         }
     }
 }

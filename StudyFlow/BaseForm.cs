@@ -62,6 +62,13 @@ namespace StudyFlow
             TrocarTela(new AjudaForm());
         }
 
+        public void TrocarConteudo(Control novoConteudo)
+        {
+            PanelConteudo.Controls.Clear();
+            novoConteudo.Dock = DockStyle.Fill;
+            PanelConteudo.Controls.Add(novoConteudo);
+        }
+
         private void BaseForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)
