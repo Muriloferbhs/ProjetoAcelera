@@ -38,13 +38,7 @@ public partial class QuestoesForm : BaseForm
         {
             string json = File.ReadAllText("questoes.json");
             List<Pergunta> questoes = JsonSerializer.Deserialize<List<Pergunta>>(json);
-
-
-
-
-
-
-
+            List<Pergunta> questoesFiltradas = JsonSerializer.Deserialize<List<Pergunta>>(json);
 
             PanelConteudo.Controls.Clear();
 
@@ -88,11 +82,33 @@ public partial class QuestoesForm : BaseForm
             painelScroll.AutoScroll = true;
             painelLista.Controls.Add(painelScroll);
 
+            // Filtra as questões conforme a área ou tipo selecionado
+            foreach (var w in questoesFiltradas)
 
+            {
+
+                switch (areaOuTipo)
+                {
+                    //adicionar o default em caso de o usuário quiser ver todas as questões
+                    case "ENEM": questoesFiltradas = questoes.Where(w => w.Tipo == "Enem").ToList();
+                        break;
+                    case "Provão Paulista": questoesFiltradas = questoes.Where(w => w.Tipo == "Provão Paulista").ToList();
+                        break;
+                    case "Linguagens e suas Tecnologias": questoesFiltradas = questoes.Where(w => w.Area == "Linguagens e suas Tecnologias").ToList();
+                        break;
+                    case "Ciências Humanas": questoesFiltradas = questoes.Where(w => w.Area == "Ciências Humanas").ToList();
+                        break;
+                    case "Ciências da Natureza": questoesFiltradas = questoes.Where(w => w.Area == "Ciências da Natureza").ToList();
+                        break;
+                    case "Matemática e suas Tecnologias": questoesFiltradas = questoes.Where(w => w.Area == "Matemática e suas Tecnologias").ToList();
+                        break;
+                }
+
+            }
 
             //importante não apagar esse for, porque ele cria os cards de cada questã. OBS.: mas pode ser mudado conforme a logica de carregar as questões
             int y = 0;
-            foreach (var q in questoes)
+            foreach (var q in questoesFiltradas)
 
             {
                 // Painel de cada questão
