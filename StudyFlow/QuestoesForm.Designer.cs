@@ -297,7 +297,7 @@ namespace StudyFlow
             // 
             // QuestoesForm
             // 
-            ClientSize = new Size(1288, 696);
+            ClientSize = new Size(1280, 720);
             Location = new Point(0, 0);
             Name = "QuestoesForm";
             Text = "QuestoesForm";
