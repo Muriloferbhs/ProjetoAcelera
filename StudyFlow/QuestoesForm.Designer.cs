@@ -50,7 +50,7 @@ namespace StudyFlow
             // 
             PanelConteudo.Controls.Add(panelCards);
             PanelConteudo.Controls.Add(panelBusca);
-            PanelConteudo.Size = new Size(1117, 628);
+            PanelConteudo.Size = new Size(1121, 616);
             PanelConteudo.StateNormal.Color1 = Color.White;
             // 
             // panelCards
@@ -64,7 +64,7 @@ namespace StudyFlow
             panelCards.Dock = DockStyle.Left;
             panelCards.Location = new Point(0, 0);
             panelCards.Name = "panelCards";
-            panelCards.Size = new Size(800, 628);
+            panelCards.Size = new Size(800, 616);
             panelCards.StateCommon.Color1 = Color.White;
             panelCards.StateDisabled.Color1 = Color.Transparent;
             panelCards.StateDisabled.Color2 = Color.Transparent;
@@ -104,7 +104,7 @@ namespace StudyFlow
             buttonProvaoP.StateTracking.Back.Color2 = Color.White;
             buttonProvaoP.TabIndex = 5;
             buttonProvaoP.Values.DropDownArrowColor = Color.Empty;
-            buttonProvaoP.Values.ExtraText = "Questões de edições anteriores do Provão Paulista, \r\nenvolvendo todas as matérias da matriz do Ensino Médio";
+            buttonProvaoP.Values.ExtraText = "Questões de edições anteriores do Provão Paulista, \r\nenvolvendo as matérias da matriz do Ensino Médio";
             buttonProvaoP.Values.Text = "PROVÃO PAULISTA";
             // 
             // buttonLinguagens
@@ -284,7 +284,7 @@ namespace StudyFlow
             panelBusca.Dock = DockStyle.Fill;
             panelBusca.Location = new Point(0, 0);
             panelBusca.Name = "panelBusca";
-            panelBusca.Size = new Size(1117, 628);
+            panelBusca.Size = new Size(1121, 616);
             panelBusca.StateCommon.Color1 = Color.White;
             panelBusca.TabIndex = 1;
             // 
@@ -297,7 +297,7 @@ namespace StudyFlow
             // 
             // QuestoesForm
             // 
-            ClientSize = new Size(1284, 708);
+            ClientSize = new Size(1288, 696);
             Location = new Point(0, 0);
             Name = "QuestoesForm";
             Text = "QuestoesForm";

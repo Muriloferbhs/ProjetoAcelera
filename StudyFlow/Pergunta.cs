@@ -2,12 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 
 namespace StudyFlow
 {
-    internal class Pergunta
+    public class Pergunta
     {
         [JsonPropertyName("ID")] public string ID {  get; set; }
         [JsonPropertyName("Tipo")] public string Tipo { get; set; }
@@ -20,8 +21,10 @@ namespace StudyFlow
         [JsonPropertyName("C")] public string C {  get; set; }
         [JsonPropertyName("D")] public string D {  get; set; }
         [JsonPropertyName("E")] public string E {  get; set; }
-        [JsonPropertyName("Resposta")] public string Resposta { get; set; }
-        [JsonPropertyName("Pontuacao")] public double PontuacaoParcial { get; set; }
+        [JsonPropertyName("Resposta")] public string? Resposta { get; set; }
+        [JsonPropertyName("PontuacaoParcial")] public double PontuacaoParcial { get; set; }
+
+
         public double Erros {  get; set; }
         
         public static double CorrecaoPontos(Pergunta pergunta)

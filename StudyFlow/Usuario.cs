@@ -7,7 +7,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace StudyFlow
 {
-    internal class Usuario
+    public class Usuario
     {
         public string NomeUser { get; set; }// parametro de login
         public string NomeCompleto { get; set; }

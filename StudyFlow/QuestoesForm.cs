@@ -6,12 +6,15 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StudyFlow;
+
 
 namespace StudyFlow
-{
-    public partial class QuestoesForm : BaseForm
+{ 
+public partial class QuestoesForm : BaseForm
     {
         public QuestoesForm()
         {
@@ -33,7 +36,16 @@ namespace StudyFlow
 
         private void MostrarListaQuestoes(string areaOuTipo)
         {
-            
+            string json = File.ReadAllText("questoes.json");
+            List<Pergunta> questoes = JsonSerializer.Deserialize<List<Pergunta>>(json);
+
+
+
+
+
+
+
+
             PanelConteudo.Controls.Clear();
 
             // Cria o painel principal que mostrará a lista
@@ -68,6 +80,7 @@ namespace StudyFlow
             lblTitulo.StateCommon.ShortText.Color1 = Color.FromArgb(32, 0, 177);
             painelLista.Controls.Add(lblTitulo);
 
+
             // Painel com scroll para a lista de questões
             Panel painelScroll = new Panel();
             painelScroll.Location = new Point(80, 90);
@@ -75,39 +88,11 @@ namespace StudyFlow
             painelScroll.AutoScroll = true;
             painelLista.Controls.Add(painelScroll);
 
-            /*
-            *
-            *
-            *
-            *  ADICIONAR AQUI O CÓDIGO DE CARREGAR E FILTRAR O JSON
-            *
-            *
-            */
-
-
-
-
-
-            // eXEMPLO DE QUESTÕES, ATT: depois que tiver a logica apagar.
-            var questoesExemplo = new[]
-            {
-            new { Id = "001", Tema = "Equações de 2º Grau", Pontos = "5" },
-            new { Id = "002", Tema = "Funções lineares", Pontos = "8" },
-            new { Id = "003", Tema = "Probabilidade", Pontos = "10" },
-            new { Id = "004", Tema = "Geometria plana", Pontos = "6" },
-            new { Id = "005", Tema = "Porcentagem e juros", Pontos = "7" },
-            new { Id = "005", Tema = "Porcentagem e juros", Pontos = "7" },
-            new { Id = "005", Tema = "Porcentagem e juros", Pontos = "7" },
-            new { Id = "005", Tema = "Porcentagem e juros", Pontos = "7" },
-            new { Id = "005", Tema = "Porcentagem e juros", Pontos = "7" },
-            new { Id = "284", Tema = "Porcentagem e juros", Pontos = "8" },
-            new { Id = "005", Tema = "Porcentagem e juros", Pontos = "7" }
-            };
 
 
             //importante não apagar esse for, porque ele cria os cards de cada questã. OBS.: mas pode ser mudado conforme a logica de carregar as questões
             int y = 0;
-            foreach (var q in questoesExemplo)
+            foreach (var q in questoes)
 
             {
                 // Painel de cada questão
@@ -139,7 +124,7 @@ namespace StudyFlow
 
                 // ID
                 KryptonLabel lblId = new KryptonLabel();
-                lblId.Text = q.Id;
+                lblId.Text = q.ID;
                 lblId.Location = new Point(20, 15);
                 lblId.StateCommon.ShortText.Font = new Font("Segoe UI", 11, FontStyle.Bold);
                 lblId.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
@@ -155,7 +140,7 @@ namespace StudyFlow
 
                 // Pontos
                 KryptonLabel lblPontos = new KryptonLabel();
-                lblPontos.Text = $"{q.Pontos} pts";
+                lblPontos.Text = $"{q.Pontuacao} pts";
                 lblPontos.Location = new Point(800, 15);
                 lblPontos.StateCommon.ShortText.Font = new Font("Segoe UI", 10);
                 lblPontos.StateCommon.ShortText.Color1 = Color.FromArgb(32, 0, 177);
