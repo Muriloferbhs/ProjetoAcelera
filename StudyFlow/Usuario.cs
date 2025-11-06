@@ -1,42 +1,59 @@
-using Krypton.Toolkit;
-using System.Collections;
 using BCrypt.Net;//para usar hash
+using Krypton.Toolkit;
+using Microsoft.VisualBasic.Logging;
+using System.Collections;
 using System.Web;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
-namespace StudyFlow
-{
-    public class Usuario
-    {
-        public string NomeUser { get; set; }// parametro de login
-        public string NomeCompleto { get; set; }
-        public string Cpf { get; set; }// parametro de login
-        public string Telefone { get; set; }
-        public string Email { get; set; }
-        public string DataDeNascimento { get; set; }
-        public string SenhaHash { get; private set; }//usar hash para senha ser segura
-        public string Senha { get; set; } // apenas para teste
-        public string Salt { get; private set; }// numero aleatorio para calcular o hash
-        public string Pontuacao { get; set; }
+namespace StudyFlow {
+    internal class Usuario {
+        public string NomeUser { get; private set; }// parametro de login
+        public string NomeCompleto { get; private set; }
+        public string Cpf { get; private set; }// parametro de login
+        public string Telefone { get; private set; }
+        public string Email { get; private set; }
+        public string Senha { get; private set; } // apenas para teste
         public bool Ativo { get; private set; } = true;// verificar se o usuario esta ativo
+        public double Pontuacao { get; private set; }
+
 
         public static ArrayList DadosDoCadastroLogin = new ArrayList();
-        
-        
-        
-        
-        public void AtribuirSenha(string senha)
-        {
+
+
+
+        public Usuario() {
+        }
+
+
+
+        public Usuario(string nomeCompleto, string cpf, string telefone, string email, string nomeUsuario, string senha, bool ativo, double pontuacao) {
+            NomeCompleto = nomeCompleto;
+            NomeUser = nomeUsuario;
+            Cpf = cpf;
+            Telefone = telefone;
+            Email = email;
+            Ativo = ativo;
+            Pontuacao = pontuacao;
+            AtribuirSenha(senha);
+        }
+
+
+
+        public void AtribuirSenha(string senha) {
             //carlos 04/10--------------------------------------------------------------------------------------------
             Senha = BCrypt.Net.BCrypt.HashPassword(senha);
         }
 
 
+
+
+
+
+
         //Murilo fez no dia 4/10 ----------------------------------------------------------------------------------
         //genial, não tinha pensado em validar assim (Henrique falando)
-        public static bool AutenticarCPF(string cpf)
-        {
+        public static bool AutenticarCPF(string cpf) {
             int decimoIdeal = 0;
             int onzeIdeal = 0;
             int total = 0;
@@ -89,11 +106,10 @@ namespace StudyFlow
                 }
             }
 
-        }             
+        }
 
 
-        public static bool AutenticarEmail(string email)
-        {
+        public static bool AutenticarEmail(string email) {
             if (!email.Contains("@"))
             {
                 KryptonMessageBox.Show("Insira um Email válido!");
@@ -104,10 +120,10 @@ namespace StudyFlow
                 return true;
             }
         }
-        public static bool AutenticarTelefone(string telefone)
-        {
+        public static bool AutenticarTelefone(string telefone) {
             if (telefone.Length == 11 && telefone.All(char.IsDigit) || telefone.Length == 14 && telefone.All(char.IsDigit))
-            {;
+            {
+                ;
                 return true;
             }
             else
@@ -118,54 +134,61 @@ namespace StudyFlow
         }
         //Murilo fez no dia 4/10 ----------------------------------------------------------------------------------
 
-        public void AtribuirDadosDoUsuario(string nomeCompleto, string cpf, string telefone, string email, string nomeUsuario, string senha, bool ativo)
-        {
-            NomeCompleto = nomeCompleto;
-            NomeUser = nomeUsuario;
-            Cpf = cpf;
-            Telefone = telefone;
-            Email = email;
-            Ativo = ativo;
-            AtribuirSenha(senha);
-        }
 
 
-        public static void Logar(string dadosLogin, string senhaLogin)
-        {
+
+
+
+        public static Usuario Logar(string dadosLogin, string senhaLogin) {
 
             Usuario.UsuariosDeTeste();
 
             foreach (Usuario u in Usuario.DadosDoCadastroLogin)
             {
-                
+
                 //carlos 04/10 (acresentar o parametro cpf pra login)---------------------------------------------------------------------
                 if ((u.NomeUser == dadosLogin || u.Cpf == dadosLogin) && BCrypt.Net.BCrypt.Verify(senhaLogin, u.Senha) == true && u.Ativo == true)
                 {
                     KryptonMessageBox.Show("Login realizado com sucesso!");
-                    return;
+
+                    return u;
                 }
-                else if((u.NomeUser == dadosLogin || u.Cpf == dadosLogin) && BCrypt.Net.BCrypt.Verify(senhaLogin, u.Senha) == true && u.Ativo == false)
+                else if ((u.NomeUser == dadosLogin || u.Cpf == dadosLogin) && BCrypt.Net.BCrypt.Verify(senhaLogin, u.Senha) == true && u.Ativo == false)
                 {
-                    //colocar caixa de sim/não
-                    KryptonMessageBox.Show("Este usuário está desativado. Deseja reativá-lo?");
-
-                    bool ativar = true;//caso queira ativar
 
 
-                    Usuario.DesativarAtivarUser(ativar , u);
-                    return;
+
+                    DialogResult resultado = MessageBox.Show(
+                        "Este usuário está desativado. Deseja reativá-lo?",
+                        "Confirmação",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question
+                    );
+
+                    if (resultado == DialogResult.Yes)
+                    {
+                        bool ativar = true;//caso queira ativar
+                        Usuario.DesativarAtivarUser(ativar, u);
+                    }
+
+
+
+                    return null;
                 }
 
 
 
             }
             KryptonMessageBox.Show("Username ou senha incorretos");
+            return null;
         }
 
 
-        public static Usuario DesativarAtivarUser(bool ativo, Usuario u)
-        {   
-            
+
+
+
+        public static Usuario DesativarAtivarUser(bool ativo, Usuario u) {
+
             if (ativo == true)
             {
                 u.Ativo = true;
@@ -178,33 +201,65 @@ namespace StudyFlow
             }
         }
 
-        public static void UsuariosDeTeste()
-        {
+        public static void UsuariosDeTeste() {
 
 
-            //login teste----------------------
-            //carlos 04/10---------------------
-            string nomeCompletoTeste = "senhor batata da silva";
+            string nomeCompletoTeste = "Carlos Henrique dos Santos Pelegrini Duarte";
             string cpfTeste = "52998224725";
             string telefoneTeste = "12991545412";
-            string emailTeste = "SenhorBatata@gmail.com";
-            string nomeUsuarioTeste = "srBatata";
-            string senhaTeste = "perdiMeuChapeu";
+            string emailTeste = "ricksz@gmail.com";
+            string nomeUsuarioTeste = "rick";
+            string senhaTeste = "2011";
+            double pontuacao = 0.0;
             bool ativoTeste = true;
 
-            Usuario testeUsuario = new Usuario();
-            testeUsuario.AtribuirDadosDoUsuario(nomeCompletoTeste, cpfTeste, telefoneTeste, emailTeste, nomeUsuarioTeste, senhaTeste, ativoTeste);
+            Usuario testeUsuario = new Usuario(nomeCompletoTeste, cpfTeste, telefoneTeste, emailTeste, nomeUsuarioTeste, senhaTeste, ativoTeste, pontuacao);
             Usuario.DadosDoCadastroLogin.Add(testeUsuario);
-            //teste
-            //---------------------------------
 
+
+            string nomeCompletoTeste1 = "Sarah Nunes de Prado";
+            string cpfTeste1 = "96001338914";
+            string telefoneTeste1 = "12996238886";
+            string emailTeste1 = "sarahnunes@gmail.com";
+            string nomeUsuarioTeste1 = "sarah";
+            string senhaTeste1 = "SoDeusSabe";
+            double pontuacao1 = 0.0;
+            bool ativoTeste1 = false;
+
+            Usuario testeUsuario1 = new Usuario(nomeCompletoTeste1, cpfTeste1, telefoneTeste1, emailTeste1, nomeUsuarioTeste1, senhaTeste1, ativoTeste1, pontuacao1);
+            Usuario.DadosDoCadastroLogin.Add(testeUsuario1);
+
+
+
+            string nomeCompletoTeste2 = "Murilo";
+            string cpfTeste2 = "08386379499";
+            string telefoneTeste2 = "12996036493";
+            string emailTeste2 = "murilo123@gmail.com";
+            string nomeUsuarioTeste2 = "murilo";
+            string senhaTeste2 = "naoTenhoIdeia";
+            double pontuacao2 = 0.0;
+            bool ativoTeste2 = true;
+
+            Usuario testeUsuario2 = new Usuario(nomeCompletoTeste2, cpfTeste2, telefoneTeste2, emailTeste2, nomeUsuarioTeste2, senhaTeste2, ativoTeste2, pontuacao2);
+            Usuario.DadosDoCadastroLogin.Add(testeUsuario2);
 
 
 
         }
+
 
         public static void RecuperarSenha() {
 
+
+
+
         }
+
+
+
+
+
+
+
     }
 }

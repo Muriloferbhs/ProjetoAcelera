@@ -119,7 +119,7 @@ public partial class QuestoesForm : BaseForm
                 card.Location = new Point(12, y + 12);
                 card.StateCommon.Color1 = Color.White;
                 card.Cursor = Cursors.Hand;
-
+             
                 // Efeito de hover
                 card.MouseEnter += (s, e) => card.StateCommon.Color1 = Color.FromArgb(250, 250, 255);
                 card.MouseLeave += (s, e) => card.StateCommon.Color1 = Color.White;
@@ -127,7 +127,7 @@ public partial class QuestoesForm : BaseForm
                 //Evento de clique
                 card.Click += (s, e) => MostrarQuestao(q);
 
-
+             
                 // ID
                 KryptonLabel lblId = new KryptonLabel();
                 lblId.Text = q.ID;
@@ -265,7 +265,7 @@ public partial class QuestoesForm : BaseForm
                questao.E
 
             };
-
+            
             KryptonButton alternativaSelecionada = null;
             
             for(int i = 0; i < alternativas.Length; i++)
@@ -329,6 +329,7 @@ public partial class QuestoesForm : BaseForm
             buttonConfirmar.Click += (s, e) =>
             {
                 // logica para confirmar resposta
+                // Pergunta.ChecarResposta();
             };
 
             panelQuestao.Controls.Add(buttonConfirmar);

@@ -49,20 +49,20 @@ namespace StudyFlow
                 return pergunta.PontuacaoParcial;
             }
         }
-        public static void ChecarResposta(string respostaDada, Pergunta pergunta, Usuario usuario)
-        {
-            if (respostaDada != pergunta.Resposta)
-            {
-                pergunta.Erros++;
-                CorrecaoPontos(pergunta);
-            }
+        //public static void ChecarResposta(string respostaDada, Pergunta pergunta, Usuario usuario)
+        //{
+        //    if (respostaDada != pergunta.Resposta)
+        //    {
+        //        pergunta.Erros++;
+        //        CorrecaoPontos(pergunta);
+        //    }
 
-            else if (respostaDada == pergunta.Resposta)
-            {
-                //tela pra aparecer que acertou a pergunta
-                usuario.Pontuacao += pergunta.PontuacaoParcial;
-            }
-        }
+        //    else if (respostaDada == pergunta.Resposta)
+        //    {
+        //        //tela pra aparecer que acertou a pergunta
+        //        usuario.Pontuacao += pergunta.PontuacaoParcial;
+        //    }
+        //}
 
 
     }

@@ -40,7 +40,26 @@ namespace StudyFlow
                 return;
             }
 
-            Usuario.Logar(dadosLogin, senhaLogin);
+
+
+
+
+
+            Usuario usuariologado = Usuario.Logar(dadosLogin, senhaLogin);
+
+            if (usuariologado != null)
+            {
+                HomeForm home = new HomeForm();
+                home.Show();
+                this.Hide();
+                //Ranking.CalcularRanking(usuariologado.NomeUser, usuariologado.Pontuacao, usuariologado.Ativo);
+
+            }
+
+
+
+
+
 
         }
 
