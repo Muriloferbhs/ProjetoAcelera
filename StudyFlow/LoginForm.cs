@@ -41,10 +41,6 @@ namespace StudyFlow
             }
 
 
-
-
-
-
             Usuario usuariologado = Usuario.Logar(dadosLogin, senhaLogin);
 
             if (usuariologado != null)
@@ -55,10 +51,6 @@ namespace StudyFlow
                 //Ranking.CalcularRanking(usuariologado.NomeUser, usuariologado.Pontuacao, usuariologado.Ativo);
 
             }
-
-
-
-
 
 
         }

@@ -149,15 +149,11 @@ namespace StudyFlow {
                 //carlos 04/10 (acresentar o parametro cpf pra login)---------------------------------------------------------------------
                 if ((u.NomeUser == dadosLogin || u.Cpf == dadosLogin) && BCrypt.Net.BCrypt.Verify(senhaLogin, u.Senha) == true && u.Ativo == true)
                 {
-                    KryptonMessageBox.Show("Login realizado com sucesso!");
 
                     return u;
                 }
                 else if ((u.NomeUser == dadosLogin || u.Cpf == dadosLogin) && BCrypt.Net.BCrypt.Verify(senhaLogin, u.Senha) == true && u.Ativo == false)
-                {
-
-
-
+                { 
                     DialogResult resultado = MessageBox.Show(
                         "Este usuário está desativado. Deseja reativá-lo?",
                         "Confirmação",

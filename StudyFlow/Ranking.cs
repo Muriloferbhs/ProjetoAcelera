@@ -84,7 +84,7 @@ namespace StudyFlow {
 
 
 
-        public void CalcularRankin(string senha) {
+        public void CalcularRanking(string senha) {
 
 
 

@@ -45,44 +45,44 @@ public partial class QuestoesForm : BaseForm
             PanelConteudo.Controls.Clear();
 
             // Cria o painel principal que mostrará a lista
-            KryptonPanel painelLista = new KryptonPanel();
-            painelLista.Dock = DockStyle.Fill;
-            painelLista.StateCommon.Color1 = Color.White;
+            KryptonPanel panelLista = new KryptonPanel();
+            panelLista.Dock = DockStyle.Fill;
+            panelLista.StateCommon.Color1 = Color.White;
 
             //
             // Botão Voltar
             //
-            KryptonButton btnVoltar = new KryptonButton();
-            btnVoltar.Text = "← Voltar";
-            btnVoltar.Size = new Size(100, 40);
-            btnVoltar.Location = new Point(20, 20);
-            btnVoltar.StateCommon.Back.Color1 = Color.FromArgb(255, 102, 0);
-            btnVoltar.StateCommon.Back.Color2 = Color.FromArgb(255, 102, 0);
-            btnVoltar.StateCommon.Content.ShortText.Color1 = Color.White;
-            btnVoltar.StateCommon.Border.Rounding = 6;
-            btnVoltar.OverrideDefault.Back.Color1 = Color.White;
-            btnVoltar.OverrideDefault.Back.Color2 = Color.White;
-            btnVoltar.Cursor = Cursors.Hand;
-            btnVoltar.Click += (s, e) => MontarTelaInicial(); // volta para a tela dos cards
-            painelLista.Controls.Add(btnVoltar);
+            KryptonButton buttonVoltar = new KryptonButton();
+            buttonVoltar.Text = "← Voltar";
+            buttonVoltar.Size = new Size(100, 40);
+            buttonVoltar.Location = new Point(20, 20);
+            buttonVoltar.StateCommon.Back.Color1 = Color.FromArgb(255, 102, 0);
+            buttonVoltar.StateCommon.Back.Color2 = Color.FromArgb(255, 102, 0);
+            buttonVoltar.StateCommon.Content.ShortText.Color1 = Color.White;
+            buttonVoltar.StateCommon.Border.Rounding = 6;
+            buttonVoltar.OverrideDefault.Back.Color1 = Color.White;
+            buttonVoltar.OverrideDefault.Back.Color2 = Color.White;
+            buttonVoltar.Cursor = Cursors.Hand;
+            buttonVoltar.Click += (s, e) => MontarTelaInicial(); // volta para a tela dos cards
+            panelLista.Controls.Add(buttonVoltar);
 
             //
             // Título
             //
-            KryptonLabel lblTitulo = new KryptonLabel();
-            lblTitulo.Text = $"Questões - {areaOuTipo}";
-            lblTitulo.Location = new Point(150, 25);
-            lblTitulo.StateCommon.ShortText.Font = new Font("Segoe UI", 16, FontStyle.Bold);
-            lblTitulo.StateCommon.ShortText.Color1 = Color.FromArgb(32, 0, 177);
-            painelLista.Controls.Add(lblTitulo);
+            KryptonLabel labelTitulo = new KryptonLabel();
+            labelTitulo.Text = $"Questões - {areaOuTipo}";
+            labelTitulo.Location = new Point(150, 25);
+            labelTitulo.StateCommon.ShortText.Font = new Font("Segoe UI", 16, FontStyle.Bold);
+            labelTitulo.StateCommon.ShortText.Color1 = Color.FromArgb(32, 0, 177);
+            panelLista.Controls.Add(labelTitulo);
 
 
             // Painel com scroll para a lista de questões
-            Panel painelScroll = new Panel();
-            painelScroll.Location = new Point(80, 90);
-            painelScroll.Size = new Size(950, 500);
-            painelScroll.AutoScroll = true;
-            painelLista.Controls.Add(painelScroll);
+            Panel panelScroll = new Panel();
+            panelScroll.Location = new Point(80, 90);
+            panelScroll.Size = new Size(950, 500);
+            panelScroll.AutoScroll = true;
+            panelLista.Controls.Add(panelScroll);
 
             // Filtra as questões conforme a área ou tipo selecionado
             foreach (var w in questoesFiltradas)
@@ -108,7 +108,7 @@ public partial class QuestoesForm : BaseForm
 
             }
 
-            //importante não apagar esse for, porque ele cria os cards de cada questã. OBS.: mas pode ser mudado conforme a logica de carregar as questões
+            
             int y = 0;
             foreach (var q in questoesFiltradas)
 
@@ -129,35 +129,35 @@ public partial class QuestoesForm : BaseForm
 
              
                 // ID
-                KryptonLabel lblId = new KryptonLabel();
-                lblId.Text = q.ID;
-                lblId.Location = new Point(20, 15);
-                lblId.StateCommon.ShortText.Font = new Font("Segoe UI", 11, FontStyle.Bold);
-                lblId.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
-                card.Controls.Add(lblId);
+                KryptonLabel labelId = new KryptonLabel();
+                labelId.Text = q.ID;
+                labelId.Location = new Point(20, 15);
+                labelId.StateCommon.ShortText.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+                labelId.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
+                card.Controls.Add(labelId);
 
                 // Tema
-                KryptonLabel lblTema = new KryptonLabel();
-                lblTema.Text = q.Tema;
-                lblTema.Location = new Point(130, 15);
-                lblTema.StateCommon.ShortText.Font = new Font("Segoe UI", 11, FontStyle.Bold);
-                lblTema.StateCommon.ShortText.Color1 = Color.FromArgb(32, 0, 177);
-                card.Controls.Add(lblTema);
+                KryptonLabel labelTema = new KryptonLabel();
+                labelTema.Text = q.Tema;
+                labelTema.Location = new Point(130, 15);
+                labelTema.StateCommon.ShortText.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+                labelTema.StateCommon.ShortText.Color1 = Color.FromArgb(32, 0, 177);
+                card.Controls.Add(labelTema);
 
                 // Pontos
-                KryptonLabel lblPontos = new KryptonLabel();
-                lblPontos.Text = $"{q.Pontuacao} pts";
-                lblPontos.Location = new Point(800, 15);
-                lblPontos.StateCommon.ShortText.Font = new Font("Segoe UI", 10);
-                lblPontos.StateCommon.ShortText.Color1 = Color.FromArgb(32, 0, 177);
-                card.Controls.Add(lblPontos);
+                KryptonLabel labelPontos = new KryptonLabel();
+                labelPontos.Text = $"{q.Pontuacao} pts";
+                labelPontos.Location = new Point(800, 15);
+                labelPontos.StateCommon.ShortText.Font = new Font("Segoe UI", 10);
+                labelPontos.StateCommon.ShortText.Color1 = Color.FromArgb(32, 0, 177);
+                card.Controls.Add(labelPontos);
 
-                painelScroll.Controls.Add(card);
+                panelScroll.Controls.Add(card);
                 y += 55;
             }
 
             // Troca o painel atual pelo de listagem
-            TrocarConteudo(painelLista);
+            TrocarConteudo(panelLista);
         }
 
         //Interface Questão
@@ -267,8 +267,9 @@ public partial class QuestoesForm : BaseForm
             };
             
             KryptonButton alternativaSelecionada = null;
-            
-            for(int i = 0; i < alternativas.Length; i++)
+            List<KryptonButton> botoesAlternativas = new List<KryptonButton>(); //lista para armazenar os botões das alternativas 
+
+            for (int i = 0; i < alternativas.Length; i++)
             {
                 KryptonButton buttonAlternativa = new KryptonButton();
                 buttonAlternativa.Size = new Size(850, 40);
@@ -300,39 +301,79 @@ public partial class QuestoesForm : BaseForm
                 buttonAlternativa.Click += (s, e) =>
                 {
                     if (alternativaSelecionada != null)
-                    {                       
+                    {
                         alternativaSelecionada.StateCommon.Back.Color1 = Color.White;
                     }
                     alternativaSelecionada = buttonAlternativa;
                     buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(255, 235, 200);
+
+
+
+                    DialogResult resultado = MessageBox.Show(
+                        $"Deseja selecionar a alternativa {labelLetra.Text}?",
+                        "Confirme sua resposta",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question
+                        );
+
+                    if (resultado == DialogResult.Yes)
+                    {
+                        // ** colocar a logica de validar a resposta **
+
+                        //******
+
+                        // colocar dentro de um if para caso a resposta esteja correta
+                        /*
+                        buttonAlternativa.StateCommon.Border.Color1 = Color.LightGreen;
+                        buttonAlternativa.StateCommon.Border.Color2 = Color.LightGreen;
+                        buttonAlternativa.OverrideDefault.Border.Color1 = Color.LightGreen;
+                        buttonAlternativa.OverrideDefault.Back.Color1 = Color.FromArgb(235, 255, 235);
+                        buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(235, 255, 235);
+                        buttonAlternativa.StateCommon.Border.Width = 2;
+                        buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(235, 255, 235); 
+                        
+
+                        
+                        MessageBox.Show("Resposta Correta!", "Parabéns",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+
+                        // Bloquiea as alternativas se o usuario acertar
+                        
+                        foreach (var bloqueio in botoesAlternativas)
+                        bloqueio.Enabled = false;
+                        */
+                        //******
+
+                        // ** else para caso a resposta esteja incorreta **
+                        /*
+                        buttonAlternativa.StateCommon.Border.Color1 = Color.Gray;
+                        buttonAlternativa.StateCommon.Border.Color2 = Color.Gray;
+                        buttonAlternativa.OverrideDefault.Border.Color1 = Color.Red;
+                        buttonAlternativa.OverrideDefault.Back.Color1 = Color.FromArgb(240, 240, 240);
+                        buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(240, 240, 240);
+                        buttonAlternativa.StateCommon.Border.Width = 1;
+                        buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(235, 255, 235);
+                        
+
+                        
+                        MessageBox.Show("Resposta incorreta!", "",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        */
+
+                    }
+                    else
+                    {
+                        buttonAlternativa.StateCommon.Back.Color1 = Color.White;
+                        alternativaSelecionada = null;
+                    }
+
                 };
 
                 panelQuestao.Controls.Add(buttonAlternativa);
                 y += 50;
             }
-
-            //
-            // Botão Confirmar
-            //
-            KryptonButton buttonConfirmar = new KryptonButton();
-            buttonConfirmar.Text = "Confirmar Resposta";
-            buttonConfirmar.Size = new Size(200, 40);
-            buttonConfirmar.Location = new Point(455, y + 5);
-            buttonConfirmar.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
-            buttonConfirmar.StateCommon.Back.Color2 = Color.FromArgb(32, 0, 177);
-            buttonConfirmar.OverrideDefault.Back.Color1 = Color.White;
-            buttonConfirmar.OverrideDefault.Back.Color2 = Color.White;
-            buttonConfirmar.StateCommon.Content.ShortText.Color1 = Color.White;
-            buttonConfirmar.StateCommon.Border.Rounding = 6;
-            buttonConfirmar.Cursor = Cursors.Hand;
-
-            buttonConfirmar.Click += (s, e) =>
-            {
-                // logica para confirmar resposta
-                // Pergunta.ChecarResposta();
-            };
-
-            panelQuestao.Controls.Add(buttonConfirmar);
+            
 
             TrocarConteudo(panelQuestao);
         }
