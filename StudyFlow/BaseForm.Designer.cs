@@ -36,18 +36,22 @@
             ButtonRanking = new Krypton.Toolkit.KryptonButton();
             ButtonHome = new Krypton.Toolkit.KryptonButton();
             PanelConteudo = new Krypton.Toolkit.KryptonPanel();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)PanelCima).BeginInit();
+            PanelCima.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PanelEsquerda).BeginInit();
             PanelEsquerda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // PanelCima
             // 
+            PanelCima.Controls.Add(pictureBox1);
             PanelCima.Dock = DockStyle.Top;
             PanelCima.Location = new Point(0, 0);
             PanelCima.Name = "PanelCima";
-            PanelCima.Size = new Size(1266, 80);
+            PanelCima.Size = new Size(1288, 80);
             PanelCima.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelCima.TabIndex = 0;
             // 
@@ -61,7 +65,7 @@
             PanelEsquerda.Dock = DockStyle.Left;
             PanelEsquerda.Location = new Point(0, 80);
             PanelEsquerda.Name = "PanelEsquerda";
-            PanelEsquerda.Size = new Size(167, 595);
+            PanelEsquerda.Size = new Size(167, 616);
             PanelEsquerda.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelEsquerda.TabIndex = 1;
             // 
@@ -195,26 +199,38 @@
             PanelConteudo.Dock = DockStyle.Fill;
             PanelConteudo.Location = new Point(167, 80);
             PanelConteudo.Name = "PanelConteudo";
-            PanelConteudo.Size = new Size(1099, 595);
+            PanelConteudo.Size = new Size(1121, 616);
             PanelConteudo.StateNormal.Color1 = Color.White;
             PanelConteudo.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.FromArgb(32, 0, 177);
+            pictureBox1.Image = Properties.Resources.logoStudyHorizontal;
+            pictureBox1.Location = new Point(439, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(394, 74);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
             // BaseForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(1280, 720);
+            ClientSize = new Size(1288, 696);
             Controls.Add(PanelConteudo);
             Controls.Add(PanelEsquerda);
             Controls.Add(PanelCima);
+            Location = new Point(0, 0);
             Name = "BaseForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "StudyFlow";
             FormClosing += BaseForm_FormClosing;
             ((System.ComponentModel.ISupportInitialize)PanelCima).EndInit();
+            PanelCima.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PanelEsquerda).EndInit();
             PanelEsquerda.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -233,5 +249,6 @@
         private Krypton.Toolkit.KryptonButton ButtonHome;
         private Krypton.Toolkit.KryptonButton ButtonAjuda;
         private Krypton.Toolkit.KryptonButton ButtonQuestoes;
+        private PictureBox pictureBox1;
     }
 }

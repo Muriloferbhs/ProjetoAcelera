@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             kryptonPanelEsquerda = new Krypton.Toolkit.KryptonPanel();
+            pictureBox1 = new PictureBox();
             TextBoxNome = new Krypton.Toolkit.KryptonTextBox();
             PanelDireita = new Krypton.Toolkit.KryptonPanel();
             pictureBoxMostrarSenha2 = new PictureBox();
@@ -49,6 +50,8 @@
             LabelUsuario = new Krypton.Toolkit.KryptonLabel();
             LabelNome = new Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)kryptonPanelEsquerda).BeginInit();
+            kryptonPanelEsquerda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PanelDireita).BeginInit();
             PanelDireita.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMostrarSenha2).BeginInit();
@@ -57,12 +60,23 @@
             // 
             // kryptonPanelEsquerda
             // 
+            kryptonPanelEsquerda.Controls.Add(pictureBox1);
             kryptonPanelEsquerda.Dock = DockStyle.Left;
             kryptonPanelEsquerda.Location = new Point(0, 0);
             kryptonPanelEsquerda.Name = "kryptonPanelEsquerda";
-            kryptonPanelEsquerda.Size = new Size(392, 588);
+            kryptonPanelEsquerda.Size = new Size(392, 531);
             kryptonPanelEsquerda.StateNormal.Color1 = Color.White;
             kryptonPanelEsquerda.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.White;
+            pictureBox1.Image = Properties.Resources.logostudycadastro;
+            pictureBox1.Location = new Point(65, 66);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(256, 351);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // TextBoxNome
             // 
@@ -104,7 +118,7 @@
             PanelDireita.Dock = DockStyle.Fill;
             PanelDireita.Location = new Point(392, 0);
             PanelDireita.Name = "PanelDireita";
-            PanelDireita.Size = new Size(412, 588);
+            PanelDireita.Size = new Size(402, 531);
             PanelDireita.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelDireita.TabIndex = 11;
             // 
@@ -187,6 +201,7 @@
             TextBoxSenha.Cursor = Cursors.IBeam;
             TextBoxSenha.Location = new Point(52, 330);
             TextBoxSenha.Name = "TextBoxSenha";
+            TextBoxSenha.PasswordChar = '●';
             TextBoxSenha.Size = new Size(135, 32);
             TextBoxSenha.StateCommon.Back.Color1 = Color.FromArgb(200, 194, 231);
             TextBoxSenha.StateCommon.Border.Rounding = 10F;
@@ -205,6 +220,7 @@
             TextBoxConfirmeSenha.Cursor = Cursors.IBeam;
             TextBoxConfirmeSenha.Location = new Point(218, 330);
             TextBoxConfirmeSenha.Name = "TextBoxConfirmeSenha";
+            TextBoxConfirmeSenha.PasswordChar = '●';
             TextBoxConfirmeSenha.Size = new Size(135, 32);
             TextBoxConfirmeSenha.StateCommon.Back.Color1 = Color.FromArgb(200, 194, 231);
             TextBoxConfirmeSenha.StateCommon.Border.Rounding = 10F;
@@ -378,7 +394,7 @@
             // CadastroForm
             // 
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(804, 588);
+            ClientSize = new Size(794, 531);
             Controls.Add(PanelDireita);
             Controls.Add(kryptonPanelEsquerda);
             Location = new Point(0, 0);
@@ -387,6 +403,8 @@
             Text = "Cadastro";
             FormClosing += CadastroForm_FormClosing;
             ((System.ComponentModel.ISupportInitialize)kryptonPanelEsquerda).EndInit();
+            kryptonPanelEsquerda.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)PanelDireita).EndInit();
             PanelDireita.ResumeLayout(false);
             PanelDireita.PerformLayout();
@@ -417,5 +435,6 @@
         private Krypton.Toolkit.KryptonButton ButtonSalvar;
         private PictureBox pictureBoxMostrarSenha2;
         private PictureBox pictureBoxMostrarSenha;
+        private PictureBox pictureBox1;
     }
 }

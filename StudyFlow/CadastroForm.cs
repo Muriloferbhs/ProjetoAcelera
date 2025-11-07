@@ -149,5 +149,10 @@ namespace StudyFlow
                 pictureBoxMostrarSenha2.Image = Properties.Resources.open_eye; // senha visível
             }
         }
+
+        private void pictureBoxLogo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
