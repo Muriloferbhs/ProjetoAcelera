@@ -141,7 +141,7 @@ namespace StudyFlow {
 
         public static Usuario Logar(string dadosLogin, string senhaLogin) {
 
-            Usuario.UsuariosDeTeste();
+            
 
             foreach (Usuario u in Usuario.DadosDoCadastroLogin)
             {
@@ -206,7 +206,7 @@ namespace StudyFlow {
             string emailTeste = "ricksz@gmail.com";
             string nomeUsuarioTeste = "rick";
             string senhaTeste = "2011";
-            double pontuacao = 0.0;
+            double pontuacao = 2.0;
             bool ativoTeste = true;
 
             Usuario testeUsuario = new Usuario(nomeCompletoTeste, cpfTeste, telefoneTeste, emailTeste, nomeUsuarioTeste, senhaTeste, ativoTeste, pontuacao);
@@ -219,7 +219,7 @@ namespace StudyFlow {
             string emailTeste1 = "sarahnunes@gmail.com";
             string nomeUsuarioTeste1 = "sarah";
             string senhaTeste1 = "SoDeusSabe";
-            double pontuacao1 = 0.0;
+            double pontuacao1 = 3.0;
             bool ativoTeste1 = false;
 
             Usuario testeUsuario1 = new Usuario(nomeCompletoTeste1, cpfTeste1, telefoneTeste1, emailTeste1, nomeUsuarioTeste1, senhaTeste1, ativoTeste1, pontuacao1);
@@ -233,7 +233,7 @@ namespace StudyFlow {
             string emailTeste2 = "murilo123@gmail.com";
             string nomeUsuarioTeste2 = "murilo";
             string senhaTeste2 = "naoTenhoIdeia";
-            double pontuacao2 = 0.0;
+            double pontuacao2 = 1.0;
             bool ativoTeste2 = true;
 
             Usuario testeUsuario2 = new Usuario(nomeCompletoTeste2, cpfTeste2, telefoneTeste2, emailTeste2, nomeUsuarioTeste2, senhaTeste2, ativoTeste2, pontuacao2);

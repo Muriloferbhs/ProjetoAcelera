@@ -48,7 +48,7 @@ namespace StudyFlow
                 HomeForm home = new HomeForm();
                 home.Show();
                 this.Hide();
-                //Ranking.CalcularRanking(usuariologado.NomeUser, usuariologado.Pontuacao, usuariologado.Ativo);
+                
 
             }
 

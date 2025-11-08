@@ -95,36 +95,16 @@ namespace StudyFlow
             labelCabecalhoPontuacao.StateCommon.Border.Color1 = Color.White;
             labelCabecalhoPontuacao.StateCommon.Border.Rounding = 8;
             panelRanking.Controls.Add(labelCabecalhoPontuacao);
+
+
             
-
-
-
-            //
-            // *** Colocar a logica de atualização aqui ***
-            //
-
-
-
-
-            // apenas exemplo visual
-            var rankingExemplo = new List<(string Usuario, int Pontos)>
-            {
-                ("Shiquinho Gaviao", 500),
-                ("Cebola", 200),
-                ("Lucas", 90),
-                ("Diana", 85),
-                ("Eve", 80),
-                ("Sett", 75),
-                ("Catlyn", 70),
-                ("Trundle", 65),
-                ("Vladmir", 60),
-                ("Lulu", 55)
-            };
+            Ranking.CalcularRanking();
+            Ranking.RankingGeral.Sort((a, b) => b.PontuacaoPrioridade.CompareTo(a.PontuacaoPrioridade));
 
             int y = 10;
             int posicao = 1;
 
-            foreach (var user in rankingExemplo)
+            foreach (var user in Ranking.RankingGeral)
             {
                 KryptonButton linha = new KryptonButton();
                 linha.Size = new Size(900, 45);
@@ -160,7 +140,7 @@ namespace StudyFlow
 
                 // Usuário
                 KryptonLabel labelNome = new KryptonLabel();
-                labelNome.Text = user.Usuario;
+                labelNome.Text = user.NomeUserRanking;
                 labelNome.Location = new Point(200, 10);
                 labelNome.StateCommon.ShortText.Font = new Font("Segoe UI", 12, FontStyle.Regular);
                 labelNome.StateCommon.ShortText.Color1 = Color.FromArgb(83, 79, 79);
@@ -168,7 +148,7 @@ namespace StudyFlow
 
                 // Pontos
                 KryptonLabel labelPontos = new KryptonLabel();
-                labelPontos.Text = $"{user.Pontos} pts";
+                labelPontos.Text = $"{user.PontuacaoPrioridade} pts";
                 labelPontos.Location = new Point(800, 10);
                 labelPontos.StateCommon.ShortText.Font = new Font("Segoe UI", 12, FontStyle.Bold);
                 labelPontos.StateCommon.ShortText.Color1 = Color.FromArgb(32, 0, 177);

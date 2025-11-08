@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,20 +12,20 @@ namespace StudyFlow {
 
         public double PontuacaoPrioridade { get; private set; }
         public string NomeUserRanking { get; private set; }
-        public bool AtivoRanking { get; private set; }
+      
 
 
         public static List<Ranking> RankingGeral = new List<Ranking>();
 
 
+        //Ranking.CalcularRanking(usuariologado.NomeUser, usuariologado.Pontuacao, usuariologado.Ativo);
 
 
-
-        public Ranking(string nomeUserlogado, double pontuacaoUserlogado, bool ativoRanking) {
+        public Ranking(string nomeUserlogado, double pontuacaoUserlogado) {
 
             NomeUserRanking = nomeUserlogado;
             PontuacaoPrioridade = pontuacaoUserlogado;
-            AtivoRanking = ativoRanking;
+           
 
         }
 
@@ -38,42 +39,40 @@ namespace StudyFlow {
 
 
 
-        public static void CalcularRanking(string nomeUserlogado, double pontuacaoUser, bool ativoUser) {
+        public static void CalcularRanking() {
 
 
 
             //Usuario novoUsuario = new Usuario(nomeCompleto, cpf,
+            //DadosDoCadastroLogin == RankingGeral
 
-
-            Ranking u;
-            Ranking usuarioExistente = RankingGeral.FirstOrDefault(u => u.NomeUserRanking == nomeUserlogado);
-
-
-
-            if (usuarioExistente == null)
+            foreach (Usuario user in Usuario.DadosDoCadastroLogin)
             {
-                Ranking newUserRanking = new Ranking(nomeUserlogado, pontuacaoUser, ativoUser);
-                Ranking.RankingGeral.Add(newUserRanking);
+
+
+                Ranking usuarioNoRanking = RankingGeral.FirstOrDefault(u => u.NomeUserRanking == user.NomeUser);
+
+
+
+                if (usuarioNoRanking == null)
+                {
+                    RankingGeral.Add(new Ranking
+                    {
+                        NomeUserRanking = user.NomeUser,
+                        PontuacaoPrioridade = user.Pontuacao
+                    });
+
+                }
+                else
+                {
+                    usuarioNoRanking.PontuacaoPrioridade = user.Pontuacao;
+                }
+                
+
+
+
 
             }
-
-
-            RankingGeral.Sort((a, b) => b.PontuacaoPrioridade.CompareTo(a.PontuacaoPrioridade));
-
-
-
-
-
-
-
-
-            foreach (var Ranking in RankingGeral)
-            {
-                Console.WriteLine($"{Ranking.NomeUserRanking} {Ranking.AtivoRanking} (Priority: {Ranking.PontuacaoPrioridade})");
-            }
-
-
-
 
         }
 
