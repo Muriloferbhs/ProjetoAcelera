@@ -6,8 +6,10 @@ using System.Web;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
-namespace StudyFlow {
-    internal class Usuario {
+namespace StudyFlow
+{
+    internal class Usuario
+    {
         public string NomeUser { get; private set; }// parametro de login
         public string NomeCompleto { get; private set; }
         public string Cpf { get; private set; }// parametro de login
@@ -22,12 +24,14 @@ namespace StudyFlow {
 
         public static Usuario UsuarioLogado { get; set; }
 
-        public Usuario() {
+        public Usuario()
+        {
         }
 
 
 
-        public Usuario(string nomeCompleto, string cpf, string telefone, string email, string nomeUsuario, string senha, bool ativo, double pontuacao) {
+        public Usuario(string nomeCompleto, string cpf, string telefone, string email, string nomeUsuario, string senha, bool ativo, double pontuacao)
+        {
             NomeCompleto = nomeCompleto;
             NomeUser = nomeUsuario;
             Cpf = cpf;
@@ -40,7 +44,8 @@ namespace StudyFlow {
 
 
 
-        public void AtribuirSenha(string senha) {
+        public void AtribuirSenha(string senha)
+        {
             //carlos 04/10--------------------------------------------------------------------------------------------
             Senha = BCrypt.Net.BCrypt.HashPassword(senha);
         }
@@ -53,7 +58,8 @@ namespace StudyFlow {
 
         //Murilo fez no dia 4/10 ----------------------------------------------------------------------------------
         //genial, não tinha pensado em validar assim (Henrique falando)
-        public static bool AutenticarCPF(string cpf) {
+        public static bool AutenticarCPF(string cpf)
+        {
             int decimoIdeal = 0;
             int onzeIdeal = 0;
             int total = 0;
@@ -109,7 +115,8 @@ namespace StudyFlow {
         }
 
 
-        public static bool AutenticarEmail(string email) {
+        public static bool AutenticarEmail(string email)
+        {
             if (!email.Contains("@"))
             {
                 KryptonMessageBox.Show("Insira um Email válido!");
@@ -120,7 +127,8 @@ namespace StudyFlow {
                 return true;
             }
         }
-        public static bool AutenticarTelefone(string telefone) {
+        public static bool AutenticarTelefone(string telefone)
+        {
             if (telefone.Length == 11 && telefone.All(char.IsDigit) || telefone.Length == 14 && telefone.All(char.IsDigit))
             {
                 ;
@@ -139,9 +147,10 @@ namespace StudyFlow {
 
 
 
-        public static Usuario Logar(string dadosLogin, string senhaLogin) {
+        public static Usuario Logar(string dadosLogin, string senhaLogin)
+        {
 
-            
+
 
             foreach (Usuario u in Usuario.DadosDoCadastroLogin)
             {
@@ -157,7 +166,7 @@ namespace StudyFlow {
 
                 }
                 else if ((u.NomeUser == dadosLogin || u.Cpf == dadosLogin) && BCrypt.Net.BCrypt.Verify(senhaLogin, u.Senha) == true && u.Ativo == false)
-                { 
+                {
                     DialogResult resultado = MessageBox.Show(
                         "Este usuário está desativado. Deseja reativá-lo?",
                         "Confirmação",
@@ -187,7 +196,8 @@ namespace StudyFlow {
 
 
 
-        public static Usuario DesativarAtivarUser(bool ativo, Usuario u) {
+        public static Usuario DesativarAtivarUser(bool ativo, Usuario u)
+        {
 
             if (ativo == true)
             {
@@ -201,7 +211,8 @@ namespace StudyFlow {
             }
         }
 
-        public static void UsuariosDeTeste() {
+        public static void UsuariosDeTeste()
+        {
 
 
             string nomeCompletoTeste = "Carlos Henrique dos Santos Pelegrini Duarte";
@@ -244,11 +255,23 @@ namespace StudyFlow {
             Usuario.DadosDoCadastroLogin.Add(testeUsuario2);
 
 
+            string nomeCompletoTeste3 = "JMurilo";
+            string cpfTeste3 = "36840918041";
+            string telefoneTeste3 = "12996036499";
+            string emailTeste3 = "murilo123@gmail.com";
+            string nomeUsuarioTeste3 = "aa";
+            string senhaTeste3 = "aa";
+            double pontuacao3 = 10;
+            bool ativoTeste3 = true;
+
+            Usuario testeUsuario3 = new Usuario(nomeCompletoTeste3, cpfTeste3, telefoneTeste3, emailTeste3, nomeUsuarioTeste3, senhaTeste3, ativoTeste3, pontuacao3);
+            Usuario.DadosDoCadastroLogin.Add(testeUsuario3);
 
         }
 
 
-        public static void RecuperarSenha() {
+        public static void RecuperarSenha()
+        {
 
 
 
