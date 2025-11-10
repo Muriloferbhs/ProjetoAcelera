@@ -10,7 +10,7 @@
 		"C": "influência do grupo na tomada de decisão.",
 		"D": "diferença cultural entre galegos e andaluzes",
 		"E": "variação meteorológica entre Sevilha e Galiza.",
-		"Resposta": "D",
+		"Resposta": "diferença cultural entre galegos e andaluzes",
 		"Pontuacao": 4,
 		"PontuacaoParcial": 4
 	},
@@ -25,250 +25,250 @@
 		"C": "promover reflexões acerca de conceitos abstratos.",
 		"D": "representar a pluralidade linguística de seu país.",
 		"E": "narrar uma trajetória de autoconhecimento.",
-		"Resposta": "D",
+		"Resposta": "representar a pluralidade linguística de seu país.",
 		"Pontuacao": 5,
 		"PontuacaoParcial": 5
 	},
-{
-	"ID": "0003",
-	"Tipo": "Enem",
-	"Area": "Linguagens e suas Tecnologias",
-	"Tema": "Espanhol",
-	"Enunciado": "Morir muy vivos\n No todo es perder, es cierto. Si te esfuerzas mucho y bien, porque no viene de fábrica, ganas conocimiento del mundo y de ti mismo, empatía, sosiego y, en suma, algo que podríamos denominar sabiduría. Pero creo que para ello hay que mantenerse alerta y no darse nunca por vencido. Pero también es un tiempo para saldar cuentas. No creo que haya que dejarse llevar por el peso de los días como un leño podrido al que las olas arrojan finalmente a la playa. Uno siempre puede intentar sacarse alguna de las piedras que lleva a la espalda, decir las cosas que nunca se atrevió a decir, cumplir en la medida de lo posible los deseos arrumbados, rescatar algún sueño que quedó en la cuneta. No rendirse, esa es la clave. Y sobre todo decirse: ¿y por qué no? Porque la vejez no está reñida con la audacia. Debemos aspirar a morir muy vivos.\n Nesse texto, ao utilizar a expressão “morir muy vivos”, a escritora Rosa Montero evidencia a importância de se:",
-	"A": "acumular sabedoria com o passar do tempo.",
-	"B": "observar o impacto dos anos sobre o corpo.",
-	"C": "rever os erros e os acertos de sua trajetória.",
-	"D": "desfrutar de todas as fases da vida.",
-	"E": "libertar das amarras sociais.",
-	"Resposta": "D",
-	"Pontuacao": 6,
-	"PontuacaoParcial": 6
-},
-{
-	"ID": "0004",
-	"Tipo": "Enem",
-	"Area": "Linguagens e suas Tecnologias",
-	"Tema": "Espanhol",
-	"Enunciado": "¿De qué se trata este fenómeno?\n Se entiende por cultura de la cancelación a una práctica popular que consiste en “quitarle apoyo” especialmente a figuras públicas y compañías multinacionales después de que hayan hecho o dicho algo considerado objetable u ofensivo. Cuando alguien o algo está cancelado se descarta, se deja de ver, se deja de escuchar, se desclasifica, se aísla, se abandona, se niega, se deja de consumir hasta que eventualmente puede o no desaparecer. Es una estrategia muy extendida en la historia de las luchas anticoloniales, antiespecistas, sexodisidentes, feministas y, especialmente en nuestro país, también llevadas adelante por el movimiento de derechos humanos. Entonces, ¿dónde radica el problema? Se puede observar positivamente que hay un proceso cada vez más agudo de socialización de herramientas críticas para desmantelar formas de desigualdad incrustadas en los lazos sociales. Pero la popularización irrestricta y el uso amplificado de esta herramienta por fuera de sus contextos colectivos de emergencia han despertado efectos adversos en una sociedad atravesada por las pantallas como formas de encierro-consumo, la representación online como única esfera pública y un imperativo felicista cuya moral nos obliga a trabajar ansiosamente por una vida sin desacuerdos, sin errores y sin dolor, a como dé lugar.\n Na argumentação apresentada sobre cultura do cancelamento, esse texto objetiva:",
-	"A": "apresentar o conceito desse tipo de prática.",
-	"B": "mostrar a contrariedade das mídias com relação a essa atitude.",
-	"C": "criticar o impacto dessa cultura sobre a vida representada nas redes.",
-	"D": "evidenciar a democratização dessa prática na sociedade virtual.",
-	"E": "discorrer historicamente sobre a origem e as causas dessa cultura.",
-	"Resposta": "C",
-	"Pontuacao": 7,
-	"PontuacaoParcial": 7
-},
-{
-	"ID": "0005",
-	"Tipo": "Enem",
-	"Area": "Linguagens e suas Tecnologias",
-	"Tema": "Inglês",
-	"Enunciado": "As my official bio reads, I was made in Cuba, assembled is Spain, and imported to the United States – meaning my mother, seven months pregnant, and the rest of my family arrived as exiles from Cuba to Madrid, where I was born. Less than two months later, we emigrated once more and settled in New York City, then eventually in Miami, where I was raised and educated. Although technically we lived in the United States, the Cuban community was culturally insular in Miami during the 1970s, bonded together by the trauma of exile. What’s more, it seemed that practically everyone was Cuban: my teachers, my classmates, the mechanic, the bus driver. I didn’t grow up feeling different or treated as a minority. The few kids who got picked on in my grade school were the ones with freckles and funny last names like Dawson and O’Neil.\n Ao relatar suas vivências, o autor destaca o(a):",
-	"A": "qualidade da educação formal em Miami. ",
-	"B": "prestígio da cultura cubana nos Estados Unidos.",
-	"C": "oportunidade de qualificação profissional em Miami.",
-	"D": "cenário da integração de cubanos nos Estados Unidos.",
-	"E": "fortalecimento do elo familiar em comunidades estadunidenses.",
-	"Resposta": "D",
-	"Pontuacao": 4,
-	"PontuacaoParcial": 4
-},
-{
-	"ID": "0006",
-	"Tipo": "Enem",
-	"Area": "Linguagens e suas Tecnologias",
-	"Tema": "Inglês",
-	"Enunciado": "Two hundred years ago, Jane Austen lived in a world where single men boasted vast estates; single ladies were expected to speak several languages, sing and play the piano. In both cases, it was, of course, advantageous if you looked good too. So, how much has – or hasn’t – changed? Dating apps opaquely outline the demands of today’s relationship market; users ruminate long and hard over their choice of pictures and what they write in their biographies to hook in potential lovers, and that’s just your own profile. What do you look for in a future partner’s profile – potential signifiers of a popular personality, a good job, a nice car? These apps are a poignant reminder of the often classist atitudes we still adopt, as well as the financial and aesthetic expectations we demand from potential partners.\n O texto aborda relações interpessoais com o objetivo de:",
-	"A": "problematizar o papel de gênero em casamentos modernos. ",
-	"B": "apontar a relevância da educação formal na escolha de parceiros. ",
-	"C": "comparar a expectativa de parceiros amorosos em épocas distintas.",
-	"D": "discutir o uso de aplicativos para proporcionar encontros românticos.",
-	"E": "valorizar a importância da aparência física na seleção de pretendentes",
-	"Resposta": "C",
-	"Pontuacao": 5,
-	"PontuacaoParcial": 5
-},
-{
-	"ID": "0007",
-	"Tipo": "Enem",
-	"Area": "Linguagens e suas Tecnologias",
-	"Tema": "Inglês",
-	"Enunciado": "Becoming\n Back in the ancestral homeland of Michelle Obama, black women were rarely granted the honorific Miss or Mrs., but were addressed by their first name, or simply as gal” or “auntie” or worse. This so openly demeaned them that many black women, long after they had left the South, refused to answer if called by their first name. A mother and father in 1970s Texas named their newborn “Miss” so that white people would have no choice but to address their daughter by that title. Black women were meant for the field or the kitchen, or for use as they saw fit. They were, by definition, not ladies. The very idea of a black woman as first lady of the land, well, that would have been unthinkable.\n A crítica do livro de memórias de Michelle Obama, ex-primeira-dama dos EUA, aborda a história das relações humanas na cidade natal da autora. Nesse contexto, o uso do vocábulo “unthinkable” ressalta que:",
-	"A": "a ascensão social era improvável.",
-	"B": "a mudança de nome era impensável.",
-	"C": "a origem do indivíduo era irrelevante.",
-	"D": "o trabalho feminino era inimaginável.",
-	"E": "o comportamento parental era irresponsável.",
-	"Resposta": "A",
-	"Pontuacao": 6,
-	"PontuacaoParcial": 6
-},
-{
-	"ID": "0008",
-	"Tipo": "Enem",
-	"Area": "Linguagens e suas Tecnologias",
-	"Tema": "Inglês",
-	"Enunciado": "No man is an island,\n Entire of itself;\n Every man is a piece of the continent,\n A part of the main.\n [...]\n Any man’s death diminishes me,\n Because I am involved in mankind.\n Nesse poema, a expressão “No man is an island”ressalta o(a)",
-	"A": "medo da morte.",
-	"B": "ideia de conexão.",
-	"C": "conceito de solidão.",
-	"D": "risco de devastação.",
-	"E": "necessidade de empatia.",
-	"Resposta": "B",
-	"Pontuacao": 3,
-	"PontuacaoParcial": 3
-},
-{
-	"ID": "0009",
-	"Tipo": "Enem",
-	"Area": "Linguagens e suas Tecnologias",
-	"Tema": "Cultura",
-	"Enunciado": "É fundamentalmente no Minho, norte de Portugal, que o cavaquinho aparece como instrumento tipicamente popular, ligado às formas essenciais da música característica dessa província. O cavaquinho minhoto tem escala rasa com o tampo, o que facilita a prática do “rasqueado”. O cavaquinho chega ao Brasil diretamente de Portugal, e o modelo brasileiro é maior do que a sua versão portuguesa, com uma caixa de ressonância mais funda. Semelhante ao cavaquinho minhoto, o machete, ou machetinho madeirense, é um pequeno cordófono de corda dedilhada, que faz parte da grande e diversificada família das violas de mão portuguesas. O ukulele tem a sua origem no século XIX, tendo como ancestrais o braguinha (ou machete) e o rajão, instrumentos levados pelos madeirenses quando eles emigraram para o Havaí.\n O conjunto dessas práticas musicais demonstra que os instrumentos mencionados no texto",
-	"A": "refletem a dependência da utilização de matéria-prima europeia.",
-	"B": "adaptam suas características a cada cultura, assumindo nova identidade.",
-	"C": "comprovam a hegemonia portuguesa na invenção de cordófonos dedilhados.",
-	"D": "ilustram processos de dominação cultural, evidenciando situações de choque cultural.",
-	"E": " mantêm nomenclatura própria para garantir a fidelidade às formas originais de confecção.",
-	"Resposta": "C",
-	"Pontuacao": 7,
-	"PontuacaoParcial": 7
-},
-{
-	"ID": "0010",
-	"Tipo": "Enem",
-	"Area": "Linguagens e suas Tecnologias",
-	"Tema": "Saúde Mental",
-	"Enunciado": "Pressão, depressão, estresse e crise de ansiedade. Os males da sociedade contemporânea também estão no esporte. A tenista Naomi Osaka, do Japão, jogadora mais bem paga do mundo e que já ocupou o número 2 do ranking, retirou-se do torneio de Roland Garros de 2021 porque não estava conseguindo administrar as crises de ansiedade provocadas pelos grandes eventos, por ser uma estrela aos 23 anos, e pelo peso de parte da imprensa. O tenista australiano Nick Kyrgios, de 25 anos, revelou sua “situação triste e solitária” enquanto lutava contra a depressão causada pelo ritmo avassalador do Circuito Mundial de Tênis. O jogador de basquete americano Kevin Love também tornou público seu quadro de ansiedade e depressão. O mundo do atleta é solitário e distante da família. O que vemos numa partida não reflete a rotina desgastante. A imprensa denomina atletas como heróis, como se aquele corpo fosse indestrutível, mas a mente é o ponto fraco da história.\n As causas do desequilíbrio na saúde mental apontadas no texto estão relacionadas às: ",
-	"A": "nacionalidades diversificadas dos praticantes.",
-	"B": "modalidades esportivas distintas.",
-	"C": "faixas etárias aproximadas",
-	"D": "representações heroicas dos atletas.",
-	"E": "pressões constantes dos eventos e da mídia.",
-	"Resposta": "C",
-	"Pontuacao": 9,
-	"PontuacaoParcial": 9
-},
-{
-	"ID": "0011",
-	"Tipo": "Enem",
-	"Area": "Linguagens e suas Tecnologias",
-	"Tema": "Arte Afro- Brasileira",
-	"Enunciado": "Uma definição possível para o conceito de arte afro-brasileira pode ser: produção plástica que é feita por negros, mestiços ou brancos a partir de suas experiências sociais com a cultura negra nacional. Exemplos clássicos dessa abordagem são Carybé (1911-1997), Mestre Didi (1917-2013) e Djanira da Motta e Silva (1914-1979), cujas obras emergem e ganham forma em razão do ambiente social no qual habitaram e viveram. Se Didi era um célebre representante da cultura religiosa nagô baiana e brasileira, iniciado desde o ventre no candomblé, Carybé era argentino e, naturalizado brasileiro, envolveu-se de tal modo com essa religião que alguns dos orixás dos quais conhecemos a imagem visual são produções suas.\n Sob a perspectiva da multiculturalidade e de acordo com o texto, a produção artística afro-brasileira caracteriza-se pelo(a): ",
-	"A": "estranhamento no modo de apropriação da cultura religiosa de matriz africana.",
-	"B": "distanciamento entre as raízes de matriz africana e a estética de outras culturas.",
-	"C": "visão uniformizadora das religiões de matriz africana expressada nas diferentes produções.",
-	"D": "relação complexa entre as vivências pessoais dos artistas e os referenciais estéticos de matriz africana.",
-	"E": "padronização da forma de produção e da temática da matriz africana presente nas obras dos artistas citados.",
-	"Resposta": "D",
-	"Pontuacao": 5,
-	"PontuacaoParcial": 5
-},
-{
-	"ID": "0012",
-	"Tipo": "Enem",
-	"Area": "Linguagens e suas Tecnologias",
-	"Tema": "Determinates Sociais",
-	"Enunciado": "Um estudo norte-americano analisou os efeitos da pandemia da covid-19 sobre a saúde mental e a manutenção da atividade física, revelando que um fator está diretamente ligado ao outro. De acordo com os dados, famílias de baixa renda foram mais impactadas pelo ciclo vicioso de falta de motivação e pelo sedentarismo. Diante da necessidade de distanciamento social e do início da quarentena, as opções de espaços seguros para exercícios físicos diminuíram, o que dificultou que as pessoas mantivessem seus níveis de atividade. Os dados evidenciaram que as pessoas mais ativas tinham melhor estado de saúde mental. As pessoas com menor renda tiveram mais dificuldade para manter os níveis de atividade física durante a pandemia, sendo aproximadamente duas vezes menos propensas a continuarem no mesmo ritmo de exercícios de antes da pandemia. Habitantes de áreas urbanas mostraram maior probabilidade de não conseguirem manter os níveis de atividade física semelhantes aos de pessoas que vivem em zonas rurais, onde há mais oportunidades de sair para espaços abertos.\n O texto evidencia a perspectiva ampliada de saúde ao abordar criticamente a pandemia da covid-19 a partir do(a): ",
-	"A": "busca por espaços para a prática de exercícios físicos.",
-	"B": "necessidade de se manter ativo para ter equilíbrio emocional.",
-	"C": "distanciamento social e sua vinculação com a prática de atividades físicas.",
-	"D": "relação entre os determinantes socioeconômicos e a prática de exercícios.",
-	"E": "benefício de morar em áreas rurais para preservar a estabilidade psicológica.",
-	"Resposta": "D",
-	"Pontuacao": 3,
-	"PontuacaoParcial": 3
-},
-{
-	"ID": "0013",
-	"Tipo": "Enem",
-	"Area": "Linguagens e suas Tecnologias",
-	"Tema": "Estigma Social",
-	"Enunciado": "Meu irmão é filho adotivo. Há uma tecnicidade no termo, filho adotivo, que contribui para sua aceitação social. Há uma novidade que por um átimo o absolve das mazelas do passado, que parece limpá-lo de seus sentidos indesejáveis. Digo que meu irmão é filho adotivo e as pessoas tendem a assentir com solenidade, disfarçando qualquer pesar, baixando os olhos como se não sentissem nenhuma ânsia de perguntar mais nada. Talvez compartilhem da minha inquietude, talvez de fato se esqueçam do assunto no próximo gole ou na próxima garfada. Se a inquietude continua a reverberar em mim, é porque ouço a frase também de maneira parcial — meu irmão é filho — e é difícil aceitar que ela não termine com a verdade tautológica habitual: meu irmão é filho dos meus pais. Estou entoando que meu irmão é filho e uma interrogação sempre me salta aos lábios: filho de quem?\n Das reflexões do narrador, apreende-se uma perspectiva que associa a adoção",
-	"A": "a representações sociais estigmatizadas da parentalidade.",
-	"B": "à necessidade de aprovação por parte de desconhecidos.",
-	"C": "ao julgamento velado de membros do núcleo familiar.",
-	"D": "ao conflito entre o termo técnico e o vínculo afetivo.",
-	"E": "a inquietações próprias das relações entre irmãos.",
-	"Resposta": "A",
-	"Pontuacao": 7,
-	"PontuacaoParcial": 7
-},
-{
-	"ID": "0014",
-	"Tipo": "Enem",
-	"Area": "Linguagens e suas Tecnologias",
-	"Tema": "Tecnologias Indígenas",
-	"Enunciado": "Teclado amazônico\n Em novembro de 2023, uma professora indígena recebeu uma missão: verter as regras de um jogo de tabuleiro infantil do português para o tukano, sua língua nativa. Com vinte anos de experiência como professora de línguas em Taracuá, no Amazonas, ela já se dedicava à tradução havia tempos. O trabalho ficou mais fácil graças a um aplicativo lançado no ano anterior: com o Linklado em seu computador, ela traduziu as sete páginas das instruções do jogo em dois dias. Sem esse recurso, a tarefa seria bem mais trabalhosa. Antes dele, diz a professora, as transcrições de línguas indígenas exigiam o esforço quase manual de produzir diacríticos (acentos gráficos)\n e letras que não constam no teclado de aplicativos de mensagens ou programas de texto. Para a pesquisadora do Instituto Nacional de Pesquisas da Amazônia (Inpa), idealizadora do aplicativo, o Linklado representa uma revolução. O programa não restringe combinações de acentos, e isso poderá facilitar a criação de representações gráficas para fonemas que ainda não têm forma escrita. “Eu mirei em uma dor e atingimos várias outras”, diz. “O Linklado possibilita que o Brasil reconheça a sua diversidade linguística”, afirma uma antropóloga que é colega da pesquisadora no Inpa e faz parte da equipe do aplicativo. Ela defende que escrever na língua materna é uma das principais formas de preservá-la\n De acordo com esse texto, o aplicativo Linklado contribuiu para a: ",
-	"A": "criação de fonemas representativos de línguas indígenas no meio digital.",
-	"B": "democratização do registro escrito de línguas dos povos originários.",
-	"C": "adaptação de regras de jogos de tabuleiro de origem indígena.",
-	"D": "divulgação das técnicas de tradução de línguas indígenas.",
-	"E": "aprendizagem da língua portuguesa pelos indígenas.",
-	"Resposta": "B",
-	"Pontuacao": 2,
-	"PontuacaoParcial": 2
-},
-{
-	"ID": "0015",
-	"Tipo": "Enem",
-	"Area": "Linguagens e suas Tecnologias",
-	"Tema": "Evolução Esportiva",
-	"Enunciado": "Os Jogos Olímpicos já não são mais os mesmos. E isso não é nem uma crítica, nem um elogio. É uma constatação. Esse movimento começou com o vôlei de praia tornando-se esporte olímpico em 1996, passou pela chegada do BMX Racing como primeiro “radical” a entrar no programa em 2008, e agora atinge seu momento mais insólito com a inclusão do break dance como modalidade dos Jogos de Paris, em 2024. Para os mais tradicionalistas, o cruzamento da linha que delimitava o que é esporte e o que é cultura e arte é uma afronta ao espírito dos Jogos Olímpicos. Skate e surfe, que há anos têm competições na televisão, pareciam estar na divisa entre esses dois mundos, o limite do aceitável pelos puristas. O break dance estaria do lado de “lá” dessa fronteira. Para o Comitê Olímpico Internacional, a decisão faz parte de uma estratégia de se comunicar com jovens urbanos que se exercitam e se entretêm de uma maneira muito diferente da dos seus avós.\n A mudança no programa olímpico mencionada no texto mostra que o esporte está se: ",
-	"A": "aproximando da aventura.",
-	"B": "mantendo em sua forma padrão",
-	"C": "tornando uma forma de dança.",
-	"D": "afastando de elementos culturais.",
-	"E": "adaptando às demandas do seu tempo.",
-	"Resposta": "E",
-	"Pontuacao": 1,
-	"PontuacaoParcial": 1
-},
-{
-	"ID": "0016",
-	"Tipo": "Enem",
-	"Area": "Linguagens e suas Tecnologias",
-	"Tema": "Metalinguagem Editorial",
-	"Enunciado": "Como é bom reencontrar os leitores da Revista da Cultura por meio de uma publicação com outro visual, conteúdo de qualidade e interesses ampliados! ]cultura[, este nome simples, e eu diria mesmo familiar, nasce entre dois colchetes voltados para fora. E não é por acaso: são sinais abertos, receptivos, propícios à circulação de ideias. O DNA da publicação se mantém o mesmo, afinal, por longos anos montamos nossas edições com assuntos saídos das estantes de uma grande livraria — e assim continuará sendo. Literatura, sociologia, filosofia, artes… nunca será difícil montar a pauta da revista porque os livros nos ensinam que monotonia é só para quem não lê.\n O uso não padrão dos colchetes para nomear a revista atribui-lhes uma nova função e está correlacionado ao(à)",
-	"A": "perfil de público-alvo, constituído por leitores exigentes e especializados em leitura acadêmica.",
-	"B": "propósito do editor, chamando a atenção para o rigor normativo nos textos da revista.",
-	"C": "exclusividade na seleção temática, direcionada para a área das ciências humanas.",
-	"D": "identidade da revista, voltada para a recepção e a promoção de ideias circulantes em livros.",
-	"E": "padrão editorial dos artigos, organizados em torno de uma proposta de design inovador.",
-	"Resposta": "D",
-	"Pontuacao": 3,
-	"PontuacaoParcial": 3
-},
-{
-	"ID": "0017",
-	"Tipo": "Enem",
-	"Area": "Linguagens e suas Tecnologias",
-	"Tema": "Variação Linguística",
-	"Enunciado": "Um grupo de pesquisadores da Universidade Federal do Ceará desenvolveu um dicionário para traduzir sintomas de doenças da linguagem popular para os termos médicos. Defruço, chanha e piloura, por exemplo, podem ser termos conhecidos para muitos, mas, durante uma consulta médica, o desconhecimento pode significar um diagnóstico errado.\n “Isso é um registro histórico e pode ser muito útil para estudos dessas comunidades, na abordagem médica delas. É de certa forma pioneiro no Brasil e, sem dúvida, um instrumento de trabalho importante, porque a comunicação é fundamental na relação médico-paciente”, avalia o reitor da instituição.\n Ao registrarem usos regionais de termos da área médica, Pesquisadores",
-	"A": "apontaram erros motivados pelo desconhecimento da variedade linguística local.",
-	"B": "explicaram problemas provocados pela incapacidade de comunicação.",
-	"C": "descobriram novos sintomas de doenças existentes na comunidade.",
-	"D": "propiciaram melhor compreensão dos sintomas dos pacientes.",
-	"E": "divulgaram um novo rol de doenças características da localidade.",
-	"Resposta": "D",
-	"Pontuacao": 2,
-	"PontuacaoParcial": 2
-},
-{
-	"ID": "0018",
-	"Tipo": "Enem",
-	"Area": "Linguagens e suas Tecnologias",
-	"Tema": "Memória História e Escravidão",
-	"Enunciado": "Esses meninos que aí andam jogando peteca não viram nunca um escravo… Quando crescerem, saberão que já houve no Brasil uma raça triste, votada à escravidão e ao desespero; e verão nos museus a coleção hedionda dos troncos, dos vira-mundos e dos bacalhaus; e terão notícias dos trágicos horrores de uma época maldita: filhos arrancados ao seio das mães, virgens violadas em pranto, homens assados lentamente em fornos de cal, mulheres nuas recebendo na sua mísera nudez desvalida o duplo ultraje das chicotadas e dos olhares do feitor bestial. […] Mas a sua indignação nunca poderá ser tão grande como a daqueles que nasceram e cresceram em pleno horror, no meio desse horrível drama de sangue e lodo, sentindo dentro do ouvido e da alma, numa arrastada e contínua melopeia, o longo gemer da raça mártir — orquestração satânica de todos os soluços, de todas as impressões, de todos os lamentos que a tortura e a injustiça podem arrancar a gargantas humanas.\n Publicado em 1902, o texto de Olavo Bilac enfatiza as mazelas da escravidão no Brasil ao: ",
-	"A": "descrever de modo impessoal as consequências da exploração racial sobre as gerações futuras.",
-	"B": "contrapor a infância privilegiada das crianças da época à infância violentada das crianças escravizadas.",
-	"C": "antecipar o futuro apagamento das marcas da escravidão no contexto social.",
-	"D": "criticar a atenuação da violência contra os povos escravizados nas memórias retratadas pelos museus.",
-	"E": "imaginar a reação de indiferença de seus contemporâneos com os escravizados libertos.",
-	"Resposta": "C",
-	"Pontuacao": 6,
-	"PontuacaoParcial": 6
-},
+	{
+		"ID": "0003",
+		"Tipo": "Enem",
+		"Area": "Linguagens e suas Tecnologias",
+		"Tema": "Espanhol",
+		"Enunciado": "Morir muy vivos\n No todo es perder, es cierto. Si te esfuerzas mucho y bien, porque no viene de fábrica, ganas conocimiento del mundo y de ti mismo, empatía, sosiego y, en suma, algo que podríamos denominar sabiduría. Pero creo que para ello hay que mantenerse alerta y no darse nunca por vencido. Pero también es un tiempo para saldar cuentas. No creo que haya que dejarse llevar por el peso de los días como un leño podrido al que las olas arrojan finalmente a la playa. Uno siempre puede intentar sacarse alguna de las piedras que lleva a la espalda, decir las cosas que nunca se atrevió a decir, cumplir en la medida de lo posible los deseos arrumbados, rescatar algún sueño que quedó en la cuneta. No rendirse, esa es la clave. Y sobre todo decirse: ¿y por qué no? Porque la vejez no está reñida con la audacia. Debemos aspirar a morir muy vivos.\n Nesse texto, ao utilizar a expressão “morir muy vivos”, a escritora Rosa Montero evidencia a importância de se:",
+		"A": "acumular sabedoria com o passar do tempo.",
+		"B": "observar o impacto dos anos sobre o corpo.",
+		"C": "rever os erros e os acertos de sua trajetória.",
+		"D": "desfrutar de todas as fases da vida.",
+		"E": "libertar das amarras sociais.",
+		"Resposta": "desfrutar de todas as fases da vida.",
+		"Pontuacao": 6,
+		"PontuacaoParcial": 6
+	},
+	{
+		"ID": "0004",
+		"Tipo": "Enem",
+		"Area": "Linguagens e suas Tecnologias",
+		"Tema": "Espanhol",
+		"Enunciado": "¿De qué se trata este fenómeno?\n Se entiende por cultura de la cancelación a una práctica popular que consiste en “quitarle apoyo” especialmente a figuras públicas y compañías multinacionales después de que hayan hecho o dicho algo considerado objetable u ofensivo. Cuando alguien o algo está cancelado se descarta, se deja de ver, se deja de escuchar, se desclasifica, se aísla, se abandona, se niega, se deja de consumir hasta que eventualmente puede o no desaparecer. Es una estrategia muy extendida en la historia de las luchas anticoloniales, antiespecistas, sexodisidentes, feministas y, especialmente en nuestro país, también llevadas adelante por el movimiento de derechos humanos. Entonces, ¿dónde radica el problema? Se puede observar positivamente que hay un proceso cada vez más agudo de socialización de herramientas críticas para desmantelar formas de desigualdad incrustadas en los lazos sociales. Pero la popularización irrestricta y el uso amplificado de esta herramienta por fuera de sus contextos colectivos de emergencia han despertado efectos adversos en una sociedad atravesada por las pantallas como formas de encierro-consumo, la representación online como única esfera pública y un imperativo felicista cuya moral nos obliga a trabajar ansiosamente por una vida sin desacuerdos, sin errores y sin dolor, a como dé lugar.\n Na argumentação apresentada sobre cultura do cancelamento, esse texto objetiva:",
+		"A": "apresentar o conceito desse tipo de prática.",
+		"B": "mostrar a contrariedade das mídias com relação a essa atitude.",
+		"C": "criticar o impacto dessa cultura sobre a vida representada nas redes.",
+		"D": "evidenciar a democratização dessa prática na sociedade virtual.",
+		"E": "discorrer historicamente sobre a origem e as causas dessa cultura.",
+		"Resposta": "criticar o impacto dessa cultura sobre a vida representada nas redes.",
+		"Pontuacao": 7,
+		"PontuacaoParcial": 7
+	},
+	{
+		"ID": "0005",
+		"Tipo": "Enem",
+		"Area": "Linguagens e suas Tecnologias",
+		"Tema": "Inglês",
+		"Enunciado": "As my official bio reads, I was made in Cuba, assembled is Spain, and imported to the United States – meaning my mother, seven months pregnant, and the rest of my family arrived as exiles from Cuba to Madrid, where I was born. Less than two months later, we emigrated once more and settled in New York City, then eventually in Miami, where I was raised and educated. Although technically we lived in the United States, the Cuban community was culturally insular in Miami during the 1970s, bonded together by the trauma of exile. What’s more, it seemed that practically everyone was Cuban: my teachers, my classmates, the mechanic, the bus driver. I didn’t grow up feeling different or treated as a minority. The few kids who got picked on in my grade school were the ones with freckles and funny last names like Dawson and O’Neil.\n Ao relatar suas vivências, o autor destaca o(a):",
+		"A": "qualidade da educação formal em Miami. ",
+		"B": "prestígio da cultura cubana nos Estados Unidos.",
+		"C": "oportunidade de qualificação profissional em Miami.",
+		"D": "cenário da integração de cubanos nos Estados Unidos.",
+		"E": "fortalecimento do elo familiar em comunidades estadunidenses.",
+		"Resposta": "cenário da integração de cubanos nos Estados Unidos.",
+		"Pontuacao": 4,
+		"PontuacaoParcial": 4
+	},
+	{
+		"ID": "0006",
+		"Tipo": "Enem",
+		"Area": "Linguagens e suas Tecnologias",
+		"Tema": "Inglês",
+		"Enunciado": "Two hundred years ago, Jane Austen lived in a world where single men boasted vast estates; single ladies were expected to speak several languages, sing and play the piano. In both cases, it was, of course, advantageous if you looked good too. So, how much has – or hasn’t – changed? Dating apps opaquely outline the demands of today’s relationship market; users ruminate long and hard over their choice of pictures and what they write in their biographies to hook in potential lovers, and that’s just your own profile. What do you look for in a future partner’s profile – potential signifiers of a popular personality, a good job, a nice car? These apps are a poignant reminder of the often classist atitudes we still adopt, as well as the financial and aesthetic expectations we demand from potential partners.\n O texto aborda relações interpessoais com o objetivo de:",
+		"A": "problematizar o papel de gênero em casamentos modernos. ",
+		"B": "apontar a relevância da educação formal na escolha de parceiros. ",
+		"C": "comparar a expectativa de parceiros amorosos em épocas distintas.",
+		"D": "discutir o uso de aplicativos para proporcionar encontros românticos.",
+		"E": "valorizar a importância da aparência física na seleção de pretendentes",
+		"Resposta": "comparar a expectativa de parceiros amorosos em épocas distintas.",
+		"Pontuacao": 5,
+		"PontuacaoParcial": 5
+	},
+	{
+		"ID": "0007",
+		"Tipo": "Enem",
+		"Area": "Linguagens e suas Tecnologias",
+		"Tema": "Inglês",
+		"Enunciado": "Becoming\n Back in the ancestral homeland of Michelle Obama, black women were rarely granted the honorific Miss or Mrs., but were addressed by their first name, or simply as gal” or “auntie” or worse. This so openly demeaned them that many black women, long after they had left the South, refused to answer if called by their first name. A mother and father in 1970s Texas named their newborn “Miss” so that white people would have no choice but to address their daughter by that title. Black women were meant for the field or the kitchen, or for use as they saw fit. They were, by definition, not ladies. The very idea of a black woman as first lady of the land, well, that would have been unthinkable.\n A crítica do livro de memórias de Michelle Obama, ex-primeira-dama dos EUA, aborda a história das relações humanas na cidade natal da autora. Nesse contexto, o uso do vocábulo “unthinkable” ressalta que:",
+		"A": "a ascensão social era improvável.",
+		"B": "a mudança de nome era impensável.",
+		"C": "a origem do indivíduo era irrelevante.",
+		"D": "o trabalho feminino era inimaginável.",
+		"E": "o comportamento parental era irresponsável.",
+		"Resposta": "a ascensão social era improvável.",
+		"Pontuacao": 6,
+		"PontuacaoParcial": 6
+	},
+	{
+		"ID": "0008",
+		"Tipo": "Enem",
+		"Area": "Linguagens e suas Tecnologias",
+		"Tema": "Inglês",
+		"Enunciado": "No man is an island,\n Entire of itself;\n Every man is a piece of the continent,\n A part of the main.\n [...]\n Any man’s death diminishes me,\n Because I am involved in mankind.\n Nesse poema, a expressão “No man is an island”ressalta o(a)",
+		"A": "medo da morte.",
+		"B": "ideia de conexão.",
+		"C": "conceito de solidão.",
+		"D": "risco de devastação.",
+		"E": "necessidade de empatia.",
+		"Resposta": "ideia de conexão.",
+		"Pontuacao": 3,
+		"PontuacaoParcial": 3
+	},
+	{
+		"ID": "0009",
+		"Tipo": "Enem",
+		"Area": "Linguagens e suas Tecnologias",
+		"Tema": "Cultura",
+		"Enunciado": "É fundamentalmente no Minho, norte de Portugal, que o cavaquinho aparece como instrumento tipicamente popular, ligado às formas essenciais da música característica dessa província. O cavaquinho minhoto tem escala rasa com o tampo, o que facilita a prática do “rasqueado”. O cavaquinho chega ao Brasil diretamente de Portugal, e o modelo brasileiro é maior do que a sua versão portuguesa, com uma caixa de ressonância mais funda. Semelhante ao cavaquinho minhoto, o machete, ou machetinho madeirense, é um pequeno cordófono de corda dedilhada, que faz parte da grande e diversificada família das violas de mão portuguesas. O ukulele tem a sua origem no século XIX, tendo como ancestrais o braguinha (ou machete) e o rajão, instrumentos levados pelos madeirenses quando eles emigraram para o Havaí.\n O conjunto dessas práticas musicais demonstra que os instrumentos mencionados no texto",
+		"A": "refletem a dependência da utilização de matéria-prima europeia.",
+		"B": "adaptam suas características a cada cultura, assumindo nova identidade.",
+		"C": "comprovam a hegemonia portuguesa na invenção de cordófonos dedilhados.",
+		"D": "ilustram processos de dominação cultural, evidenciando situações de choque cultural.",
+		"E": " mantêm nomenclatura própria para garantir a fidelidade às formas originais de confecção.",
+		"Resposta": "comprovam a hegemonia portuguesa na invenção de cordófonos dedilhados.",
+		"Pontuacao": 7,
+		"PontuacaoParcial": 7
+	},
+	{
+		"ID": "0010",
+		"Tipo": "Enem",
+		"Area": "Linguagens e suas Tecnologias",
+		"Tema": "Saúde Mental",
+		"Enunciado": "Pressão, depressão, estresse e crise de ansiedade. Os males da sociedade contemporânea também estão no esporte. A tenista Naomi Osaka, do Japão, jogadora mais bem paga do mundo e que já ocupou o número 2 do ranking, retirou-se do torneio de Roland Garros de 2021 porque não estava conseguindo administrar as crises de ansiedade provocadas pelos grandes eventos, por ser uma estrela aos 23 anos, e pelo peso de parte da imprensa. O tenista australiano Nick Kyrgios, de 25 anos, revelou sua “situação triste e solitária” enquanto lutava contra a depressão causada pelo ritmo avassalador do Circuito Mundial de Tênis. O jogador de basquete americano Kevin Love também tornou público seu quadro de ansiedade e depressão. O mundo do atleta é solitário e distante da família. O que vemos numa partida não reflete a rotina desgastante. A imprensa denomina atletas como heróis, como se aquele corpo fosse indestrutível, mas a mente é o ponto fraco da história.\n As causas do desequilíbrio na saúde mental apontadas no texto estão relacionadas às: ",
+		"A": "nacionalidades diversificadas dos praticantes.",
+		"B": "modalidades esportivas distintas.",
+		"C": "faixas etárias aproximadas",
+		"D": "representações heroicas dos atletas.",
+		"E": "pressões constantes dos eventos e da mídia.",
+		"Resposta": "faixas etárias aproximadas",
+		"Pontuacao": 9,
+		"PontuacaoParcial": 9
+	},
+	{
+		"ID": "0011",
+		"Tipo": "Enem",
+		"Area": "Linguagens e suas Tecnologias",
+		"Tema": "Arte Afro- Brasileira",
+		"Enunciado": "Uma definição possível para o conceito de arte afro-brasileira pode ser: produção plástica que é feita por negros, mestiços ou brancos a partir de suas experiências sociais com a cultura negra nacional. Exemplos clássicos dessa abordagem são Carybé (1911-1997), Mestre Didi (1917-2013) e Djanira da Motta e Silva (1914-1979), cujas obras emergem e ganham forma em razão do ambiente social no qual habitaram e viveram. Se Didi era um célebre representante da cultura religiosa nagô baiana e brasileira, iniciado desde o ventre no candomblé, Carybé era argentino e, naturalizado brasileiro, envolveu-se de tal modo com essa religião que alguns dos orixás dos quais conhecemos a imagem visual são produções suas.\n Sob a perspectiva da multiculturalidade e de acordo com o texto, a produção artística afro-brasileira caracteriza-se pelo(a): ",
+		"A": "estranhamento no modo de apropriação da cultura religiosa de matriz africana.",
+		"B": "distanciamento entre as raízes de matriz africana e a estética de outras culturas.",
+		"C": "visão uniformizadora das religiões de matriz africana expressada nas diferentes produções.",
+		"D": "relação complexa entre as vivências pessoais dos artistas e os referenciais estéticos de matriz africana.",
+		"E": "padronização da forma de produção e da temática da matriz africana presente nas obras dos artistas citados.",
+		"Resposta": "relação complexa entre as vivências pessoais dos artistas e os referenciais estéticos de matriz africana.",
+		"Pontuacao": 5,
+		"PontuacaoParcial": 5
+	},
+	{
+		"ID": "0012",
+		"Tipo": "Enem",
+		"Area": "Linguagens e suas Tecnologias",
+		"Tema": "Determinates Sociais",
+		"Enunciado": "Um estudo norte-americano analisou os efeitos da pandemia da covid-19 sobre a saúde mental e a manutenção da atividade física, revelando que um fator está diretamente ligado ao outro. De acordo com os dados, famílias de baixa renda foram mais impactadas pelo ciclo vicioso de falta de motivação e pelo sedentarismo. Diante da necessidade de distanciamento social e do início da quarentena, as opções de espaços seguros para exercícios físicos diminuíram, o que dificultou que as pessoas mantivessem seus níveis de atividade. Os dados evidenciaram que as pessoas mais ativas tinham melhor estado de saúde mental. As pessoas com menor renda tiveram mais dificuldade para manter os níveis de atividade física durante a pandemia, sendo aproximadamente duas vezes menos propensas a continuarem no mesmo ritmo de exercícios de antes da pandemia. Habitantes de áreas urbanas mostraram maior probabilidade de não conseguirem manter os níveis de atividade física semelhantes aos de pessoas que vivem em zonas rurais, onde há mais oportunidades de sair para espaços abertos.\n O texto evidencia a perspectiva ampliada de saúde ao abordar criticamente a pandemia da covid-19 a partir do(a): ",
+		"A": "busca por espaços para a prática de exercícios físicos.",
+		"B": "necessidade de se manter ativo para ter equilíbrio emocional.",
+		"C": "distanciamento social e sua vinculação com a prática de atividades físicas.",
+		"D": "relação entre os determinantes socioeconômicos e a prática de exercícios.",
+		"E": "benefício de morar em áreas rurais para preservar a estabilidade psicológica.",
+		"Resposta": "relação entre os determinantes socioeconômicos e a prática de exercícios.",
+		"Pontuacao": 3,
+		"PontuacaoParcial": 3
+	},
+	{
+		"ID": "0013",
+		"Tipo": "Enem",
+		"Area": "Linguagens e suas Tecnologias",
+		"Tema": "Estigma Social",
+		"Enunciado": "Meu irmão é filho adotivo. Há uma tecnicidade no termo, filho adotivo, que contribui para sua aceitação social. Há uma novidade que por um átimo o absolve das mazelas do passado, que parece limpá-lo de seus sentidos indesejáveis. Digo que meu irmão é filho adotivo e as pessoas tendem a assentir com solenidade, disfarçando qualquer pesar, baixando os olhos como se não sentissem nenhuma ânsia de perguntar mais nada. Talvez compartilhem da minha inquietude, talvez de fato se esqueçam do assunto no próximo gole ou na próxima garfada. Se a inquietude continua a reverberar em mim, é porque ouço a frase também de maneira parcial — meu irmão é filho — e é difícil aceitar que ela não termine com a verdade tautológica habitual: meu irmão é filho dos meus pais. Estou entoando que meu irmão é filho e uma interrogação sempre me salta aos lábios: filho de quem?\n Das reflexões do narrador, apreende-se uma perspectiva que associa a adoção",
+		"A": "a representações sociais estigmatizadas da parentalidade.",
+		"B": "à necessidade de aprovação por parte de desconhecidos.",
+		"C": "ao julgamento velado de membros do núcleo familiar.",
+		"D": "ao conflito entre o termo técnico e o vínculo afetivo.",
+		"E": "a inquietações próprias das relações entre irmãos.",
+		"Resposta": "a representações sociais estigmatizadas da parentalidade.",
+		"Pontuacao": 7,
+		"PontuacaoParcial": 7
+	},
+	{
+		"ID": "0014",
+		"Tipo": "Enem",
+		"Area": "Linguagens e suas Tecnologias",
+		"Tema": "Tecnologias Indígenas",
+		"Enunciado": "Teclado amazônico\n Em novembro de 2023, uma professora indígena recebeu uma missão: verter as regras de um jogo de tabuleiro infantil do português para o tukano, sua língua nativa. Com vinte anos de experiência como professora de línguas em Taracuá, no Amazonas, ela já se dedicava à tradução havia tempos. O trabalho ficou mais fácil graças a um aplicativo lançado no ano anterior: com o Linklado em seu computador, ela traduziu as sete páginas das instruções do jogo em dois dias. Sem esse recurso, a tarefa seria bem mais trabalhosa. Antes dele, diz a professora, as transcrições de línguas indígenas exigiam o esforço quase manual de produzir diacríticos (acentos gráficos)\n e letras que não constam no teclado de aplicativos de mensagens ou programas de texto. Para a pesquisadora do Instituto Nacional de Pesquisas da Amazônia (Inpa), idealizadora do aplicativo, o Linklado representa uma revolução. O programa não restringe combinações de acentos, e isso poderá facilitar a criação de representações gráficas para fonemas que ainda não têm forma escrita. “Eu mirei em uma dor e atingimos várias outras”, diz. “O Linklado possibilita que o Brasil reconheça a sua diversidade linguística”, afirma uma antropóloga que é colega da pesquisadora no Inpa e faz parte da equipe do aplicativo. Ela defende que escrever na língua materna é uma das principais formas de preservá-la\n De acordo com esse texto, o aplicativo Linklado contribuiu para a: ",
+		"A": "criação de fonemas representativos de línguas indígenas no meio digital.",
+		"B": "democratização do registro escrito de línguas dos povos originários.",
+		"C": "adaptação de regras de jogos de tabuleiro de origem indígena.",
+		"D": "divulgação das técnicas de tradução de línguas indígenas.",
+		"E": "aprendizagem da língua portuguesa pelos indígenas.",
+		"Resposta": "democratização do registro escrito de línguas dos povos originários.",
+		"Pontuacao": 2,
+		"PontuacaoParcial": 2
+	},
+	{
+		"ID": "0015",
+		"Tipo": "Enem",
+		"Area": "Linguagens e suas Tecnologias",
+		"Tema": "Evolução Esportiva",
+		"Enunciado": "Os Jogos Olímpicos já não são mais os mesmos. E isso não é nem uma crítica, nem um elogio. É uma constatação. Esse movimento começou com o vôlei de praia tornando-se esporte olímpico em 1996, passou pela chegada do BMX Racing como primeiro “radical” a entrar no programa em 2008, e agora atinge seu momento mais insólito com a inclusão do break dance como modalidade dos Jogos de Paris, em 2024. Para os mais tradicionalistas, o cruzamento da linha que delimitava o que é esporte e o que é cultura e arte é uma afronta ao espírito dos Jogos Olímpicos. Skate e surfe, que há anos têm competições na televisão, pareciam estar na divisa entre esses dois mundos, o limite do aceitável pelos puristas. O break dance estaria do lado de “lá” dessa fronteira. Para o Comitê Olímpico Internacional, a decisão faz parte de uma estratégia de se comunicar com jovens urbanos que se exercitam e se entretêm de uma maneira muito diferente da dos seus avós.\n A mudança no programa olímpico mencionada no texto mostra que o esporte está se: ",
+		"A": "aproximando da aventura.",
+		"B": "mantendo em sua forma padrão",
+		"C": "tornando uma forma de dança.",
+		"D": "afastando de elementos culturais.",
+		"E": "adaptando às demandas do seu tempo.",
+		"Resposta": "adaptando às demandas do seu tempo.",
+		"Pontuacao": 1,
+		"PontuacaoParcial": 1
+	},
+	{
+		"ID": "0016",
+		"Tipo": "Enem",
+		"Area": "Linguagens e suas Tecnologias",
+		"Tema": "Metalinguagem Editorial",
+		"Enunciado": "Como é bom reencontrar os leitores da Revista da Cultura por meio de uma publicação com outro visual, conteúdo de qualidade e interesses ampliados! ]cultura[, este nome simples, e eu diria mesmo familiar, nasce entre dois colchetes voltados para fora. E não é por acaso: são sinais abertos, receptivos, propícios à circulação de ideias. O DNA da publicação se mantém o mesmo, afinal, por longos anos montamos nossas edições com assuntos saídos das estantes de uma grande livraria — e assim continuará sendo. Literatura, sociologia, filosofia, artes… nunca será difícil montar a pauta da revista porque os livros nos ensinam que monotonia é só para quem não lê.\n O uso não padrão dos colchetes para nomear a revista atribui-lhes uma nova função e está correlacionado ao(à)",
+		"A": "perfil de público-alvo, constituído por leitores exigentes e especializados em leitura acadêmica.",
+		"B": "propósito do editor, chamando a atenção para o rigor normativo nos textos da revista.",
+		"C": "exclusividade na seleção temática, direcionada para a área das ciências humanas.",
+		"D": "identidade da revista, voltada para a recepção e a promoção de ideias circulantes em livros.",
+		"E": "padrão editorial dos artigos, organizados em torno de uma proposta de design inovador.",
+		"Resposta": "identidade da revista, voltada para a recepção e a promoção de ideias circulantes em livros.",
+		"Pontuacao": 3,
+		"PontuacaoParcial": 3
+	},
+	{
+		"ID": "0017",
+		"Tipo": "Enem",
+		"Area": "Linguagens e suas Tecnologias",
+		"Tema": "Variação Linguística",
+		"Enunciado": "Um grupo de pesquisadores da Universidade Federal do Ceará desenvolveu um dicionário para traduzir sintomas de doenças da linguagem popular para os termos médicos. Defruço, chanha e piloura, por exemplo, podem ser termos conhecidos para muitos, mas, durante uma consulta médica, o desconhecimento pode significar um diagnóstico errado.\n “Isso é um registro histórico e pode ser muito útil para estudos dessas comunidades, na abordagem médica delas. É de certa forma pioneiro no Brasil e, sem dúvida, um instrumento de trabalho importante, porque a comunicação é fundamental na relação médico-paciente”, avalia o reitor da instituição.\n Ao registrarem usos regionais de termos da área médica, Pesquisadores",
+		"A": "apontaram erros motivados pelo desconhecimento da variedade linguística local.",
+		"B": "explicaram problemas provocados pela incapacidade de comunicação.",
+		"C": "descobriram novos sintomas de doenças existentes na comunidade.",
+		"D": "propiciaram melhor compreensão dos sintomas dos pacientes.",
+		"E": "divulgaram um novo rol de doenças características da localidade.",
+		"Resposta": "propiciaram melhor compreensão dos sintomas dos pacientes.",
+		"Pontuacao": 2,
+		"PontuacaoParcial": 2
+	},
+	{
+		"ID": "0018",
+		"Tipo": "Enem",
+		"Area": "Linguagens e suas Tecnologias",
+		"Tema": "Memória História e Escravidão",
+		"Enunciado": "Esses meninos que aí andam jogando peteca não viram nunca um escravo… Quando crescerem, saberão que já houve no Brasil uma raça triste, votada à escravidão e ao desespero; e verão nos museus a coleção hedionda dos troncos, dos vira-mundos e dos bacalhaus; e terão notícias dos trágicos horrores de uma época maldita: filhos arrancados ao seio das mães, virgens violadas em pranto, homens assados lentamente em fornos de cal, mulheres nuas recebendo na sua mísera nudez desvalida o duplo ultraje das chicotadas e dos olhares do feitor bestial. […] Mas a sua indignação nunca poderá ser tão grande como a daqueles que nasceram e cresceram em pleno horror, no meio desse horrível drama de sangue e lodo, sentindo dentro do ouvido e da alma, numa arrastada e contínua melopeia, o longo gemer da raça mártir — orquestração satânica de todos os soluços, de todas as impressões, de todos os lamentos que a tortura e a injustiça podem arrancar a gargantas humanas.\n Publicado em 1902, o texto de Olavo Bilac enfatiza as mazelas da escravidão no Brasil ao: ",
+		"A": "descrever de modo impessoal as consequências da exploração racial sobre as gerações futuras.",
+		"B": "contrapor a infância privilegiada das crianças da época à infância violentada das crianças escravizadas.",
+		"C": "antecipar o futuro apagamento das marcas da escravidão no contexto social.",
+		"D": "criticar a atenuação da violência contra os povos escravizados nas memórias retratadas pelos museus.",
+		"E": "imaginar a reação de indiferença de seus contemporâneos com os escravizados libertos.",
+		"Resposta": "antecipar o futuro apagamento das marcas da escravidão no contexto social.",
+		"Pontuacao": 6,
+		"PontuacaoParcial": 6
+	},
 	{
 		"ID": "0019",
 		"Tipo": "Enem",
@@ -280,7 +280,7 @@
 		"C": "Fragilização de vínculos afetivos.",
 		"D": "Supressão de práticas exploratórias.",
 		"E": "Recuperação de tradições ancestrais.",
-		"Resposta": "C",
+		"Resposta": "Fragilização de vínculos afetivos.",
 		"Pontuacao": 1,
 		"PontuacaoParcial": 1
 	},
@@ -295,7 +295,7 @@
 		"C": "erradicação da violência.",
 		"D": "construção da democracia.",
 		"E": "diversificação do trabalho.",
-		"Resposta": "D",
+		"Resposta": "construção da democracia.",
 		"Pontuacao": 3,
 		"PontuacaoParcial": 3
 	},
@@ -310,7 +310,7 @@
 		"C": "Implantação de parques públicos.",
 		"D": "Verticalização de espaços centrais.",
 		"E": "Construção de estacionamentos privados.",
-		"Resposta": "C",
+		"Resposta": "Implantação de parques públicos.",
 		"Pontuacao": 2,
 		"PontuacaoParcial": 2
 	},
@@ -325,7 +325,7 @@
 		"C": "indústria regional",
 		"D": "estética editorial.",
 		"E": "cultura erudita.",
-		"Resposta": "D",
+		"Resposta": "estética editorial.",
 		"Pontuacao": 5,
 		"PontuacaoParcial": 5
 	},
@@ -340,7 +340,7 @@
 		"C": "degradação das reservas nutritivas pelo choque térmico.",
 		"D": "impedimento da entrada de oxigênio pela fervura da água.",
 		"E": "desidratação dos grãos por causa da alteração da temperatura.",
-		"Resposta": "A",
+		"Resposta": "desnaturação enzimática pela alta temperatura.",
 		"Pontuacao": 5,
 		"PontuacaoParcial": 5
 	},
@@ -355,7 +355,7 @@
 		"C": "modelado continuamente para ajuste ao tamanho do corpo.",
 		"D": "substituído por meio de mudas que ocorrem periodicamente.",
 		"E": "impregnado por pequena quantidade de sais para sua distensão.",
-		"Resposta": "D",
+		"Resposta": "substituído por meio de mudas que ocorrem periodicamente.",
 		"Pontuacao": 3,
 		"PontuacaoParcial": 3
 	},
@@ -370,7 +370,7 @@
 		"C": "epitelial",
 		"D": "adiposo",
 		"E": "sanguíneo",
-		"Resposta": "D",
+		"Resposta": "adiposo",
 		"Pontuacao": 4,
 		"PontuacaoParcial": 4
 	},
@@ -385,53 +385,10 @@
 		"C": "tiverem a mesma frequência.",
 		"D": "tiverem a mesma intensidade.",
 		"E": "propagarem-se com velocidades diferentes.",
-		"Resposta": "C",
+		"Resposta": "tiverem a mesma frequência.",
 		"Pontuacao": 3,
 		"PontuacaoParcial": 3
 	}
 
 	]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

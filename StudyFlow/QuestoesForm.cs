@@ -15,8 +15,8 @@ using System.Windows.Forms;
 
 
 namespace StudyFlow
-{ 
-public partial class QuestoesForm : BaseForm
+{
+    public partial class QuestoesForm : BaseForm
     {
         public QuestoesForm()
         {
@@ -92,23 +92,29 @@ public partial class QuestoesForm : BaseForm
                 switch (areaOuTipo)
                 {
                     //adicionar o default em caso de o usuário quiser ver todas as questões
-                    case "ENEM": questoesFiltradas = questoes.Where(w => w.Tipo == "Enem").ToList();
+                    case "ENEM":
+                        questoesFiltradas = questoes.Where(w => w.Tipo == "Enem").ToList();
                         break;
-                    case "Provão Paulista": questoesFiltradas = questoes.Where(w => w.Tipo == "Provão Paulista").ToList();
+                    case "Provão Paulista":
+                        questoesFiltradas = questoes.Where(w => w.Tipo == "Provão Paulista").ToList();
                         break;
-                    case "Linguagens e suas Tecnologias": questoesFiltradas = questoes.Where(w => w.Area == "Linguagens e suas Tecnologias").ToList();
+                    case "Linguagens e suas Tecnologias":
+                        questoesFiltradas = questoes.Where(w => w.Area == "Linguagens e suas Tecnologias").ToList();
                         break;
-                    case "Ciências Humanas": questoesFiltradas = questoes.Where(w => w.Area == "Ciências Humanas").ToList();
+                    case "Ciências Humanas":
+                        questoesFiltradas = questoes.Where(w => w.Area == "Ciências Humanas").ToList();
                         break;
-                    case "Ciências da Natureza": questoesFiltradas = questoes.Where(w => w.Area == "Ciências da Natureza").ToList();
+                    case "Ciências da Natureza":
+                        questoesFiltradas = questoes.Where(w => w.Area == "Ciências da Natureza").ToList();
                         break;
-                    case "Matemática e suas Tecnologias": questoesFiltradas = questoes.Where(w => w.Area == "Matemática e suas Tecnologias").ToList();
+                    case "Matemática e suas Tecnologias":
+                        questoesFiltradas = questoes.Where(w => w.Area == "Matemática e suas Tecnologias").ToList();
                         break;
                 }
 
             }
 
-            
+
             int y = 0;
             foreach (var q in questoesFiltradas)
 
@@ -119,7 +125,7 @@ public partial class QuestoesForm : BaseForm
                 card.Location = new Point(12, y + 12);
                 card.StateCommon.Color1 = Color.White;
                 card.Cursor = Cursors.Hand;
-             
+
                 // Efeito de hover
                 card.MouseEnter += (s, e) => card.StateCommon.Color1 = Color.FromArgb(250, 250, 255);
                 card.MouseLeave += (s, e) => card.StateCommon.Color1 = Color.White;
@@ -127,7 +133,7 @@ public partial class QuestoesForm : BaseForm
                 //Evento de clique
                 card.Click += (s, e) => MostrarQuestao(q);
 
-             
+
                 // ID
                 KryptonLabel labelId = new KryptonLabel();
                 labelId.Text = q.ID;
@@ -163,6 +169,9 @@ public partial class QuestoesForm : BaseForm
         //Interface Questão
         private void MostrarQuestao(Pergunta questao)
         {
+            
+            string respostaDada = "";
+            Usuario usuarioLogado = Usuario.UsuarioLogado;
             PanelConteudo.Controls.Clear();
 
             KryptonPanel panelQuestao = new KryptonPanel();
@@ -226,7 +235,7 @@ public partial class QuestoesForm : BaseForm
             KryptonButton labelArea = new KryptonButton();
             labelArea.Text = questao.Area;
             labelArea.Enabled = false;
-            labelArea.Location = new Point(320, baseY - 5); 
+            labelArea.Location = new Point(320, baseY - 5);
             labelArea.Size = new Size(270, 30);
             labelArea.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
             labelArea.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12, FontStyle.Bold);
@@ -246,7 +255,7 @@ public partial class QuestoesForm : BaseForm
             textEnunciado.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
             textEnunciado.StateCommon.Border.Rounding = 6;
             textEnunciado.StateCommon.Content.Font = new Font("Segoe UI", 12);
-            
+
             textEnunciado.Text = questao.Enunciado;
             textEnunciado.ReadOnly = true;
             panelQuestao.Controls.Add(textEnunciado);
@@ -257,7 +266,7 @@ public partial class QuestoesForm : BaseForm
             int y = baseY + 250;
             string[] alternativas = new string[]
             {
-                
+
                questao.A,
                questao.B,
                questao.C,
@@ -265,7 +274,7 @@ public partial class QuestoesForm : BaseForm
                questao.E
 
             };
-            
+
             KryptonButton alternativaSelecionada = null;
             List<KryptonButton> botoesAlternativas = new List<KryptonButton>(); //lista para armazenar os botões das alternativas 
 
@@ -305,6 +314,7 @@ public partial class QuestoesForm : BaseForm
                         alternativaSelecionada.StateCommon.Back.Color1 = Color.White;
                     }
                     alternativaSelecionada = buttonAlternativa;
+                    respostaDada = alternativaSelecionada.Text;
                     buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(255, 235, 200);
 
 
@@ -319,9 +329,190 @@ public partial class QuestoesForm : BaseForm
                     if (resultado == DialogResult.Yes)
                     {
                         // ** colocar a logica de validar a resposta **
+                        if (!Pergunta.JaRespondeu(questao.ID))
+                        {
 
-                        //******
+                            if (respostaDada != questao.Resposta)
+                            {
+                                questao.Erros++;
+                                if (questao.Erros == 1)
+                                {
 
+                                    questao.PontuacaoParcial = questao.Pontuacao * 0.66;
+
+                                    buttonAlternativa.StateCommon.Border.Color1 = Color.Gray;
+                                    buttonAlternativa.StateCommon.Border.Color2 = Color.Gray;
+                                    buttonAlternativa.OverrideDefault.Border.Color1 = Color.Red;
+                                    buttonAlternativa.OverrideDefault.Back.Color1 = Color.FromArgb(240, 240, 240);
+                                    buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(240, 240, 240);
+                                    buttonAlternativa.StateCommon.Border.Width = 1;
+                                    buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(235, 255, 235);
+                                    buttonAlternativa.Enabled = false;
+
+
+                                    MessageBox.Show("Resposta incorreta!", "",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                }
+
+                                else if (questao.Erros == 2)
+                                {
+                                    questao.PontuacaoParcial = questao.Pontuacao * 0.33;
+
+                                    buttonAlternativa.StateCommon.Border.Color1 = Color.Gray;
+                                    buttonAlternativa.StateCommon.Border.Color2 = Color.Gray;
+                                    buttonAlternativa.OverrideDefault.Border.Color1 = Color.Red;
+                                    buttonAlternativa.OverrideDefault.Back.Color1 = Color.FromArgb(240, 240, 240);
+                                    buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(240, 240, 240);
+                                    buttonAlternativa.StateCommon.Border.Width = 1;
+                                    buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(235, 255, 235);
+                                    buttonAlternativa.Enabled = false;
+
+
+                                    MessageBox.Show("Resposta incorreta!", "",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+
+                                else if (questao.Erros >= 3)
+                                {
+                                    questao.PontuacaoParcial = 0;
+
+                                    buttonAlternativa.StateCommon.Border.Color1 = Color.Gray;
+                                    buttonAlternativa.StateCommon.Border.Color2 = Color.Gray;
+                                    buttonAlternativa.OverrideDefault.Border.Color1 = Color.Red;
+                                    buttonAlternativa.OverrideDefault.Back.Color1 = Color.FromArgb(240, 240, 240);
+                                    buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(240, 240, 240);
+                                    buttonAlternativa.StateCommon.Border.Width = 1;
+                                    buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(235, 255, 235);
+                                    buttonAlternativa.Enabled = false;
+
+
+                                    questao.Respondida = true;
+                                    Pergunta.MarcarComoRespondida(questao.ID);
+                                    MessageBox.Show("Resposta incorreta!", "",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                    foreach (var bloqueio in botoesAlternativas)
+                                    {
+                                        bloqueio.Enabled = false;
+                                    }
+                                }
+
+                            }
+
+                            else
+                            {
+                                //tela pra aparecer que acertou a pergunta
+                                usuarioLogado.Pontuacao += questao.PontuacaoParcial;
+                                buttonAlternativa.StateCommon.Border.Color1 = Color.LightGreen;
+                                buttonAlternativa.StateCommon.Border.Color2 = Color.LightGreen;
+                                buttonAlternativa.OverrideDefault.Border.Color1 = Color.LightGreen;
+                                buttonAlternativa.OverrideDefault.Back.Color1 = Color.FromArgb(235, 255, 235);
+                                buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(235, 255, 235);
+                                buttonAlternativa.StateCommon.Border.Width = 2;
+                                buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(235, 255, 235);
+                                buttonAlternativa.Enabled = false;
+
+                                questao.Respondida = true;
+                                Pergunta.MarcarComoRespondida(questao.ID);
+                                MessageBox.Show("Resposta Correta!", "Parabéns",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                foreach (var bloqueio in botoesAlternativas)
+                                {
+
+                                    bloqueio.Enabled = false;
+
+                                }
+                            }
+                        }
+
+                        else if (Pergunta.JaRespondeu(questao.ID))
+                        {
+                            if (respostaDada != questao.Resposta)
+                            {
+                                questao.Erros++;
+                                if (questao.Erros == 1)
+                                {
+
+
+                                    buttonAlternativa.StateCommon.Border.Color1 = Color.Gray;
+                                    buttonAlternativa.StateCommon.Border.Color2 = Color.Gray;
+                                    buttonAlternativa.OverrideDefault.Border.Color1 = Color.Red;
+                                    buttonAlternativa.OverrideDefault.Back.Color1 = Color.FromArgb(240, 240, 240);
+                                    buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(240, 240, 240);
+                                    buttonAlternativa.StateCommon.Border.Width = 1;
+                                    buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(235, 255, 235);
+                                    buttonAlternativa.Enabled = false;
+
+
+                                    MessageBox.Show("Resposta incorreta!", "",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                }
+
+                                else if (questao.Erros == 2)
+                                {
+                                    buttonAlternativa.StateCommon.Border.Color1 = Color.Gray;
+                                    buttonAlternativa.StateCommon.Border.Color2 = Color.Gray;
+                                    buttonAlternativa.OverrideDefault.Border.Color1 = Color.Red;
+                                    buttonAlternativa.OverrideDefault.Back.Color1 = Color.FromArgb(240, 240, 240);
+                                    buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(240, 240, 240);
+                                    buttonAlternativa.StateCommon.Border.Width = 1;
+                                    buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(235, 255, 235);
+                                    buttonAlternativa.Enabled = false;
+
+
+                                    MessageBox.Show("Resposta incorreta!", "",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+
+                                else if (questao.Erros >= 3)
+                                {
+                                    buttonAlternativa.StateCommon.Border.Color1 = Color.Gray;
+                                    buttonAlternativa.StateCommon.Border.Color2 = Color.Gray;
+                                    buttonAlternativa.OverrideDefault.Border.Color1 = Color.Red;
+                                    buttonAlternativa.OverrideDefault.Back.Color1 = Color.FromArgb(240, 240, 240);
+                                    buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(240, 240, 240);
+                                    buttonAlternativa.StateCommon.Border.Width = 1;
+                                    buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(235, 255, 235);
+                                    buttonAlternativa.Enabled = false;
+
+
+                                    MessageBox.Show("Resposta incorreta!", "",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                    foreach (var bloqueio in botoesAlternativas)
+                                    {
+                                        bloqueio.Enabled = false;
+                                    }
+                                }
+
+                            }
+
+                            else
+                            {
+                                //tela pra aparecer que acertou a pergunta
+                                buttonAlternativa.StateCommon.Border.Color1 = Color.LightGreen;
+                                buttonAlternativa.StateCommon.Border.Color2 = Color.LightGreen;
+                                buttonAlternativa.OverrideDefault.Border.Color1 = Color.LightGreen;
+                                buttonAlternativa.OverrideDefault.Back.Color1 = Color.FromArgb(235, 255, 235);
+                                buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(235, 255, 235);
+                                buttonAlternativa.StateCommon.Border.Width = 2;
+                                buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(235, 255, 235);
+                                buttonAlternativa.Enabled = false;
+
+                                MessageBox.Show("Resposta Correta!", "Parabéns",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                foreach (var bloqueio in botoesAlternativas)
+                                {
+
+                                    bloqueio.Enabled = false;
+
+                                }
+                            }
+                        }
                         // colocar dentro de um if para caso a resposta esteja correta
                         /*
                         buttonAlternativa.StateCommon.Border.Color1 = Color.LightGreen;
@@ -331,15 +522,15 @@ public partial class QuestoesForm : BaseForm
                         buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(235, 255, 235);
                         buttonAlternativa.StateCommon.Border.Width = 2;
                         buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(235, 255, 235); 
-                        
 
-                        
+
+
                         MessageBox.Show("Resposta Correta!", "Parabéns",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
+
 
                         // Bloquiea as alternativas se o usuario acertar
-                        
+
                         foreach (var bloqueio in botoesAlternativas)
                         bloqueio.Enabled = false;
                         */
@@ -354,9 +545,9 @@ public partial class QuestoesForm : BaseForm
                         buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(240, 240, 240);
                         buttonAlternativa.StateCommon.Border.Width = 1;
                         buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(235, 255, 235);
-                        
 
-                        
+
+
                         MessageBox.Show("Resposta incorreta!", "",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                         */
@@ -368,12 +559,13 @@ public partial class QuestoesForm : BaseForm
                         alternativaSelecionada = null;
                     }
 
-                };
+                }
+                    ;
 
                 panelQuestao.Controls.Add(buttonAlternativa);
                 y += 50;
             }
-            
+
 
             TrocarConteudo(panelQuestao);
         }

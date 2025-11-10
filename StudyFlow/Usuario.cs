@@ -15,12 +15,12 @@ namespace StudyFlow {
         public string Email { get; private set; }
         public string Senha { get; private set; } // apenas para teste
         public bool Ativo { get; private set; } = true;// verificar se o usuario esta ativo
-        public double Pontuacao { get; private set; }
+        public double Pontuacao { get; set; }
 
 
         public static ArrayList DadosDoCadastroLogin = new ArrayList();
 
-
+        public static Usuario UsuarioLogado { get; set; }
 
         public Usuario() {
         }
@@ -150,7 +150,11 @@ namespace StudyFlow {
                 if ((u.NomeUser == dadosLogin || u.Cpf == dadosLogin) && BCrypt.Net.BCrypt.Verify(senhaLogin, u.Senha) == true && u.Ativo == true)
                 {
 
+
+                    Usuario.UsuarioLogado = u;
                     return u;
+
+
                 }
                 else if ((u.NomeUser == dadosLogin || u.Cpf == dadosLogin) && BCrypt.Net.BCrypt.Verify(senhaLogin, u.Senha) == true && u.Ativo == false)
                 { 
@@ -232,7 +236,7 @@ namespace StudyFlow {
             string telefoneTeste2 = "12996036493";
             string emailTeste2 = "murilo123@gmail.com";
             string nomeUsuarioTeste2 = "murilo";
-            string senhaTeste2 = "naoTenhoIdeia";
+            string senhaTeste2 = "murilo2006";
             double pontuacao2 = 1.0;
             bool ativoTeste2 = true;
 
