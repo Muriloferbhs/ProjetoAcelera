@@ -1,6 +1,6 @@
 ﻿namespace StudyFlow
 {
-    partial class NivelamentoForm
+    partial class ResolucoesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -46,10 +46,10 @@
             kryptonLabel1.TabIndex = 3;
             kryptonLabel1.Values.Text = "kryptonLabel1";
             // 
-            // NivelamentoForm
+            // ResolucoesForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
-            ClientSize = new Size(1266, 675);
+            ClientSize = new Size(1280, 720);
             Name = "NivelamentoForm";
             Text = "NivelamentoForm";
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).EndInit();

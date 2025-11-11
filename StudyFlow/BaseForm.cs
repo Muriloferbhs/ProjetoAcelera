@@ -46,14 +46,14 @@ namespace StudyFlow
 
         private void ButtonNivelamento_Click(object sender, EventArgs e)
         {
-            if (this is NivelamentoForm) return;
-            TrocarTela(new NivelamentoForm());
+            if (this is QuestoesForm) return;
+            TrocarTela(new QuestoesForm());
         }
 
         private void ButtonQuestoes_Click(object sender, EventArgs e)
         {
-            if (this is QuestoesForm) return;
-            TrocarTela(new QuestoesForm());
+            if (this is ResolucoesForm) return;
+            TrocarTela(new ResolucoesForm());
         }
 
         private void ButtonAjuda_Click(object sender, EventArgs e)

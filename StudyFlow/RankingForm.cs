@@ -18,7 +18,6 @@ namespace StudyFlow
             InitializeComponent();
             TelaRanking();
         }
-        // *** AINDA EM DESENVOLVIMENTO ***
         private void TelaRanking()
         {
             PanelConteudo.Controls.Clear();

@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             PanelCima = new Krypton.Toolkit.KryptonPanel();
+            pictureBox1 = new PictureBox();
             PanelEsquerda = new Krypton.Toolkit.KryptonPanel();
             ButtonAjuda = new Krypton.Toolkit.KryptonButton();
-            ButtonQuestoes = new Krypton.Toolkit.KryptonButton();
-            ButtonNivelamento = new Krypton.Toolkit.KryptonButton();
+            ButtonResolucao = new Krypton.Toolkit.KryptonButton();
+            ButtonQuestao = new Krypton.Toolkit.KryptonButton();
             ButtonRanking = new Krypton.Toolkit.KryptonButton();
             ButtonHome = new Krypton.Toolkit.KryptonButton();
             PanelConteudo = new Krypton.Toolkit.KryptonPanel();
-            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)PanelCima).BeginInit();
             PanelCima.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PanelEsquerda).BeginInit();
             PanelEsquerda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // PanelCima
@@ -51,21 +51,31 @@
             PanelCima.Dock = DockStyle.Top;
             PanelCima.Location = new Point(0, 0);
             PanelCima.Name = "PanelCima";
-            PanelCima.Size = new Size(1288, 80);
+            PanelCima.Size = new Size(1296, 80);
             PanelCima.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelCima.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.FromArgb(32, 0, 177);
+            pictureBox1.Image = Properties.Resources.logoStudyHorizontal;
+            pictureBox1.Location = new Point(439, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(394, 74);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // PanelEsquerda
             // 
             PanelEsquerda.Controls.Add(ButtonAjuda);
-            PanelEsquerda.Controls.Add(ButtonQuestoes);
-            PanelEsquerda.Controls.Add(ButtonNivelamento);
+            PanelEsquerda.Controls.Add(ButtonResolucao);
+            PanelEsquerda.Controls.Add(ButtonQuestao);
             PanelEsquerda.Controls.Add(ButtonRanking);
             PanelEsquerda.Controls.Add(ButtonHome);
             PanelEsquerda.Dock = DockStyle.Left;
             PanelEsquerda.Location = new Point(0, 80);
             PanelEsquerda.Name = "PanelEsquerda";
-            PanelEsquerda.Size = new Size(167, 616);
+            PanelEsquerda.Size = new Size(167, 592);
             PanelEsquerda.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelEsquerda.TabIndex = 1;
             // 
@@ -94,55 +104,55 @@
             ButtonAjuda.Values.Text = "  AJUDA";
             ButtonAjuda.Click += ButtonAjuda_Click;
             // 
-            // ButtonQuestoes
+            // ButtonResolucao
             // 
-            ButtonQuestoes.ButtonStyle = Krypton.Toolkit.ButtonStyle.LowProfile;
-            ButtonQuestoes.Cursor = Cursors.Hand;
-            ButtonQuestoes.Dock = DockStyle.Top;
-            ButtonQuestoes.Location = new Point(0, 210);
-            ButtonQuestoes.Name = "ButtonQuestoes";
-            ButtonQuestoes.Size = new Size(167, 70);
-            ButtonQuestoes.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
-            ButtonQuestoes.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
-            ButtonQuestoes.StateCommon.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            ButtonQuestoes.StateCommon.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            ButtonQuestoes.StateCommon.Content.Padding = new Padding(15, 0, 0, 0);
-            ButtonQuestoes.StateCommon.Content.ShortText.Color1 = Color.White;
-            ButtonQuestoes.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            ButtonQuestoes.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            ButtonQuestoes.StateCommon.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            ButtonQuestoes.StatePressed.Back.Color1 = Color.FromArgb(50, 0, 150);
-            ButtonQuestoes.StateTracking.Back.Color1 = Color.FromArgb(45, 0, 200);
-            ButtonQuestoes.TabIndex = 3;
-            ButtonQuestoes.Values.DropDownArrowColor = Color.Empty;
-            ButtonQuestoes.Values.Image = Properties.Resources.check;
-            ButtonQuestoes.Values.Text = "  QUESTÕES";
-            ButtonQuestoes.Click += ButtonQuestoes_Click;
+            ButtonResolucao.ButtonStyle = Krypton.Toolkit.ButtonStyle.LowProfile;
+            ButtonResolucao.Cursor = Cursors.Hand;
+            ButtonResolucao.Dock = DockStyle.Top;
+            ButtonResolucao.Location = new Point(0, 210);
+            ButtonResolucao.Name = "ButtonResolucao";
+            ButtonResolucao.Size = new Size(167, 70);
+            ButtonResolucao.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
+            ButtonResolucao.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
+            ButtonResolucao.StateCommon.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            ButtonResolucao.StateCommon.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            ButtonResolucao.StateCommon.Content.Padding = new Padding(15, 0, 0, 0);
+            ButtonResolucao.StateCommon.Content.ShortText.Color1 = Color.White;
+            ButtonResolucao.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            ButtonResolucao.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            ButtonResolucao.StateCommon.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            ButtonResolucao.StatePressed.Back.Color1 = Color.FromArgb(50, 0, 150);
+            ButtonResolucao.StateTracking.Back.Color1 = Color.FromArgb(45, 0, 200);
+            ButtonResolucao.TabIndex = 3;
+            ButtonResolucao.Values.DropDownArrowColor = Color.Empty;
+            ButtonResolucao.Values.Image = Properties.Resources.check;
+            ButtonResolucao.Values.Text = "  RESOLUÇÕES\r\n";
+            ButtonResolucao.Click += ButtonQuestoes_Click;
             // 
-            // ButtonNivelamento
+            // ButtonQuestao
             // 
-            ButtonNivelamento.ButtonStyle = Krypton.Toolkit.ButtonStyle.LowProfile;
-            ButtonNivelamento.Cursor = Cursors.Hand;
-            ButtonNivelamento.Dock = DockStyle.Top;
-            ButtonNivelamento.Location = new Point(0, 140);
-            ButtonNivelamento.Name = "ButtonNivelamento";
-            ButtonNivelamento.Size = new Size(167, 70);
-            ButtonNivelamento.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
-            ButtonNivelamento.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
-            ButtonNivelamento.StateCommon.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            ButtonNivelamento.StateCommon.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            ButtonNivelamento.StateCommon.Content.Padding = new Padding(15, 0, 0, 0);
-            ButtonNivelamento.StateCommon.Content.ShortText.Color1 = Color.White;
-            ButtonNivelamento.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            ButtonNivelamento.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            ButtonNivelamento.StateCommon.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            ButtonNivelamento.StatePressed.Back.Color1 = Color.FromArgb(50, 0, 150);
-            ButtonNivelamento.StateTracking.Back.Color1 = Color.FromArgb(45, 0, 200);
-            ButtonNivelamento.TabIndex = 2;
-            ButtonNivelamento.Values.DropDownArrowColor = Color.Empty;
-            ButtonNivelamento.Values.Image = Properties.Resources.open_book;
-            ButtonNivelamento.Values.Text = "  NIVELAMENTO";
-            ButtonNivelamento.Click += ButtonNivelamento_Click;
+            ButtonQuestao.ButtonStyle = Krypton.Toolkit.ButtonStyle.LowProfile;
+            ButtonQuestao.Cursor = Cursors.Hand;
+            ButtonQuestao.Dock = DockStyle.Top;
+            ButtonQuestao.Location = new Point(0, 140);
+            ButtonQuestao.Name = "ButtonQuestao";
+            ButtonQuestao.Size = new Size(167, 70);
+            ButtonQuestao.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
+            ButtonQuestao.StateCommon.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
+            ButtonQuestao.StateCommon.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            ButtonQuestao.StateCommon.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            ButtonQuestao.StateCommon.Content.Padding = new Padding(15, 0, 0, 0);
+            ButtonQuestao.StateCommon.Content.ShortText.Color1 = Color.White;
+            ButtonQuestao.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            ButtonQuestao.StateCommon.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            ButtonQuestao.StateCommon.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            ButtonQuestao.StatePressed.Back.Color1 = Color.FromArgb(50, 0, 150);
+            ButtonQuestao.StateTracking.Back.Color1 = Color.FromArgb(45, 0, 200);
+            ButtonQuestao.TabIndex = 2;
+            ButtonQuestao.Values.DropDownArrowColor = Color.Empty;
+            ButtonQuestao.Values.Image = Properties.Resources.open_book;
+            ButtonQuestao.Values.Text = "  QUESTÕES";
+            ButtonQuestao.Click += ButtonNivelamento_Click;
             // 
             // ButtonRanking
             // 
@@ -199,24 +209,14 @@
             PanelConteudo.Dock = DockStyle.Fill;
             PanelConteudo.Location = new Point(167, 80);
             PanelConteudo.Name = "PanelConteudo";
-            PanelConteudo.Size = new Size(1121, 616);
+            PanelConteudo.Size = new Size(1129, 592);
             PanelConteudo.StateNormal.Color1 = Color.White;
             PanelConteudo.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.FromArgb(32, 0, 177);
-            pictureBox1.Image = Properties.Resources.logoStudyHorizontal;
-            pictureBox1.Location = new Point(439, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(394, 74);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
             // 
             // BaseForm
             // 
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(1288, 696);
+            ClientSize = new Size(1296, 672);
             Controls.Add(PanelConteudo);
             Controls.Add(PanelEsquerda);
             Controls.Add(PanelCima);
@@ -227,10 +227,10 @@
             FormClosing += BaseForm_FormClosing;
             ((System.ComponentModel.ISupportInitialize)PanelCima).EndInit();
             PanelCima.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)PanelEsquerda).EndInit();
             PanelEsquerda.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -244,11 +244,11 @@
         private Krypton.Toolkit.KryptonButton kryptonButton3;
         private Krypton.Toolkit.KryptonButton kryptonButton2;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
-        private Krypton.Toolkit.KryptonButton ButtonNivelamento;
+        private Krypton.Toolkit.KryptonButton ButtonQuestao;
         private Krypton.Toolkit.KryptonButton ButtonRanking;
         private Krypton.Toolkit.KryptonButton ButtonHome;
         private Krypton.Toolkit.KryptonButton ButtonAjuda;
-        private Krypton.Toolkit.KryptonButton ButtonQuestoes;
+        private Krypton.Toolkit.KryptonButton ButtonResolucao;
         private PictureBox pictureBox1;
     }
 }
