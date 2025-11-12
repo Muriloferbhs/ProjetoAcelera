@@ -22,14 +22,35 @@ namespace StudyFlow
 
         public static ArrayList DadosDoCadastroLogin = new ArrayList();
 
+
         public static Usuario UsuarioLogado { get; set; }
 
-        public Usuario()
+
+        public static Dictionary<string, bool> QuestoesRespondidas { get; } = new Dictionary<string, bool>();
+        public static void MarcarComoRespondida(string ID)
         {
+            if (!QuestoesRespondidas.ContainsKey(ID))
+                QuestoesRespondidas[ID] = true;
+        }
+        public static bool JaRespondeu(string ID)
+        {
+            return QuestoesRespondidas.ContainsKey(ID) && QuestoesRespondidas[ID];
         }
 
 
+        public static Dictionary<string, int> ErrosPorQuestao { get; } = new Dictionary<string, int>();
 
+
+        public static void SalvarErro(string ID)
+        {
+            if (!ErrosPorQuestao.ContainsKey(ID))
+                ErrosPorQuestao[ID] = 0;
+
+            if (ErrosPorQuestao.ContainsKey(ID))
+                ErrosPorQuestao[ID]++;
+        }
+
+        
         public Usuario(string nomeCompleto, string cpf, string telefone, string email, string nomeUsuario, string senha, bool ativo, double pontuacao)
         {
             NomeCompleto = nomeCompleto;

@@ -326,13 +326,13 @@ namespace StudyFlow
 
                     if (resultado == DialogResult.Yes)
                     {
-                        if (!Pergunta.JaRespondeu(questao.ID))
+                        if (!Usuario.JaRespondeu(questao.ID))
                         {
 
                             if (respostaDada != questao.Resposta)
                             {
-                                questao.Erros++;
-                                if (questao.Erros == 1)
+                                Usuario.SalvarErro(questao.ID);
+                                if (Usuario.ErrosPorQuestao[questao.ID] == 1)
                                 {
 
                                     questao.PontuacaoParcial = questao.Pontuacao * 2 / 3;
@@ -342,7 +342,7 @@ namespace StudyFlow
                                     buttonAlternativa.OverrideDefault.Border.Color1 = Color.Red;
                                     buttonAlternativa.OverrideDefault.Back.Color1 = Color.FromArgb(240, 240, 240);
                                     buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(240, 240, 240);
-                                    buttonAlternativa.StateCommon.Border.Width = 1;
+                                    buttonAlternativa.StateCommon.Border.Width = 3;
                                     buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(250, 250, 250);
                                     buttonAlternativa.StateCommon.Back.Color2 = Color.FromArgb(250, 250, 250);
 
@@ -354,7 +354,7 @@ namespace StudyFlow
 
                                 }
 
-                                else if (questao.Erros == 2)
+                                else if (Usuario.ErrosPorQuestao[questao.ID] == 2)
                                 {
                                     questao.PontuacaoParcial = questao.Pontuacao * 1 / 3;
 
@@ -363,7 +363,7 @@ namespace StudyFlow
                                     buttonAlternativa.OverrideDefault.Border.Color1 = Color.Red;
                                     buttonAlternativa.OverrideDefault.Back.Color1 = Color.FromArgb(240, 240, 240);
                                     buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(240, 240, 240);
-                                    buttonAlternativa.StateCommon.Border.Width = 1;
+                                    buttonAlternativa.StateCommon.Border.Width = 3;
                                     buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(250, 250, 250);
                                     buttonAlternativa.StateCommon.Back.Color2 = Color.FromArgb(250, 250, 250);
 
@@ -374,7 +374,7 @@ namespace StudyFlow
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
 
-                                else if (questao.Erros >= 3)
+                                else if (Usuario.ErrosPorQuestao[questao.ID] == 3)
                                 {
                                     questao.PontuacaoParcial = 0;
 
@@ -383,15 +383,14 @@ namespace StudyFlow
                                     buttonAlternativa.OverrideDefault.Border.Color1 = Color.Red;
                                     buttonAlternativa.OverrideDefault.Back.Color1 = Color.FromArgb(240, 240, 240);
                                     buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(240, 240, 240);
-                                    buttonAlternativa.StateCommon.Border.Width = 1;
+                                    buttonAlternativa.StateCommon.Border.Width = 3;
                                     buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(250, 250, 250);
                                     buttonAlternativa.StateCommon.Back.Color2 = Color.FromArgb(250, 250, 250);
 
                                     buttonAlternativa.Enabled = false;
 
-
-                                    questao.Respondida = true;
-                                    Pergunta.MarcarComoRespondida(questao.ID);
+                                    Usuario.ErrosPorQuestao[questao.ID] = 0;
+                                    Usuario.MarcarComoRespondida(questao.ID);
                                     MessageBox.Show("Resposta incorreta!", "",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -414,12 +413,12 @@ namespace StudyFlow
                                 buttonAlternativa.OverrideDefault.Border.Color1 = Color.LightGreen;
                                 buttonAlternativa.OverrideDefault.Back.Color1 = Color.FromArgb(235, 255, 235);
                                 buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(235, 255, 235);
-                                buttonAlternativa.StateCommon.Border.Width = 2;
+                                buttonAlternativa.StateCommon.Border.Width = 3;
                                 buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(235, 255, 235);
                                 buttonAlternativa.Enabled = false;
 
-                                questao.Respondida = true;
-                                Pergunta.MarcarComoRespondida(questao.ID);
+                                Usuario.ErrosPorQuestao[questao.ID] = 0;
+                                Usuario.MarcarComoRespondida(questao.ID);
                                 MessageBox.Show("Resposta Correta!", "Parabéns",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -429,16 +428,15 @@ namespace StudyFlow
                                     bloqueio.Enabled = false;
 
                                 }
-                                questao.Erros = 0;
                             }
                         }
 
-                        else if (Pergunta.JaRespondeu(questao.ID))
+                        else if (Usuario.JaRespondeu(questao.ID))
                         {
                             if (respostaDada != questao.Resposta)
                             {
-                                questao.Erros++;
-                                if (questao.Erros == 1)
+                                
+                                if (Usuario.ErrosPorQuestao[questao.ID] == 1)
                                 {
 
 
@@ -447,7 +445,7 @@ namespace StudyFlow
                                     buttonAlternativa.OverrideDefault.Border.Color1 = Color.Red;
                                     buttonAlternativa.OverrideDefault.Back.Color1 = Color.FromArgb(240, 240, 240);
                                     buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(240, 240, 240);
-                                    buttonAlternativa.StateCommon.Border.Width = 1;
+                                    buttonAlternativa.StateCommon.Border.Width = 3;
                                     buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(250, 250, 250);
                                     buttonAlternativa.StateCommon.Back.Color2 = Color.FromArgb(250, 250, 250);
 
@@ -459,14 +457,14 @@ namespace StudyFlow
 
                                 }
 
-                                else if (questao.Erros == 2)
+                                else if (Usuario.ErrosPorQuestao[questao.ID] == 2)
                                 {
                                     buttonAlternativa.StateCommon.Border.Color1 = Color.Red;
                                     buttonAlternativa.StateCommon.Border.Color2 = Color.Red;
                                     buttonAlternativa.OverrideDefault.Border.Color1 = Color.Red;
                                     buttonAlternativa.OverrideDefault.Back.Color1 = Color.FromArgb(240, 240, 240);
                                     buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(240, 240, 240);
-                                    buttonAlternativa.StateCommon.Border.Width = 1;
+                                    buttonAlternativa.StateCommon.Border.Width = 3;
                                     buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(250, 250, 250);
                                     buttonAlternativa.StateCommon.Back.Color2 = Color.FromArgb(250, 250, 250);
 
@@ -477,20 +475,20 @@ namespace StudyFlow
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
 
-                                else if (questao.Erros >= 3)
+                                else if (Usuario.ErrosPorQuestao[questao.ID] == 3)
                                 {
                                     buttonAlternativa.StateCommon.Border.Color1 = Color.Red;
                                     buttonAlternativa.StateCommon.Border.Color2 = Color.Red;
                                     buttonAlternativa.OverrideDefault.Border.Color1 = Color.Red;
                                     buttonAlternativa.OverrideDefault.Back.Color1 = Color.FromArgb(240, 240, 240);
                                     buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(240, 240, 240);
-                                    buttonAlternativa.StateCommon.Border.Width = 1;
+                                    buttonAlternativa.StateCommon.Border.Width = 3;
                                     buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(250, 250, 250);
                                     buttonAlternativa.StateCommon.Back.Color2 = Color.FromArgb(250, 250, 250);
 
                                     buttonAlternativa.Enabled = false;
 
-
+                                    Usuario.ErrosPorQuestao[questao.ID] = 0;
                                     MessageBox.Show("Resposta incorreta!", "",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -510,10 +508,11 @@ namespace StudyFlow
                                 buttonAlternativa.OverrideDefault.Border.Color1 = Color.LightGreen;
                                 buttonAlternativa.OverrideDefault.Back.Color1 = Color.FromArgb(235, 255, 235);
                                 buttonAlternativa.OverrideDefault.Back.Color2 = Color.FromArgb(235, 255, 235);
-                                buttonAlternativa.StateCommon.Border.Width = 2;
+                                buttonAlternativa.StateCommon.Border.Width = 3;
                                 buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(235, 255, 235);
                                 buttonAlternativa.Enabled = false;
 
+                                Usuario.ErrosPorQuestao[questao.ID] = 0;
                                 MessageBox.Show("Resposta Correta!", "Parabéns",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 

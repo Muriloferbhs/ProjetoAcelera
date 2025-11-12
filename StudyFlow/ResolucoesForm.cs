@@ -81,12 +81,21 @@ namespace StudyFlow
             buttonBusca.Cursor = Cursors.Hand;
             panelResolucoes.Controls.Add(buttonBusca);
 
-
-
+            //busca as questoes do arquivo json e cria uma outra lista que vai ter 
             string json = File.ReadAllText("questoes.json");
             List<Pergunta> questoes = JsonSerializer.Deserialize<List<Pergunta>>(json);
-            List<Pergunta> questoesFiltradas = JsonSerializer.Deserialize<List<Pergunta>>(json);
+            List<Pergunta> questoesFiltradas = new List<Pergunta>();
 
+            //filtra as questoes que o usuario ja respondeu
+            foreach (var q in questoes)
+            {
+                if (Usuario.JaRespondeu(q.ID))
+                {
+                    questoesFiltradas.Add(q);
+                }
+            }
+            
+            
             Action atualizarLista = () =>
             {
                 panelScroll.Controls.Clear();
@@ -128,7 +137,42 @@ namespace StudyFlow
 
             buttonBusca.Click += (s, e) =>
             {
-                //logica de busca
+                foreach (Pergunta q in questoesFiltradas)
+                {
+                    //if (q.ID)
+                    //{
+                    //    int y = 10;
+                    //    KryptonPanel card = new KryptonPanel();
+                    //    card.Size = new Size(900, 60);
+                    //    card.Location = new Point(20, y);
+                    //    card.StateCommon.Color1 = Color.White;
+                    //    card.Cursor = Cursors.Hand;
+
+                    //    card.MouseEnter += (s, e) => card.StateCommon.Color1 = Color.FromArgb(250, 250, 255);
+                    //    card.MouseLeave += (s, e) => card.StateCommon.Color1 = Color.White;
+
+                    //    card.Click += (s, e) => MostrarResolucao(q);
+
+                    //    KryptonLabel labelId = new KryptonLabel();
+                    //    labelId.Text = q.ID;
+                    //    labelId.Location = new Point(10, 20);
+                    //    labelId.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                    //    labelId.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
+                    //    card.Controls.Add(labelId);
+
+                    //    KryptonLabel labelTema = new KryptonLabel();
+                    //    labelTema.Text = q.Tema;
+                    //    labelTema.Location = new Point(80, 20);
+                    //    labelTema.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                    //    labelTema.StateCommon.ShortText.Color1 = Color.FromArgb(32, 0, 177);
+                    //    card.Controls.Add(labelTema);
+
+                    //    panelScroll.Controls.Add(card);
+                    //    y += 70;
+                    //}
+
+
+                }
             };
 
             //

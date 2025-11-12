@@ -26,18 +26,6 @@ namespace StudyFlow
         [JsonPropertyName("PontuacaoParcial")] public double PontuacaoParcial { get; set; }
         public bool Respondida { get; set; } = false;
 
-        public static Dictionary<string, bool> QuestoesRespondidas { get; } = new Dictionary<string, bool>();
-
-        public static void MarcarComoRespondida(string id)
-        {
-            if (!QuestoesRespondidas.ContainsKey(id))
-                QuestoesRespondidas[id] = true;
-        }
-
-        public static bool JaRespondeu(string id)
-        {
-            return QuestoesRespondidas.ContainsKey(id) && QuestoesRespondidas[id];
-        }
 
         public double Erros { get; set; }
 
