@@ -392,10 +392,9 @@
             // CadastroForm
             // 
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(794, 531);
+            ClientSize = new Size(800, 600);
             Controls.Add(PanelDireita);
             Controls.Add(kryptonPanelEsquerda);
-            Location = new Point(0, 0);
             Name = "CadastroForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro";

@@ -50,7 +50,8 @@ namespace StudyFlow
             // HomeForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
-            ClientSize = new Size(1266, 675);
+            ClientSize = new Size(1280, 720);
+            StartPosition = FormStartPosition.CenterScreen;
             Name = "HomeForm";
             Text = "HomeForm";
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).EndInit();

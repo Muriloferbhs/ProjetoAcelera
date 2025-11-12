@@ -33,27 +33,25 @@ namespace StudyFlow
         private void InitializeComponent()
         {
             PanelEsquerda = new KryptonPanel();
+            pictureBox2 = new PictureBox();
             PanelDireita = new KryptonPanel();
             pictureBoxMostrarSenha = new PictureBox();
             TextBoxSenha = new KryptonTextBox();
             PictureBoxSenha = new KryptonPictureBox();
-            pictureBoxHexagono = new PictureBox();
             TextBoxUsuario = new KryptonTextBox();
             linkLabelSenha = new LinkLabel();
             linkLabelCadastro = new LinkLabel();
             ButtonEntrar = new KryptonButton();
             pictureBoxUsuario = new PictureBox();
             LabelLogin = new KryptonLabel();
-            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)PanelEsquerda).BeginInit();
             PanelEsquerda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PanelDireita).BeginInit();
             PanelDireita.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMostrarSenha).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PictureBoxSenha).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxHexagono).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxUsuario).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // PanelEsquerda
@@ -62,16 +60,25 @@ namespace StudyFlow
             PanelEsquerda.Dock = DockStyle.Left;
             PanelEsquerda.Location = new Point(0, 0);
             PanelEsquerda.Name = "PanelEsquerda";
-            PanelEsquerda.Size = new Size(393, 543);
+            PanelEsquerda.Size = new Size(393, 588);
             PanelEsquerda.StateCommon.Color1 = Color.FromArgb(32, 0, 177);
             PanelEsquerda.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.FromArgb(32, 0, 177);
+            pictureBox2.Image = Properties.Resources.logoStudyLogin;
+            pictureBox2.Location = new Point(65, 66);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(256, 351);
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
             // 
             // PanelDireita
             // 
             PanelDireita.Controls.Add(pictureBoxMostrarSenha);
             PanelDireita.Controls.Add(TextBoxSenha);
             PanelDireita.Controls.Add(PictureBoxSenha);
-            PanelDireita.Controls.Add(pictureBoxHexagono);
             PanelDireita.Controls.Add(TextBoxUsuario);
             PanelDireita.Controls.Add(linkLabelSenha);
             PanelDireita.Controls.Add(linkLabelCadastro);
@@ -81,7 +88,7 @@ namespace StudyFlow
             PanelDireita.Dock = DockStyle.Fill;
             PanelDireita.Location = new Point(393, 0);
             PanelDireita.Name = "PanelDireita";
-            PanelDireita.Size = new Size(397, 543);
+            PanelDireita.Size = new Size(411, 588);
             PanelDireita.StateCommon.Color1 = Color.White;
             PanelDireita.TabIndex = 1;
             // 
@@ -105,6 +112,7 @@ namespace StudyFlow
             TextBoxSenha.Cursor = Cursors.IBeam;
             TextBoxSenha.Location = new Point(85, 234);
             TextBoxSenha.Name = "TextBoxSenha";
+            TextBoxSenha.PasswordChar = '●';
             TextBoxSenha.Size = new Size(250, 34);
             TextBoxSenha.StateCommon.Back.Color1 = Color.FromArgb(173, 186, 255);
             TextBoxSenha.StateCommon.Border.Color1 = Color.FromArgb(173, 186, 255);
@@ -124,17 +132,6 @@ namespace StudyFlow
             PictureBoxSenha.SizeMode = PictureBoxSizeMode.Zoom;
             PictureBoxSenha.TabIndex = 7;
             PictureBoxSenha.TabStop = false;
-            // 
-            // pictureBoxHexagono
-            // 
-            pictureBoxHexagono.BackColor = Color.Transparent;
-            pictureBoxHexagono.Image = Properties.Resources.hexagono_contorno_azul;
-            pictureBoxHexagono.Location = new Point(181, 33);
-            pictureBoxHexagono.Name = "pictureBoxHexagono";
-            pictureBoxHexagono.Size = new Size(61, 64);
-            pictureBoxHexagono.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxHexagono.TabIndex = 6;
-            pictureBoxHexagono.TabStop = false;
             // 
             // TextBoxUsuario
             // 
@@ -237,37 +234,25 @@ namespace StudyFlow
             LabelLogin.TabIndex = 0;
             LabelLogin.Values.Text = "Login";
             // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.FromArgb(32, 0, 177);
-            pictureBox2.Image = Properties.Resources.logoStudyLogin;
-            pictureBox2.Location = new Point(65, 66);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(256, 351);
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
-            // 
             // LoginForm
             // 
-            ClientSize = new Size(790, 543);
+            ClientSize = new Size(800, 600);
             Controls.Add(PanelDireita);
             Controls.Add(PanelEsquerda);
-            Location = new Point(0, 0);
             MaximizeBox = false;
-            Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
+            Name = "LoginForm";
             Text = "Login";
             FormClosing += LoginForm_FormClosing;
             ((System.ComponentModel.ISupportInitialize)PanelEsquerda).EndInit();
             PanelEsquerda.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)PanelDireita).EndInit();
             PanelDireita.ResumeLayout(false);
             PanelDireita.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMostrarSenha).EndInit();
             ((System.ComponentModel.ISupportInitialize)PictureBoxSenha).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxHexagono).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxUsuario).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -283,7 +268,6 @@ namespace StudyFlow
         private LinkLabel linkLabelCadastro;
         private PictureBox pictureBoxUsuario;
         private KryptonPictureBox PictureBoxSenha;
-        private PictureBox pictureBoxHexagono;
         private PictureBox pictureBoxMostrarSenha;
         private PictureBox pictureBox2;
     }

@@ -1,5 +1,6 @@
 ﻿using Krypton.Toolkit;
 using System;
+using System.Buffers.Text;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -183,7 +184,54 @@ namespace StudyFlow
 
         private void MostrarResolucao(Pergunta pergunta)
         {
-            
+           PanelConteudo.Controls.Clear();
+
+            // Panel de Conteúdo
+            KryptonPanel panelResolucao = new KryptonPanel();
+            panelResolucao.Dock = DockStyle.Fill;
+            panelResolucao.StateNormal.Color1 = Color.White;
+
+            // botao voltar
+            KryptonButton buttonVoltar = new KryptonButton();
+            buttonVoltar.Text = "← Voltar";
+            buttonVoltar.Size = new Size(100, 40);
+            buttonVoltar.Location = new Point(20, 20);
+            buttonVoltar.StateCommon.Back.Color1 = Color.FromArgb(255, 102, 0);
+            buttonVoltar.StateCommon.Back.Color2 = Color.FromArgb(255, 102, 0);
+            buttonVoltar.StateCommon.Content.ShortText.Color1 = Color.White;
+            buttonVoltar.StateCommon.Border.Rounding = 6;
+            buttonVoltar.OverrideDefault.Back.Color1 = Color.White;
+            buttonVoltar.OverrideDefault.Back.Color2 = Color.White;
+            buttonVoltar.Cursor = Cursors.Hand;
+            buttonVoltar.Click += (s, e) => TelaResolucoes(); // volta para a tela dos cards
+            panelResolucao.Controls.Add(buttonVoltar);
+
+            // Titulo
+            KryptonLabel labelTitulo = new KryptonLabel();
+            labelTitulo.Text = $"Resolução da Questão {pergunta.ID}";
+            labelTitulo.Location = new Point(150, 55);
+            labelTitulo.StateCommon.ShortText.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            labelTitulo.StateCommon.ShortText.Color1 = Color.FromArgb(32, 0, 177);
+            panelResolucao.Controls.Add(labelTitulo);
+
+            // resolução
+            KryptonRichTextBox textResolucao = new KryptonRichTextBox();
+            textResolucao.Size = new Size(850, 400);
+            textResolucao.Location = new Point(150, 100);
+            textResolucao.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
+            textResolucao.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
+            textResolucao.StateCommon.Border.Rounding = 8;
+            textResolucao.StateCommon.Content.Font = new Font("Segoe UI", 12);
+
+
+            // **** aqui deve ser carregada a resolução da questão ****
+            textResolucao.Text = "ADICIONAR AQUI A RESOLUÇÃO";
+            textResolucao.ReadOnly = true;
+            panelResolucao.Controls.Add(textResolucao);
+
+            // add panel conteudo pricipal
+            PanelConteudo.Controls.Add(panelResolucao);
+
         }
     }
 }

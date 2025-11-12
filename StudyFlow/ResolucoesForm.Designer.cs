@@ -50,6 +50,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             ClientSize = new Size(1280, 720);
+            StartPosition = FormStartPosition.CenterScreen;
             Name = "NivelamentoForm";
             Text = "NivelamentoForm";
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).EndInit();

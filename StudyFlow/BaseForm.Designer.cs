@@ -216,11 +216,10 @@
             // BaseForm
             // 
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(1296, 672);
+            ClientSize = new Size(1280, 720);
             Controls.Add(PanelConteudo);
             Controls.Add(PanelEsquerda);
             Controls.Add(PanelCima);
-            Location = new Point(0, 0);
             Name = "BaseForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "StudyFlow";
