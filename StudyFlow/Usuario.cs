@@ -291,6 +291,55 @@ namespace StudyFlow
         }
 
 
+
+
+
+
+
+
+        public static void EditarUsuario(string? novoNome, string? novoTelefone, string? novoEmail) {
+
+            if (!string.IsNullOrWhiteSpace(novoNome))
+                UsuarioLogado.NomeCompleto = novoNome;
+
+            if (!string.IsNullOrWhiteSpace(novoTelefone))
+                UsuarioLogado.Telefone = novoTelefone;
+
+            if (!string.IsNullOrWhiteSpace(novoEmail))
+                UsuarioLogado.Email = novoEmail;
+
+
+            //trocar senha?
+
+        }
+
+
+        public static void Deslogar() {
+
+            UsuarioLogado = null;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         public static void RecuperarSenha()
         {
 

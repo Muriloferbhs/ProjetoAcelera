@@ -277,7 +277,6 @@ C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8
 C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.CadastroForm.resources
 C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.HomeForm.resources
 C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.LoginForm.resources
-C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.NivelamentoForm.resources
 C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.Properties.Resources.resources
 C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.QuestoesForm.resources
 C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.RankingForm.resources
@@ -295,3 +294,4 @@ C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8
 C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\ref\StudyFlow.dll
 C:\Users\Usuário 1\Desktop\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.ResolucoesForm.resources
 C:\Users\Murilo\Documents\Repositorios\AceleraPrincipal\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.ResolucoesForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.ResolucoesForm.resources

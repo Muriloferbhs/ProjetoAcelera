@@ -147,7 +147,7 @@ namespace StudyFlow
 
                 // Pontos
                 KryptonLabel labelPontos = new KryptonLabel();
-                labelPontos.Text = $"{user.PontuacaoPrioridade} pts";
+                labelPontos.Text = $"{user.PontuacaoPrioridade:F2} pts";
                 labelPontos.Location = new Point(800, 10);
                 labelPontos.StateCommon.ShortText.Font = new Font("Segoe UI", 12, FontStyle.Bold);
                 labelPontos.StateCommon.ShortText.Color1 = Color.FromArgb(32, 0, 177);
