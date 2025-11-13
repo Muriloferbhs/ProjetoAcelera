@@ -18,13 +18,13 @@ namespace StudyFlow {
         public static List<Ranking> RankingGeral = new List<Ranking>();
 
 
-        //Ranking.CalcularRanking(usuariologado.NomeUser, usuariologado.Pontuacao, usuariologado.Ativo);
+        
 
 
-        public Ranking(string nomeUserlogado, double pontuacaoUserlogado) {
+        public Ranking(string nomeUserRanking, double pontuacaoPrioridade) {
 
-            NomeUserRanking = nomeUserlogado;
-            PontuacaoPrioridade = pontuacaoUserlogado;
+            NomeUserRanking = nomeUserRanking;
+            PontuacaoPrioridade = pontuacaoPrioridade;
            
 
         }
@@ -83,9 +83,9 @@ namespace StudyFlow {
 
 
 
-        public void CalcularRanking(string senha) {
-
-
+        public static void LocalizarUser() {
+                    
+            
 
 
 

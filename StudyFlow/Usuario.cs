@@ -19,6 +19,8 @@ namespace StudyFlow
         public bool Ativo { get; private set; } = true;// verificar se o usuario esta ativo
         public double Pontuacao { get; set; }
 
+        public int PosiçãoRanking { get; set; } 
+
 
         public static ArrayList DadosDoCadastroLogin = new ArrayList();
 
@@ -269,7 +271,7 @@ namespace StudyFlow
             string emailTeste2 = "murilo123@gmail.com";
             string nomeUsuarioTeste2 = "murilo";
             string senhaTeste2 = "murilo2006";
-            double pontuacao2 = 1.0;
+            double pontuacao2 = 3.0;
             bool ativoTeste2 = true;
 
             Usuario testeUsuario2 = new Usuario(nomeCompletoTeste2, cpfTeste2, telefoneTeste2, emailTeste2, nomeUsuarioTeste2, senhaTeste2, ativoTeste2, pontuacao2);

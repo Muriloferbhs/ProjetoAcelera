@@ -116,6 +116,23 @@ namespace StudyFlow
                 linha.StateCommon.Border.Width = 1;
                 linha.Enabled = false;
 
+
+                if (Usuario.UsuarioLogado.NomeUser == user.NomeUserRanking)
+                {
+                    Usuario.UsuarioLogado.PosiçãoRanking = posicao;
+                    //KryptonMessageBox.Show("posição do usuario logado: " + Usuario.UsuarioLogado.PosiçãoRanking);
+
+
+                    //linha.StateCommon.Border.Color1 = Color.FromArgb(10, 35, 80);
+                    linha.StateCommon.Back.Color1 = Color.FromArgb(215, 215, 215); ;
+
+
+                }
+
+
+
+
+
                 if (posicao == 1)
                 {
                     linha.StateCommon.Border.Color1 = Color.FromArgb(255, 180, 40);
@@ -157,7 +174,7 @@ namespace StudyFlow
                 y += 50;
                 posicao++;
             }
-
+            
             TrocarConteudo(panelRanking);
         }
     }
