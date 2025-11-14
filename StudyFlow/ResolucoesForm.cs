@@ -1,4 +1,4 @@
-﻿using Krypton.Toolkit;
+using Krypton.Toolkit;
 using System;
 using System.Buffers.Text;
 using System.Collections.Generic;
@@ -23,6 +23,17 @@ namespace StudyFlow
 
         private void TelaResolucoes()
         {
+            Usuario.QuestoesRespondidas["0001"] = true;
+            Usuario.QuestoesRespondidas["0002"] = true;
+            Usuario.QuestoesRespondidas["0004"] = true;
+            Usuario.QuestoesRespondidas["0005"] = true;
+            Usuario.QuestoesRespondidas["0008"] = true;
+            Usuario.QuestoesRespondidas["0015"] = true;
+            Usuario.QuestoesRespondidas["0019"] = true;
+            Usuario.QuestoesRespondidas["0023"] = true;
+            Usuario.QuestoesRespondidas["0024"] = true;
+            Usuario.QuestoesRespondidas["0025"] = true;
+
             PanelConteudo.Controls.Clear();
 
             //
@@ -54,33 +65,41 @@ namespace StudyFlow
             // texto busca
             //
             KryptonTextBox textBusca = new KryptonTextBox();
-            textBusca.Location = new Point(700, 40);
-            textBusca.Size = new Size(200, 30);
-            textBusca.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
+            textBusca.Location = new Point(880, 40);
+            textBusca.Size = new Size(120, 30);
             textBusca.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
             textBusca.StateCommon.Border.Rounding = 8;
             textBusca.StateCommon.Content.Font = new Font("Segoe UI", 10);
             panelResolucoes.Controls.Add(textBusca);
+            //adicionei dps
+            //by murilo
+            textBusca.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
+            textBusca.Size = new Size(120, 30);
+            textBusca.StateCommon.Back.Color1 = Color.FromArgb(240, 240, 240);
+            textBusca.StateCommon.Border.Width = 2;
+            textBusca.StateCommon.Content.Color1 = Color.Black;
+            textBusca.CueHint.CueHintText = "Pesquisar ID";
+            textBusca.CueHint.Color1 = Color.FromArgb(110, 110, 110);
 
             //
             // botao busca
             //
-            KryptonButton buttonBusca = new KryptonButton();
-            buttonBusca.Text = "Buscar";
-            buttonBusca.Location = new Point(920, 40);
-            buttonBusca.Size = new Size(60, 30);
-            buttonBusca.StateCommon.Back.Color1 = Color.FromArgb(255, 102, 0);
-            buttonBusca.StateCommon.Back.Color2 = Color.FromArgb(255, 102, 0);
-            buttonBusca.OverrideDefault.Back.Color1 = Color.FromArgb(255, 102, 0);
-            buttonBusca.OverrideDefault.Back.Color2 = Color.FromArgb(255, 102, 0);
-            buttonBusca.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
-            buttonBusca.StateCommon.Border.Color2 = Color.FromArgb(255, 102, 0);
-            buttonBusca.StatePressed.Back.Color1 = Color.FromArgb(230, 92, 0);
-            buttonBusca.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            buttonBusca.StateCommon.Content.ShortText.Color1 = Color.White;
-            buttonBusca.StateCommon.Border.Rounding = 8;
-            buttonBusca.Cursor = Cursors.Hand;
-            panelResolucoes.Controls.Add(buttonBusca);
+            //KryptonButton buttonBusca = new KryptonButton();
+            //buttonBusca.Text = "Buscar";
+            //buttonBusca.Location = new Point(920, 40);
+            //buttonBusca.Size = new Size(60, 30);
+            //buttonBusca.StateCommon.Back.Color1 = Color.FromArgb(255, 102, 0);
+            //buttonBusca.StateCommon.Back.Color2 = Color.FromArgb(255, 102, 0);
+            //buttonBusca.OverrideDefault.Back.Color1 = Color.FromArgb(255, 102, 0);
+            //buttonBusca.OverrideDefault.Back.Color2 = Color.FromArgb(255, 102, 0);
+            //buttonBusca.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
+            //buttonBusca.StateCommon.Border.Color2 = Color.FromArgb(255, 102, 0);
+            //buttonBusca.StatePressed.Back.Color1 = Color.FromArgb(230, 92, 0);
+            //buttonBusca.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            //buttonBusca.StateCommon.Content.ShortText.Color1 = Color.White;
+            //buttonBusca.StateCommon.Border.Rounding = 8;
+            //buttonBusca.Cursor = Cursors.Hand;
+            //panelResolucoes.Controls.Add(buttonBusca);
 
             //busca as questoes do arquivo json e cria uma outra lista que vai ter 
             string json = File.ReadAllText("questoes.json");
@@ -95,8 +114,8 @@ namespace StudyFlow
                     questoesFiltradas.Add(q);
                 }
             }
-            
-            
+
+
             Action atualizarLista = () =>
             {
                 panelScroll.Controls.Clear();
@@ -105,7 +124,7 @@ namespace StudyFlow
                 foreach (var q in questoesFiltradas)
                 {
                     KryptonPanel card = new KryptonPanel();
-                    card.Size = new Size (900, 60);
+                    card.Size = new Size(900, 60);
                     card.Location = new Point(20, y);
                     card.StateCommon.Color1 = Color.White;
                     card.Cursor = Cursors.Hand;
@@ -114,7 +133,7 @@ namespace StudyFlow
                     card.MouseLeave += (s, e) => card.StateCommon.Color1 = Color.White;
 
                     card.Click += (s, e) => MostrarResolucao(q);
-                    
+
                     KryptonLabel labelId = new KryptonLabel();
                     labelId.Text = q.ID;
                     labelId.Location = new Point(10, 20);
@@ -136,44 +155,61 @@ namespace StudyFlow
 
             atualizarLista();
 
-            buttonBusca.Click += (s, e) =>
+
+            textBusca.TextChanged += (s, e) =>
             {
-                foreach (Pergunta q in questoesFiltradas)
+
+                panelScroll.Controls.Clear();
+
+                string textoBusca = textBusca.Text.Trim();
+
+                List<Pergunta> questoesFiltradasDenovo;
+
+                if (string.IsNullOrEmpty(textoBusca))
                 {
-                    //if (q.ID)
-                    //{
-                    //    int y = 10;
-                    //    KryptonPanel card = new KryptonPanel();
-                    //    card.Size = new Size(900, 60);
-                    //    card.Location = new Point(20, y);
-                    //    card.StateCommon.Color1 = Color.White;
-                    //    card.Cursor = Cursors.Hand;
-
-                    //    card.MouseEnter += (s, e) => card.StateCommon.Color1 = Color.FromArgb(250, 250, 255);
-                    //    card.MouseLeave += (s, e) => card.StateCommon.Color1 = Color.White;
-
-                    //    card.Click += (s, e) => MostrarResolucao(q);
-
-                    //    KryptonLabel labelId = new KryptonLabel();
-                    //    labelId.Text = q.ID;
-                    //    labelId.Location = new Point(10, 20);
-                    //    labelId.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-                    //    labelId.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
-                    //    card.Controls.Add(labelId);
-
-                    //    KryptonLabel labelTema = new KryptonLabel();
-                    //    labelTema.Text = q.Tema;
-                    //    labelTema.Location = new Point(80, 20);
-                    //    labelTema.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-                    //    labelTema.StateCommon.ShortText.Color1 = Color.FromArgb(32, 0, 177);
-                    //    card.Controls.Add(labelTema);
-
-                    //    panelScroll.Controls.Add(card);
-                    //    y += 70;
-                    //}
-
-
+                    questoesFiltradasDenovo = questoesFiltradas.ToList();
                 }
+                else
+                {
+                    // Filtra por ID exatamente igual
+                    questoesFiltradasDenovo = questoesFiltradas.Where(q => q.ID.StartsWith(textoBusca)).ToList();
+                }
+
+                int y = 10;
+                foreach (Pergunta q in questoesFiltradasDenovo)
+                {
+
+                    KryptonPanel card = new KryptonPanel();
+                    card.Size = new Size(900, 60);
+                    card.Location = new Point(20, y);
+                    card.StateCommon.Color1 = Color.White;
+                    card.Cursor = Cursors.Hand;
+
+                    card.MouseEnter += (s, e) => card.StateCommon.Color1 = Color.FromArgb(250, 250, 255);
+                    card.MouseLeave += (s, e) => card.StateCommon.Color1 = Color.White;
+
+                    card.Click += (s, e) => MostrarResolucao(q);
+
+                    KryptonLabel labelId = new KryptonLabel();
+                    labelId.Text = q.ID;
+                    labelId.Location = new Point(10, 20);
+                    labelId.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                    labelId.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
+                    card.Controls.Add(labelId);
+
+                    KryptonLabel labelTema = new KryptonLabel();
+                    labelTema.Text = q.Tema;
+                    labelTema.Location = new Point(80, 20);
+                    labelTema.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                    labelTema.StateCommon.ShortText.Color1 = Color.FromArgb(32, 0, 177);
+                    card.Controls.Add(labelTema);
+
+                    panelScroll.Controls.Add(card);
+                    y += 70;
+                }
+
+
+
             };
 
             //
@@ -184,7 +220,7 @@ namespace StudyFlow
 
         private void MostrarResolucao(Pergunta pergunta)
         {
-           PanelConteudo.Controls.Clear();
+            PanelConteudo.Controls.Clear();
 
             // Panel de Conteúdo
             KryptonPanel panelResolucao = new KryptonPanel();
