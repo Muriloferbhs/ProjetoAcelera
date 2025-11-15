@@ -24,6 +24,13 @@ namespace StudyFlow
         [JsonPropertyName("E")] public string E { get; set; }
         [JsonPropertyName("Resposta")] public string? Resposta { get; set; }
         [JsonPropertyName("PontuacaoParcial")] public double PontuacaoParcial { get; set; }
+
+        [JsonPropertyName("expA")] public string expA { get; set; }
+        [JsonPropertyName("expB")] public string expB { get; set; }
+        [JsonPropertyName("expC")] public string expC { get; set; }
+        [JsonPropertyName("expD")] public string expD { get; set; }
+        [JsonPropertyName("expE")] public string expE { get; set; }
+        [JsonPropertyName("expUnica")] public string expUnica { get; set; }
         public bool Respondida { get; set; } = false;
 
 

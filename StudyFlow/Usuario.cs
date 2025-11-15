@@ -2,7 +2,9 @@ using BCrypt.Net;//para usar hash
 using Krypton.Toolkit;
 using Microsoft.VisualBasic.Logging;
 using System.Collections;
+using System.Text.Json;
 using System.Web;
+using System.Text.Json;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -52,7 +54,7 @@ namespace StudyFlow
                 ErrosPorQuestao[ID]++;
         }
 
-        
+
         public Usuario(string nomeCompleto, string cpf, string telefone, string email, string nomeUsuario, string senha, bool ativo, double pontuacao)
         {
             NomeCompleto = nomeCompleto;
