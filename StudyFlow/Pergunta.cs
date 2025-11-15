@@ -31,6 +31,7 @@ namespace StudyFlow
         [JsonPropertyName("expD")] public string expD { get; set; }
         [JsonPropertyName("expE")] public string expE { get; set; }
         [JsonPropertyName("expUnica")] public string expUnica { get; set; }
+        [JsonPropertyName("Ano")] public string Ano { get; set; }
         public bool Respondida { get; set; } = false;
 
 

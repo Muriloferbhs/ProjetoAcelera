@@ -32,18 +32,18 @@ namespace StudyFlow
             List<Pergunta> questoes = JsonSerializer.Deserialize<List<Pergunta>>(json);
             List<Pergunta> questoesFiltradas = new List<Pergunta>();
 
-            //apenas para teste, marcar algumas questoes como respondidas
-            Usuario.QuestoesRespondidas["0001"] = true;
-            Usuario.QuestoesRespondidas["0002"] = true;
-            Usuario.QuestoesRespondidas["0004"] = true;
-            Usuario.QuestoesRespondidas["0005"] = true;
-            Usuario.QuestoesRespondidas["0008"] = true;
-            Usuario.QuestoesRespondidas["0013"] = true;
-            Usuario.QuestoesRespondidas["0015"] = true;
-            Usuario.QuestoesRespondidas["0019"] = true;
-            Usuario.QuestoesRespondidas["0023"] = true;
-            Usuario.QuestoesRespondidas["0024"] = true;
-            Usuario.QuestoesRespondidas["0025"] = true;
+            ////apenas para teste, marcar algumas questoes como respondidas
+            //Usuario.QuestoesRespondidas["0001"] = true;
+            //Usuario.QuestoesRespondidas["0002"] = true;
+            //Usuario.QuestoesRespondidas["0004"] = true;
+            //Usuario.QuestoesRespondidas["0005"] = true;
+            //Usuario.QuestoesRespondidas["0008"] = true;
+            //Usuario.QuestoesRespondidas["0013"] = true;
+            //Usuario.QuestoesRespondidas["0015"] = true;
+            //Usuario.QuestoesRespondidas["0019"] = true;
+            //Usuario.QuestoesRespondidas["0023"] = true;
+            //Usuario.QuestoesRespondidas["0024"] = true;
+            //Usuario.QuestoesRespondidas["0025"] = true;
 
             PanelConteudo.Controls.Clear();
 
@@ -135,6 +135,26 @@ namespace StudyFlow
                     card.StateCommon.Color1 = Color.White;
                     card.Cursor = Cursors.Hand;
 
+                    if (Usuario.AcertouOuErrou.ContainsKey(q.ID) == true)
+                    {
+                        KryptonLabel labelCertoouErrado = new KryptonLabel();
+                        if (Usuario.AcertouOuErrou[q.ID] == true)
+                        {
+                            labelCertoouErrado.Text = "Acertou";
+                            labelCertoouErrado.StateCommon.ShortText.Color1 = Color.LightGreen;
+                            labelCertoouErrado.Location = new Point(710, 20);
+                        }
+
+                        if (Usuario.AcertouOuErrou[q.ID] == false)
+                        {
+                            labelCertoouErrado.Text = "Errou";
+                            labelCertoouErrado.StateCommon.ShortText.Color1 = Color.Red;
+                            labelCertoouErrado.Location = new Point(718, 20);
+                        }
+                        labelCertoouErrado.StateCommon.ShortText.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+                        card.Controls.Add(labelCertoouErrado);
+                    }
+
                     card.MouseEnter += (s, e) => card.StateCommon.Color1 = Color.FromArgb(250, 250, 255);
                     card.MouseLeave += (s, e) => card.StateCommon.Color1 = Color.White;
 
@@ -209,6 +229,26 @@ namespace StudyFlow
                     labelTema.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
                     labelTema.StateCommon.ShortText.Color1 = Color.FromArgb(32, 0, 177);
                     card.Controls.Add(labelTema);
+
+                    if (Usuario.AcertouOuErrou.ContainsKey(q.ID) == true)
+                    {
+                        KryptonLabel labelCertoouErrado = new KryptonLabel();
+                        if (Usuario.AcertouOuErrou[q.ID] == true)
+                        {
+                            labelCertoouErrado.Text = "Acertou";
+                            labelCertoouErrado.StateCommon.ShortText.Color1 = Color.LightGreen;
+                            labelCertoouErrado.Location = new Point(710, 20);
+                        }
+
+                        if (Usuario.AcertouOuErrou[q.ID] == false)
+                        {
+                            labelCertoouErrado.Text = "Errou";
+                            labelCertoouErrado.StateCommon.ShortText.Color1 = Color.Red;
+                            labelCertoouErrado.Location = new Point(718, 20);
+                        }
+                        labelCertoouErrado.StateCommon.ShortText.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+                        card.Controls.Add(labelCertoouErrado);
+                    }
 
                     panelScroll.Controls.Add(card);
                     y += 70;

@@ -70,7 +70,7 @@ namespace StudyFlow
             KryptonButton labelCabecalhoUsuario = new KryptonButton();
             labelCabecalhoUsuario.Text = "Usuário";
             labelCabecalhoUsuario.Enabled = false;
-            labelCabecalhoUsuario.Location = new Point(280, 80);
+            labelCabecalhoUsuario.Location = new Point(220, 80);
             labelCabecalhoUsuario.Size = new Size(90, 30);
             labelCabecalhoUsuario.StateCommon.Back.Color1 = Color.FromArgb(255, 102, 0);
             labelCabecalhoUsuario.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12, FontStyle.Bold);
@@ -79,6 +79,21 @@ namespace StudyFlow
             labelCabecalhoUsuario.StateCommon.Border.Color1 = Color.White;
             labelCabecalhoUsuario.StateCommon.Border.Rounding = 8;
             panelRanking.Controls.Add(labelCabecalhoUsuario);
+
+
+            //Questoes respodidas
+            //KryptonButton labelCabecalhoTentativas = new KryptonButton();
+            //labelCabecalhoTentativas.Text = "Respondidas";
+            //labelCabecalhoTentativas.Enabled = false;
+            //labelCabecalhoTentativas.Location = new Point(355, 80);
+            //labelCabecalhoTentativas.Size = new Size(120, 30);
+            //labelCabecalhoTentativas.StateCommon.Back.Color1 = Color.FromArgb(255, 102, 0);
+            //labelCabecalhoTentativas.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            //labelCabecalhoTentativas.StateCommon.Content.ShortText.Color1 = Color.White;
+            //labelCabecalhoTentativas.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
+            //labelCabecalhoTentativas.StateCommon.Border.Color1 = Color.White;
+            //labelCabecalhoTentativas.StateCommon.Border.Rounding = 8;
+            //panelRanking.Controls.Add(labelCabecalhoTentativas);
 
             // pontuaçao
 
@@ -157,9 +172,11 @@ namespace StudyFlow
                 // Usuário
                 KryptonLabel labelNome = new KryptonLabel();
                 labelNome.Text = user.NomeUserRanking;
-                labelNome.Location = new Point(200, 10);
+                labelNome.Location = new Point(150, 10);
                 labelNome.StateCommon.ShortText.Font = new Font("Segoe UI", 12, FontStyle.Regular);
                 labelNome.StateCommon.ShortText.Color1 = Color.FromArgb(83, 79, 79);
+                labelNome.StateCommon.ShortText.TextV = PaletteRelativeAlign.Center;
+                labelNome.StateCommon.ShortText.TextV = PaletteRelativeAlign.Center;
                 linha.Controls.Add(labelNome);
 
                 // Pontos

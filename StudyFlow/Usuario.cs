@@ -20,14 +20,28 @@ namespace StudyFlow
         public string Senha { get; private set; } // apenas para teste
         public bool Ativo { get; private set; } = true;// verificar se o usuario esta ativo
         public double Pontuacao { get; set; }
-
         public int PosiçãoRanking { get; set; } 
+        public int Respondidas  { get; set; } 
+        public int Acertos { get; set; } 
 
 
         public static ArrayList DadosDoCadastroLogin = new ArrayList();
 
 
         public static Usuario UsuarioLogado { get; set; }
+
+        public static Dictionary<string, bool> AcertouOuErrou { get; } = new Dictionary<string, bool>();
+        public static void MarcarComoCertaOuErrada(string ID, string respostaDada, string resposta)
+        {
+            if (respostaDada == resposta)
+            {
+                AcertouOuErrou[ID] = true;
+            }
+            else
+            {
+                AcertouOuErrou[ID] = false;
+            }
+        }
 
 
         public static Dictionary<string, bool> QuestoesRespondidas { get; } = new Dictionary<string, bool>();
