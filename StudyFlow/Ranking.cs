@@ -12,7 +12,8 @@ namespace StudyFlow {
 
         public double PontuacaoPrioridade { get; private set; }
         public string NomeUserRanking { get; private set; }
-      
+
+        public int Posicao { get; private set; }
 
 
         public static List<Ranking> RankingGeral = new List<Ranking>();
@@ -21,11 +22,11 @@ namespace StudyFlow {
         
 
 
-        public Ranking(string nomeUserRanking, double pontuacaoPrioridade) {
+        public Ranking(string nomeUserRanking, double pontuacaoPrioridade, int posicao) {
 
             NomeUserRanking = nomeUserRanking;
             PontuacaoPrioridade = pontuacaoPrioridade;
-           
+            Posicao = posicao;
 
         }
 
@@ -67,8 +68,35 @@ namespace StudyFlow {
                 {
                     usuarioNoRanking.PontuacaoPrioridade = user.Pontuacao;
                 }
-                
 
+
+
+
+
+                Ranking.RankingGeral.Sort((a, b) => b.PontuacaoPrioridade.CompareTo(a.PontuacaoPrioridade));
+                int posicao = 1;
+
+                foreach (var posicaoUser in Ranking.RankingGeral)
+                {
+
+
+
+
+                    if (Usuario.UsuarioLogado.NomeUser == posicaoUser.NomeUserRanking)
+                    {
+                        Usuario.UsuarioLogado.PosiçãoRanking = posicao;
+
+                    }
+
+                    posicaoUser.Posicao = posicao;
+
+
+
+
+                    posicao++;
+
+
+                }
 
 
 

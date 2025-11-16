@@ -26,8 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             PanelCima = new Krypton.Toolkit.KryptonPanel();
             pictureBox1 = new PictureBox();
             PanelEsquerda = new Krypton.Toolkit.KryptonPanel();
@@ -51,7 +50,7 @@
             PanelCima.Dock = DockStyle.Top;
             PanelCima.Location = new Point(0, 0);
             PanelCima.Name = "PanelCima";
-            PanelCima.Size = new Size(1296, 80);
+            PanelCima.Size = new Size(1288, 80);
             PanelCima.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelCima.TabIndex = 0;
             // 
@@ -75,9 +74,10 @@
             PanelEsquerda.Dock = DockStyle.Left;
             PanelEsquerda.Location = new Point(0, 80);
             PanelEsquerda.Name = "PanelEsquerda";
-            PanelEsquerda.Size = new Size(167, 592);
+            PanelEsquerda.Size = new Size(167, 616);
             PanelEsquerda.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelEsquerda.TabIndex = 1;
+            PanelEsquerda.Paint += PanelEsquerda_Paint;
             // 
             // ButtonAjuda
             // 
@@ -209,17 +209,18 @@
             PanelConteudo.Dock = DockStyle.Fill;
             PanelConteudo.Location = new Point(167, 80);
             PanelConteudo.Name = "PanelConteudo";
-            PanelConteudo.Size = new Size(1129, 592);
+            PanelConteudo.Size = new Size(1121, 616);
             PanelConteudo.StateNormal.Color1 = Color.White;
             PanelConteudo.TabIndex = 2;
             // 
             // BaseForm
             // 
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(1280, 720);
+            ClientSize = new Size(1288, 696);
             Controls.Add(PanelConteudo);
             Controls.Add(PanelEsquerda);
             Controls.Add(PanelCima);
+            Location = new Point(0, 0);
             Name = "BaseForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "StudyFlow";

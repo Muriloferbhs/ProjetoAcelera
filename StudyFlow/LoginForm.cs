@@ -48,7 +48,8 @@ namespace StudyFlow
                 HomeForm home = new HomeForm();
                 home.Show();
                 this.Hide();
-                
+                Ranking.CalcularRanking();
+                KryptonMessageBox.Show("Posição = " + Usuario.UsuarioLogado.PosiçãoRanking);
 
             }
 

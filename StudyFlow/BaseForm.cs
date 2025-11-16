@@ -11,16 +11,15 @@ using System.Windows.Forms;
 
 namespace StudyFlow
 {
-    public partial class BaseForm : KryptonForm
-    {
-        public BaseForm()
-        {
+    public partial class BaseForm : KryptonForm {
+        public BaseForm() {
             InitializeComponent();
             this.Size = new Size(1280, 720);
             this.StartPosition = FormStartPosition.CenterScreen;
 
         }
 
+        
         private void TrocarTela(Form novaTela) //metodo para trocar de tela
         {
             novaTela.StartPosition = FormStartPosition.Manual;
@@ -29,48 +28,46 @@ namespace StudyFlow
             novaTela.Show();
             this.Hide(); //esconde a tela anterior 
 
+
         }
 
-        private void ButtonHome_Click(object sender, EventArgs e)
-        {
+        private void ButtonHome_Click(object sender, EventArgs e) {
             if (this is HomeForm) return;
-            TrocarTela(new HomeForm());
-           
+            TrocarTela(new HomeForm());  // Troca de tel
+
         }
 
-        private void ButtonRanking_Click(object sender, EventArgs e)
-        {
+        private void ButtonRanking_Click(object sender, EventArgs e) {
             if (this is RankingForm) return;
-            TrocarTela(new RankingForm());
+            
+            TrocarTela(new RankingForm());  // Troca de tel
         }
 
-        private void ButtonNivelamento_Click(object sender, EventArgs e)
-        {
+        private void ButtonNivelamento_Click(object sender, EventArgs e) {
             if (this is QuestoesForm) return;
-            TrocarTela(new QuestoesForm());
+           
+            TrocarTela(new QuestoesForm());  // Troca de tel
         }
 
-        private void ButtonQuestoes_Click(object sender, EventArgs e)
-        {
+        private void ButtonQuestoes_Click(object sender, EventArgs e) {
             if (this is ResolucoesForm) return;
-            TrocarTela(new ResolucoesForm());
+          
+            TrocarTela(new ResolucoesForm());  // Troca de tel
         }
 
-        private void ButtonAjuda_Click(object sender, EventArgs e)
-        {
+        private void ButtonAjuda_Click(object sender, EventArgs e) {
             if (this is AjudaForm) return;
+           
             TrocarTela(new AjudaForm());
         }
 
-        public void TrocarConteudo(Control novoConteudo)
-        {
+        public void TrocarConteudo(Control novoConteudo) {
             PanelConteudo.Controls.Clear();
             novoConteudo.Dock = DockStyle.Fill;
             PanelConteudo.Controls.Add(novoConteudo);
         }
 
-        private void BaseForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
+        private void BaseForm_FormClosing(object sender, FormClosingEventArgs e) {
             if (e.CloseReason == CloseReason.UserClosing)
             {
                 DialogResult resultado = MessageBox.Show(
@@ -89,6 +86,10 @@ namespace StudyFlow
                     Application.Exit(); // Fecha toda a aplicação
                 }
             }
+        }
+
+        private void PanelEsquerda_Paint(object sender, PaintEventArgs e) {
+
         }
     }
 }

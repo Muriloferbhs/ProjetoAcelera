@@ -111,12 +111,9 @@ namespace StudyFlow
             panelRanking.Controls.Add(labelCabecalhoPontuacao);
 
 
-            
-            Ranking.CalcularRanking();
-            Ranking.RankingGeral.Sort((a, b) => b.PontuacaoPrioridade.CompareTo(a.PontuacaoPrioridade));
 
             int y = 10;
-            int posicao = 1;
+
 
             foreach (var user in Ranking.RankingGeral)
             {
@@ -134,11 +131,8 @@ namespace StudyFlow
 
                 if (Usuario.UsuarioLogado.NomeUser == user.NomeUserRanking)
                 {
-                    Usuario.UsuarioLogado.PosiçãoRanking = posicao;
-                    //KryptonMessageBox.Show("posição do usuario logado: " + Usuario.UsuarioLogado.PosiçãoRanking);
+                    Usuario.UsuarioLogado.PosiçãoRanking = user.Posicao;
 
-
-                    //linha.StateCommon.Border.Color1 = Color.FromArgb(10, 35, 80);
                     linha.StateCommon.Back.Color1 = Color.FromArgb(215, 215, 215); ;
 
 
@@ -147,23 +141,22 @@ namespace StudyFlow
 
 
 
-
-                if (posicao == 1)
+                if (user.Posicao == 1)
                 {
                     linha.StateCommon.Border.Color1 = Color.FromArgb(255, 180, 40);
                 }
-                else if (posicao == 2)
+                else if (user.Posicao == 2)
                 {
                     linha.StateCommon.Border.Color1 = Color.FromArgb(180, 180, 180);
                 }
-                else if (posicao == 3)
+                else if (user.Posicao == 3)
                 {
                     linha.StateCommon.Border.Color1 = Color.FromArgb(220, 120, 60);
                 }
 
                 // Posição
                 KryptonLabel labelPos = new KryptonLabel();
-                labelPos.Text = $"{posicao}º";
+                labelPos.Text = $"{user.Posicao}º";
                 labelPos.Location = new Point(30, 10);
                 labelPos.StateCommon.ShortText.Font = new Font("Segoe UI", 12, FontStyle.Bold);
                 labelPos.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
@@ -189,7 +182,7 @@ namespace StudyFlow
 
                 panelScroll.Controls.Add(linha);
                 y += 50;
-                posicao++;
+               
             }
             
             TrocarConteudo(panelRanking);
