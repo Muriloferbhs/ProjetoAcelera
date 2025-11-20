@@ -1,10 +1,11 @@
 using BCrypt.Net;//para usar hash
 using Krypton.Toolkit;
+using Microsoft.VisualBasic.ApplicationServices;
 using Microsoft.VisualBasic.Logging;
 using System.Collections;
 using System.Text.Json;
-using System.Web;
 using System.Text.Json;
+using System.Web;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -24,6 +25,8 @@ namespace StudyFlow
         public int Respondidas  { get; set; } 
         public int Acertos { get; set; }
         public string FotoPerfil { get; set; }//pensando em como fazer
+        public string TextoUser { get; set; }
+
 
 
 
@@ -318,19 +321,25 @@ namespace StudyFlow
 
 
 
-        public static void EditarUsuario(string? novoNome, string? novoTelefone, string? novoEmail) {
+        public static void EditarUsuario(string? novoNome, string? novoTelefone) {
+
+
+            foreach (Ranking r in Ranking.RankingGeral)
+            {
+                if (UsuarioLogado.NomeUser == r.NomeUserRanking)
+                { r.NomeUserRanking = novoNome; }
+            
+            }
 
             if (!string.IsNullOrWhiteSpace(novoNome))
-                UsuarioLogado.NomeCompleto = novoNome;
+            UsuarioLogado.NomeUser = novoNome;
+
+           
 
             if (!string.IsNullOrWhiteSpace(novoTelefone))
+
+
                 UsuarioLogado.Telefone = novoTelefone;
-
-            if (!string.IsNullOrWhiteSpace(novoEmail))
-                UsuarioLogado.Email = novoEmail;
-
-
-            //trocar senha?
 
         }
 

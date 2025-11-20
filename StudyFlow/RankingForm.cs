@@ -114,7 +114,7 @@ namespace StudyFlow
 
             int y = 10;
 
-
+            Ranking.CalcularRanking();
             foreach (var user in Ranking.RankingGeral)
             {
                 KryptonButton linha = new KryptonButton();

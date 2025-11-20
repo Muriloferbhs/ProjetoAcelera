@@ -27,6 +27,8 @@ namespace StudyFlow
             InitializeComponent();
             TelaPerfil();
         }
+        String editNome, editTelefone;
+
 
         private void TelaPerfil()
         {
@@ -48,7 +50,7 @@ namespace StudyFlow
 
             //posição no rank
             KryptonButton labelposicao = new KryptonButton();
-            labelposicao.Text = "#01";
+            labelposicao.Text =  Usuario.UsuarioLogado.PosiçãoRanking + "º";
             labelposicao.Enabled = false;
             labelposicao.Location = new Point(165,360);
             labelposicao.Size = new Size(170, 50);
@@ -60,7 +62,7 @@ namespace StudyFlow
 
             //pontos 
             KryptonButton labelPontos = new KryptonButton();
-            labelPontos.Text = "1234 pts";
+            labelPontos.Text = $"{Usuario.UsuarioLogado.Pontuacao:F2} pts";
             labelPontos.Enabled = false;
             labelPontos.Location = new Point(165, 430);
             labelPontos.Size = new Size(170, 50);
@@ -83,7 +85,8 @@ namespace StudyFlow
             textBoxNome = new KryptonTextBox();
             textBoxNome.Location = new Point(460, 150);
             textBoxNome.Size = new Size(210, 40);
-            textBoxNome.Text = "Nome do Usuário";
+            editNome = Usuario.UsuarioLogado.NomeUser;
+            textBoxNome.Text = "" + editNome;
             textBoxNome.StateCommon.Content.Font = new Font("Segoe UI", 12);
             textBoxNome.StateCommon.Border.Rounding = 8;
             textBoxNome.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
@@ -103,7 +106,7 @@ namespace StudyFlow
             textBoxCpf = new KryptonTextBox();
             textBoxCpf.Location = new Point(460, 230);
             textBoxCpf.Size = new Size(210, 40);
-            textBoxCpf.Text = "000.000.000-00";
+            textBoxCpf.Text = "" + Usuario.UsuarioLogado.Cpf;
             textBoxCpf.StateCommon.Content.Font = new Font("Segoe UI", 12);
             textBoxCpf.StateCommon.Border.Rounding = 8;
             textBoxCpf.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
@@ -123,7 +126,7 @@ namespace StudyFlow
             textBoxTel = new KryptonTextBox();
             textBoxTel.Location = new Point(720, 150);
             textBoxTel.Size = new Size(210, 40);
-            textBoxTel.Text = "(00) 00000-0000";
+            textBoxTel.Text = "" + Usuario.UsuarioLogado.Telefone;
             textBoxTel.StateCommon.Content.Font = new Font("Segoe UI", 12);
             textBoxTel.StateCommon.Border.Rounding = 8;
             textBoxTel.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
@@ -163,6 +166,7 @@ namespace StudyFlow
             textBoxSobre = new KryptonRichTextBox();
             textBoxSobre.Location = new Point(460, 340);
             textBoxSobre.Size = new Size(475, 180);
+            textBoxSobre.Text = "" + Usuario.UsuarioLogado.TextoUser;
             textBoxSobre.StateCommon.Content.Font = new Font("Segoe UI", 12);
             textBoxSobre.StateCommon.Border.Rounding = 8;
             textBoxSobre.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
@@ -221,19 +225,24 @@ namespace StudyFlow
         private void EntrarModoEdicao()
         {
             textBoxNome.Enabled = true;
-            textBoxCpf.Enabled = true;
+            textBoxCpf.Enabled = false;
             textBoxTel.Enabled = true;
             textBoxSenha.Enabled = false;
             textBoxSobre.Enabled = true;
+
             modoEdicao = true;
         }
 
         private void SalvarEdicao()
         {
+
+
+            Usuario.EditarUsuario(textBoxNome.Text, textBoxTel.Text);
+
             if (modoEdicao)
             {
                 // adicionar logica para salvar os dados editados
-                BloquearCampos();
+                 BloquearCampos();
             }
         }
     }

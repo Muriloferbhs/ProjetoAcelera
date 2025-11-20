@@ -10,8 +10,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 namespace StudyFlow {
     internal class Ranking {
 
-        public double PontuacaoPrioridade { get; private set; }
-        public string NomeUserRanking { get; private set; }
+        public double PontuacaoPrioridade { get;  set; }
+        public string NomeUserRanking { get;  set; }
 
         public int Posicao { get; private set; }
 
@@ -55,7 +55,7 @@ namespace StudyFlow {
 
 
 
-                if (usuarioNoRanking == null)
+                if (usuarioNoRanking == null )
                 {
                     RankingGeral.Add(new Ranking
                     {

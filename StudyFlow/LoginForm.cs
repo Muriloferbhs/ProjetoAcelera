@@ -45,11 +45,12 @@ namespace StudyFlow
 
             if (usuariologado != null)
             {
+                Ranking.CalcularRanking();
                 HomeForm home = new HomeForm();
                 home.Show();
                 this.Hide();
-                Ranking.CalcularRanking();
-                KryptonMessageBox.Show("Posição = " + Usuario.UsuarioLogado.PosiçãoRanking);
+                
+              
 
             }
 
