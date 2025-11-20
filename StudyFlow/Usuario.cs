@@ -321,7 +321,7 @@ namespace StudyFlow
 
 
 
-        public static void EditarUsuario(string? novoNome, string? novoTelefone) {
+        public static void EditarUsuario(string? novoNome, string? novoTelefone, string? novoSobreMim) {
 
 
             foreach (Ranking r in Ranking.RankingGeral)
@@ -337,9 +337,9 @@ namespace StudyFlow
            
 
             if (!string.IsNullOrWhiteSpace(novoTelefone))
+            UsuarioLogado.Telefone = novoTelefone;
 
-
-                UsuarioLogado.Telefone = novoTelefone;
+            UsuarioLogado.TextoUser = novoSobreMim;
 
         }
 

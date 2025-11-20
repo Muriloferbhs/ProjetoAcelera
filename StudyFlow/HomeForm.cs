@@ -27,7 +27,7 @@ namespace StudyFlow
             InitializeComponent();
             TelaPerfil();
         }
-        String editNome, editTelefone;
+        String editNome, editTelefone, editSobremim;
 
 
         private void TelaPerfil()
@@ -126,7 +126,8 @@ namespace StudyFlow
             textBoxTel = new KryptonTextBox();
             textBoxTel.Location = new Point(720, 150);
             textBoxTel.Size = new Size(210, 40);
-            textBoxTel.Text = "" + Usuario.UsuarioLogado.Telefone;
+            editTelefone = Usuario.UsuarioLogado.Telefone;
+            textBoxTel.Text = "" + editTelefone;
             textBoxTel.StateCommon.Content.Font = new Font("Segoe UI", 12);
             textBoxTel.StateCommon.Border.Rounding = 8;
             textBoxTel.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
@@ -166,7 +167,8 @@ namespace StudyFlow
             textBoxSobre = new KryptonRichTextBox();
             textBoxSobre.Location = new Point(460, 340);
             textBoxSobre.Size = new Size(475, 180);
-            textBoxSobre.Text = "" + Usuario.UsuarioLogado.TextoUser;
+            editSobremim = Usuario.UsuarioLogado.TextoUser;
+            textBoxSobre.Text = "" + editSobremim;
             textBoxSobre.StateCommon.Content.Font = new Font("Segoe UI", 12);
             textBoxSobre.StateCommon.Border.Rounding = 8;
             textBoxSobre.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
@@ -181,7 +183,27 @@ namespace StudyFlow
             btnEditar.StateCommon.Border.Rounding = 25;
             btnEditar.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
             btnEditar.Text = "Editar";
-            btnEditar.Click += (s, e) => EntrarModoEdicao();
+            btnEditar.Click += (s, e) =>
+            {
+                if (modoEdicao == false) { EntrarModoEdicao(); }
+                else 
+                {
+                    textBoxNome.Text = Usuario.UsuarioLogado.NomeUser;
+                    textBoxTel.Text = Usuario.UsuarioLogado.Telefone;
+                    textBoxSobre.Text = Usuario.UsuarioLogado.TextoUser;
+
+                    BloquearCampos(); 
+                }
+
+
+            };
+            
+            
+            
+            
+            
+            
+            
             perfilPanel.Controls.Add(btnEditar);
 
 
@@ -213,6 +235,7 @@ namespace StudyFlow
         
         private void BloquearCampos()
         {
+
             textBoxNome.Enabled = false;
             textBoxCpf.Enabled = false;
             textBoxTel.Enabled = false;
@@ -237,7 +260,7 @@ namespace StudyFlow
         {
 
 
-            Usuario.EditarUsuario(textBoxNome.Text, textBoxTel.Text);
+            Usuario.EditarUsuario(textBoxNome.Text, textBoxTel.Text, textBoxSobre.Text);
 
             if (modoEdicao)
             {
