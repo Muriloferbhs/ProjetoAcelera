@@ -16,7 +16,7 @@ namespace StudyFlow
             //Application.Run(new QuestoesForm());
             //Application.Run(new RankingForm());
             //Application.Run(new ResolucoesForm());
-           // Application.Run(new HomeForm());
+            //Application.Run(new HomeForm());
         }
     }
 }

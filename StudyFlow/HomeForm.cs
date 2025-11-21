@@ -19,6 +19,7 @@ namespace StudyFlow
         KryptonTextBox textBoxTel;
         KryptonTextBox textBoxSenha;
         KryptonRichTextBox textBoxSobre;
+        KryptonButton labelposicao;
 
         bool modoEdicao = false;
 
@@ -49,7 +50,7 @@ namespace StudyFlow
             perfilPanel.Controls.Add(fotoPerfil);
 
             //posição no rank
-            KryptonButton labelposicao = new KryptonButton();
+            labelposicao = new KryptonButton();
             labelposicao.Text =  Usuario.UsuarioLogado.PosiçãoRanking + "º";
             labelposicao.Enabled = false;
             labelposicao.Location = new Point(165,360);
@@ -175,15 +176,29 @@ namespace StudyFlow
             textBoxSobre.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
             perfilPanel.Controls.Add(textBoxSobre);
 
-            // botao editar  ***provisorio*** 
-            KryptonButton btnEditar = new KryptonButton();
-            btnEditar.Size = new Size(70, 70);
-            btnEditar.Location = new Point(950, 80);
-            btnEditar.StateCommon.Back.Color1 = Color.Orange;
-            btnEditar.StateCommon.Border.Rounding = 25;
-            btnEditar.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
-            btnEditar.Text = "Editar";
-            btnEditar.Click += (s, e) =>
+            // botao editar 
+            // 
+            PictureBox iconEdit = new PictureBox();
+            iconEdit.Size = new Size(40, 40);
+            iconEdit.Location = new Point(950, 80);
+            iconEdit.BackColor = Color.White;
+            iconEdit.Image = Properties.Resources.edit;
+            iconEdit.SizeMode = PictureBoxSizeMode.Zoom;
+            iconEdit.Cursor = Cursors.Hand;
+
+            iconEdit.MouseDown += (s, e) =>
+            {
+                iconEdit.Size = new Size(36, 36);
+                iconEdit.Location = new Point(952, 82);
+            };
+
+            iconEdit.MouseUp += (s, e) =>
+            {
+                iconEdit.Size = new Size(40, 40);
+                iconEdit.Location = new Point(950, 80);
+            };
+
+            iconEdit.Click += (s, e) =>
             {
                 if (modoEdicao == false) { EntrarModoEdicao(); }
                 else 
@@ -197,14 +212,8 @@ namespace StudyFlow
 
 
             };
-            
-            
-            
-            
-            
-            
-            
-            perfilPanel.Controls.Add(btnEditar);
+
+            perfilPanel.Controls.Add(iconEdit);
 
 
             // botao salvar

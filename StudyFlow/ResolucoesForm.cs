@@ -72,11 +72,20 @@ namespace StudyFlow
             panelScroll.BorderStyle = BorderStyle.FixedSingle;
             panelResolucoes.Controls.Add(panelScroll);
 
+            // ícone lupa
+            PictureBox iconLupa = new PictureBox();
+            iconLupa.Image = Properties.Resources.search;
+            iconLupa.Location = new Point(825, 41);
+            iconLupa.Size = new Size(30, 30);
+            iconLupa.BackColor = Color.Transparent;
+            iconLupa.SizeMode = PictureBoxSizeMode.StretchImage;
+            panelResolucoes.Controls.Add(iconLupa);
+
             //
             // texto busca
             //
             KryptonTextBox textBusca = new KryptonTextBox();
-            textBusca.Location = new Point(880, 40);
+            textBusca.Location = new Point(860, 40);
             textBusca.Size = new Size(120, 30);
             textBusca.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
             textBusca.StateCommon.Border.Rounding = 8;
@@ -272,7 +281,7 @@ namespace StudyFlow
             btn.StateCommon.Back.Color1 = Color.White;
             btn.StateCommon.Back.Color2 = Color.White;
 
-            // Opcional: limpar override
+            // limpar override
             btn.StatePressed.Back.Color1 = Color.FromArgb(255, 102, 0);
             btn.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
             btn.OverrideDefault.Border.Color1 = Color.Empty;
@@ -291,7 +300,7 @@ namespace StudyFlow
             btn.StateCommon.Back.Color1 = Color.White;
             btn.StateCommon.Back.Color2 = Color.White;
 
-            // Opcional: limpar override
+            // limpar override
             btn.StatePressed.Back.Color1 = Color.FromArgb(255, 102, 0);
             btn.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
             btn.OverrideDefault.Border.Color1 = Color.Empty;

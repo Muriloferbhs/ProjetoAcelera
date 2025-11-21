@@ -68,7 +68,7 @@ namespace StudyFlow
             // 
             pictureBox2.BackColor = Color.FromArgb(32, 0, 177);
             pictureBox2.Image = Properties.Resources.logoStudyLogin;
-            pictureBox2.Location = new Point(65, 66);
+            pictureBox2.Location = new Point(64, 87);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(256, 351);
             pictureBox2.TabIndex = 0;
@@ -112,6 +112,7 @@ namespace StudyFlow
             TextBoxSenha.Cursor = Cursors.IBeam;
             TextBoxSenha.Location = new Point(85, 234);
             TextBoxSenha.Name = "TextBoxSenha";
+            TextBoxSenha.PasswordChar = '●';
             TextBoxSenha.Size = new Size(250, 34);
             TextBoxSenha.StateCommon.Back.Color1 = Color.FromArgb(173, 186, 255);
             TextBoxSenha.StateCommon.Border.Color1 = Color.FromArgb(173, 186, 255);
@@ -215,10 +216,10 @@ namespace StudyFlow
             // 
             pictureBoxUsuario.BackColor = Color.Transparent;
             pictureBoxUsuario.Image = Properties.Resources.icone_usuario;
-            pictureBoxUsuario.Location = new Point(16, 165);
+            pictureBoxUsuario.Location = new Point(15, 163);
             pictureBoxUsuario.Name = "pictureBoxUsuario";
             pictureBoxUsuario.Size = new Size(88, 83);
-            pictureBoxUsuario.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxUsuario.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxUsuario.TabIndex = 0;
             pictureBoxUsuario.TabStop = false;
             // 
@@ -235,12 +236,13 @@ namespace StudyFlow
             // 
             // LoginForm
             // 
-            ClientSize = new Size(800, 600);
+            ClientSize = new Size(804, 588);
             Controls.Add(PanelDireita);
             Controls.Add(PanelEsquerda);
+            Location = new Point(0, 0);
             MaximizeBox = false;
-            StartPosition = FormStartPosition.CenterScreen;
             Name = "LoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             FormClosing += LoginForm_FormClosing;
             ((System.ComponentModel.ISupportInitialize)PanelEsquerda).EndInit();
