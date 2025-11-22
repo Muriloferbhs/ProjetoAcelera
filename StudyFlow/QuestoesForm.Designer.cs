@@ -50,7 +50,7 @@ namespace StudyFlow
             // 
             PanelConteudo.Controls.Add(panelCards);
             PanelConteudo.Controls.Add(panelBusca);
-            PanelConteudo.Size = new Size(1121, 616);
+            PanelConteudo.Size = new Size(1117, 628);
             PanelConteudo.StateNormal.Color1 = Color.White;
             // 
             // panelCards
@@ -64,7 +64,7 @@ namespace StudyFlow
             panelCards.Dock = DockStyle.Left;
             panelCards.Location = new Point(0, 0);
             panelCards.Name = "panelCards";
-            panelCards.Size = new Size(800, 616);
+            panelCards.Size = new Size(800, 628);
             panelCards.StateCommon.Color1 = Color.White;
             panelCards.StateDisabled.Color1 = Color.Transparent;
             panelCards.StateDisabled.Color2 = Color.Transparent;
@@ -136,7 +136,6 @@ namespace StudyFlow
             buttonLinguagens.Values.DropDownArrowColor = Color.Empty;
             buttonLinguagens.Values.ExtraText = "Questões envolvendo os conhecimentos\r\nde língua portuguesa, interpretação de texto,\r\n literatura, artes, inglês, espanhol e atualidades";
             buttonLinguagens.Values.Text = "LINGUAGENS E SUAS TECNOLOGIAS";
-            buttonLinguagens.Click += buttonLinguagens_Click;
             // 
             // buttonCienciasH
             // 
@@ -277,14 +276,13 @@ namespace StudyFlow
             buttonMatematica.Values.DropDownArrowColor = Color.Empty;
             buttonMatematica.Values.ExtraText = "Questões envolvendo os conhecimentos \nem matemática e raciocínio lógico";
             buttonMatematica.Values.Text = "MATEMÁTICA E SUAS TECNOLOGIAS";
-            buttonMatematica.Click += buttonMatematica_Click_2;
             // 
             // panelBusca
             // 
             panelBusca.Dock = DockStyle.Fill;
             panelBusca.Location = new Point(0, 0);
             panelBusca.Name = "panelBusca";
-            panelBusca.Size = new Size(1121, 616);
+            panelBusca.Size = new Size(1117, 628);
             panelBusca.StateCommon.Color1 = Color.White;
             panelBusca.TabIndex = 1;
             // 
@@ -297,8 +295,7 @@ namespace StudyFlow
             // 
             // QuestoesForm
             // 
-            ClientSize = new Size(1280, 720);
-            StartPosition = FormStartPosition.CenterScreen;
+            ClientSize = new Size(1284, 708);
             Name = "QuestoesForm";
             Text = "QuestoesForm";
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).EndInit();

@@ -60,7 +60,7 @@ namespace StudyFlow
             PanelEsquerda.Dock = DockStyle.Left;
             PanelEsquerda.Location = new Point(0, 0);
             PanelEsquerda.Name = "PanelEsquerda";
-            PanelEsquerda.Size = new Size(393, 588);
+            PanelEsquerda.Size = new Size(393, 555);
             PanelEsquerda.StateCommon.Color1 = Color.FromArgb(32, 0, 177);
             PanelEsquerda.TabIndex = 0;
             // 
@@ -88,7 +88,7 @@ namespace StudyFlow
             PanelDireita.Dock = DockStyle.Fill;
             PanelDireita.Location = new Point(393, 0);
             PanelDireita.Name = "PanelDireita";
-            PanelDireita.Size = new Size(411, 588);
+            PanelDireita.Size = new Size(393, 555);
             PanelDireita.StateCommon.Color1 = Color.White;
             PanelDireita.TabIndex = 1;
             // 
@@ -236,12 +236,14 @@ namespace StudyFlow
             // 
             // LoginForm
             // 
-            ClientSize = new Size(804, 588);
+            BackColor = Color.White;
+            ClientSize = new Size(786, 555);
             Controls.Add(PanelDireita);
             Controls.Add(PanelEsquerda);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Location = new Point(0, 0);
-            MaximizeBox = false;
             Name = "LoginForm";
+            SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             FormClosing += LoginForm_FormClosing;

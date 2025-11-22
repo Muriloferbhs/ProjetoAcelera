@@ -277,5 +277,18 @@ namespace StudyFlow
                  BloquearCampos();
             }
         }
+
+        private string ajudaTexto = "Nesta tela você pode visualizar e editar as informações do seu perfil.\n\n" +
+            "Campos disponíveis para edição:\n" +
+            "- Nome: Atualize seu nome completo.\n" +
+            "- Telefone: Modifique seu número de telefone para contato.\n" +
+            "- Sobre mim: Adicione ou altere uma breve descrição sobre você.\n\n" +
+            "Para editar suas informações, clique no ícone de lápis no canto superior direito. Após fazer as alterações desejadas, clique no botão 'Salvar' para atualizar seu perfil.\n\n" +
+            "Lembre-se de que o CPF e a senha não podem ser alterados nesta tela por questões de segurança.";
+
+        public override string ObterMensagemAjuda()
+        {
+            return ajudaTexto;
+        }
     }
 }

@@ -56,9 +56,8 @@ namespace StudyFlow
         }
 
         private void ButtonAjuda_Click(object sender, EventArgs e) {
-            if (this is AjudaForm) return;
-           
-            TrocarTela(new AjudaForm());
+            
+            MostrarAjuda("Ajuda", ObterMensagemAjuda());
         }
 
         public void TrocarConteudo(Control novoConteudo) {
@@ -86,6 +85,17 @@ namespace StudyFlow
                     Application.Exit(); // Fecha toda a aplicação
                 }
             }
+        }
+
+        public virtual string ObterMensagemAjuda()
+        {
+            return "Esta é a mensagem de ajuda padrão. Substitua este método nas subclasses para fornecer mensagens específicas.";
+        }
+
+        public void MostrarAjuda(string titulo, string mensagem)
+        {
+            PopupForm popup = new PopupForm(titulo, mensagem);
+            popup.ShowDialog();
         }
 
         private void PanelEsquerda_Paint(object sender, PaintEventArgs e) {

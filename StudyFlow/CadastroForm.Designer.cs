@@ -64,7 +64,7 @@
             kryptonPanelEsquerda.Dock = DockStyle.Left;
             kryptonPanelEsquerda.Location = new Point(0, 0);
             kryptonPanelEsquerda.Name = "kryptonPanelEsquerda";
-            kryptonPanelEsquerda.Size = new Size(392, 588);
+            kryptonPanelEsquerda.Size = new Size(392, 555);
             kryptonPanelEsquerda.StateNormal.Color1 = Color.White;
             kryptonPanelEsquerda.TabIndex = 0;
             // 
@@ -118,7 +118,7 @@
             PanelDireita.Dock = DockStyle.Fill;
             PanelDireita.Location = new Point(392, 0);
             PanelDireita.Name = "PanelDireita";
-            PanelDireita.Size = new Size(412, 588);
+            PanelDireita.Size = new Size(394, 555);
             PanelDireita.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelDireita.TabIndex = 11;
             // 
@@ -394,11 +394,13 @@
             // CadastroForm
             // 
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(804, 588);
+            ClientSize = new Size(800, 600);
+            StartPosition = FormStartPosition.CenterScreen;
             Controls.Add(PanelDireita);
             Controls.Add(kryptonPanelEsquerda);
-            Location = new Point(0, 0);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "CadastroForm";
+            SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro";
             FormClosing += CadastroForm_FormClosing;

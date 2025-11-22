@@ -486,7 +486,7 @@ namespace StudyFlow
                 //pra aparecer quando a questao nao tiver mais de uma explicação
                 if (questao.expUnica != null)
                 {
-                
+
 
                     KryptonLabel labelLetra = new KryptonLabel();
                     labelLetra.Text = ((char)('A' + i)).ToString();
@@ -668,6 +668,15 @@ namespace StudyFlow
                 TrocarConteudo(panelQuestao);
 
             }
+        }
+
+        private string ajudaTexto = "Nesta seção, você pode revisar as resoluções das questões que já respondeu.\n\n" +
+            "Use a barra de pesquisa para encontrar questões específicas pelo ID. Clique em qualquer questão para ver a resolução detalhada, incluindo explicações para cada alternativa.\n\n" +
+            "Isso ajudará você a entender seus erros e aprimorar seus conhecimentos.";
+
+        public override string ObterMensagemAjuda()
+        {
+            return ajudaTexto;
         }
     }
 }

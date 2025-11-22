@@ -574,15 +574,15 @@ namespace StudyFlow
             TrocarConteudo(panelQuestao);
         }
 
-
-        private void buttonMatematica_Click_2(object sender, EventArgs e)
+        private string ajudaTexto = "Nesta seção, você pode praticar questões de diversas áreas do conhecimento.\n\n" +
+                   "Selecione uma área ou tipo de prova para ver a lista de questões disponíveis.\n\n" +
+                   "Clique em uma questão para visualizá-la e escolher sua resposta.\n\n" +
+                   "Você pode tentar responder cada questão até três vezes, com pontuação parcial para respostas corretas após erros.\n\n" +
+                   "Boa sorte nos seus estudos!";
+       
+        public override string ObterMensagemAjuda()
         {
-
-        }
-
-        private void buttonLinguagens_Click(object sender, EventArgs e)
-        {
-
+            return ajudaTexto;
         }
     }
 }

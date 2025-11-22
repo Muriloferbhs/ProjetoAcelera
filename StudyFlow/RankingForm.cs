@@ -187,5 +187,15 @@ namespace StudyFlow
             
             TrocarConteudo(panelRanking);
         }
+
+        private string ajudaTexto = "Nesta tela, você pode visualizar o ranking dos usuários com base em sua pontuação acumulada.\n\n" +
+                   "Os usuários são classificados do maior para o menor número de pontos.\n\n" +
+                   "Seu progresso no ranking é atualizado automaticamente à medida que você completa mais questões e ganha pontos.\n\n" +
+                   "Tente melhorar sua posição respondendo a mais questões e acumulando pontos!";
+        
+        public override string ObterMensagemAjuda()
+        {
+            return ajudaTexto;
+        }
     }
 }
