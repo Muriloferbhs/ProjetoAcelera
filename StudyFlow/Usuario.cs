@@ -334,10 +334,16 @@ namespace StudyFlow
             if (!string.IsNullOrWhiteSpace(novoNome))
             UsuarioLogado.NomeUser = novoNome;
 
-           
 
-            if (!string.IsNullOrWhiteSpace(novoTelefone))
-            UsuarioLogado.Telefone = novoTelefone;
+
+            if (AutenticarTelefone(novoTelefone) == true)
+                UsuarioLogado.Telefone = novoTelefone;
+            else { UsuarioLogado.Telefone = UsuarioLogado.Telefone; }
+
+
+                
+
+
 
             UsuarioLogado.TextoUser = novoSobreMim;
 

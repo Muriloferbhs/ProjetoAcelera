@@ -7,8 +7,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 
 namespace StudyFlow
 {
@@ -22,13 +24,15 @@ namespace StudyFlow
         KryptonButton labelposicao;
 
         bool modoEdicao = false;
+        bool controler;
 
         public HomeForm()
         {
             InitializeComponent();
             TelaPerfil();
         }
-        String editNome, editTelefone, editSobremim;
+        String editNome, editTelefone, editSobremim, cpf;
+        
 
 
         private void TelaPerfil()
@@ -107,7 +111,8 @@ namespace StudyFlow
             textBoxCpf = new KryptonTextBox();
             textBoxCpf.Location = new Point(460, 230);
             textBoxCpf.Size = new Size(210, 40);
-            textBoxCpf.Text = "" + Usuario.UsuarioLogado.Cpf;
+            cpf = Usuario.UsuarioLogado.Cpf;
+            textBoxCpf.Text = "" + FormatarCPF(cpf);
             textBoxCpf.StateCommon.Content.Font = new Font("Segoe UI", 12);
             textBoxCpf.StateCommon.Border.Rounding = 8;
             textBoxCpf.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
@@ -128,7 +133,7 @@ namespace StudyFlow
             textBoxTel.Location = new Point(720, 150);
             textBoxTel.Size = new Size(210, 40);
             editTelefone = Usuario.UsuarioLogado.Telefone;
-            textBoxTel.Text = "" + editTelefone;
+            textBoxTel.Text = FormatarTelefone(editTelefone, controler);
             textBoxTel.StateCommon.Content.Font = new Font("Segoe UI", 12);
             textBoxTel.StateCommon.Border.Rounding = 8;
             textBoxTel.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
@@ -245,6 +250,17 @@ namespace StudyFlow
         private void BloquearCampos()
         {
 
+            textBoxNome.Text = Usuario.UsuarioLogado.NomeUser;
+            textBoxCpf.Text = FormatarCPF(cpf);
+            textBoxTel.Text = FormatarTelefone(editTelefone , controler = true);
+            textBoxSobre.Text = Usuario.UsuarioLogado.TextoUser;
+
+
+
+
+
+
+
             textBoxNome.Enabled = false;
             textBoxCpf.Enabled = false;
             textBoxTel.Enabled = false;
@@ -256,6 +272,7 @@ namespace StudyFlow
 
         private void EntrarModoEdicao()
         {
+            textBoxTel.Text = FormatarTelefone(editTelefone, controler = false);
             textBoxNome.Enabled = true;
             textBoxCpf.Enabled = false;
             textBoxTel.Enabled = true;
@@ -269,14 +286,49 @@ namespace StudyFlow
         {
 
 
-            Usuario.EditarUsuario(textBoxNome.Text, textBoxTel.Text, textBoxSobre.Text);
+           
 
             if (modoEdicao)
             {
-                // adicionar logica para salvar os dados editados
-                 BloquearCampos();
+                Usuario.EditarUsuario(textBoxNome.Text, textBoxTel.Text, textBoxSobre.Text);
+                BloquearCampos();
             }
         }
+
+
+
+
+        public static string FormatarCPF(string cpf) {
+ 
+            
+                return Convert.ToUInt64(cpf).ToString(@"000\.000\.000\-00");
+    
+
+        }
+
+
+
+        public static string FormatarTelefone(string editTelefone, bool controler) {
+            
+
+            if (controler == true)
+            {
+                return Convert.ToUInt64(editTelefone).ToString(@"\(00\) 00000\-0000");
+                KryptonMessageBox.Show("oi");
+            }
+
+            else
+            {
+                return Regex.Replace(editTelefone, @"\D", "");
+                //KryptonMessageBox.Show("oi");
+            }
+
+            
+
+        }
+
+
+
 
         private string ajudaTexto = "Nesta tela você pode visualizar e editar as informações do seu perfil.\n\n" +
             "Campos disponíveis para edição:\n" +
