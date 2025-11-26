@@ -320,7 +320,7 @@ namespace StudyFlow
             else
             {
                 return Regex.Replace(editTelefone, @"\D", "");
-                //KryptonMessageBox.Show("oi");
+                
             }
 
             

@@ -12,15 +12,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace StudyFlow
 {
-    public partial class LoginForm : KryptonForm
-    {
-        public LoginForm()
-        {
+    public partial class LoginForm : KryptonForm {
+        public LoginForm() {
             InitializeComponent();
         }
- 
-        private void ButtonEntrar_Click(object sender, EventArgs e)
-        {
+
+        private void ButtonEntrar_Click(object sender, EventArgs e) {
             string dadosLogin = TextBoxUsuario.Text.Trim();
             string senhaLogin = TextBoxSenha.Text;
 
@@ -49,24 +46,22 @@ namespace StudyFlow
                 HomeForm home = new HomeForm();
                 home.Show();
                 this.Hide();
-                
-              
+
+
 
             }
 
 
         }
 
-        private void linkLabelCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        private void linkLabelCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             CadastroForm cadastro = new CadastroForm();
             cadastro.Show();
 
             this.Hide();
         }
 
-        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e) {
             if (e.CloseReason == CloseReason.UserClosing)
             {
                 DialogResult resultado = MessageBox.Show(
@@ -88,8 +83,7 @@ namespace StudyFlow
         }
 
         private bool senhaVisivel = false;
-        private void pictureBoxMostrarSenha_Click(object sender, EventArgs e)
-        {
+        private void pictureBoxMostrarSenha_Click(object sender, EventArgs e) {
             // Alterna o estado da senha
             TextBoxSenha.UseSystemPasswordChar = !TextBoxSenha.UseSystemPasswordChar;
 
@@ -102,6 +96,14 @@ namespace StudyFlow
             {
                 pictureBoxMostrarSenha.Image = Properties.Resources.open_eye; // senha visível
             }
+        }
+
+        private void linkLabelSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+           
+            RecuperarSenhaForm recuperarSenha = new RecuperarSenhaForm();
+            recuperarSenha.Show();
+            this.Hide();
+
         }
     }
 }

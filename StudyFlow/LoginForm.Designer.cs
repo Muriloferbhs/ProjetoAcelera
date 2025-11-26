@@ -30,8 +30,7 @@ namespace StudyFlow
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             PanelEsquerda = new KryptonPanel();
             pictureBox2 = new PictureBox();
             PanelDireita = new KryptonPanel();
@@ -60,7 +59,7 @@ namespace StudyFlow
             PanelEsquerda.Dock = DockStyle.Left;
             PanelEsquerda.Location = new Point(0, 0);
             PanelEsquerda.Name = "PanelEsquerda";
-            PanelEsquerda.Size = new Size(393, 555);
+            PanelEsquerda.Size = new Size(393, 543);
             PanelEsquerda.StateCommon.Color1 = Color.FromArgb(32, 0, 177);
             PanelEsquerda.TabIndex = 0;
             // 
@@ -88,7 +87,7 @@ namespace StudyFlow
             PanelDireita.Dock = DockStyle.Fill;
             PanelDireita.Location = new Point(393, 0);
             PanelDireita.Name = "PanelDireita";
-            PanelDireita.Size = new Size(393, 555);
+            PanelDireita.Size = new Size(397, 543);
             PanelDireita.StateCommon.Color1 = Color.White;
             PanelDireita.TabIndex = 1;
             // 
@@ -165,6 +164,7 @@ namespace StudyFlow
             linkLabelSenha.TabStop = true;
             linkLabelSenha.Text = "Esqueci minha senha";
             linkLabelSenha.VisitedLinkColor = Color.Gray;
+            linkLabelSenha.LinkClicked += linkLabelSenha_LinkClicked;
             // 
             // linkLabelCadastro
             // 
@@ -237,7 +237,7 @@ namespace StudyFlow
             // LoginForm
             // 
             BackColor = Color.White;
-            ClientSize = new Size(786, 555);
+            ClientSize = new Size(790, 543);
             Controls.Add(PanelDireita);
             Controls.Add(PanelEsquerda);
             FormBorderStyle = FormBorderStyle.FixedSingle;

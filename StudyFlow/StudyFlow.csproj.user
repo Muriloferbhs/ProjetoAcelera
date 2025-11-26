@@ -19,6 +19,12 @@
     <Compile Update="PopupForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="RecuperarSenhaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RedefinirSenhaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ResolucoesForm.cs">
       <SubType>Form</SubType>
     </Compile>

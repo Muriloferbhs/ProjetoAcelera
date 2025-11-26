@@ -35,6 +35,7 @@ namespace StudyFlow
 
 
         public static Usuario UsuarioLogado { get; set; }
+       public static Usuario UsuarioSenhaEditada { get; set; }
 
         public static Dictionary<string, bool> AcertouOuErrou { get; } = new Dictionary<string, bool>();
         public static void MarcarComoCertaOuErrada(string ID, string respostaDada, string resposta)
@@ -376,8 +377,12 @@ namespace StudyFlow
 
 
 
-        public static void RecuperarSenha()
+        public static void RedefinirSenhaSenha(string novaSenha)
         {
+
+            UsuarioSenhaEditada.AtribuirSenha(novaSenha);
+
+            return;
 
 
 
