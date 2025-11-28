@@ -58,7 +58,7 @@
             // 
             pictureBox1.BackColor = Color.White;
             pictureBox1.Image = Properties.Resources.logostudycadastro;
-            pictureBox1.Location = new Point(64, 87);
+            pictureBox1.Location = new Point(66, 111);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(256, 351);
             pictureBox1.TabIndex = 0;
@@ -145,6 +145,7 @@
             linkLabelLogin.TabStop = true;
             linkLabelLogin.Text = "Já tem uma conta? Login";
             linkLabelLogin.VisitedLinkColor = Color.White;
+            linkLabelLogin.LinkClicked += linkLabelLogin_LinkClicked;
             // 
             // TextBoxCpf
             // 
@@ -255,15 +256,17 @@
             // 
             // RecuperarSenhaForm
             // 
-            AutoScaleMode = AutoScaleMode.None;
+            AutoScaleMode = AutoScaleMode.Inherit;
             ClientSize = new Size(800, 600);
             Controls.Add(PanelDireita);
             Controls.Add(kryptonPanelEsquerda);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MdiChildrenMinimizedAnchorBottom = false;
             Name = "RecuperarSenhaForm";
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Cadastro";
+            Text = "RecuperarSenha";
+            FormClosing += RecuperarSenhaForm_FormClosing;
             ((System.ComponentModel.ISupportInitialize)kryptonPanelEsquerda).EndInit();
             kryptonPanelEsquerda.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

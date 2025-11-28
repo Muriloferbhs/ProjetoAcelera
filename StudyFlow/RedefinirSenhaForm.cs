@@ -54,12 +54,6 @@ namespace StudyFlow {
             this.Hide();
 
 
-
-
-
-
-
-
         }
 
 

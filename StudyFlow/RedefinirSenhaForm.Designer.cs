@@ -38,6 +38,7 @@ namespace StudyFlow {
             linkLabelLogin = new LinkLabel();
             ButtonSalvar = new KryptonButton();
             RedefinirSenha = new KryptonLabel();
+            kryptonPictureBox1 = new KryptonPictureBox();
             ((System.ComponentModel.ISupportInitialize)PanelEsquerda).BeginInit();
             PanelEsquerda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -46,6 +47,7 @@ namespace StudyFlow {
             ((System.ComponentModel.ISupportInitialize)pictureBoxVerSenha).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxVerConfirmarSenha).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PictureBoxSenha).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
             SuspendLayout();
             // 
             // PanelEsquerda
@@ -62,7 +64,7 @@ namespace StudyFlow {
             // 
             pictureBox2.BackColor = Color.FromArgb(32, 0, 177);
             pictureBox2.Image = Properties.Resources.logoStudyLogin;
-            pictureBox2.Location = new Point(65, 66);
+            pictureBox2.Location = new Point(65, 118);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(256, 351);
             pictureBox2.TabIndex = 0;
@@ -70,6 +72,7 @@ namespace StudyFlow {
             // 
             // PanelDireita
             // 
+            PanelDireita.Controls.Add(kryptonPictureBox1);
             PanelDireita.Controls.Add(pictureBoxVerSenha);
             PanelDireita.Controls.Add(pictureBoxVerConfirmarSenha);
             PanelDireita.Controls.Add(TextBoxConfirmarSenha);
@@ -90,7 +93,7 @@ namespace StudyFlow {
             pictureBoxVerSenha.BackColor = Color.FromArgb(173, 186, 255);
             pictureBoxVerSenha.Cursor = Cursors.Hand;
             pictureBoxVerSenha.Image = Properties.Resources.closed_eye;
-            pictureBoxVerSenha.Location = new Point(305, 190);
+            pictureBoxVerSenha.Location = new Point(305, 227);
             pictureBoxVerSenha.Name = "pictureBoxVerSenha";
             pictureBoxVerSenha.Size = new Size(26, 25);
             pictureBoxVerSenha.TabIndex = 9;
@@ -102,7 +105,7 @@ namespace StudyFlow {
             pictureBoxVerConfirmarSenha.BackColor = Color.FromArgb(173, 186, 255);
             pictureBoxVerConfirmarSenha.Cursor = Cursors.Hand;
             pictureBoxVerConfirmarSenha.Image = Properties.Resources.closed_eye;
-            pictureBoxVerConfirmarSenha.Location = new Point(305, 240);
+            pictureBoxVerConfirmarSenha.Location = new Point(305, 298);
             pictureBoxVerConfirmarSenha.Name = "pictureBoxVerConfirmarSenha";
             pictureBoxVerConfirmarSenha.Size = new Size(26, 23);
             pictureBoxVerConfirmarSenha.TabIndex = 8;
@@ -115,8 +118,9 @@ namespace StudyFlow {
             TextBoxConfirmarSenha.CueHint.CueHintText = "Confirmar Senha";
             TextBoxConfirmarSenha.CueHint.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TextBoxConfirmarSenha.Cursor = Cursors.IBeam;
-            TextBoxConfirmarSenha.Location = new Point(85, 234);
+            TextBoxConfirmarSenha.Location = new Point(85, 293);
             TextBoxConfirmarSenha.Name = "TextBoxConfirmarSenha";
+            TextBoxConfirmarSenha.PasswordChar = '●';
             TextBoxConfirmarSenha.Size = new Size(250, 34);
             TextBoxConfirmarSenha.StateCommon.Back.Color1 = Color.FromArgb(173, 186, 255);
             TextBoxConfirmarSenha.StateCommon.Border.Color1 = Color.FromArgb(173, 186, 255);
@@ -130,7 +134,7 @@ namespace StudyFlow {
             // PictureBoxSenha
             // 
             PictureBoxSenha.Image = Properties.Resources.icone_senha;
-            PictureBoxSenha.Location = new Point(40, 234);
+            PictureBoxSenha.Location = new Point(40, 293);
             PictureBoxSenha.Name = "PictureBoxSenha";
             PictureBoxSenha.Size = new Size(39, 34);
             PictureBoxSenha.SizeMode = PictureBoxSizeMode.Zoom;
@@ -143,8 +147,9 @@ namespace StudyFlow {
             TextBoxSenha.CueHint.CueHintText = "Digite a senha";
             TextBoxSenha.CueHint.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TextBoxSenha.Cursor = Cursors.IBeam;
-            TextBoxSenha.Location = new Point(85, 185);
+            TextBoxSenha.Location = new Point(81, 221);
             TextBoxSenha.Name = "TextBoxSenha";
+            TextBoxSenha.PasswordChar = '●';
             TextBoxSenha.Size = new Size(250, 34);
             TextBoxSenha.StateCommon.Back.Color1 = Color.FromArgb(173, 186, 255);
             TextBoxSenha.StateCommon.Border.Color1 = Color.FromArgb(173, 186, 255);
@@ -162,7 +167,7 @@ namespace StudyFlow {
             linkLabelLogin.BackColor = Color.White;
             linkLabelLogin.Cursor = Cursors.Hand;
             linkLabelLogin.Font = new Font("Segoe UI", 11F);
-            linkLabelLogin.Location = new Point(123, 478);
+            linkLabelLogin.Location = new Point(120, 449);
             linkLabelLogin.Name = "linkLabelLogin";
             linkLabelLogin.Size = new Size(174, 20);
             linkLabelLogin.TabIndex = 5;
@@ -174,7 +179,7 @@ namespace StudyFlow {
             // ButtonSalvar
             // 
             ButtonSalvar.Cursor = Cursors.Hand;
-            ButtonSalvar.Location = new Point(145, 343);
+            ButtonSalvar.Location = new Point(140, 389);
             ButtonSalvar.Name = "ButtonSalvar";
             ButtonSalvar.OverrideDefault.Back.Color1 = Color.FromArgb(237, 75, 0);
             ButtonSalvar.OverrideDefault.Back.Color2 = Color.FromArgb(237, 75, 0);
@@ -203,7 +208,7 @@ namespace StudyFlow {
             // 
             // RedefinirSenha
             // 
-            RedefinirSenha.Location = new Point(85, 87);
+            RedefinirSenha.Location = new Point(85, 132);
             RedefinirSenha.Name = "RedefinirSenha";
             RedefinirSenha.Size = new Size(241, 45);
             RedefinirSenha.StateCommon.Image.ImageColorMap = Color.Transparent;
@@ -212,13 +217,23 @@ namespace StudyFlow {
             RedefinirSenha.TabIndex = 0;
             RedefinirSenha.Values.Text = "Redefinir Senha";
             // 
-            // RecuperarSenhaForm
+            // kryptonPictureBox1
+            // 
+            kryptonPictureBox1.Image = Properties.Resources.icone_senha;
+            kryptonPictureBox1.Location = new Point(40, 221);
+            kryptonPictureBox1.Name = "kryptonPictureBox1";
+            kryptonPictureBox1.Size = new Size(39, 34);
+            kryptonPictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            kryptonPictureBox1.TabIndex = 10;
+            kryptonPictureBox1.TabStop = false;
+            // 
+            // RedefinirSenhaForm
             // 
             ClientSize = new Size(800, 600);
             Controls.Add(PanelDireita);
             Controls.Add(PanelEsquerda);
             MaximizeBox = false;
-            Name = "RecuperarSenhaForm";
+            Name = "RedefinirSenhaForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "RecuperarSenha";
             FormClosing += RecuperarSenhaForm_FormClosing;
@@ -231,6 +246,7 @@ namespace StudyFlow {
             ((System.ComponentModel.ISupportInitialize)pictureBoxVerSenha).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxVerConfirmarSenha).EndInit();
             ((System.ComponentModel.ISupportInitialize)PictureBoxSenha).EndInit();
+            ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
             ResumeLayout(false);
 
 
@@ -254,5 +270,6 @@ namespace StudyFlow {
         private PictureBox pictureBox2;
         private PictureBox pictureBoxVerConfirmarSenha;
         private PictureBox pictureBoxVerSenha;
+        private KryptonPictureBox kryptonPictureBox1;
     }
 }

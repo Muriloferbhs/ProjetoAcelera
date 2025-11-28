@@ -6,7 +6,7 @@ namespace StudyFlow
 {
     partial class LoginForm 
     {
-        /// <summary>
+        /// <summary> FormClosing
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
@@ -31,6 +31,7 @@ namespace StudyFlow
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             PanelEsquerda = new KryptonPanel();
             pictureBox2 = new PictureBox();
             PanelDireita = new KryptonPanel();
@@ -59,7 +60,7 @@ namespace StudyFlow
             PanelEsquerda.Dock = DockStyle.Left;
             PanelEsquerda.Location = new Point(0, 0);
             PanelEsquerda.Name = "PanelEsquerda";
-            PanelEsquerda.Size = new Size(393, 543);
+            PanelEsquerda.Size = new Size(393, 546);
             PanelEsquerda.StateCommon.Color1 = Color.FromArgb(32, 0, 177);
             PanelEsquerda.TabIndex = 0;
             // 
@@ -87,7 +88,7 @@ namespace StudyFlow
             PanelDireita.Dock = DockStyle.Fill;
             PanelDireita.Location = new Point(393, 0);
             PanelDireita.Name = "PanelDireita";
-            PanelDireita.Size = new Size(397, 543);
+            PanelDireita.Size = new Size(425, 546);
             PanelDireita.StateCommon.Color1 = Color.White;
             PanelDireita.TabIndex = 1;
             // 
@@ -237,15 +238,17 @@ namespace StudyFlow
             // LoginForm
             // 
             BackColor = Color.White;
-            ClientSize = new Size(790, 543);
+            ClientSize = new Size(818, 546);
             Controls.Add(PanelDireita);
             Controls.Add(PanelEsquerda);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Location = new Point(0, 0);
             Name = "LoginForm";
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            TransparencyKey = Color.Fuchsia;
             FormClosing += LoginForm_FormClosing;
             ((System.ComponentModel.ISupportInitialize)PanelEsquerda).EndInit();
             PanelEsquerda.ResumeLayout(false);

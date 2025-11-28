@@ -55,7 +55,8 @@ namespace StudyFlow {
             }
 
 
-            DialogResult resultado = MessageBox.Show(
+
+        DialogResult resultado = MessageBox.Show(
                         "Dados não encontrados, deseja fazer cadastro?",
                         "Confirmação",
                         MessageBoxButtons.YesNo,
@@ -72,22 +73,78 @@ namespace StudyFlow {
             return;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
+
+
+
+
+        private void linkLabelLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+            LoginForm login = new LoginForm();
+            login.Show();
+            this.Hide();
+        }
+
+
+
+
+
+
+        private void RecuperarSenhaForm_FormClosing(object sender, FormClosingEventArgs e) {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                DialogResult resultado = MessageBox.Show(
+                    "Deseja realmente sair?",
+                    "Confirmação",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (resultado == DialogResult.No)
+                {
+                    e.Cancel = true; // Cancela o fechamento
+                }
+                else
+                {
+                    Application.Exit(); // Fecha toda a aplicação
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
