@@ -53,13 +53,26 @@ namespace StudyFlow
             KryptonButton btnFechar = new KryptonButton();
             btnFechar.Text = "Fechar";
             btnFechar.Location = new Point(230, 300);
-            btnFechar.Size = new Size(140, 40);
+            btnFechar.Size = new Size(120, 40);
             btnFechar.StateCommon.Back.Color1 = Color.FromArgb(255, 102, 0);
             btnFechar.StateCommon.Back.Color2 = Color.FromArgb(255, 102, 0);
-            btnFechar.StateCommon.Border.Rounding = 8;
+            btnFechar.StateCommon.Border.Rounding = 15;
+            btnFechar.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12, FontStyle.Bold);
             btnFechar.StateCommon.Content.ShortText.Color1 = Color.White;
             btnFechar.Click += (s, e) => this.Close();
             Controls.Add(btnFechar);
+
+            btnFechar.MouseDown += (s, e) =>
+            {
+                btnFechar.Size = new Size(115, 35);
+                btnFechar.Location = new Point(233, 303);
+            };
+
+            btnFechar.MouseUp += (s, e) =>
+            {
+                btnFechar.Size = new Size(120, 40);
+                btnFechar.Location = new Point(230, 300);
+            };
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroForm));
             kryptonPanelEsquerda = new Krypton.Toolkit.KryptonPanel();
             pictureBox1 = new PictureBox();
             TextBoxNome = new Krypton.Toolkit.KryptonTextBox();
@@ -64,7 +65,7 @@
             kryptonPanelEsquerda.Dock = DockStyle.Left;
             kryptonPanelEsquerda.Location = new Point(0, 0);
             kryptonPanelEsquerda.Name = "kryptonPanelEsquerda";
-            kryptonPanelEsquerda.Size = new Size(392, 561);
+            kryptonPanelEsquerda.Size = new Size(392, 600);
             kryptonPanelEsquerda.StateNormal.Color1 = Color.White;
             kryptonPanelEsquerda.TabIndex = 0;
             // 
@@ -118,7 +119,7 @@
             PanelDireita.Dock = DockStyle.Fill;
             PanelDireita.Location = new Point(392, 0);
             PanelDireita.Name = "PanelDireita";
-            PanelDireita.Size = new Size(394, 561);
+            PanelDireita.Size = new Size(408, 600);
             PanelDireita.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelDireita.TabIndex = 11;
             // 
@@ -201,6 +202,7 @@
             TextBoxSenha.Cursor = Cursors.IBeam;
             TextBoxSenha.Location = new Point(52, 330);
             TextBoxSenha.Name = "TextBoxSenha";
+            TextBoxSenha.PasswordChar = '●';
             TextBoxSenha.Size = new Size(135, 32);
             TextBoxSenha.StateCommon.Back.Color1 = Color.FromArgb(200, 194, 231);
             TextBoxSenha.StateCommon.Border.Rounding = 10F;
@@ -219,6 +221,7 @@
             TextBoxConfirmeSenha.Cursor = Cursors.IBeam;
             TextBoxConfirmeSenha.Location = new Point(218, 330);
             TextBoxConfirmeSenha.Name = "TextBoxConfirmeSenha";
+            TextBoxConfirmeSenha.PasswordChar = '●';
             TextBoxConfirmeSenha.Size = new Size(135, 32);
             TextBoxConfirmeSenha.StateCommon.Back.Color1 = Color.FromArgb(200, 194, 231);
             TextBoxConfirmeSenha.StateCommon.Border.Rounding = 10F;
@@ -396,6 +399,7 @@
             Controls.Add(PanelDireita);
             Controls.Add(kryptonPanelEsquerda);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CadastroForm";
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterScreen;

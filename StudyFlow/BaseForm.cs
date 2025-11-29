@@ -33,8 +33,8 @@ namespace StudyFlow
         }
 
         private void ButtonHome_Click(object sender, EventArgs e) {
-            if (this is HomeForm) return;
-            TrocarTela(new HomeForm());  // Troca de tel
+            if (this is PerfilForm) return;
+            TrocarTela(new PerfilForm());  // Troca de tel
 
         }
 

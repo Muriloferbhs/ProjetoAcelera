@@ -52,7 +52,7 @@ namespace StudyFlow
             //
             // Botão Voltar
             //
-            KryptonButton buttonVoltar = new KryptonButton();
+            /*KryptonButton buttonVoltar = new KryptonButton();
             buttonVoltar.Text = "← Voltar";
             buttonVoltar.Size = new Size(100, 40);
             buttonVoltar.Location = new Point(20, 20);
@@ -64,7 +64,29 @@ namespace StudyFlow
             buttonVoltar.OverrideDefault.Back.Color2 = Color.White;
             buttonVoltar.Cursor = Cursors.Hand;
             buttonVoltar.Click += (s, e) => MontarTelaInicial(); // volta para a tela dos cards
-            panelLista.Controls.Add(buttonVoltar);
+            panelLista.Controls.Add(buttonVoltar);*/
+
+            PictureBox iconVoltar = new PictureBox();
+            iconVoltar.Size = new Size(40, 40);
+            iconVoltar.Location = new Point(30, 20);
+            iconVoltar.BackColor = Color.White;
+            iconVoltar.Image = Properties.Resources.previous;
+            iconVoltar.SizeMode = PictureBoxSizeMode.Zoom;
+            iconVoltar.Cursor = Cursors.Hand;
+            iconVoltar.Click += (s, e) => MontarTelaInicial(); // volta para a tela dos cards
+
+            iconVoltar.MouseDown += (s, e) =>
+            {
+                iconVoltar.Size = new Size(35, 35);
+                iconVoltar.Location = new Point(30, 22);
+            };
+
+            iconVoltar.MouseUp += (s, e) =>
+            {
+                iconVoltar.Size = new Size(40, 40);
+                iconVoltar.Location = new Point(30, 20);
+            };
+            panelLista.Controls.Add(iconVoltar);
 
             //
             // Título
@@ -204,19 +226,27 @@ namespace StudyFlow
             //
             // Voltar
             //
-            KryptonButton buttonVoltar = new KryptonButton();
-            buttonVoltar.Text = "← Voltar";
-            buttonVoltar.Size = new Size(100, 40);
-            buttonVoltar.Location = new Point(20, 20);
-            buttonVoltar.StateCommon.Back.Color1 = Color.FromArgb(255, 102, 0);
-            buttonVoltar.StateCommon.Back.Color2 = Color.FromArgb(255, 102, 0);
-            buttonVoltar.StateCommon.Content.ShortText.Color1 = Color.White;
-            buttonVoltar.StateCommon.Border.Rounding = 6;
-            buttonVoltar.OverrideDefault.Back.Color1 = Color.White;
-            buttonVoltar.OverrideDefault.Back.Color2 = Color.White;
-            buttonVoltar.Cursor = Cursors.Hand;
-            buttonVoltar.Click += (s, e) => MostrarListaQuestoes(questao.Area); // volta para a lista de questões
-            panelQuestao.Controls.Add(buttonVoltar);
+            PictureBox iconVoltar = new PictureBox();
+            iconVoltar.Size = new Size(40, 40);
+            iconVoltar.Location = new Point(30, 20);
+            iconVoltar.BackColor = Color.White;
+            iconVoltar.Image = Properties.Resources.previous;
+            iconVoltar.SizeMode = PictureBoxSizeMode.Zoom;
+            iconVoltar.Cursor = Cursors.Hand;
+            iconVoltar.Click += (s, e) => MostrarListaQuestoes(questao.Area);
+
+            iconVoltar.MouseDown += (s, e) =>
+            {
+                iconVoltar.Size = new Size(35, 35);
+                iconVoltar.Location = new Point(30, 22);
+            };
+
+            iconVoltar.MouseUp += (s, e) =>
+            {
+                iconVoltar.Size = new Size(40, 40);
+                iconVoltar.Location = new Point(30, 20);
+            };
+            panelQuestao.Controls.Add(iconVoltar);
 
             // cabeçalho da questão
             int baseY = 50;

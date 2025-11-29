@@ -29,7 +29,9 @@ namespace StudyFlow
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseForm));
             kryptonPictureBoxmenu = new KryptonPictureBox();
             pictureBox1 = new PictureBox();
             PanelEsquerda = new KryptonPanel();
@@ -37,7 +39,7 @@ namespace StudyFlow
             ButtonResolucao = new KryptonButton();
             ButtonQuestao = new KryptonButton();
             ButtonRanking = new KryptonButton();
-            ButtonHome = new KryptonButton();
+            ButtonPerfil = new KryptonButton();
             PanelConteudo = new KryptonPanel();
             kryptonButuonsobrenos = new KryptonButton();
             kryptonButtonsair = new KryptonButton();
@@ -84,11 +86,11 @@ namespace StudyFlow
             PanelEsquerda.Controls.Add(ButtonResolucao);
             PanelEsquerda.Controls.Add(ButtonQuestao);
             PanelEsquerda.Controls.Add(ButtonRanking);
-            PanelEsquerda.Controls.Add(ButtonHome);
+            PanelEsquerda.Controls.Add(ButtonPerfil);
             PanelEsquerda.Dock = DockStyle.Left;
             PanelEsquerda.Location = new Point(0, 80);
             PanelEsquerda.Name = "PanelEsquerda";
-            PanelEsquerda.Size = new Size(167, 616);
+            PanelEsquerda.Size = new Size(167, 601);
             PanelEsquerda.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelEsquerda.TabIndex = 1;
             PanelEsquerda.Paint += PanelEsquerda_Paint;
@@ -193,30 +195,30 @@ namespace StudyFlow
             ButtonRanking.Values.Text = "  RANKING";
             ButtonRanking.Click += ButtonRanking_Click;
             // 
-            // ButtonHome
+            // ButtonPerfil
             // 
-            ButtonHome.ButtonStyle = ButtonStyle.LowProfile;
-            ButtonHome.Cursor = Cursors.Hand;
-            ButtonHome.Dock = DockStyle.Top;
-            ButtonHome.Location = new Point(0, 0);
-            ButtonHome.Name = "ButtonHome";
-            ButtonHome.Size = new Size(167, 70);
-            ButtonHome.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
-            ButtonHome.StateCommon.Back.ColorStyle = PaletteColorStyle.Solid;
-            ButtonHome.StateCommon.Content.Image.ImageH = PaletteRelativeAlign.Near;
-            ButtonHome.StateCommon.Content.Image.ImageV = PaletteRelativeAlign.Center;
-            ButtonHome.StateCommon.Content.Padding = new Padding(15, 0, 0, 0);
-            ButtonHome.StateCommon.Content.ShortText.Color1 = Color.White;
-            ButtonHome.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            ButtonHome.StateCommon.Content.ShortText.TextH = PaletteRelativeAlign.Near;
-            ButtonHome.StateCommon.Content.ShortText.TextV = PaletteRelativeAlign.Center;
-            ButtonHome.StatePressed.Back.Color1 = Color.FromArgb(50, 0, 150);
-            ButtonHome.StateTracking.Back.Color1 = Color.FromArgb(45, 0, 200);
-            ButtonHome.TabIndex = 0;
-            ButtonHome.Values.DropDownArrowColor = Color.Empty;
-            ButtonHome.Values.Image = Properties.Resources.house;
-            ButtonHome.Values.Text = "  HOME";
-            ButtonHome.Click += ButtonHome_Click;
+            ButtonPerfil.ButtonStyle = ButtonStyle.LowProfile;
+            ButtonPerfil.Cursor = Cursors.Hand;
+            ButtonPerfil.Dock = DockStyle.Top;
+            ButtonPerfil.Location = new Point(0, 0);
+            ButtonPerfil.Name = "ButtonPerfil";
+            ButtonPerfil.Size = new Size(167, 70);
+            ButtonPerfil.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
+            ButtonPerfil.StateCommon.Back.ColorStyle = PaletteColorStyle.Solid;
+            ButtonPerfil.StateCommon.Content.Image.ImageH = PaletteRelativeAlign.Near;
+            ButtonPerfil.StateCommon.Content.Image.ImageV = PaletteRelativeAlign.Center;
+            ButtonPerfil.StateCommon.Content.Padding = new Padding(15, 0, 0, 0);
+            ButtonPerfil.StateCommon.Content.ShortText.Color1 = Color.White;
+            ButtonPerfil.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            ButtonPerfil.StateCommon.Content.ShortText.TextH = PaletteRelativeAlign.Near;
+            ButtonPerfil.StateCommon.Content.ShortText.TextV = PaletteRelativeAlign.Center;
+            ButtonPerfil.StatePressed.Back.Color1 = Color.FromArgb(50, 0, 150);
+            ButtonPerfil.StateTracking.Back.Color1 = Color.FromArgb(45, 0, 200);
+            ButtonPerfil.TabIndex = 0;
+            ButtonPerfil.Values.DropDownArrowColor = Color.Empty;
+            ButtonPerfil.Values.Image = (Image)resources.GetObject("ButtonPerfil.Values.Image");
+            ButtonPerfil.Values.Text = "  PERFIL";
+            ButtonPerfil.Click += ButtonHome_Click;
             // 
             // PanelConteudo
             // 
@@ -227,7 +229,7 @@ namespace StudyFlow
             PanelConteudo.Dock = DockStyle.Fill;
             PanelConteudo.Location = new Point(167, 80);
             PanelConteudo.Name = "PanelConteudo";
-            PanelConteudo.Size = new Size(1121, 616);
+            PanelConteudo.Size = new Size(1097, 601);
             PanelConteudo.StateNormal.Color1 = Color.White;
             PanelConteudo.TabIndex = 2;
             PanelConteudo.Paint += PanelConteudo_Paint;
@@ -287,18 +289,19 @@ namespace StudyFlow
             PanelCima.Dock = DockStyle.Top;
             PanelCima.Location = new Point(0, 0);
             PanelCima.Name = "PanelCima";
-            PanelCima.Size = new Size(1288, 80);
+            PanelCima.Size = new Size(1264, 80);
             PanelCima.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelCima.TabIndex = 0;
             // 
             // BaseForm
             // 
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(1288, 696);
+            ClientSize = new Size(1264, 681);
             Controls.Add(PanelConteudo);
             Controls.Add(PanelEsquerda);
             Controls.Add(PanelCima);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "BaseForm";
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterScreen;
@@ -326,7 +329,7 @@ namespace StudyFlow
         private Krypton.Toolkit.KryptonButton kryptonButton4;
         private Krypton.Toolkit.KryptonButton ButtonQuestao;
         private Krypton.Toolkit.KryptonButton ButtonRanking;
-        private Krypton.Toolkit.KryptonButton ButtonHome;
+        private Krypton.Toolkit.KryptonButton ButtonPerfil;
         private Krypton.Toolkit.KryptonButton ButtonAjuda;
         private Krypton.Toolkit.KryptonButton ButtonResolucao;
         private PictureBox pictureBox1;

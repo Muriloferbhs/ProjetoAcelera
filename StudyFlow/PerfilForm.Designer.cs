@@ -1,7 +1,7 @@
 ﻿using Krypton.Toolkit;
 namespace StudyFlow
 {
-    partial class HomeForm
+    partial class PerfilForm
     {
         /// <summary>
         /// Required designer variable.

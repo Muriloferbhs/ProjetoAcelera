@@ -23,7 +23,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             kryptonPanelEsquerda = new Krypton.Toolkit.KryptonPanel();
             pictureBox1 = new PictureBox();
             TextBoxNome = new Krypton.Toolkit.KryptonTextBox();
@@ -36,6 +37,7 @@
             LabelTelefone = new Krypton.Toolkit.KryptonLabel();
             LabelEmail = new Krypton.Toolkit.KryptonLabel();
             LabelNome = new Krypton.Toolkit.KryptonLabel();
+            LabelTexto = new Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)kryptonPanelEsquerda).BeginInit();
             kryptonPanelEsquerda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -49,7 +51,7 @@
             kryptonPanelEsquerda.Dock = DockStyle.Left;
             kryptonPanelEsquerda.Location = new Point(0, 0);
             kryptonPanelEsquerda.Name = "kryptonPanelEsquerda";
-            kryptonPanelEsquerda.Size = new Size(392, 561);
+            kryptonPanelEsquerda.Size = new Size(392, 600);
             kryptonPanelEsquerda.StateNormal.Color1 = Color.White;
             kryptonPanelEsquerda.TabIndex = 0;
             // 
@@ -82,6 +84,7 @@
             // 
             // PanelDireita
             // 
+            PanelDireita.Controls.Add(LabelTexto);
             PanelDireita.Controls.Add(ButtonConfirmar);
             PanelDireita.Controls.Add(TextBoxCpf);
             PanelDireita.Controls.Add(TextBoxTelefone);
@@ -94,7 +97,7 @@
             PanelDireita.Dock = DockStyle.Fill;
             PanelDireita.Location = new Point(392, 0);
             PanelDireita.Name = "PanelDireita";
-            PanelDireita.Size = new Size(392, 561);
+            PanelDireita.Size = new Size(408, 600);
             PanelDireita.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelDireita.TabIndex = 11;
             // 
@@ -235,6 +238,18 @@
             LabelNome.TabIndex = 16;
             LabelNome.Values.Text = "Nome completo";
             // 
+            // LabelTexto
+            // 
+            LabelTexto.Location = new Point(24, 33);
+            LabelTexto.Name = "LabelTexto";
+            LabelTexto.Size = new Size(361, 26);
+            LabelTexto.StateCommon.ShortText.Color1 = Color.White;
+            LabelTexto.StateCommon.ShortText.Color2 = Color.White;
+            LabelTexto.StateCommon.ShortText.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LabelTexto.TabIndex = 26;
+            LabelTexto.Values.Text = "Confirme seus dados antes de mudar a senha";
+            LabelTexto.Click += kryptonLabel1_Click;
+            // 
             // RecuperarSenhaForm
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -271,5 +286,6 @@
         private Krypton.Toolkit.KryptonLabel LabelNome;
         private Krypton.Toolkit.KryptonButton ButtonConfirmar;
         private PictureBox pictureBox1;
+        private Krypton.Toolkit.KryptonLabel LabelTexto;
     }
 }

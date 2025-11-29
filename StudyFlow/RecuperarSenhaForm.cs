@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,12 +12,15 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace StudyFlow {
-    public partial class RecuperarSenhaForm : Form {
-        public RecuperarSenhaForm() {
+    public partial class RecuperarSenhaForm : Form
+    {
+        public RecuperarSenhaForm()
+        {
             InitializeComponent();
         }
 
-        private void ButtonConfirmar_Click(object sender, EventArgs e) {
+        private void ButtonConfirmar_Click(object sender, EventArgs e)
+        {
 
 
 
@@ -56,12 +60,12 @@ namespace StudyFlow {
 
 
 
-        DialogResult resultado = MessageBox.Show(
-                        "Dados não encontrados, deseja fazer cadastro?",
-                        "Confirmação",
-                        MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Question
-                    );
+            DialogResult resultado = MessageBox.Show(
+                            "Dados não encontrados, deseja fazer cadastro?",
+                            "Confirmação",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question
+                        );
             if (resultado == DialogResult.Yes)
             {
 
@@ -72,63 +76,31 @@ namespace StudyFlow {
             }
             return;
 
-
         }
 
 
 
 
-        
 
 
 
 
 
 
-        private void RecuperarSenhaForm_FormClosing(object sender, FormClosingEventArgs e) {
+
+        private void RecuperarSenhaForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-            
-                    this.Hide();
+
+                this.Hide();
 
             }
         }
 
+        private void kryptonLabel1_Click(object sender, EventArgs e)
+        {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        }
     }
 }

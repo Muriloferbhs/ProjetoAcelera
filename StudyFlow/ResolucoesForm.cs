@@ -100,26 +100,6 @@ namespace StudyFlow
             textBusca.CueHint.CueHintText = "Pesquisar ID";
             textBusca.CueHint.Color1 = Color.FromArgb(110, 110, 110);
 
-            //
-            // botao busca
-            //
-            //KryptonButton buttonBusca = new KryptonButton();
-            //buttonBusca.Text = "Buscar";
-            //buttonBusca.Location = new Point(920, 40);
-            //buttonBusca.Size = new Size(60, 30);
-            //buttonBusca.StateCommon.Back.Color1 = Color.FromArgb(255, 102, 0);
-            //buttonBusca.StateCommon.Back.Color2 = Color.FromArgb(255, 102, 0);
-            //buttonBusca.OverrideDefault.Back.Color1 = Color.FromArgb(255, 102, 0);
-            //buttonBusca.OverrideDefault.Back.Color2 = Color.FromArgb(255, 102, 0);
-            //buttonBusca.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
-            //buttonBusca.StateCommon.Border.Color2 = Color.FromArgb(255, 102, 0);
-            //buttonBusca.StatePressed.Back.Color1 = Color.FromArgb(230, 92, 0);
-            //buttonBusca.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            //buttonBusca.StateCommon.Content.ShortText.Color1 = Color.White;
-            //buttonBusca.StateCommon.Border.Rounding = 8;
-            //buttonBusca.Cursor = Cursors.Hand;
-            //panelResolucoes.Controls.Add(buttonBusca);
-
 
             //filtra as questoes que o usuario ja respondeu
             foreach (var q in questoes)
@@ -324,19 +304,27 @@ namespace StudyFlow
             //
             // Voltar
             //
-            KryptonButton buttonVoltar = new KryptonButton();
-            buttonVoltar.Text = "← Voltar";
-            buttonVoltar.Size = new Size(100, 40);
-            buttonVoltar.Location = new Point(20, 20);
-            buttonVoltar.StateCommon.Back.Color1 = Color.FromArgb(255, 102, 0);
-            buttonVoltar.StateCommon.Back.Color2 = Color.FromArgb(255, 102, 0);
-            buttonVoltar.StateCommon.Content.ShortText.Color1 = Color.White;
-            buttonVoltar.StateCommon.Border.Rounding = 6;
-            buttonVoltar.OverrideDefault.Back.Color1 = Color.White;
-            buttonVoltar.OverrideDefault.Back.Color2 = Color.White;
-            buttonVoltar.Cursor = Cursors.Hand;
-            buttonVoltar.Click += (s, e) => TelaResolucoes(); // volta para a lista de questões
-            panelQuestao.Controls.Add(buttonVoltar);
+            PictureBox iconVoltar = new PictureBox();
+            iconVoltar.Size = new Size(40, 40);
+            iconVoltar.Location = new Point(30, 20);
+            iconVoltar.BackColor = Color.White;
+            iconVoltar.Image = Properties.Resources.previous;
+            iconVoltar.SizeMode = PictureBoxSizeMode.Zoom;
+            iconVoltar.Cursor = Cursors.Hand;
+            iconVoltar.Click += (s, e) => TelaResolucoes(); // volta para a lista de questões
+
+            iconVoltar.MouseDown += (s, e) =>
+            {
+                iconVoltar.Size = new Size(35, 35);
+                iconVoltar.Location = new Point(30, 22);
+            };
+
+            iconVoltar.MouseUp += (s, e) =>
+            {
+                iconVoltar.Size = new Size(40, 40);
+                iconVoltar.Location = new Point(30, 20);
+            };
+            panelQuestao.Controls.Add(iconVoltar);
 
             KryptonLabel labelTitulo = new KryptonLabel();
             labelTitulo.Text = "Resolução da questão " + questao.ID; ;

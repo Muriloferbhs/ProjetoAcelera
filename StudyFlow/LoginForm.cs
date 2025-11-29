@@ -43,7 +43,7 @@ namespace StudyFlow
             if (usuariologado != null)
             {
                 Ranking.CalcularRanking();
-                HomeForm home = new HomeForm();
+                PerfilForm home = new PerfilForm();
                 home.Show();
                 this.Hide();
 
