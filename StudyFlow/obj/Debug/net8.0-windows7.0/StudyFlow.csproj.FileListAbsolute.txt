@@ -299,3 +299,100 @@ C:\Users\Usuário 1\Desktop\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0
 C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.PopupForm.resources
 C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.RedefinirSenhaForm.resources
 C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.RecuperarSenhaForm.resources
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.csproj.AssemblyReference.cache
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.g.resources
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.dll
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\refint\StudyFlow.dll
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.pdb
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.exe
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.deps.json
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.runtimeconfig.json
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.dll
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.pdb
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\bin\Debug\net8.0-windows7.0\BCrypt.Net-Next.dll
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\bin\Debug\net8.0-windows7.0\Krypton.Toolkit.dll
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.AjudaForm.resources
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.BaseForm.resources
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.CadastroForm.resources
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.HomeForm.resources
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.LoginForm.resources
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.PopupForm.resources
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.Properties.Resources.resources
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.QuestoesForm.resources
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.RankingForm.resources
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.RecuperarSenhaForm.resources
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.RedefinirSenhaForm.resources
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.ResolucoesForm.resources
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.csproj.GenerateResource.cache
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.AssemblyInfoInputs.cache
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.AssemblyInfo.cs
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.csproj.CoreCompileInputs.cache
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.csproj.Up2Date
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.genruntimeconfig.cache
+C:\Users\aluno\Downloads\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\ref\StudyFlow.dll
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.exe
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.deps.json
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.runtimeconfig.json
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.dll
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.pdb
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\bin\Debug\net8.0-windows7.0\BCrypt.Net-Next.dll
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\bin\Debug\net8.0-windows7.0\Krypton.Toolkit.dll
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.csproj.AssemblyReference.cache
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.g.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.AjudaForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.BaseForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.CadastroForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.HomeForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.LoginForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.PopupForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.Properties.Resources.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.QuestoesForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.RankingForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.RecuperarSenhaForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.RedefinirSenhaForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.ResolucoesForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.csproj.GenerateResource.cache
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.AssemblyInfoInputs.cache
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.AssemblyInfo.cs
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.csproj.CoreCompileInputs.cache
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.csproj.Up2Date
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.dll
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\refint\StudyFlow.dll
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.pdb
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.genruntimeconfig.cache
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera-main\ProjetoAcelera-main\StudyFlow\obj\Debug\net8.0-windows7.0\ref\StudyFlow.dll
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.exe
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.deps.json
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.runtimeconfig.json
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.dll
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\bin\Debug\net8.0-windows7.0\StudyFlow.pdb
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\bin\Debug\net8.0-windows7.0\BCrypt.Net-Next.dll
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\bin\Debug\net8.0-windows7.0\Krypton.Toolkit.dll
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.csproj.AssemblyReference.cache
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.g.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.AjudaForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.BaseForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.CadastroForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.HomeForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.LoginForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.PopupForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.Properties.Resources.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.QuestoesForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.RankingForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.RecuperarSenhaForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.RedefinirSenhaForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.ResolucoesForm.resources
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.csproj.GenerateResource.cache
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.AssemblyInfoInputs.cache
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.AssemblyInfo.cs
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.csproj.CoreCompileInputs.cache
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.sourcelink.json
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.csproj.Up2Date
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.dll
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\refint\StudyFlow.dll
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.pdb
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.genruntimeconfig.cache
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\ref\StudyFlow.dll

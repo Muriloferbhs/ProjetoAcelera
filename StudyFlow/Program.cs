@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 
 namespace StudyFlow
@@ -8,6 +9,8 @@ namespace StudyFlow
         [STAThread]
         static void Main()
         {
+
+            
             Usuario.UsuariosDeTeste();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

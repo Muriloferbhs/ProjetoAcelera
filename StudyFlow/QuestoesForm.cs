@@ -584,5 +584,15 @@ namespace StudyFlow
         {
             return ajudaTexto;
         }
+
+
+        private void panelBusca_Paint(object sender, PaintEventArgs e) {
+
+        }
+
+
+
+
+
     }
 }

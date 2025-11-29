@@ -37,19 +37,16 @@ namespace StudyFlow
             buttonEnem = new KryptonButton();
             buttonCienciasN = new KryptonButton();
             buttonMatematica = new KryptonButton();
-            panelBusca = new KryptonPanel();
             btnCard = new KryptonButton();
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).BeginInit();
             PanelConteudo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)panelCards).BeginInit();
             panelCards.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)panelBusca).BeginInit();
             SuspendLayout();
             // 
             // PanelConteudo
             // 
             PanelConteudo.Controls.Add(panelCards);
-            PanelConteudo.Controls.Add(panelBusca);
             PanelConteudo.Size = new Size(1117, 628);
             PanelConteudo.StateNormal.Color1 = Color.White;
             // 
@@ -61,10 +58,10 @@ namespace StudyFlow
             panelCards.Controls.Add(buttonEnem);
             panelCards.Controls.Add(buttonCienciasN);
             panelCards.Controls.Add(buttonMatematica);
-            panelCards.Dock = DockStyle.Left;
+            panelCards.Dock = DockStyle.Fill;
             panelCards.Location = new Point(0, 0);
             panelCards.Name = "panelCards";
-            panelCards.Size = new Size(800, 628);
+            panelCards.Size = new Size(1117, 628);
             panelCards.StateCommon.Color1 = Color.White;
             panelCards.StateDisabled.Color1 = Color.Transparent;
             panelCards.StateDisabled.Color2 = Color.Transparent;
@@ -75,13 +72,13 @@ namespace StudyFlow
             // buttonProvaoP
             // 
             buttonProvaoP.Cursor = Cursors.Hand;
-            buttonProvaoP.Location = new Point(415, 390);
+            buttonProvaoP.Location = new Point(569, 410);
             buttonProvaoP.Name = "buttonProvaoP";
             buttonProvaoP.OverrideDefault.Back.Color1 = Color.White;
             buttonProvaoP.OverrideDefault.Back.Color2 = Color.White;
             buttonProvaoP.OverrideDefault.Border.Color1 = Color.FromArgb(255, 102, 0);
             buttonProvaoP.OverrideDefault.Border.Color2 = Color.FromArgb(255, 102, 0);
-            buttonProvaoP.Size = new Size(350, 120);
+            buttonProvaoP.Size = new Size(360, 145);
             buttonProvaoP.StateCommon.Back.Color1 = Color.White;
             buttonProvaoP.StateCommon.Back.Color2 = Color.White;
             buttonProvaoP.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
@@ -110,13 +107,13 @@ namespace StudyFlow
             // buttonLinguagens
             // 
             buttonLinguagens.Cursor = Cursors.Hand;
-            buttonLinguagens.Location = new Point(415, 70);
+            buttonLinguagens.Location = new Point(569, 56);
             buttonLinguagens.Name = "buttonLinguagens";
             buttonLinguagens.OverrideDefault.Back.Color1 = Color.White;
             buttonLinguagens.OverrideDefault.Back.Color2 = Color.White;
             buttonLinguagens.OverrideDefault.Border.Color1 = Color.FromArgb(255, 102, 0);
             buttonLinguagens.OverrideDefault.Border.Color2 = Color.FromArgb(255, 102, 0);
-            buttonLinguagens.Size = new Size(350, 120);
+            buttonLinguagens.Size = new Size(360, 145);
             buttonLinguagens.StateCommon.Back.Color1 = Color.White;
             buttonLinguagens.StateCommon.Back.Color2 = Color.White;
             buttonLinguagens.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
@@ -140,13 +137,13 @@ namespace StudyFlow
             // buttonCienciasH
             // 
             buttonCienciasH.Cursor = Cursors.Hand;
-            buttonCienciasH.Location = new Point(37, 234);
+            buttonCienciasH.Location = new Point(161, 233);
             buttonCienciasH.Name = "buttonCienciasH";
             buttonCienciasH.OverrideDefault.Back.Color1 = Color.White;
             buttonCienciasH.OverrideDefault.Back.Color2 = Color.White;
             buttonCienciasH.OverrideDefault.Border.Color1 = Color.FromArgb(255, 102, 0);
             buttonCienciasH.OverrideDefault.Border.Color2 = Color.FromArgb(255, 102, 0);
-            buttonCienciasH.Size = new Size(350, 120);
+            buttonCienciasH.Size = new Size(360, 145);
             buttonCienciasH.StateCommon.Back.Color1 = Color.White;
             buttonCienciasH.StateCommon.Back.Color2 = Color.White;
             buttonCienciasH.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
@@ -175,13 +172,13 @@ namespace StudyFlow
             // buttonEnem
             // 
             buttonEnem.Cursor = Cursors.Hand;
-            buttonEnem.Location = new Point(37, 390);
+            buttonEnem.Location = new Point(161, 410);
             buttonEnem.Name = "buttonEnem";
             buttonEnem.OverrideDefault.Back.Color1 = Color.White;
             buttonEnem.OverrideDefault.Back.Color2 = Color.White;
             buttonEnem.OverrideDefault.Border.Color1 = Color.FromArgb(255, 102, 0);
             buttonEnem.OverrideDefault.Border.Color2 = Color.FromArgb(255, 102, 0);
-            buttonEnem.Size = new Size(350, 120);
+            buttonEnem.Size = new Size(360, 145);
             buttonEnem.StateCommon.Back.Color1 = Color.White;
             buttonEnem.StateCommon.Back.Color2 = Color.White;
             buttonEnem.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
@@ -210,13 +207,13 @@ namespace StudyFlow
             // buttonCienciasN
             // 
             buttonCienciasN.Cursor = Cursors.Hand;
-            buttonCienciasN.Location = new Point(415, 234);
+            buttonCienciasN.Location = new Point(569, 233);
             buttonCienciasN.Name = "buttonCienciasN";
             buttonCienciasN.OverrideDefault.Back.Color1 = Color.White;
             buttonCienciasN.OverrideDefault.Back.Color2 = Color.White;
             buttonCienciasN.OverrideDefault.Border.Color1 = Color.FromArgb(255, 102, 0);
             buttonCienciasN.OverrideDefault.Border.Color2 = Color.FromArgb(255, 102, 0);
-            buttonCienciasN.Size = new Size(350, 120);
+            buttonCienciasN.Size = new Size(360, 145);
             buttonCienciasN.StateCommon.Back.Color1 = Color.White;
             buttonCienciasN.StateCommon.Back.Color2 = Color.White;
             buttonCienciasN.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
@@ -245,13 +242,13 @@ namespace StudyFlow
             // buttonMatematica
             // 
             buttonMatematica.Cursor = Cursors.Hand;
-            buttonMatematica.Location = new Point(37, 70);
+            buttonMatematica.Location = new Point(161, 56);
             buttonMatematica.Name = "buttonMatematica";
             buttonMatematica.OverrideDefault.Back.Color1 = Color.White;
             buttonMatematica.OverrideDefault.Back.Color2 = Color.White;
             buttonMatematica.OverrideDefault.Border.Color1 = Color.FromArgb(255, 102, 0);
             buttonMatematica.OverrideDefault.Border.Color2 = Color.FromArgb(255, 102, 0);
-            buttonMatematica.Size = new Size(350, 120);
+            buttonMatematica.Size = new Size(360, 145);
             buttonMatematica.StateCommon.Back.Color1 = Color.White;
             buttonMatematica.StateCommon.Back.Color2 = Color.White;
             buttonMatematica.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
@@ -277,15 +274,6 @@ namespace StudyFlow
             buttonMatematica.Values.ExtraText = "Questões envolvendo os conhecimentos \nem matemática e raciocínio lógico";
             buttonMatematica.Values.Text = "MATEMÁTICA E SUAS TECNOLOGIAS";
             // 
-            // panelBusca
-            // 
-            panelBusca.Dock = DockStyle.Fill;
-            panelBusca.Location = new Point(0, 0);
-            panelBusca.Name = "panelBusca";
-            panelBusca.Size = new Size(1117, 628);
-            panelBusca.StateCommon.Color1 = Color.White;
-            panelBusca.TabIndex = 1;
-            // 
             // btnCard
             // 
             btnCard.Location = new Point(0, 0);
@@ -295,21 +283,19 @@ namespace StudyFlow
             // 
             // QuestoesForm
             // 
-            ClientSize = new Size(1284, 708);
+            ClientSize = new Size(1280, 720);
             Name = "QuestoesForm";
             Text = "QuestoesForm";
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).EndInit();
             PanelConteudo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)panelCards).EndInit();
             panelCards.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)panelBusca).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Krypton.Toolkit.KryptonPanel panelCards;
-        private Krypton.Toolkit.KryptonPanel panelBusca;
         private KryptonButton btnCard;
         private KryptonButton buttonMatematica;
         private KryptonButton buttonProvaoP;

@@ -5,6 +5,7 @@ using Microsoft.VisualBasic.Logging;
 using System.Collections;
 using System.Text.Json;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using System.Web;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
@@ -33,6 +34,7 @@ namespace StudyFlow
 
         public static ArrayList DadosDoCadastroLogin = new ArrayList();
 
+       
 
         public static Usuario UsuarioLogado { get; set; }
        public static Usuario UsuarioSenhaEditada { get; set; }
@@ -173,6 +175,54 @@ namespace StudyFlow
                 return true;
             }
         }
+
+
+
+        public static bool ValidarSenha(string senha) {
+
+            // Pelo menos uma letra maiúscula
+            if (!senha.Any(char.IsUpper))
+            {
+                KryptonMessageBox.Show("A senha deve conter pelo menos uma letra MAIÚSCULA.");
+                return false;
+            }
+
+            // Pelo menos uma letra minúscula
+            if (!senha.Any(char.IsLower))
+            {
+                KryptonMessageBox.Show("A senha deve conter pelo menos uma letra minúscula.");
+                return false;
+            }
+
+            // Pelo menos um número
+            if (!senha.Any(char.IsDigit))
+            {
+                KryptonMessageBox.Show("A senha deve conter pelo menos um número.");
+                return false;
+            }
+
+            // Pelo menos um caractere especial
+            string especiais = "!@#$%^&*()-_=+[]{};:,.<>/?|";
+            if (!senha.Any(c => especiais.Contains(c)))
+            {
+                KryptonMessageBox.Show("A senha deve conter pelo menos um caractere especial.");
+                return false;
+            }
+
+            // Tamanho mínimo  
+            if (senha.Length < 8)
+            {
+                KryptonMessageBox.Show("A senha deve ter no mínimo 8 caracteres.");
+                return false;
+            }
+
+            return true;
+
+        }
+
+
+
+
         public static bool AutenticarTelefone(string telefone)
         {
             if (telefone.Length == 11 && telefone.All(char.IsDigit) || telefone.Length == 14 && telefone.All(char.IsDigit))
@@ -322,7 +372,7 @@ namespace StudyFlow
 
 
 
-        public static void EditarUsuario(string? novoNome, string? novoTelefone, string? novoSobreMim) {
+        public static void EditarUsuario(string? novoNome, string? novoTelefone, string? novoSobreMim, string? novoEmail) {
 
 
             foreach (Ranking r in Ranking.RankingGeral)
@@ -334,6 +384,10 @@ namespace StudyFlow
 
             if (!string.IsNullOrWhiteSpace(novoNome))
             UsuarioLogado.NomeUser = novoNome;
+
+            if (AutenticarEmail(novoEmail) && !string.IsNullOrWhiteSpace(novoEmail))
+                UsuarioLogado.Email = novoEmail;
+
 
 
 

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace StudyFlow
 {
-    public partial class CadastroForm : KryptonForm
+    public partial class CadastroForm : Form
     {
         public CadastroForm()
         {
@@ -34,6 +34,15 @@ namespace StudyFlow
                 KryptonMessageBox.Show("Preencha todos os campos!", "Atenção");
                 return;
             }
+
+            if (Usuario.ValidarSenha(senha) == false)
+            {
+                
+                return;
+            }
+
+
+
             if (senha != confirmarSenha)
             {
                 KryptonMessageBox.Show("As senhas não são iguais!", "Atenção");

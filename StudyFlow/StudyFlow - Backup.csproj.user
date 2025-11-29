@@ -35,9 +35,12 @@
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+=======
+>>>>>>> 18f590b1f40f4768e54bf1bc9f51b6038d36df13
 </Project>

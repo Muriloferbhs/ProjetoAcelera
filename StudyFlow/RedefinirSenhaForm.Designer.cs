@@ -30,6 +30,7 @@ namespace StudyFlow {
             PanelEsquerda = new KryptonPanel();
             pictureBox2 = new PictureBox();
             PanelDireita = new KryptonPanel();
+            kryptonPictureBox1 = new KryptonPictureBox();
             pictureBoxVerSenha = new PictureBox();
             pictureBoxVerConfirmarSenha = new PictureBox();
             TextBoxConfirmarSenha = new KryptonTextBox();
@@ -38,16 +39,16 @@ namespace StudyFlow {
             linkLabelLogin = new LinkLabel();
             ButtonSalvar = new KryptonButton();
             RedefinirSenha = new KryptonLabel();
-            kryptonPictureBox1 = new KryptonPictureBox();
             ((System.ComponentModel.ISupportInitialize)PanelEsquerda).BeginInit();
             PanelEsquerda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PanelDireita).BeginInit();
             PanelDireita.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxVerSenha).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxVerConfirmarSenha).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PictureBoxSenha).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
+            
             SuspendLayout();
             // 
             // PanelEsquerda
@@ -56,7 +57,7 @@ namespace StudyFlow {
             PanelEsquerda.Dock = DockStyle.Left;
             PanelEsquerda.Location = new Point(0, 0);
             PanelEsquerda.Name = "PanelEsquerda";
-            PanelEsquerda.Size = new Size(393, 600);
+            PanelEsquerda.Size = new Size(393, 561);
             PanelEsquerda.StateCommon.Color1 = Color.FromArgb(32, 0, 177);
             PanelEsquerda.TabIndex = 0;
             // 
@@ -84,9 +85,18 @@ namespace StudyFlow {
             PanelDireita.Dock = DockStyle.Fill;
             PanelDireita.Location = new Point(393, 0);
             PanelDireita.Name = "PanelDireita";
-            PanelDireita.Size = new Size(407, 600);
+            PanelDireita.Size = new Size(391, 561);
             PanelDireita.StateCommon.Color1 = Color.White;
             PanelDireita.TabIndex = 1;
+            // kryptonPictureBox1
+            // 
+            kryptonPictureBox1.Image = Properties.Resources.icone_senha;
+            kryptonPictureBox1.Location = new Point(40, 221);
+            kryptonPictureBox1.Name = "kryptonPictureBox1";
+            kryptonPictureBox1.Size = new Size(39, 34);
+            kryptonPictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            kryptonPictureBox1.TabIndex = 10;
+            kryptonPictureBox1.TabStop = false;
             // 
             // pictureBoxVerSenha
             // 
@@ -217,16 +227,6 @@ namespace StudyFlow {
             RedefinirSenha.TabIndex = 0;
             RedefinirSenha.Values.Text = "Redefinir Senha";
             // 
-            // kryptonPictureBox1
-            // 
-            kryptonPictureBox1.Image = Properties.Resources.icone_senha;
-            kryptonPictureBox1.Location = new Point(40, 221);
-            kryptonPictureBox1.Name = "kryptonPictureBox1";
-            kryptonPictureBox1.Size = new Size(39, 34);
-            kryptonPictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            kryptonPictureBox1.TabIndex = 10;
-            kryptonPictureBox1.TabStop = false;
-            // 
             // RedefinirSenhaForm
             // 
             ClientSize = new Size(800, 600);
@@ -234,6 +234,7 @@ namespace StudyFlow {
             Controls.Add(PanelEsquerda);
             MaximizeBox = false;
             Name = "RedefinirSenhaForm";
+            SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "RecuperarSenha";
             FormClosing += RecuperarSenhaForm_FormClosing;
@@ -243,10 +244,11 @@ namespace StudyFlow {
             ((System.ComponentModel.ISupportInitialize)PanelDireita).EndInit();
             PanelDireita.ResumeLayout(false);
             PanelDireita.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxVerSenha).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxVerConfirmarSenha).EndInit();
             ((System.ComponentModel.ISupportInitialize)PictureBoxSenha).EndInit();
-            ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
+
             ResumeLayout(false);
 
 

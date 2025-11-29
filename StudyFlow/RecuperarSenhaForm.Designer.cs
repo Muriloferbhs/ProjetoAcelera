@@ -29,7 +29,6 @@
             TextBoxNome = new Krypton.Toolkit.KryptonTextBox();
             PanelDireita = new Krypton.Toolkit.KryptonPanel();
             ButtonConfirmar = new Krypton.Toolkit.KryptonButton();
-            linkLabelLogin = new LinkLabel();
             TextBoxCpf = new Krypton.Toolkit.KryptonTextBox();
             TextBoxTelefone = new Krypton.Toolkit.KryptonTextBox();
             TextBoxEmail = new Krypton.Toolkit.KryptonTextBox();
@@ -50,7 +49,7 @@
             kryptonPanelEsquerda.Dock = DockStyle.Left;
             kryptonPanelEsquerda.Location = new Point(0, 0);
             kryptonPanelEsquerda.Name = "kryptonPanelEsquerda";
-            kryptonPanelEsquerda.Size = new Size(392, 600);
+            kryptonPanelEsquerda.Size = new Size(392, 561);
             kryptonPanelEsquerda.StateNormal.Color1 = Color.White;
             kryptonPanelEsquerda.TabIndex = 0;
             // 
@@ -84,7 +83,6 @@
             // PanelDireita
             // 
             PanelDireita.Controls.Add(ButtonConfirmar);
-            PanelDireita.Controls.Add(linkLabelLogin);
             PanelDireita.Controls.Add(TextBoxCpf);
             PanelDireita.Controls.Add(TextBoxTelefone);
             PanelDireita.Controls.Add(TextBoxEmail);
@@ -96,7 +94,7 @@
             PanelDireita.Dock = DockStyle.Fill;
             PanelDireita.Location = new Point(392, 0);
             PanelDireita.Name = "PanelDireita";
-            PanelDireita.Size = new Size(408, 600);
+            PanelDireita.Size = new Size(392, 561);
             PanelDireita.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
             PanelDireita.TabIndex = 11;
             // 
@@ -129,23 +127,6 @@
             ButtonConfirmar.Values.DropDownArrowColor = Color.Empty;
             ButtonConfirmar.Values.Text = "Confirmar";
             ButtonConfirmar.Click += ButtonConfirmar_Click;
-            // 
-            // linkLabelLogin
-            // 
-            linkLabelLogin.ActiveLinkColor = Color.White;
-            linkLabelLogin.AutoSize = true;
-            linkLabelLogin.BackColor = Color.FromArgb(32, 0, 177);
-            linkLabelLogin.Cursor = Cursors.Hand;
-            linkLabelLogin.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            linkLabelLogin.LinkColor = Color.White;
-            linkLabelLogin.Location = new Point(123, 525);
-            linkLabelLogin.Name = "linkLabelLogin";
-            linkLabelLogin.Size = new Size(163, 17);
-            linkLabelLogin.TabIndex = 24;
-            linkLabelLogin.TabStop = true;
-            linkLabelLogin.Text = "Já tem uma conta? Login";
-            linkLabelLogin.VisitedLinkColor = Color.White;
-            linkLabelLogin.LinkClicked += linkLabelLogin_LinkClicked;
             // 
             // TextBoxCpf
             // 
@@ -256,7 +237,7 @@
             // 
             // RecuperarSenhaForm
             // 
-            AutoScaleMode = AutoScaleMode.Inherit;
+            AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(800, 600);
             Controls.Add(PanelDireita);
             Controls.Add(kryptonPanelEsquerda);
@@ -288,7 +269,6 @@
         private Krypton.Toolkit.KryptonLabel LabelTelefone;
         private Krypton.Toolkit.KryptonLabel LabelEmail;
         private Krypton.Toolkit.KryptonLabel LabelNome;
-        private LinkLabel linkLabelLogin;
         private Krypton.Toolkit.KryptonButton ButtonConfirmar;
         private PictureBox pictureBox1;
     }

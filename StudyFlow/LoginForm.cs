@@ -12,7 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace StudyFlow
 {
-    public partial class LoginForm : KryptonForm {
+    public partial class LoginForm : Form {
         public LoginForm() {
             InitializeComponent();
         }
@@ -99,10 +99,13 @@ namespace StudyFlow
         }
 
         private void linkLabelSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
-           
+
             RecuperarSenhaForm recuperarSenha = new RecuperarSenhaForm();
             recuperarSenha.Show();
-            this.Hide();
+
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e) {
 
         }
     }

@@ -21,6 +21,11 @@ namespace StudyFlow
             base.Dispose(disposing);
         }
 
+        
+
+
+
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -30,13 +35,17 @@ namespace StudyFlow
         private void InitializeComponent()
         {
             kryptonLabel1 = new KryptonLabel();
+            kryptonPictureBox1 = new KryptonPictureBox();
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).BeginInit();
             PanelConteudo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).BeginInit();
             SuspendLayout();
             // 
             // PanelConteudo
             // 
+            PanelConteudo.Controls.Add(kryptonPictureBox1);
             PanelConteudo.Controls.Add(kryptonLabel1);
+            PanelConteudo.Size = new Size(1121, 616);
             PanelConteudo.StateNormal.Color1 = Color.White;
             // 
             // kryptonLabel1
@@ -47,21 +56,30 @@ namespace StudyFlow
             kryptonLabel1.TabIndex = 3;
             kryptonLabel1.Values.Text = "kryptonLabel1";
             // 
+            // kryptonPictureBox1
+            // 
+            kryptonPictureBox1.Location = new Point(886, 95);
+            kryptonPictureBox1.Name = "kryptonPictureBox1";
+            kryptonPictureBox1.Size = new Size(100, 50);
+            kryptonPictureBox1.TabIndex = 4;
+            kryptonPictureBox1.TabStop = false;
+            // 
             // HomeForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            ClientSize = new Size(1280, 720);
-            StartPosition = FormStartPosition.CenterScreen;
+            ClientSize = new Size(1288, 696);
             Name = "HomeForm";
             Text = "HomeForm";
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).EndInit();
             PanelConteudo.ResumeLayout(false);
             PanelConteudo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)kryptonPictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
+        private LinkLabel linkLabelSenha;
         private KryptonLabel kryptonLabel1;
+        private KryptonPictureBox kryptonPictureBox1;
     }
 }

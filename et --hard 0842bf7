@@ -1,0 +1,198 @@
+[33mcommit d8539711f22dafe4f8e287bfeccfc2e08b69a3ac[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: 0842bf7 18f590b
+Author: Carlos Henrique <carloshenriquesantospelegrini@gmail.com>
+Date:   Sat Nov 29 14:22:39 2025 -0300
+
+    coloquei botão menu, arrumei bug do alterar senha, coloquei um padrao de senha forte, troquei o editar cpf por editar email e coloquer validasão de email
+
+[33mcommit 0842bf72419bd0a3dc5d53042b496636e46f5f56[m
+Author: Carlos Henrique <carloshenriquesantospelegrini@gmail.com>
+Date:   Sat Nov 29 01:22:29 2025 -0300
+
+    corrigi erro login, iniciei menu, adicionei botão menu e corrigi logica de recuperação de senha, acresentei um metodo de validar senha para o usuario ser obrigado a ter um senh forte
+
+[33mcommit 18f590b1f40f4768e54bf1bc9f51b6038d36df13[m
+Author: LF <lfgarcez1@gmail.com>
+Date:   Fri Nov 28 20:11:40 2025 -0300
+
+    Janelas foram modificadas, tamanho e estilo
+
+[33mcommit 2069f56cbe9c25bb8ad20dda8526c6c9493ee23f[m
+Author: Carlos Henrique <carloshenriquesantospelegrini@gmail.com>
+Date:   Fri Nov 28 00:59:48 2025 -0300
+
+    corrigi erros coloquei icon no login, (só teste)
+
+[33mcommit 638331a01acad18bfe3a71859c6d9c6f75a347fd[m
+Author: Carlos Henrique <carloshenriquesantospelegrini@gmail.com>
+Date:   Tue Nov 25 23:52:04 2025 -0300
+
+    telas de recuperar e redefinir senhas criadas(não finalizadas) estrutura bach end criada
+
+[33mcommit c1e250fd4ebfa34b4a95c7ba94995ca5682a4e9c[m
+Author: Carlos Henrique <carloshenriquesantospelegrini@gmail.com>
+Date:   Sun Nov 23 13:40:32 2025 -0300
+
+    corrigi erro do editar telefone e criei dois metodos, formartarcpf e formartartelefone para deixar no padrão de escrita
+
+[33mcommit 4d601d4116616f02d59d6e1a46d4d942a1d212ed[m
+Author: LF <lfgarcez1@gmail.com>
+Date:   Sat Nov 22 13:43:40 2025 -0300
+
+    Pop-up de ajuda para as telas
+
+[33mcommit aaf8fc0d8db920f3c00929ad8cf4a2dea74f81ea[m
+Author: LF <lfgarcez1@gmail.com>
+Date:   Fri Nov 21 19:29:06 2025 -0300
+
+    adicionado icone de lupa na busca(resolução), botão editar na area perfil modificado
+
+[33mcommit a35a6419eeb59bd0e49aacef61c7eea350fc2e0d[m
+Author: Carlos Henrique <carloshenriquesantospelegrini@gmail.com>
+Date:   Thu Nov 20 20:24:32 2025 -0300
+
+    modifiquei o metodo editarUser para salvar o texto (sobre mim) e modifiquei o botão editar
+
+[33mcommit de61cc6ef7e99495fc3a45d9b545429a5896f5c3[m
+Author: Carlos Henrique <carloshenriquesantospelegrini@gmail.com>
+Date:   Thu Nov 20 19:42:12 2025 -0300
+
+    metodo editar usuario terminado, terminando a parte de edição e dados do perfil
+
+[33mcommit 5c00396a69e879c3c39f1c2a486bfb462b763ce2[m
+Author: LF <lfgarcez1@gmail.com>
+Date:   Thu Nov 20 15:01:06 2025 -0300
+
+    Tela de perfil feita
+
+[33mcommit dd4ef9c540532e3b12d31d5270c371df509b382e[m
+Author: Carlos Henrique <carloshenriquesantospelegrini@gmail.com>
+Date:   Sat Nov 15 21:19:49 2025 -0300
+
+    logica para colocar o ranking na tela base feita
+
+[33mcommit 29410211a3b9aec491b701c725c8dfa72c30e184[m
+Author: Muriloferbhs <muriloferbhs@gmail.com>
+Date:   Sat Nov 15 12:24:56 2025 -0300
+
+    Fiz umas pequenas mudanças, coloquei para aparecer o ano da prova quando clicamos na questão, a pontuação parcial da questão e se acertou ou errou a questão na tela para escolher qual questao responder e na tela de qual resolução ver
+
+[33mcommit 8ae0421a0b50b2e9c992b53461f7d101e3a75801[m
+Author: Muriloferbhs <muriloferbhs@gmail.com>
+Date:   Sat Nov 15 01:31:09 2025 -0300
+
+    Arrumei o arquivo json com as novas questoes e as explicações separadas pela sarah, mudei a tela de resolução das questões, fazendo com que, quando é uma questao de mais de uma explicação, apareça de forma que mostre todas as explicações, em cada alternativa, e, quando é uma questao que tem uma unica explicacao, a explicacao aparece do lado
+
+[33mcommit 603c9f7d247c27da15a7eac969b28b0604a7d104[m
+Author: Murilo Fernando Barbosa Hummel da Silva <Muriloferbhs@gmail.com>
+Date:   Thu Nov 13 23:06:29 2025 -0300
+
+    adicionei mecanismo de busca por ID na aba de resolucoes
+    
+    adicionei mecanismo de busca por ID na aba de resolucoes
+
+[33mcommit 953b7d1aedfd5d81d654643679d764a39710b724[m
+Author: LF <lfgarcez1@gmail.com>
+Date:   Thu Nov 13 17:47:45 2025 -0300
+
+    Foram adicionados os elementos à interface de Ajuda
+
+[33mcommit 1e2e57da2b6e26581d6f8548ce35a1e774b5e6d5[m
+Author: Carlos Henrique <carloshenriquesantospelegrini@gmail.com>
+Date:   Thu Nov 13 00:07:26 2025 -0300
+
+    crido metodo LocalizarUser(ainda vazio) e ranking modificado para identificar o usuario logado
+
+[33mcommit ce015e2714c14e6e709e1d23ea84460b2032ade9[m
+Author: LF <lfgarcez1@gmail.com>
+Date:   Wed Nov 12 17:19:11 2025 -0300
+
+    Segunda parte da tela de resoluções pronta, falta adicionar lógica. Também foram modificados alguns leyouts das demais interfaces
+
+[33mcommit e16d4a58702b2670db2a4810374476530a55b9fe[m
+Author: Carlos Henrique <carloshenriquesantospelegrini@gmail.com>
+Date:   Tue Nov 11 23:54:44 2025 -0300
+
+    métodos DeslogarUser e EditarUser criados e correção de bug na ranking
+
+[33mcommit cce53122a6f60354f2a9efcf7b1ea5f2f7ce9777[m
+Author: Muriloferbhs <muriloferbhs@gmail.com>
+Date:   Tue Nov 11 23:22:46 2025 -0300
+
+    Criei um filtro na aba ResolucoesForms.cs, arrumei uns bug
+
+[33mcommit ed3520ae271422672d5adcdf5b63ff981bba7973[m
+Author: LF <lfgarcez1@gmail.com>
+Date:   Tue Nov 11 19:55:56 2025 -0300
+
+    A primeira parte da interface de resoluções foi feita, mas falta a logica do filtro
+
+[33mcommit 664d934145ba64121e257038d99c7301e6e498d2[m
+Author: LF <lfgarcez1@gmail.com>
+Date:   Mon Nov 10 20:16:54 2025 -0300
+
+    Correção de bugs e a interface de questões foi finalizada
+
+[33mcommit 880f148a5b02689fe85e6d7a2fd779ca0aa68e98[m
+Author: Muriloferbhs <muriloferbhs@gmail.com>
+Date:   Sun Nov 9 22:18:40 2025 -0300
+
+    Terminei a logica de validação das respostas, criei um dicionario, coloquei a cor nas alternativas de verde se acertar e vermelho de errar, ou seja, a parte toda de responder a pergutna ja esta completa
+
+[33mcommit 46f5b3a0009605ca8ce81a30d495935a09e59574[m
+Author: Carlos Henrique <carloshenriquesantospelegrini@gmail.com>
+Date:   Fri Nov 7 21:50:16 2025 -0300
+
+    Sistema de ranking com Windows Forms, integrando lógica de pontuação e rankiamento
+
+[33mcommit 548f0c6c62ebeb1202e9794892fb6858d62c24d8[m
+Author: LF <lfgarcez1@gmail.com>
+Date:   Fri Nov 7 17:39:08 2025 -0300
+
+    Adicionado as logos nas interfaces
+
+[33mcommit 7e7fcd75a9a3127e49daada96806f637f15ec04f[m
+Author: LF <lfgarcez1@gmail.com>
+Date:   Fri Nov 7 13:20:21 2025 -0300
+
+    O botão confirmar foi excluido, sua logica foi passada para quando clicar na propria questão. Foi feito a tela de ranking
+
+[33mcommit 50f2c4bc7af3c19d30c115c519587154df171466[m
+Author: Aluno Fatec <luizgustavoamcarv@gmail.com>
+Date:   Thu Nov 6 09:15:43 2025 -0300
+
+    criei contrutor para usuario a clss Ranking, editei a metodo logim e a clss loginform
+
+[33mcommit 9381e2df23ed40755611425b933daeb43acb0b12[m
+Author: LF <lfgarcez1@gmail.com>
+Date:   Sat Nov 1 17:45:07 2025 -0300
+
+    Foi feito a tela onde o usuario irá responder a questão escolhida
+
+[33mcommit 1b2dd150e4a9ab77bac4f76037466c6567846059[m
+Author: Muriloferbhs <muriloferbhs@gmail.com>
+Date:   Fri Oct 31 23:31:12 2025 -0300
+
+    Adicionando o filtro nas questões
+
+[33mcommit b7df2b3a57d03dc389bcb77f8eae05da3ebead66[m
+Author: Muriloferbhs <muriloferbhs@gmail.com>
+Date:   Fri Oct 31 21:58:03 2025 -0300
+
+    Colocando as questões do json para aparecer, mas sem o filtro
+
+[33mcommit d11567a956fb0e29f7fcc3f5ccfe4fac2fee247c[m
+Author: LF <lfgarcez1@gmail.com>
+Date:   Thu Oct 30 21:37:36 2025 -0300
+
+    Foi adicionado uma parte do frontend das questoes, adicionado lista de questoes
+
+[33mcommit 60adb6691cbd8491403db9a9f88a542fc7a74ff7[m
+Author: LF <lfgarcez1@gmail.com>
+Date:   Thu Oct 30 18:56:29 2025 -0300
+
+    Resolvido problema de autoscale, e foram removidas linhas desnecessarias
+
+[33mcommit 33bfc3f7fef058ab4103221b3f9198651ccdc2c0[m
+Author: Murilo Fernando Barbosa Hummel da Silva <Muriloferbhs@gmail.com>
+Date:   Thu Oct 30 08:59

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace StudyFlow
 {
-    public partial class PopupForm : KryptonForm
+    public partial class PopupForm : Form
     {
         public PopupForm(string titulo, string mensagem)
         {

@@ -17,7 +17,7 @@ namespace StudyFlow
     public partial class HomeForm : BaseForm
     {
         KryptonTextBox textBoxNome;
-        KryptonTextBox textBoxCpf;
+        KryptonTextBox textBoxEmail;
         KryptonTextBox textBoxTel;
         KryptonTextBox textBoxSenha;
         KryptonRichTextBox textBoxSobre;
@@ -31,14 +31,21 @@ namespace StudyFlow
             InitializeComponent();
             TelaPerfil();
         }
-        String editNome, editTelefone, editSobremim, cpf;
-        
+        String editNome, editTelefone, editSobremim, editEmail;
 
+        private void linkLabelSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            RecuperarSenhaForm recuperarSenha = new RecuperarSenhaForm();
+            recuperarSenha.Show();
+            
+
+        }
 
         private void TelaPerfil()
         {
             PanelConteudo.Controls.Clear();
- 
+
             KryptonPanel perfilPanel = new KryptonPanel();
             perfilPanel.StateCommon.Color1 = Color.White;
             perfilPanel.Dock = DockStyle.Fill;
@@ -55,9 +62,9 @@ namespace StudyFlow
 
             //posição no rank
             labelposicao = new KryptonButton();
-            labelposicao.Text =  Usuario.UsuarioLogado.PosiçãoRanking + "º";
+            labelposicao.Text = Usuario.UsuarioLogado.PosiçãoRanking + "º";
             labelposicao.Enabled = false;
-            labelposicao.Location = new Point(165,360);
+            labelposicao.Location = new Point(165, 360);
             labelposicao.Size = new Size(170, 50);
             labelposicao.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
             labelposicao.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 16, FontStyle.Bold);
@@ -99,26 +106,46 @@ namespace StudyFlow
             perfilPanel.Controls.Add(textBoxNome);
 
 
-            //label CPF
-            KryptonLabel labelCpf = new KryptonLabel();
-            labelCpf.Text = "Cpf: ";
-            labelCpf.Location = new Point(460, 205);
-            labelCpf.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            labelCpf.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
-            perfilPanel.Controls.Add(labelCpf);
+            //label E-mail
+            KryptonLabel labelEmail = new KryptonLabel();
+            labelEmail.Text = "E-mail: ";
+            labelEmail.Location = new Point(460, 205);
+            labelEmail.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            labelEmail.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
+            perfilPanel.Controls.Add(labelEmail);
 
-            //Campo CPF
-            textBoxCpf = new KryptonTextBox();
-            textBoxCpf.Location = new Point(460, 230);
-            textBoxCpf.Size = new Size(210, 40);
-            cpf = Usuario.UsuarioLogado.Cpf;
-            textBoxCpf.Text = "" + FormatarCPF(cpf);
-            textBoxCpf.StateCommon.Content.Font = new Font("Segoe UI", 12);
-            textBoxCpf.StateCommon.Border.Rounding = 8;
-            textBoxCpf.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
-            textBoxCpf.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
-            perfilPanel.Controls.Add(textBoxCpf);
+            //Campo E-mail
+            textBoxEmail = new KryptonTextBox();
+            textBoxEmail.Location = new Point(460, 230);
+            textBoxEmail.Size = new Size(210, 40);
+            editEmail = Usuario.UsuarioLogado.Email;
+            textBoxEmail.Text = "" + editEmail;
+            textBoxEmail.StateCommon.Content.Font = new Font("Segoe UI", 12);
+            textBoxEmail.StateCommon.Border.Rounding = 8;
+            textBoxEmail.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
+            textBoxEmail.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
+            perfilPanel.Controls.Add(textBoxEmail);
 
+
+            // 
+            // linkLabelSenha
+            // 
+            linkLabelSenha = new LinkLabel();
+            linkLabelSenha.ActiveLinkColor = Color.Gray;
+            linkLabelSenha.AutoSize = true;
+            linkLabelSenha.BackColor = Color.White;
+            linkLabelSenha.Cursor = Cursors.Hand;
+            linkLabelSenha.Font = new Font("Segoe UI", 9F);
+            linkLabelSenha.LinkColor = Color.Gray;
+            linkLabelSenha.Location = new Point(765, 268);
+            linkLabelSenha.Name = "linkLabelSenha";
+            linkLabelSenha.Size = new Size(118, 15);
+            linkLabelSenha.TabIndex = 3;
+            linkLabelSenha.TabStop = true;
+            linkLabelSenha.Text = "Esqueci minha senha";
+            linkLabelSenha.VisitedLinkColor = Color.Gray;
+            linkLabelSenha.LinkClicked += linkLabelSenha_LinkClicked;
+            perfilPanel.Controls.Add(linkLabelSenha);
 
             //label telefone
             KryptonLabel labelTel = new KryptonLabel();
@@ -206,13 +233,13 @@ namespace StudyFlow
             iconEdit.Click += (s, e) =>
             {
                 if (modoEdicao == false) { EntrarModoEdicao(); }
-                else 
+                else
                 {
                     textBoxNome.Text = Usuario.UsuarioLogado.NomeUser;
                     textBoxTel.Text = Usuario.UsuarioLogado.Telefone;
                     textBoxSobre.Text = Usuario.UsuarioLogado.TextoUser;
 
-                    BloquearCampos(); 
+                    BloquearCampos();
                 }
 
 
@@ -246,13 +273,13 @@ namespace StudyFlow
 
             TrocarConteudo(perfilPanel);
         }
-        
+
         private void BloquearCampos()
         {
 
             textBoxNome.Text = Usuario.UsuarioLogado.NomeUser;
-            textBoxCpf.Text = FormatarCPF(cpf);
-            textBoxTel.Text = FormatarTelefone(editTelefone , controler = true);
+            textBoxEmail.Text = Usuario.UsuarioLogado.Email;
+            textBoxTel.Text = FormatarTelefone(editTelefone, controler = true);
             textBoxSobre.Text = Usuario.UsuarioLogado.TextoUser;
 
 
@@ -262,7 +289,7 @@ namespace StudyFlow
 
 
             textBoxNome.Enabled = false;
-            textBoxCpf.Enabled = false;
+            textBoxEmail.Enabled = false;
             textBoxTel.Enabled = false;
             textBoxSenha.Enabled = false;
             textBoxSobre.Enabled = false;
@@ -274,7 +301,7 @@ namespace StudyFlow
         {
             textBoxTel.Text = FormatarTelefone(editTelefone, controler = false);
             textBoxNome.Enabled = true;
-            textBoxCpf.Enabled = false;
+            textBoxEmail.Enabled = true;
             textBoxTel.Enabled = true;
             textBoxSenha.Enabled = false;
             textBoxSobre.Enabled = true;
@@ -286,11 +313,11 @@ namespace StudyFlow
         {
 
 
-           
+
 
             if (modoEdicao)
             {
-                Usuario.EditarUsuario(textBoxNome.Text, textBoxTel.Text, textBoxSobre.Text);
+                Usuario.EditarUsuario(textBoxNome.Text, textBoxTel.Text, textBoxSobre.Text, textBoxEmail.Text);
                 BloquearCampos();
             }
         }
@@ -298,18 +325,20 @@ namespace StudyFlow
 
 
 
-        public static string FormatarCPF(string cpf) {
- 
-            
-                return Convert.ToUInt64(cpf).ToString(@"000\.000\.000\-00");
-    
+        public static string FormatarCPF(string cpf)
+        {
+
+
+            return Convert.ToUInt64(cpf).ToString(@"000\.000\.000\-00");
+
 
         }
 
 
 
-        public static string FormatarTelefone(string editTelefone, bool controler) {
-            
+        public static string FormatarTelefone(string editTelefone, bool controler)
+        {
+
 
             if (controler == true)
             {
@@ -320,10 +349,10 @@ namespace StudyFlow
             else
             {
                 return Regex.Replace(editTelefone, @"\D", "");
-                
+
             }
 
-            
+
 
         }
 
@@ -341,6 +370,11 @@ namespace StudyFlow
         public override string ObterMensagemAjuda()
         {
             return ajudaTexto;
+        }
+
+        private void kryptonPictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
