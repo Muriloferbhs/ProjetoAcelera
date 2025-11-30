@@ -42,30 +42,113 @@ namespace StudyFlow
 
         }
 
+        private Image ZoomNaImagem(Image foto, float zoomFactor)
+        {
+            int novaLargura = (int)(foto.Width * zoomFactor);
+            int novaAltura = (int)(foto.Height * zoomFactor);
+
+            Bitmap bmp = new Bitmap(novaLargura, novaAltura);
+
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                g.DrawImage(foto, new Rectangle(0, 0, novaLargura, novaAltura));
+            }
+
+            return bmp;
+        }
         private void TelaPerfil()
         {
             PanelConteudo.Controls.Clear();
-
             KryptonPanel perfilPanel = new KryptonPanel();
+
+            Image zoomed = ZoomNaImagem(Usuario.UsuarioLogado.foto, 0.21f);
+
+            ///
+            ///foto usuário
+            ///
+
+
+            PictureBox fotoPerfil = new PictureBox();
+
+            fotoPerfil.Image = zoomed;
+
+
+            fotoPerfil.Location = new Point(150, 110);
+            fotoPerfil.Size = new Size(200, 200);
+
+            fotoPerfil.BackColor = Color.White;
+            fotoPerfil.BorderStyle = BorderStyle.FixedSingle;
+            fotoPerfil.SizeMode = PictureBoxSizeMode.CenterImage;
+
+
+            perfilPanel.Controls.Add(fotoPerfil);
+
+            ///
+            ///botao trocar foto
+            ///
             perfilPanel.StateCommon.Color1 = Color.White;
             perfilPanel.Dock = DockStyle.Fill;
             PanelConteudo.Controls.Add(perfilPanel);
 
-            //foto usuário
-            PictureBox fotoPerfil = new PictureBox();
-            fotoPerfil.Size = new Size(200, 200);
-            fotoPerfil.Location = new Point(130, 90);
-            fotoPerfil.BackColor = Color.White;
-            fotoPerfil.BorderStyle = BorderStyle.FixedSingle;
-            fotoPerfil.SizeMode = PictureBoxSizeMode.Zoom;
-            perfilPanel.Controls.Add(fotoPerfil);
+            KryptonButton btnEscolherFoto = new KryptonButton();
+            btnEscolherFoto.Text = "Trocar Foto";
+            btnEscolherFoto.Location = new Point(185, 310);
+            btnEscolherFoto.Size = new Size(130, 30);
 
+            btnEscolherFoto.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
+            btnEscolherFoto.StateCommon.Back.Color2 = Color.FromArgb(32, 0, 177);
+
+            btnEscolherFoto.OverrideDefault.Back.Color1 = Color.FromArgb(32, 0, 177);
+            btnEscolherFoto.OverrideDefault.Back.Color2 = Color.FromArgb(32, 0, 177);
+
+            btnEscolherFoto.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+            btnEscolherFoto.StateCommon.Content.ShortText.Color1 = Color.White;
+            btnEscolherFoto.StateCommon.Border.Rounding = 10;
+
+            perfilPanel.Controls.Add(btnEscolherFoto);
+
+            btnEscolherFoto.Click += (s, e) =>
+            {
+                OpenFileDialog dlg = new OpenFileDialog();
+                dlg.Title = "Escolher foto de perfil";
+                dlg.Filter = "Imagens|*.jpg;*.jpeg;*.png;*.bmp";
+
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        // Carrega a imagem escolhida
+                        Usuario.UsuarioLogado.foto = Image.FromFile(dlg.FileName);
+
+                        // Atualiza o PictureBox
+                        fotoPerfil.Image = Usuario.UsuarioLogado.foto;
+
+                        Image zoomed = ZoomNaImagem(Usuario.UsuarioLogado.foto, 0.19f);
+                        // (opcional) salva para usar no futuro
+                        // Usuario.UsuarioLogado.FotoPath = dlg.FileName;
+                        fotoPerfil.Image = zoomed;
+
+                        // Atualiza a foto no canto superior direito
+
+                        zoomed = ZoomNaImagem(Usuario.UsuarioLogado.foto, 0.06f);
+                        BaseForm baseForm = (BaseForm)this.TopLevelControl;
+                        baseForm.AtualizarFotoTopo(zoomed);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Não foi possível carregar a imagem.");
+                    }
+                }
+            };
             //posição no rank
             labelposicao = new KryptonButton();
-            labelposicao.Text = Usuario.UsuarioLogado.PosiçãoRanking + "º";
+            labelposicao.Text =  Usuario.UsuarioLogado.PosiçãoRanking + "º";
             labelposicao.Enabled = false;
-            labelposicao.Location = new Point(145, 340);
-            labelposicao.Size = new Size(170, 50);
+
+            labelposicao.Location = new Point(160, 380);
+            labelposicao.Size = new Size(45, 50);
+
             labelposicao.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
             labelposicao.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 16, FontStyle.Bold);
             labelposicao.StateCommon.Content.ShortText.Color1 = Color.White;
@@ -73,11 +156,14 @@ namespace StudyFlow
             perfilPanel.Controls.Add(labelposicao);
 
             //pontos 
+
             KryptonButton labelPontos = new KryptonButton();
             labelPontos.Text = $"{Usuario.UsuarioLogado.Pontuacao:F2} pts";
             labelPontos.Enabled = false;
-            labelPontos.Location = new Point(145, 410);
-            labelPontos.Size = new Size(170, 50);
+
+            labelPontos.Location = new Point(215, 380);
+            labelPontos.Size = new Size(125, 50);
+
             labelPontos.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
             labelPontos.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 16, FontStyle.Bold);
             labelPontos.StateCommon.Content.ShortText.Color1 = Color.White;
@@ -88,14 +174,14 @@ namespace StudyFlow
             //label nome
             KryptonLabel labelNome = new KryptonLabel();
             labelNome.Text = "Nome do Usuário";
-            labelNome.Location = new Point(440, 105);
+            labelNome.Location = new Point(460, 105);
             labelNome.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             labelNome.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
             perfilPanel.Controls.Add(labelNome);
 
             //Campo nome
             textBoxNome = new KryptonTextBox();
-            textBoxNome.Location = new Point(440, 130);
+            textBoxNome.Location = new Point(460, 130);
             textBoxNome.Size = new Size(210, 40);
             editNome = Usuario.UsuarioLogado.NomeUser;
             textBoxNome.Text = "" + editNome;
@@ -106,58 +192,38 @@ namespace StudyFlow
             perfilPanel.Controls.Add(textBoxNome);
 
 
-            //label E-mail
-            KryptonLabel labelEmail = new KryptonLabel();
-            labelEmail.Text = "E-mail: ";
-            labelEmail.Location = new Point(440, 185);
-            labelEmail.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            labelEmail.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
-            perfilPanel.Controls.Add(labelEmail);
+            //label CPF
+            KryptonLabel labelCpf = new KryptonLabel();
+            labelCpf.Text = "Cpf: ";
+            labelCpf.Location = new Point(460, 185);
+            labelCpf.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            labelCpf.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
+            perfilPanel.Controls.Add(labelCpf);
 
-            //Campo E-mail
-            textBoxEmail = new KryptonTextBox();
-            textBoxEmail.Location = new Point(440, 210);
-            textBoxEmail.Size = new Size(210, 40);
-            editEmail = Usuario.UsuarioLogado.Email;
-            textBoxEmail.Text = "" + editEmail;
-            textBoxEmail.StateCommon.Content.Font = new Font("Segoe UI", 12);
-            textBoxEmail.StateCommon.Border.Rounding = 8;
-            textBoxEmail.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
-            textBoxEmail.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
-            perfilPanel.Controls.Add(textBoxEmail);
+            //Campo CPF
+            textBoxCpf = new KryptonTextBox();
+            textBoxCpf.Location = new Point(460, 210);
+            textBoxCpf.Size = new Size(210, 40);
+            cpf = Usuario.UsuarioLogado.Cpf;
+            textBoxCpf.Text = "" + FormatarCPF(cpf);
+            textBoxCpf.StateCommon.Content.Font = new Font("Segoe UI", 12);
+            textBoxCpf.StateCommon.Border.Rounding = 8;
+            textBoxCpf.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
+            textBoxCpf.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
+            perfilPanel.Controls.Add(textBoxCpf);
 
-
-            // 
-            // linkLabelSenha
-            // 
-            linkLabelSenha = new LinkLabel();
-            linkLabelSenha.ActiveLinkColor = Color.Gray;
-            linkLabelSenha.AutoSize = true;
-            linkLabelSenha.BackColor = Color.White;
-            linkLabelSenha.Cursor = Cursors.Hand;
-            linkLabelSenha.Font = new Font("Segoe UI", 9F);
-            linkLabelSenha.LinkColor = Color.Gray;
-            linkLabelSenha.Location = new Point(745, 248);
-            linkLabelSenha.Name = "linkLabelSenha";
-            linkLabelSenha.Size = new Size(118, 15);
-            linkLabelSenha.TabIndex = 3;
-            linkLabelSenha.TabStop = true;
-            linkLabelSenha.Text = "Esqueci minha senha";
-            linkLabelSenha.VisitedLinkColor = Color.Gray;
-            linkLabelSenha.LinkClicked += linkLabelSenha_LinkClicked;
-            perfilPanel.Controls.Add(linkLabelSenha);
 
             //label telefone
             KryptonLabel labelTel = new KryptonLabel();
             labelTel.Text = "Telefone: ";
-            labelTel.Location = new Point(700, 105);
+            labelTel.Location = new Point(720, 105);
             labelTel.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             labelTel.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
             perfilPanel.Controls.Add(labelTel);
 
             //Campo telefone
             textBoxTel = new KryptonTextBox();
-            textBoxTel.Location = new Point(700, 130);
+            textBoxTel.Location = new Point(720, 130);
             textBoxTel.Size = new Size(210, 40);
             editTelefone = Usuario.UsuarioLogado.Telefone;
             textBoxTel.Text = FormatarTelefone(editTelefone, controler);
@@ -171,14 +237,14 @@ namespace StudyFlow
             //label senha
             KryptonLabel labelSenha = new KryptonLabel();
             labelSenha.Text = "Senha:";
-            labelSenha.Location = new Point(690, 175);
+            labelSenha.Location = new Point(720, 185);
             labelSenha.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             labelSenha.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
             perfilPanel.Controls.Add(labelSenha);
 
             //Campo senha
             textBoxSenha = new KryptonTextBox();
-            textBoxSenha.Location = new Point(700, 210);
+            textBoxSenha.Location = new Point(720, 210);
             textBoxSenha.Size = new Size(210, 40);
             textBoxSenha.Text = "********";
             textBoxSenha.StateCommon.Content.Font = new Font("Segoe UI", 12);
@@ -191,14 +257,14 @@ namespace StudyFlow
             //label sobre mim
             KryptonLabel labelSobre = new KryptonLabel();
             labelSobre.Text = "Sobre mim:";
-            labelSobre.Location = new Point(440, 295);
+            labelSobre.Location = new Point(460, 295);
             labelSobre.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             labelSobre.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
             perfilPanel.Controls.Add(labelSobre);
 
             //Campo Sobre mim
             textBoxSobre = new KryptonRichTextBox();
-            textBoxSobre.Location = new Point(440, 320);
+            textBoxSobre.Location = new Point(460, 320);
             textBoxSobre.Size = new Size(475, 180);
             editSobremim = Usuario.UsuarioLogado.TextoUser;
             textBoxSobre.Text = "" + editSobremim;
@@ -212,7 +278,7 @@ namespace StudyFlow
             // 
             PictureBox iconEdit = new PictureBox();
             iconEdit.Size = new Size(40, 40);
-            iconEdit.Location = new Point(930, 80);
+            iconEdit.Location = new Point(950, 60);
             iconEdit.BackColor = Color.White;
             iconEdit.Image = Properties.Resources.edit;
             iconEdit.SizeMode = PictureBoxSizeMode.Zoom;
@@ -221,25 +287,25 @@ namespace StudyFlow
             iconEdit.MouseDown += (s, e) =>
             {
                 iconEdit.Size = new Size(36, 36);
-                iconEdit.Location = new Point(932, 82);
+                iconEdit.Location = new Point(952, 82);
             };
 
             iconEdit.MouseUp += (s, e) =>
             {
                 iconEdit.Size = new Size(40, 40);
-                iconEdit.Location = new Point(930, 80);
+                iconEdit.Location = new Point(950, 80);
             };
 
             iconEdit.Click += (s, e) =>
             {
                 if (modoEdicao == false) { EntrarModoEdicao(); }
-                else
+                else 
                 {
                     textBoxNome.Text = Usuario.UsuarioLogado.NomeUser;
                     textBoxTel.Text = Usuario.UsuarioLogado.Telefone;
                     textBoxSobre.Text = Usuario.UsuarioLogado.TextoUser;
 
-                    BloquearCampos();
+                    BloquearCampos(); 
                 }
 
 
@@ -251,36 +317,25 @@ namespace StudyFlow
             // botao salvar
             KryptonButton buttonSalvar = new KryptonButton();
             buttonSalvar.Text = "Salvar";
-            buttonSalvar.Location = new Point(600, 510);
-            buttonSalvar.Size = new Size(130, 45);
+            buttonSalvar.Location = new Point(620, 510);
+            buttonSalvar.Size = new Size(150, 45);
             buttonSalvar.StateCommon.Back.Color1 = Color.FromArgb(255, 102, 0);
             buttonSalvar.StateCommon.Back.Color2 = Color.FromArgb(255, 102, 0);
             buttonSalvar.OverrideDefault.Back.Color1 = Color.FromArgb(255, 102, 0);
             buttonSalvar.OverrideDefault.Back.Color2 = Color.FromArgb(255, 102, 0);
-            buttonSalvar.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
             buttonSalvar.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
             buttonSalvar.StateCommon.Border.Color2 = Color.FromArgb(255, 102, 0);
             buttonSalvar.StatePressed.Back.Color1 = Color.FromArgb(230, 92, 0);
-            buttonSalvar.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            buttonSalvar.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             buttonSalvar.StateCommon.Content.ShortText.Color1 = Color.White;
-            buttonSalvar.StateCommon.Border.Rounding = 15;
+            buttonSalvar.StateCommon.Border.Rounding = 8;
             buttonSalvar.Cursor = Cursors.Hand;
             buttonSalvar.Click += (s, e) => SalvarEdicao();
             perfilPanel.Controls.Add(buttonSalvar);
 
-            buttonSalvar.MouseDown += (s, e) =>
-            {
-                buttonSalvar.Size = new Size(125, 40);
-                buttonSalvar.Location = new Point(603, 513);
-            };
-
-            buttonSalvar.MouseUp += (s, e) =>
-            {
-                buttonSalvar.Size = new Size(130, 45);
-                buttonSalvar.Location = new Point(600, 510);
-            };
-
             BloquearCampos();
+
+
 
             TrocarConteudo(perfilPanel);
         }
