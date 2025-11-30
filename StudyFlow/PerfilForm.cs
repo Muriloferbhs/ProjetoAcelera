@@ -76,7 +76,7 @@ namespace StudyFlow
             fotoPerfil.Image = zoomed;
 
 
-            fotoPerfil.Location = new Point(150, 110);
+            fotoPerfil.Location = new Point(130, 90);
             fotoPerfil.Size = new Size(200, 200);
 
             fotoPerfil.BackColor = Color.White;
@@ -93,7 +93,7 @@ namespace StudyFlow
 
             KryptonButton btnEscolherFoto = new KryptonButton();
             btnEscolherFoto.Text = "Trocar Foto";
-            btnEscolherFoto.Location = new Point(185, 310);
+            btnEscolherFoto.Location = new Point(165, 292);
             btnEscolherFoto.Size = new Size(130, 30);
 
             btnEscolherFoto.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
@@ -149,15 +149,22 @@ namespace StudyFlow
 
 
             //posição no rank
-            labelposicao = new KryptonButton();
+            KryptonButton labelposicao = new KryptonButton();
             labelposicao.Text = Usuario.UsuarioLogado.PosiçãoRanking + "º";
             labelposicao.Enabled = false;
 
-            labelposicao.Location = new Point(160, 380);
-            labelposicao.Size = new Size(45, 50);
+            labelposicao.Location = new Point(150, 360);
+            labelposicao.Size = new Size(40, 35);
 
             labelposicao.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
-            labelposicao.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 16, FontStyle.Bold);
+            labelposicao.StateCommon.Back.Color2 = Color.FromArgb(32, 0, 177);
+            labelposicao.OverrideDefault.Back.Color1 = Color.FromArgb(32, 0, 177);
+            labelposicao.OverrideDefault.Back.Color2 = Color.FromArgb(32, 0, 177);
+            labelposicao.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
+            labelposicao.StateCommon.Border.Color1 = Color.FromArgb(32, 0, 177);
+            labelposicao.StateCommon.Border.Color2 = Color.FromArgb(32, 0, 177);
+            
+            labelposicao.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 13, FontStyle.Bold);
             labelposicao.StateCommon.Content.ShortText.Color1 = Color.White;
             labelposicao.StateCommon.Border.Rounding = 10;
             perfilPanel.Controls.Add(labelposicao);
@@ -168,11 +175,17 @@ namespace StudyFlow
             labelPontos.Text = $"{Usuario.UsuarioLogado.Pontuacao:F2} pts";
             labelPontos.Enabled = false;
 
-            labelPontos.Location = new Point(215, 380);
-            labelPontos.Size = new Size(125, 50);
+            labelPontos.Location = new Point(205, 360);
+            labelPontos.Size = new Size(110, 35);
 
             labelPontos.StateCommon.Back.Color1 = Color.FromArgb(32, 0, 177);
-            labelPontos.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 16, FontStyle.Bold);
+            labelPontos.StateCommon.Back.Color2 = Color.FromArgb(32, 0, 177);
+            labelPontos.OverrideDefault.Back.Color1 = Color.FromArgb(32, 0, 177);
+            labelPontos.OverrideDefault.Back.Color2 = Color.FromArgb(32, 0, 177);
+            labelPontos.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
+            labelPontos.StateCommon.Border.Color1 = Color.FromArgb(32, 0, 177);
+            labelPontos.StateCommon.Border.Color2 = Color.FromArgb(32, 0, 177);
+            labelPontos.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 13, FontStyle.Bold);
             labelPontos.StateCommon.Content.ShortText.Color1 = Color.White;
             labelPontos.StateCommon.Border.Rounding = 10;
             perfilPanel.Controls.Add(labelPontos);
@@ -181,14 +194,14 @@ namespace StudyFlow
             //label nome
             KryptonLabel labelNome = new KryptonLabel();
             labelNome.Text = "Nome do Usuário";
-            labelNome.Location = new Point(460, 105);
+            labelNome.Location = new Point(440, 85);
             labelNome.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             labelNome.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
             perfilPanel.Controls.Add(labelNome);
 
             //Campo nome
             textBoxNome = new KryptonTextBox();
-            textBoxNome.Location = new Point(460, 130);
+            textBoxNome.Location = new Point(440, 110);
             textBoxNome.Size = new Size(210, 40);
             editNome = Usuario.UsuarioLogado.NomeUser;
             textBoxNome.Text = "" + editNome;
@@ -202,14 +215,14 @@ namespace StudyFlow
             //label E-mail
             KryptonLabel labelEmail = new KryptonLabel();
             labelEmail.Text = "E-mail: ";
-            labelEmail.Location = new Point(460, 185);
+            labelEmail.Location = new Point(440, 165);
             labelEmail.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             labelEmail.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
             perfilPanel.Controls.Add(labelEmail);
 
             //Campo E-mail
             textBoxEmail = new KryptonTextBox();
-            textBoxEmail.Location = new Point(460, 210);
+            textBoxEmail.Location = new Point(440, 190);
             textBoxEmail.Size = new Size(210, 40);
             editEmail = Usuario.UsuarioLogado.Email;
             textBoxEmail.Text = "" + editEmail;
@@ -230,7 +243,7 @@ namespace StudyFlow
             linkLabelSenha.Cursor = Cursors.Hand;
             linkLabelSenha.Font = new Font("Segoe UI", 9F);
             linkLabelSenha.LinkColor = Color.Gray;
-            linkLabelSenha.Location = new Point(745, 248);
+            linkLabelSenha.Location = new Point(725, 228);
             linkLabelSenha.Name = "linkLabelSenha";
             linkLabelSenha.Size = new Size(118, 15);
             linkLabelSenha.TabIndex = 3;
@@ -243,14 +256,14 @@ namespace StudyFlow
             //label telefone
             KryptonLabel labelTel = new KryptonLabel();
             labelTel.Text = "Telefone: ";
-            labelTel.Location = new Point(700, 105);
+            labelTel.Location = new Point(680, 85);
             labelTel.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             labelTel.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
             perfilPanel.Controls.Add(labelTel);
 
             //Campo telefone
             textBoxTel = new KryptonTextBox();
-            textBoxTel.Location = new Point(700, 130);
+            textBoxTel.Location = new Point(680, 110);
             textBoxTel.Size = new Size(210, 40);
             editTelefone = Usuario.UsuarioLogado.Telefone;
             textBoxTel.Text = FormatarTelefone(editTelefone, controler);
@@ -264,14 +277,14 @@ namespace StudyFlow
             //label senha
             KryptonLabel labelSenha = new KryptonLabel();
             labelSenha.Text = "Senha:";
-            labelSenha.Location = new Point(690, 175);
+            labelSenha.Location = new Point(680, 165);
             labelSenha.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             labelSenha.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
             perfilPanel.Controls.Add(labelSenha);
 
             //Campo senha
             textBoxSenha = new KryptonTextBox();
-            textBoxSenha.Location = new Point(700, 210);
+            textBoxSenha.Location = new Point(680, 190);
             textBoxSenha.Size = new Size(210, 40);
             textBoxSenha.Text = "********";
             textBoxSenha.StateCommon.Content.Font = new Font("Segoe UI", 12);
@@ -284,14 +297,14 @@ namespace StudyFlow
             //label sobre mim
             KryptonLabel labelSobre = new KryptonLabel();
             labelSobre.Text = "Sobre mim:";
-            labelSobre.Location = new Point(450, 295);
+            labelSobre.Location = new Point(430, 275);
             labelSobre.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             labelSobre.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
             perfilPanel.Controls.Add(labelSobre);
 
             //Campo Sobre mim
             textBoxSobre = new KryptonRichTextBox();
-            textBoxSobre.Location = new Point(450, 320);
+            textBoxSobre.Location = new Point(430, 300);
             textBoxSobre.Size = new Size(475, 180);
             editSobremim = Usuario.UsuarioLogado.TextoUser;
             textBoxSobre.Text = "" + editSobremim;
@@ -305,7 +318,7 @@ namespace StudyFlow
             // 
             PictureBox iconEdit = new PictureBox();
             iconEdit.Size = new Size(40, 40);
-            iconEdit.Location = new Point(950, 60);
+            iconEdit.Location = new Point(930, 40);
             iconEdit.BackColor = Color.White;
             iconEdit.Image = Properties.Resources.edit;
             iconEdit.SizeMode = PictureBoxSizeMode.Zoom;
@@ -314,13 +327,13 @@ namespace StudyFlow
             iconEdit.MouseDown += (s, e) =>
             {
                 iconEdit.Size = new Size(36, 36);
-                iconEdit.Location = new Point(950, 60);
+                iconEdit.Location = new Point(932, 42);
             };
 
             iconEdit.MouseUp += (s, e) =>
             {
                 iconEdit.Size = new Size(40, 40);
-                iconEdit.Location = new Point(950, 60);
+                iconEdit.Location = new Point(930, 40);
             };
 
             iconEdit.Click += (s, e) =>
@@ -344,7 +357,7 @@ namespace StudyFlow
             // botao salvar
             KryptonButton buttonSalvar = new KryptonButton();
             buttonSalvar.Text = "Salvar";
-            buttonSalvar.Location = new Point(620, 510);
+            buttonSalvar.Location = new Point(600, 490);
             buttonSalvar.Size = new Size(130, 45);
             buttonSalvar.StateCommon.Back.Color1 = Color.FromArgb(255, 102, 0);
             buttonSalvar.StateCommon.Back.Color2 = Color.FromArgb(255, 102, 0);
@@ -364,13 +377,13 @@ namespace StudyFlow
             buttonSalvar.MouseDown += (s, e) =>
             {
                 buttonSalvar.Size = new Size(125, 40);
-                buttonSalvar.Location = new Point(620, 510);
+                buttonSalvar.Location = new Point(602, 492);
             };
 
             buttonSalvar.MouseUp += (s, e) =>
             {
                 buttonSalvar.Size = new Size(130, 45);
-                buttonSalvar.Location = new Point(620, 510);
+                buttonSalvar.Location = new Point(600, 490);
             };
 
             BloquearCampos();
@@ -424,7 +437,7 @@ namespace StudyFlow
             if (controler == true)
             {
                 return Convert.ToUInt64(editTelefone).ToString(@"\(00\) 00000\-0000");
-                KryptonMessageBox.Show("oi");
+                MessageBox.Show("oi");
             }
 
             else

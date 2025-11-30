@@ -22,8 +22,6 @@ namespace StudyFlow {
         private void ButtonConfirmar_Click(object sender, EventArgs e)
         {
 
-
-
             string nomeCompleto_Recuperar = TextBoxNome.Text.Trim();
             string telefone_Recuperar = TextBoxTelefone.Text.Trim();
             string email_Recuperar = TextBoxEmail.Text.Trim();
@@ -32,18 +30,15 @@ namespace StudyFlow {
             if (string.IsNullOrEmpty(nomeCompleto_Recuperar) || string.IsNullOrEmpty(telefone_Recuperar) || string.IsNullOrEmpty(email_Recuperar) ||
                 string.IsNullOrEmpty(cpf_Recuperar))
             {
-                KryptonMessageBox.Show("Preencha todos os campos!", "Atenção");
+                MessageBox.Show("Preencha todos os campos!", "Atenção");
                 return;
             }
-
 
             foreach (Usuario u in Usuario.DadosDoCadastroLogin)
             {
 
-
                 if (u.NomeCompleto == nomeCompleto_Recuperar && u.Telefone == telefone_Recuperar && u.Email == email_Recuperar && u.Cpf == cpf_Recuperar)
                 {
-
 
                     RedefinirSenhaForm redefinirSenha = new RedefinirSenhaForm();
                     redefinirSenha.Show();
@@ -52,13 +47,8 @@ namespace StudyFlow {
                     Usuario.UsuarioSenhaEditada = u;
 
                     return;
-
                 }
-
-
             }
-
-
 
             DialogResult resultado = MessageBox.Show(
                             "Dados não encontrados, deseja fazer cadastro?",
@@ -77,16 +67,6 @@ namespace StudyFlow {
             return;
 
         }
-
-
-
-
-
-
-
-
-
-
 
         private void RecuperarSenhaForm_FormClosing(object sender, FormClosingEventArgs e)
         {

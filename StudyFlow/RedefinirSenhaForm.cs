@@ -40,12 +40,9 @@ namespace StudyFlow {
 
             if (novaSenha != confirmarNovaSenha)
             {
-                KryptonMessageBox.Show("As senhas não são iguais!", "Atenção");
+                MessageBox.Show("As senhas não são iguais!", "Atenção");
                 return;
             }
-
-
-
 
             Usuario.RedefinirSenhaSenha(novaSenha);
 
@@ -55,12 +52,6 @@ namespace StudyFlow {
 
 
         }
-
-
-
-
-
-
 
         private void linkLabelLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             LoginForm login = new LoginForm();

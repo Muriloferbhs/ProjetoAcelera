@@ -47,10 +47,7 @@ namespace StudyFlow
                 home.Show();
                 this.Hide();
 
-
-
             }
-
 
         }
 
@@ -110,5 +107,3 @@ namespace StudyFlow
         }
     }
 }
-
-

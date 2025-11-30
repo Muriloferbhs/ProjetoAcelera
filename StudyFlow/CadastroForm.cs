@@ -31,7 +31,7 @@ namespace StudyFlow
             if (string.IsNullOrEmpty(nomeUsuario) || string.IsNullOrEmpty(senha) || string.IsNullOrEmpty(nomeCompleto) ||
                 string.IsNullOrEmpty(telefone) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(cpf))
             {
-                KryptonMessageBox.Show("Preencha todos os campos!", "Atenção");
+                MessageBox.Show("Preencha todos os campos!", "Atenção");
                 return;
             }
 
@@ -45,7 +45,7 @@ namespace StudyFlow
 
             if (senha != confirmarSenha)
             {
-                KryptonMessageBox.Show("As senhas não são iguais!", "Atenção");
+                MessageBox.Show("As senhas não são iguais!", "Atenção");
                 return;
             }
 
@@ -77,13 +77,12 @@ namespace StudyFlow
             if (cont == false)
             {
 
-                bool ativo = true;//carlos 04/10---------------------
+                bool ativo = true;
                 double pontuação = 0.0;
                 Usuario novoUsuario = new Usuario(nomeCompleto, cpf, telefone, email, nomeUsuario, senha, ativo, pontuação);
                 Usuario.DadosDoCadastroLogin.Add(novoUsuario);
-                KryptonMessageBox.Show("Conta cadastrada com sucesso!");
-
-                //carlos 04/10---------------------
+                MessageBox.Show("Conta cadastrada com sucesso!");
+               
                 LoginForm login = new LoginForm();
                 login.Show();
                 this.Hide();
@@ -91,10 +90,8 @@ namespace StudyFlow
             }
             else
             {
-                KryptonMessageBox.Show("Conta ja está cadastrada!");
+                MessageBox.Show("Conta ja está cadastrada!");
             }
-
-
         }
 
         private void linkLabelLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -157,11 +154,6 @@ namespace StudyFlow
             {
                 pictureBoxMostrarSenha2.Image = Properties.Resources.open_eye; // senha visível
             }
-        }
-
-        private void pictureBoxLogo_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

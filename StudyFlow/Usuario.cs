@@ -94,18 +94,11 @@ namespace StudyFlow
 
         public void AtribuirSenha(string senha)
         {
-            //carlos 04/10--------------------------------------------------------------------------------------------
+
             Senha = BCrypt.Net.BCrypt.HashPassword(senha);
         }
 
 
-
-
-
-
-
-        //Murilo fez no dia 4/10 ----------------------------------------------------------------------------------
-        //genial, não tinha pensado em validar assim (Henrique falando)
         public static bool AutenticarCPF(string cpf)
         {
             int decimoIdeal = 0;
@@ -221,8 +214,6 @@ namespace StudyFlow
         }
 
 
-
-
         public static bool AutenticarTelefone(string telefone)
         {
             if (telefone.Length == 11 && telefone.All(char.IsDigit) || telefone.Length == 14 && telefone.All(char.IsDigit))
@@ -236,12 +227,6 @@ namespace StudyFlow
                 return false;
             }
         }
-        //Murilo fez no dia 4/10 ----------------------------------------------------------------------------------
-
-
-
-
-
 
         public static Usuario Logar(string dadosLogin, string senhaLogin)
         {
@@ -251,7 +236,6 @@ namespace StudyFlow
             foreach (Usuario u in Usuario.DadosDoCadastroLogin)
             {
 
-                //carlos 04/10 (acresentar o parametro cpf pra login)---------------------------------------------------------------------
                 if ((u.NomeUser == dadosLogin || u.Cpf == dadosLogin) && BCrypt.Net.BCrypt.Verify(senhaLogin, u.Senha) == true && u.Ativo == true)
                 {
 
@@ -287,10 +271,6 @@ namespace StudyFlow
             KryptonMessageBox.Show("Username ou senha incorretos");
             return null;
         }
-
-
-
-
 
         public static Usuario DesativarAtivarUser(bool ativo, Usuario u)
         {
@@ -365,13 +345,6 @@ namespace StudyFlow
 
         }
 
-
-
-
-
-
-
-
         public static void EditarUsuario(string? novoNome, string? novoTelefone, string? novoSobreMim, string? novoEmail) {
 
 
@@ -395,11 +368,6 @@ namespace StudyFlow
                 UsuarioLogado.Telefone = novoTelefone;
             else { UsuarioLogado.Telefone = UsuarioLogado.Telefone; }
 
-
-                
-
-
-
             UsuarioLogado.TextoUser = novoSobreMim;
 
         }
@@ -410,27 +378,6 @@ namespace StudyFlow
             UsuarioLogado = null;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         public static void RedefinirSenhaSenha(string novaSenha)
         {
 
@@ -438,16 +385,7 @@ namespace StudyFlow
 
             return;
 
-
-
-
         }
-
-
-
-
-
-
 
     }
 }
