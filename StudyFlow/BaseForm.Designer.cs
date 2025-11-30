@@ -1,4 +1,5 @@
 ﻿using Krypton.Toolkit;
+using System;
 using System.Drawing.Design;
 
 namespace StudyFlow
@@ -51,11 +52,9 @@ namespace StudyFlow
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
-            
-            pictureUser = new KryptonPictureBox();
+        private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseForm));
+            pictureUser = new KryptonPictureBox();
             kryptonPictureBoxmenu = new KryptonPictureBox();
             pictureBox1 = new PictureBox();
             PanelEsquerda = new KryptonPanel();
@@ -66,22 +65,32 @@ namespace StudyFlow
             ButtonPerfil = new KryptonButton();
             PanelConteudo = new KryptonPanel();
             kryptonButuonsobrenos = new KryptonButton();
-            kryptonButtonsair = new KryptonButton();
+            kryptonPanelmenu = new KryptonPanel();
             kryptonPerfil = new KryptonButton();
-            kryptonPictureimagemmenu = new KryptonPictureBox();
+            kryptonButtonsair = new KryptonButton();
             kryptonPanel1 = new KryptonPanel();
             PanelCima = new KryptonPanel();
+            ((System.ComponentModel.ISupportInitialize)pictureUser).BeginInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBoxmenu).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PanelEsquerda).BeginInit();
             PanelEsquerda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).BeginInit();
-            PanelConteudo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)kryptonPictureimagemmenu).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)kryptonPanelmenu).BeginInit();
+            kryptonPanelmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PanelCima).BeginInit();
             PanelCima.SuspendLayout();
             SuspendLayout();
+            // 
+            // pictureUser
+            // 
+            pictureUser.Location = new Point(1200, 11);
+            pictureUser.Name = "pictureUser";
+            pictureUser.Size = new Size(60, 60);
+            pictureUser.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureUser.TabIndex = 0;
+            pictureUser.TabStop = false;
             // 
             // kryptonPictureBoxmenu
             // 
@@ -92,25 +101,10 @@ namespace StudyFlow
             kryptonPictureBoxmenu.Size = new Size(48, 48);
             kryptonPictureBoxmenu.TabIndex = 1;
             kryptonPictureBoxmenu.TabStop = false;
-            kryptonPictureBoxmenu.Visible = false;
-            kryptonPictureBoxmenu.Click += kryptonPictureBox1_Click;
+            kryptonPictureBoxmenu.Click += kryptonPictureBoxmenu_Click;
             // 
             // pictureBox1
             // 
-            Image zoomed = ZoomNaImagem(Usuario.UsuarioLogado.foto, 0.06f);
-
-            pictureUser.Image = zoomed;
-            pictureUser.Size = new Size(60, 60);
-            pictureUser.Location = new Point(1200, 11);
-            pictureUser.SizeMode = PictureBoxSizeMode.CenterImage;
-
-
-            System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
-            gp.AddEllipse(0, 0, pictureUser.Width - 1, pictureUser.Height - 1);
-            pictureUser.Region = new Region(gp);
-            pictureUser.BackColor = Color.Transparent;
-
-            //PanelCima.Controls.Add(pictureUser);
             pictureBox1.BackColor = Color.FromArgb(32, 0, 177);
             pictureBox1.Image = Properties.Resources.logoStudyHorizontal;
             pictureBox1.Location = new Point(439, 3);
@@ -261,10 +255,6 @@ namespace StudyFlow
             // 
             // PanelConteudo
             // 
-            PanelConteudo.Controls.Add(kryptonButuonsobrenos);
-            PanelConteudo.Controls.Add(kryptonButtonsair);
-            PanelConteudo.Controls.Add(kryptonPerfil);
-            PanelConteudo.Controls.Add(kryptonPictureimagemmenu);
             PanelConteudo.Dock = DockStyle.Fill;
             PanelConteudo.Location = new Point(167, 80);
             PanelConteudo.Name = "PanelConteudo";
@@ -275,43 +265,100 @@ namespace StudyFlow
             // 
             // kryptonButuonsobrenos
             // 
-            kryptonButuonsobrenos.Location = new Point(989, 44);
+            kryptonButuonsobrenos.Location = new Point(5, 42);
             kryptonButuonsobrenos.Name = "kryptonButuonsobrenos";
-            kryptonButuonsobrenos.Size = new Size(81, 36);
+            kryptonButuonsobrenos.Size = new Size(92, 36);
+            kryptonButuonsobrenos.StateCommon.Back.Color1 = Color.White;
+            kryptonButuonsobrenos.StateCommon.Back.Color2 = Color.White;
+            kryptonButuonsobrenos.StateCommon.Back.ColorStyle = PaletteColorStyle.Solid;
+            kryptonButuonsobrenos.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
+            kryptonButuonsobrenos.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            kryptonButuonsobrenos.StateCommon.Border.Rounding = 4F;
+            kryptonButuonsobrenos.StateCommon.Content.ShortText.Color1 = Color.Black;
+            kryptonButuonsobrenos.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            kryptonButuonsobrenos.StateCommon.Content.ShortText.TextH = PaletteRelativeAlign.Center;
+            kryptonButuonsobrenos.StateCommon.Content.ShortText.TextV = PaletteRelativeAlign.Center;
+            kryptonButuonsobrenos.StateTracking.Back.Color1 = Color.FromArgb(255, 102, 0);
+            kryptonButuonsobrenos.StateTracking.Back.Color2 = Color.FromArgb(255, 102, 0);
+            kryptonButuonsobrenos.StateTracking.Border.Color1 = Color.Black;
+            kryptonButuonsobrenos.StateTracking.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            kryptonButuonsobrenos.StateTracking.Content.ShortText.Color1 = Color.White;/////////////////////////////
+            kryptonButuonsobrenos.StateTracking.Content.ShortText.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             kryptonButuonsobrenos.TabIndex = 3;
             kryptonButuonsobrenos.Values.DropDownArrowColor = Color.Empty;
-            kryptonButuonsobrenos.Values.Text = "kryptonButton3";
+            kryptonButuonsobrenos.Values.Text = "SOBRE NÓS";
             kryptonButuonsobrenos.Visible = false;
+            kryptonButuonsobrenos.Click += kryptonButuonsobrenos_Click;
             // 
-            // kryptonButtonsair
+            // kryptonPanelmenu
             // 
-            kryptonButtonsair.Location = new Point(989, 78);
-            kryptonButtonsair.Name = "kryptonButtonsair";
-            kryptonButtonsair.Size = new Size(81, 38);
-            kryptonButtonsair.TabIndex = 2;
-            kryptonButtonsair.Values.DropDownArrowColor = Color.Empty;
-            kryptonButtonsair.Values.Text = "kryptonButton2";
-            kryptonButtonsair.Visible = false;
+            kryptonPanelmenu.Controls.Add(kryptonPerfil);
+            kryptonPanelmenu.Controls.Add(kryptonButtonsair);
+            kryptonPanelmenu.Controls.Add(kryptonButuonsobrenos);
+            kryptonPanelmenu.Location = new Point(1147, 83);
+            kryptonPanelmenu.Name = "kryptonPanelmenu";
+            kryptonPanelmenu.Size = new Size(105, 128);
+            kryptonPanelmenu.StateCommon.Color1 = Color.White;
+            kryptonPanelmenu.StateCommon.Color2 = Color.White;
+            kryptonPanelmenu.StateCommon.ColorStyle = PaletteColorStyle.Solid;
+            kryptonPanelmenu.TabIndex = 4;
+            kryptonPanelmenu.Visible = false;
+            kryptonPanelmenu.Paint += kryptonPanelmenu_Paint;
             // 
             // kryptonPerfil
             // 
-            kryptonPerfil.Location = new Point(989, 5);
+            kryptonPerfil.Cursor = Cursors.Hand;
+            kryptonPerfil.Location = new Point(5, 3);
             kryptonPerfil.Name = "kryptonPerfil";
-            kryptonPerfil.Size = new Size(81, 38);
+            kryptonPerfil.Size = new Size(92, 38);
+            kryptonPerfil.StateCommon.Back.Color1 = Color.White;
+            kryptonPerfil.StateCommon.Back.Color2 = Color.White;
+            kryptonPerfil.StateCommon.Back.ColorStyle = PaletteColorStyle.Solid;
+            kryptonPerfil.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
+            kryptonPerfil.StateCommon.Border.Color2 = Color.Black;
+            kryptonPerfil.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            kryptonPerfil.StateCommon.Border.Rounding = 5F;
+            kryptonPerfil.StateCommon.Content.ShortText.Color1 = Color.Black;
+            kryptonPerfil.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            kryptonPerfil.StateCommon.Content.ShortText.TextH = PaletteRelativeAlign.Center;
+            kryptonPerfil.StateCommon.Content.ShortText.TextV = PaletteRelativeAlign.Center;
+            kryptonPerfil.StatePressed.Back.Color1 = Color.LightGray;
+            kryptonPerfil.StatePressed.Back.Color2 = Color.LightGray;
+            kryptonPerfil.StateTracking.Back.Color1 = Color.FromArgb(255, 102, 0);
+            kryptonPerfil.StateTracking.Back.Color2 = Color.FromArgb(255, 102, 0);
+            kryptonPerfil.StateTracking.Content.ShortText.Color1 = Color.White;
             kryptonPerfil.TabIndex = 1;
             kryptonPerfil.Values.DropDownArrowColor = Color.Empty;
-            kryptonPerfil.Values.Text = "kryptonButton1";
+            kryptonPerfil.Values.Text = "Perfil";
             kryptonPerfil.Visible = false;
-            kryptonPerfil.Click += kryptonButton1_Click;
+            kryptonPerfil.Click += kryptonPerfil_Click;
             // 
-            // kryptonPictureimagemmenu
+            // kryptonButtonsair
             // 
-            kryptonPictureimagemmenu.Image = Properties.Resources.itemMenu;
-            kryptonPictureimagemmenu.Location = new Point(979, -6);
-            kryptonPictureimagemmenu.Name = "kryptonPictureimagemmenu";
-            kryptonPictureimagemmenu.Size = new Size(102, 135);
-            kryptonPictureimagemmenu.TabIndex = 0;
-            kryptonPictureimagemmenu.TabStop = false;
+            kryptonButtonsair.Cursor = Cursors.Hand;
+            kryptonButtonsair.Location = new Point(5, 79);
+            kryptonButtonsair.Name = "kryptonButtonsair";
+            kryptonButtonsair.Size = new Size(92, 38);
+            kryptonButtonsair.StateCommon.Back.Color1 = Color.White;
+            kryptonButtonsair.StateCommon.Back.Color2 = Color.White;
+            kryptonButtonsair.StateCommon.Back.ColorStyle = PaletteColorStyle.Solid;
+            kryptonButtonsair.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
+            kryptonButtonsair.StateCommon.Border.Color2 = Color.Black;
+            kryptonButtonsair.StateCommon.Border.DrawBorders = PaletteDrawBorders.Top | PaletteDrawBorders.Bottom | PaletteDrawBorders.Left | PaletteDrawBorders.Right;
+            kryptonButtonsair.StateCommon.Border.Rounding = 5F;
+            kryptonButtonsair.StateCommon.Content.ShortText.Color1 = Color.Black;
+            kryptonButtonsair.StateCommon.Content.ShortText.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            kryptonButtonsair.StateCommon.Content.ShortText.TextH = PaletteRelativeAlign.Center;
+            kryptonButtonsair.StateCommon.Content.ShortText.TextV = PaletteRelativeAlign.Center;
+            kryptonButtonsair.StatePressed.Back.Color1 = Color.LightGray;
+            kryptonButtonsair.StatePressed.Back.Color2 = Color.LightGray;
+            kryptonButtonsair.StateTracking.Back.Color1 = Color.FromArgb(255, 102, 0);
+            kryptonButtonsair.StateTracking.Back.Color2 = Color.FromArgb(255, 102, 0);
+            kryptonButtonsair.StateTracking.Content.ShortText.Color1 = Color.White;
+            kryptonButtonsair.TabIndex = 2;
+            kryptonButtonsair.Values.DropDownArrowColor = Color.Empty;
+            kryptonButtonsair.Values.Text = "Sair";
+            kryptonButtonsair.Click += kryptonButtonsair_Click;
             // 
             // kryptonPanel1
             // 
@@ -338,6 +385,7 @@ namespace StudyFlow
             ClientSize = new Size(1264, 681);
             Controls.Add(PanelConteudo);
             Controls.Add(PanelEsquerda);
+            Controls.Add(kryptonPanelmenu);
             Controls.Add(PanelCima);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -346,19 +394,20 @@ namespace StudyFlow
             StartPosition = FormStartPosition.CenterScreen;
             Text = "StudyFlow";
             FormClosing += BaseForm_FormClosing;
+            ((System.ComponentModel.ISupportInitialize)pictureUser).EndInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBoxmenu).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)PanelEsquerda).EndInit();
             PanelEsquerda.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).EndInit();
-            PanelConteudo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)kryptonPictureimagemmenu).EndInit();
+            ((System.ComponentModel.ISupportInitialize)kryptonPanelmenu).EndInit();
+            kryptonPanelmenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).EndInit();
             ((System.ComponentModel.ISupportInitialize)PanelCima).EndInit();
             PanelCima.ResumeLayout(false);
             ResumeLayout(false);
         }
-
+        //kryptonPictureBox1_Click
         #endregion
 
         private Krypton.Toolkit.KryptonPanel PanelCima;
@@ -377,9 +426,9 @@ namespace StudyFlow
 
 
         private KryptonPictureBox pictureUser;
-        private KryptonPictureBox kryptonPictureimagemmenu;
         private KryptonButton kryptonPerfil;
         private KryptonButton kryptonButuonsobrenos;
         private KryptonButton kryptonButtonsair;
+        private Krypton.Toolkit.KryptonPanel kryptonPanelmenu;
     }
 }

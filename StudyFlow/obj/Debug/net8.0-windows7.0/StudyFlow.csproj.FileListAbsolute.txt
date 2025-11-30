@@ -246,7 +246,6 @@ C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8
 C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.AjudaForm.resources
 C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.BaseForm.resources
 C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.CadastroForm.resources
-C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.HomeForm.resources
 C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.LoginForm.resources
 C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.Properties.Resources.resources
 C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.QuestoesForm.resources
@@ -497,3 +496,4 @@ C:\Users\Murilo\Documents\Repositorios\ProjetoAcelera\StudyFlow\obj\Debug\net8.0
 C:\Users\Murilo\Documents\Repositorios\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.pdb
 C:\Users\Murilo\Documents\Repositorios\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.genruntimeconfig.cache
 C:\Users\Murilo\Documents\Repositorios\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\ref\StudyFlow.dll
+C:\Users\Usuário\Documents\progeto todo\ProjetoAcelera\StudyFlow\obj\Debug\net8.0-windows7.0\StudyFlow.PerfilForm.resources

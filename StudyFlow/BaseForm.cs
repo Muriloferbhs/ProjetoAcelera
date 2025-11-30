@@ -21,6 +21,7 @@ namespace StudyFlow
         }
 
 
+
         private void TrocarTela(Form novaTela) //metodo para trocar de tela
         {
             novaTela.StartPosition = FormStartPosition.Manual;
@@ -61,11 +62,18 @@ namespace StudyFlow
             MostrarAjuda("Ajuda", ObterMensagemAjuda());
         }
 
+
+
+
         public void TrocarConteudo(Control novoConteudo) {
             PanelConteudo.Controls.Clear();
             novoConteudo.Dock = DockStyle.Fill;
             PanelConteudo.Controls.Add(novoConteudo);
         }
+
+
+
+
 
         private void BaseForm_FormClosing(object sender, FormClosingEventArgs e) {
             if (e.CloseReason == CloseReason.UserClosing)
@@ -101,29 +109,21 @@ namespace StudyFlow
 
         }
 
-        private void kryptonPictureBox1_Click(object sender, EventArgs e) {
+        private void kryptonPictureBoxmenu_Click(object sender, EventArgs e) {
 
-            bool menu = true;
-            kryptonPictureBoxmenu.MouseDown += (s, e) =>
-            {
-                kryptonPictureBoxmenu.Size = new Size(44, 44);
-                kryptonPictureBoxmenu.Location = new Point(1211, 15);
-                kryptonPictureBoxmenu.SizeMode = PictureBoxSizeMode.Zoom;
-            };
 
-            kryptonPictureBoxmenu.MouseUp += (s, e) =>
-            {
-                kryptonPictureBoxmenu.Size = new Size(48, 48);
-                kryptonPictureBoxmenu.Location = new Point(1211, 15);
-                kryptonPictureBoxmenu.SizeMode = PictureBoxSizeMode.Normal;
-            };
+            kryptonButtonsair.Visible = !kryptonButtonsair.Visible;
 
-            kryptonPictureBoxmenu.Click += (s, e) =>
-            {
-                if (menu == true) { }
-                else { }
+            kryptonButuonsobrenos.Visible = !kryptonButuonsobrenos.Visible;
 
-            };
+            kryptonPerfil.Visible = !kryptonPerfil.Visible;
+
+            kryptonPanelmenu.Visible = !kryptonPanelmenu.Visible;
+            kryptonPanelmenu.BringToFront();
+
+
+
+
 
         }
 
@@ -140,6 +140,64 @@ namespace StudyFlow
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e) {
+        }
+
+
+
+
+
+
+
+
+
+        private void kryptonPerfil_Click(object sender, EventArgs e) {
+
+            PerfilForm perfil = new PerfilForm();
+            perfil.Show();
+            this.Hide();
+
+
+        }
+
+        private void kryptonButuonsobrenos_Click(object sender, EventArgs e) {
+
+            AjudaForm ajuda = new AjudaForm();
+            ajuda.Show();
+            this.Hide();
+
+
+        }
+
+        private void kryptonButtonsair_Click(object sender, EventArgs e) {
+
+
+
+
+            DialogResult resultado = MessageBox.Show(
+                "Deseja realmente Deslogar?",
+                "Confirmação",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (resultado == DialogResult.Yes)
+            {
+
+                Usuario.Deslogar();
+                LoginForm login = new LoginForm();
+                login.Show();
+                this.Hide();
+
+            }
+
+
+        }
+
+        private void kryptonPictureimagemmenu_Click(object sender, EventArgs e) {
+
+        }
+
+        private void kryptonPanelmenu_Paint(object sender, PaintEventArgs e) {
 
         }
     }
