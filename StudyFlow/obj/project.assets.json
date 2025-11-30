@@ -109,11 +109,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Murilo\\Documents\\Repositorios\\Acelera\\ProjetoAcelera\\StudyFlow\\StudyFlow.csproj",
+      "projectUniqueName": "C:\\Users\\Murilo\\Documents\\Repositorios\\ProjetoAcelera\\StudyFlow\\StudyFlow.csproj",
       "projectName": "StudyFlow",
-      "projectPath": "C:\\Users\\Murilo\\Documents\\Repositorios\\Acelera\\ProjetoAcelera\\StudyFlow\\StudyFlow.csproj",
+      "projectPath": "C:\\Users\\Murilo\\Documents\\Repositorios\\ProjetoAcelera\\StudyFlow\\StudyFlow.csproj",
       "packagesPath": "C:\\Users\\Murilo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Murilo\\Documents\\Repositorios\\Acelera\\ProjetoAcelera\\StudyFlow\\obj\\",
+      "outputPath": "C:\\Users\\Murilo\\Documents\\Repositorios\\ProjetoAcelera\\StudyFlow\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

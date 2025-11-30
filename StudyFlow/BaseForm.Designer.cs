@@ -110,7 +110,7 @@ namespace StudyFlow
             pictureUser.Region = new Region(gp);
             pictureUser.BackColor = Color.Transparent;
 
-            PanelCima.Controls.Add(pictureUser);
+            //PanelCima.Controls.Add(pictureUser);
             pictureBox1.BackColor = Color.FromArgb(32, 0, 177);
             pictureBox1.Image = Properties.Resources.logoStudyHorizontal;
             pictureBox1.Location = new Point(439, 3);
