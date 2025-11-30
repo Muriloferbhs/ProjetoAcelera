@@ -23,6 +23,28 @@ namespace StudyFlow
             base.Dispose(disposing);
         }
 
+        public void AtualizarFotoTopo(Image novaFoto)
+        {
+            pictureUser.Image = novaFoto;     // esse já existe no BaseForm.Designer
+            pictureUser.Refresh();
+        }
+        
+        private Image ZoomNaImagem(Image foto, float zoomFactor)
+        {
+            int novaLargura = (int)(foto.Width * zoomFactor);
+            int novaAltura = (int)(foto.Height * zoomFactor);
+
+            Bitmap bmp = new Bitmap(novaLargura, novaAltura);
+
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                g.DrawImage(foto, new Rectangle(0, 0, novaLargura, novaAltura));
+            }
+
+            return bmp;
+        }
+        
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -31,6 +53,22 @@ namespace StudyFlow
         /// </summary>
         private void InitializeComponent()
         {
+            PanelCima = new Krypton.Toolkit.KryptonPanel();
+pictureBox1 = new PictureBox();
+PanelEsquerda = new Krypton.Toolkit.KryptonPanel();
+ButtonAjuda = new Krypton.Toolkit.KryptonButton();
+ButtonResolucao = new Krypton.Toolkit.KryptonButton();
+ButtonQuestao = new Krypton.Toolkit.KryptonButton();
+ButtonRanking = new Krypton.Toolkit.KryptonButton();
+ButtonHome = new Krypton.Toolkit.KryptonButton();
+PanelConteudo = new Krypton.Toolkit.KryptonPanel();
+((System.ComponentModel.ISupportInitialize)PanelCima).BeginInit();
+PanelCima.SuspendLayout();
+((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+((System.ComponentModel.ISupportInitialize)PanelEsquerda).BeginInit();
+PanelEsquerda.SuspendLayout();
+((System.ComponentModel.ISupportInitialize)PanelConteudo).BeginInit();
+SuspendLayout();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseForm));
             kryptonPictureBoxmenu = new KryptonPictureBox();
             pictureBox1 = new PictureBox();
@@ -335,6 +373,7 @@ namespace StudyFlow
         private PictureBox pictureBox1;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBoxmenu;
         private KryptonPanel kryptonPanel1;
+        private PictureBox pictureUser;
 
 
 
