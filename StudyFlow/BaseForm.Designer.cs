@@ -23,12 +23,12 @@ namespace StudyFlow
             base.Dispose(disposing);
         }
 
-        //public void AtualizarFotoTopo(Image novaFoto)
-        //{
-        //    pictureUser.Image = novaFoto;     // esse já existe no BaseForm.Designer
-        //    pictureUser.Refresh();
-        //}
-        
+        public void AtualizarFotoTopo(Image novaFoto)
+        {
+            pictureUser.Image = novaFoto;     // esse já existe no BaseForm.Designer
+            pictureUser.Refresh();
+        }
+
         private Image ZoomNaImagem(Image foto, float zoomFactor)
         {
             int novaLargura = (int)(foto.Width * zoomFactor);
@@ -51,10 +51,11 @@ namespace StudyFlow
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
+            
+            pictureUser = new KryptonPictureBox();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseForm));
-            PanelCima = new KryptonPanel();
-            kryptonPanel1 = new KryptonPanel();
             kryptonPictureBoxmenu = new KryptonPictureBox();
             pictureBox1 = new PictureBox();
             PanelEsquerda = new KryptonPanel();
@@ -68,9 +69,8 @@ namespace StudyFlow
             kryptonButtonsair = new KryptonButton();
             kryptonPerfil = new KryptonButton();
             kryptonPictureimagemmenu = new KryptonPictureBox();
-            ((System.ComponentModel.ISupportInitialize)PanelCima).BeginInit();
-            PanelCima.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
+            kryptonPanel1 = new KryptonPanel();
+            PanelCima = new KryptonPanel();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBoxmenu).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PanelEsquerda).BeginInit();
@@ -78,26 +78,10 @@ namespace StudyFlow
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).BeginInit();
             PanelConteudo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureimagemmenu).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PanelCima).BeginInit();
+            PanelCima.SuspendLayout();
             SuspendLayout();
-            // 
-            // PanelCima
-            // 
-            PanelCima.Controls.Add(kryptonPanel1);
-            PanelCima.Controls.Add(kryptonPictureBoxmenu);
-            PanelCima.Controls.Add(pictureBox1);
-            PanelCima.Dock = DockStyle.Top;
-            PanelCima.Location = new Point(0, 0);
-            PanelCima.Name = "PanelCima";
-            PanelCima.Size = new Size(1264, 80);
-            PanelCima.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
-            PanelCima.TabIndex = 0;
-            // 
-            // kryptonPanel1
-            // 
-            kryptonPanel1.Location = new Point(1120, 111);
-            kryptonPanel1.Name = "kryptonPanel1";
-            kryptonPanel1.Size = new Size(103, 132);
-            kryptonPanel1.TabIndex = 0;
             // 
             // kryptonPictureBoxmenu
             // 
@@ -108,10 +92,25 @@ namespace StudyFlow
             kryptonPictureBoxmenu.Size = new Size(48, 48);
             kryptonPictureBoxmenu.TabIndex = 1;
             kryptonPictureBoxmenu.TabStop = false;
+            kryptonPictureBoxmenu.Visible = false;
             kryptonPictureBoxmenu.Click += kryptonPictureBox1_Click;
             // 
             // pictureBox1
             // 
+            Image zoomed = ZoomNaImagem(Usuario.UsuarioLogado.foto, 0.06f);
+
+            pictureUser.Image = zoomed;
+            pictureUser.Size = new Size(60, 60);
+            pictureUser.Location = new Point(1200, 11);
+            pictureUser.SizeMode = PictureBoxSizeMode.CenterImage;
+
+
+            System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
+            gp.AddEllipse(0, 0, pictureUser.Width - 1, pictureUser.Height - 1);
+            pictureUser.Region = new Region(gp);
+            pictureUser.BackColor = Color.Transparent;
+
+            PanelCima.Controls.Add(pictureUser);
             pictureBox1.BackColor = Color.FromArgb(32, 0, 177);
             pictureBox1.Image = Properties.Resources.logoStudyHorizontal;
             pictureBox1.Location = new Point(439, 3);
@@ -281,9 +280,8 @@ namespace StudyFlow
             kryptonButuonsobrenos.Size = new Size(81, 36);
             kryptonButuonsobrenos.TabIndex = 3;
             kryptonButuonsobrenos.Values.DropDownArrowColor = Color.Empty;
-            kryptonButuonsobrenos.Values.Text = "Sobre nós";
+            kryptonButuonsobrenos.Values.Text = "kryptonButton3";
             kryptonButuonsobrenos.Visible = false;
-            kryptonButuonsobrenos.Click += kryptonButuonsobrenos_Click;
             // 
             // kryptonButtonsair
             // 
@@ -292,9 +290,8 @@ namespace StudyFlow
             kryptonButtonsair.Size = new Size(81, 38);
             kryptonButtonsair.TabIndex = 2;
             kryptonButtonsair.Values.DropDownArrowColor = Color.Empty;
-            kryptonButtonsair.Values.Text = "Sair";
+            kryptonButtonsair.Values.Text = "kryptonButton2";
             kryptonButtonsair.Visible = false;
-            kryptonButtonsair.Click += kryptonButtonsair_Click;
             // 
             // kryptonPerfil
             // 
@@ -303,9 +300,9 @@ namespace StudyFlow
             kryptonPerfil.Size = new Size(81, 38);
             kryptonPerfil.TabIndex = 1;
             kryptonPerfil.Values.DropDownArrowColor = Color.Empty;
-            kryptonPerfil.Values.Text = "Perfil";
+            kryptonPerfil.Values.Text = "kryptonButton1";
             kryptonPerfil.Visible = false;
-            kryptonPerfil.Click += kryptonPerfil_Click;
+            kryptonPerfil.Click += kryptonButton1_Click;
             // 
             // kryptonPictureimagemmenu
             // 
@@ -315,7 +312,25 @@ namespace StudyFlow
             kryptonPictureimagemmenu.Size = new Size(102, 135);
             kryptonPictureimagemmenu.TabIndex = 0;
             kryptonPictureimagemmenu.TabStop = false;
-            kryptonPictureimagemmenu.Visible = false;
+            // 
+            // kryptonPanel1
+            // 
+            kryptonPanel1.Location = new Point(1120, 111);
+            kryptonPanel1.Name = "kryptonPanel1";
+            kryptonPanel1.Size = new Size(103, 132);
+            kryptonPanel1.TabIndex = 0;
+            // 
+            // PanelCima
+            // 
+            PanelCima.Controls.Add(kryptonPanel1);
+            PanelCima.Controls.Add(kryptonPictureBoxmenu);
+            PanelCima.Controls.Add(pictureBox1);
+            PanelCima.Dock = DockStyle.Top;
+            PanelCima.Location = new Point(0, 0);
+            PanelCima.Name = "PanelCima";
+            PanelCima.Size = new Size(1264, 80);
+            PanelCima.StateNormal.Color1 = Color.FromArgb(32, 0, 177);
+            PanelCima.TabIndex = 0;
             // 
             // BaseForm
             // 
@@ -331,9 +346,6 @@ namespace StudyFlow
             StartPosition = FormStartPosition.CenterScreen;
             Text = "StudyFlow";
             FormClosing += BaseForm_FormClosing;
-            ((System.ComponentModel.ISupportInitialize)PanelCima).EndInit();
-            PanelCima.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)kryptonPanel1).EndInit();
             ((System.ComponentModel.ISupportInitialize)kryptonPictureBoxmenu).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)PanelEsquerda).EndInit();
@@ -341,6 +353,9 @@ namespace StudyFlow
             ((System.ComponentModel.ISupportInitialize)PanelConteudo).EndInit();
             PanelConteudo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)kryptonPictureimagemmenu).EndInit();
+            ((System.ComponentModel.ISupportInitialize)kryptonPanel1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PanelCima).EndInit();
+            PanelCima.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -359,10 +374,9 @@ namespace StudyFlow
         private PictureBox pictureBox1;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBoxmenu;
         private KryptonPanel kryptonPanel1;
-        private PictureBox pictureUser;
 
 
-
+        private KryptonPictureBox pictureUser;
         private KryptonPictureBox kryptonPictureimagemmenu;
         private KryptonButton kryptonPerfil;
         private KryptonButton kryptonButuonsobrenos;
