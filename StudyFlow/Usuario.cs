@@ -25,7 +25,7 @@ namespace StudyFlow
         public int PosiçãoRanking { get; set; } 
         public int Respondidas  { get; set; } 
         public int Acertos { get; set; }
-        public Image foto = Properties.Resources.abatar;
+        public Image foto = Properties.Resources.Perfil;
         public string TextoUser { get; set; }
 
 
@@ -408,6 +408,7 @@ namespace StudyFlow
         public static void Deslogar() {
 
             UsuarioLogado = null;
+            UsuarioSenhaEditada = null;
         }
 
 

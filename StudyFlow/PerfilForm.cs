@@ -31,7 +31,7 @@ namespace StudyFlow
             InitializeComponent();
             TelaPerfil();
         }
-        String editNome, editTelefone, editSobremim, editEmail;
+        String editNome, editTelefone, editSobremim, editemail;
 
         private void linkLabelSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -133,7 +133,7 @@ namespace StudyFlow
 
                         zoomed = ZoomNaImagem(Usuario.UsuarioLogado.foto, 0.06f);
                         BaseForm baseForm = (BaseForm)this.TopLevelControl;
-                        baseForm.AtualizarFotoTopo(zoomed);
+                        //baseForm.AtualizarFotoTopo(zoomed);
                     }
                     catch
                     {
@@ -200,17 +200,17 @@ namespace StudyFlow
             labelCpf.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
             perfilPanel.Controls.Add(labelCpf);
 
-            //Campo CPF
-            textBoxCpf = new KryptonTextBox();
-            textBoxCpf.Location = new Point(460, 210);
-            textBoxCpf.Size = new Size(210, 40);
-            cpf = Usuario.UsuarioLogado.Cpf;
-            textBoxCpf.Text = "" + FormatarCPF(cpf);
-            textBoxCpf.StateCommon.Content.Font = new Font("Segoe UI", 12);
-            textBoxCpf.StateCommon.Border.Rounding = 8;
-            textBoxCpf.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
-            textBoxCpf.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
-            perfilPanel.Controls.Add(textBoxCpf);
+            //Campo email
+            textBoxEmail = new KryptonTextBox();
+            textBoxEmail.Location = new Point(460, 210);
+            textBoxEmail.Size = new Size(210, 40);
+            editemail = Usuario.UsuarioLogado.Email;
+            textBoxEmail.Text = editemail;
+            textBoxEmail.StateCommon.Content.Font = new Font("Segoe UI", 12);
+            textBoxEmail.StateCommon.Border.Rounding = 8;
+            textBoxEmail.StateCommon.Border.DrawBorders = PaletteDrawBorders.All;
+            textBoxEmail.StateCommon.Border.Color1 = Color.FromArgb(255, 102, 0);
+            perfilPanel.Controls.Add(textBoxEmail);
 
 
             //label telefone
