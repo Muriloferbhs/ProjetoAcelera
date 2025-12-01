@@ -20,8 +20,6 @@ namespace StudyFlow
 
         }
 
-
-
         private void TrocarTela(Form novaTela) //metodo para trocar de tela
         {
             novaTela.StartPosition = FormStartPosition.Manual;
@@ -29,8 +27,6 @@ namespace StudyFlow
             novaTela.Site = this.Site;
             novaTela.Show();
             this.Hide(); //esconde a tela anterior 
-
-
         }
 
         private void ButtonHome_Click(object sender, EventArgs e) {
@@ -62,18 +58,11 @@ namespace StudyFlow
             MostrarAjuda("Ajuda", ObterMensagemAjuda());
         }
 
-
-
-
         public void TrocarConteudo(Control novoConteudo) {
             PanelConteudo.Controls.Clear();
             novoConteudo.Dock = DockStyle.Fill;
             PanelConteudo.Controls.Add(novoConteudo);
         }
-
-
-
-
 
         private void BaseForm_FormClosing(object sender, FormClosingEventArgs e) {
             if (e.CloseReason == CloseReason.UserClosing)
@@ -106,11 +95,9 @@ namespace StudyFlow
         }
 
         private void PanelEsquerda_Paint(object sender, PaintEventArgs e) {
-
         }
 
         private void kryptonPictureBoxmenu_Click(object sender, EventArgs e) {
-
 
             kryptonButtonsair.Visible = !kryptonButtonsair.Visible;
 
@@ -121,33 +108,12 @@ namespace StudyFlow
             kryptonPanelmenu.Visible = !kryptonPanelmenu.Visible;
             kryptonPanelmenu.BringToFront();
 
-
-
-
-
         }
 
-        private void kryptonLabel1_Click(object sender, EventArgs e) {
-
-        }
 
         private void PanelConteudo_Paint(object sender, PaintEventArgs e) {
 
         }
-
-        private void kryptonPanel2_Paint(object sender, PaintEventArgs e) {
-
-        }
-
-        private void kryptonButton1_Click(object sender, EventArgs e) {
-        }
-
-
-
-
-
-
-
 
 
         private void kryptonPerfil_Click(object sender, EventArgs e) {
@@ -169,12 +135,8 @@ namespace StudyFlow
         }
 
         private void kryptonButtonsair_Click(object sender, EventArgs e) {
-
-
-
-
             DialogResult resultado = MessageBox.Show(
-                "Deseja realmente Deslogar?",
+                "Deseja realmente sair?",
                 "Confirmação",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question
@@ -182,19 +144,11 @@ namespace StudyFlow
 
             if (resultado == DialogResult.Yes)
             {
-
                 Usuario.Deslogar();
                 LoginForm login = new LoginForm();
                 login.Show();
                 this.Hide();
-
             }
-
-
-        }
-
-        private void kryptonPictureimagemmenu_Click(object sender, EventArgs e) {
-
         }
 
         private void kryptonPanelmenu_Paint(object sender, PaintEventArgs e) {

@@ -113,7 +113,7 @@ namespace StudyFlow
             TextBoxSenha.Cursor = Cursors.IBeam;
             TextBoxSenha.Location = new Point(85, 234);
             TextBoxSenha.Name = "TextBoxSenha";
-            TextBoxSenha.PasswordChar = '●';
+
             TextBoxSenha.Size = new Size(250, 34);
             TextBoxSenha.StateCommon.Back.Color1 = Color.FromArgb(173, 186, 255);
             TextBoxSenha.StateCommon.Border.Color1 = Color.FromArgb(173, 186, 255);

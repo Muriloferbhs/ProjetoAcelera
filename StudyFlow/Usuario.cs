@@ -39,8 +39,8 @@ namespace StudyFlow
         public static Usuario UsuarioLogado { get; set; }
        public static Usuario UsuarioSenhaEditada { get; set; }
 
-        public static Dictionary<string, bool> AcertouOuErrou { get; } = new Dictionary<string, bool>();
-        public static void MarcarComoCertaOuErrada(string ID, string respostaDada, string resposta)
+        public Dictionary<string, bool> AcertouOuErrou { get; } = new Dictionary<string, bool>();
+        public void MarcarComoCertaOuErrada(string ID, string respostaDada, string resposta)
         {
             if (respostaDada == resposta)
             {
@@ -53,22 +53,22 @@ namespace StudyFlow
         }
 
 
-        public static Dictionary<string, bool> QuestoesRespondidas { get; } = new Dictionary<string, bool>();
-        public static void MarcarComoRespondida(string ID)
+        public Dictionary<string, bool> QuestoesRespondidas { get; } = new Dictionary<string, bool>();
+        public void MarcarComoRespondida(string ID)
         {
             if (!QuestoesRespondidas.ContainsKey(ID))
                 QuestoesRespondidas[ID] = true;
         }
-        public static bool JaRespondeu(string ID)
+        public bool JaRespondeu(string ID)
         {
             return QuestoesRespondidas.ContainsKey(ID) && QuestoesRespondidas[ID];
         }
 
 
-        public static Dictionary<string, int> ErrosPorQuestao { get; } = new Dictionary<string, int>();
+        public Dictionary<string, int> ErrosPorQuestao { get; } = new Dictionary<string, int>();
 
 
-        public static void SalvarErro(string ID)
+        public void SalvarErro(string ID)
         {
             if (!ErrosPorQuestao.ContainsKey(ID))
                 ErrosPorQuestao[ID] = 0;
@@ -109,7 +109,7 @@ namespace StudyFlow
 
             if (cpf.Length != 11 || !cpf.All(char.IsDigit))
             {
-                KryptonMessageBox.Show("Insira um CPF válido!");
+                MessageBox.Show("Insira um CPF válido!");
                 return false;
             }
 
@@ -148,7 +148,7 @@ namespace StudyFlow
                 }
                 else
                 {
-                    KryptonMessageBox.Show("Insira um CPF válido!");
+                    MessageBox.Show("Insira um CPF válido!");
                     return false;
                 }
             }
@@ -160,7 +160,7 @@ namespace StudyFlow
         {
             if (!email.Contains("@"))
             {
-                KryptonMessageBox.Show("Insira um Email válido!");
+                MessageBox.Show("Insira um Email válido!");
                 return false;
             }
             else
@@ -176,21 +176,21 @@ namespace StudyFlow
             // Pelo menos uma letra maiúscula
             if (!senha.Any(char.IsUpper))
             {
-                KryptonMessageBox.Show("A senha deve conter pelo menos uma letra MAIÚSCULA.");
+                MessageBox.Show("A senha deve conter pelo menos uma letra MAIÚSCULA.");
                 return false;
             }
 
             // Pelo menos uma letra minúscula
             if (!senha.Any(char.IsLower))
             {
-                KryptonMessageBox.Show("A senha deve conter pelo menos uma letra minúscula.");
+                MessageBox.Show("A senha deve conter pelo menos uma letra minúscula.");
                 return false;
             }
 
             // Pelo menos um número
             if (!senha.Any(char.IsDigit))
             {
-                KryptonMessageBox.Show("A senha deve conter pelo menos um número.");
+                MessageBox.Show("A senha deve conter pelo menos um número.");
                 return false;
             }
 
@@ -198,14 +198,14 @@ namespace StudyFlow
             string especiais = "!@#$%^&*()-_=+[]{};:,.<>/?|";
             if (!senha.Any(c => especiais.Contains(c)))
             {
-                KryptonMessageBox.Show("A senha deve conter pelo menos um caractere especial.");
+                MessageBox.Show("A senha deve conter pelo menos um caractere especial.");
                 return false;
             }
 
             // Tamanho mínimo  
             if (senha.Length < 8)
             {
-                KryptonMessageBox.Show("A senha deve ter no mínimo 8 caracteres.");
+                MessageBox.Show("A senha deve ter no mínimo 8 caracteres.");
                 return false;
             }
 
@@ -223,7 +223,7 @@ namespace StudyFlow
             }
             else
             {
-                KryptonMessageBox.Show("Insira um Telefone válido!");
+                MessageBox.Show("Insira um Telefone válido!");
                 return false;
             }
         }
@@ -268,7 +268,7 @@ namespace StudyFlow
 
 
             }
-            KryptonMessageBox.Show("Username ou senha incorretos");
+            MessageBox.Show("Username ou senha incorretos");
             return null;
         }
 
@@ -289,7 +289,6 @@ namespace StudyFlow
 
         public static void UsuariosDeTeste()
         {
-
 
             string nomeCompletoTeste = "Carlos Henrique dos Santos Pelegrini Duarte";
             string cpfTeste = "52998224725";
@@ -335,7 +334,7 @@ namespace StudyFlow
             string cpfTeste3 = "36840918041";
             string telefoneTeste3 = "12996036499";
             string emailTeste3 = "murilo123@gmail.com";
-            string nomeUsuarioTeste3 = "aa";
+            string nomeUsuarioTeste3 = "Luiz Felipe";
             string senhaTeste3 = "aa";
             double pontuacao3 = 10;
             bool ativoTeste3 = true;

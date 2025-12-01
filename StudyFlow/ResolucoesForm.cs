@@ -104,7 +104,7 @@ namespace StudyFlow
             //filtra as questoes que o usuario ja respondeu
             foreach (var q in questoes)
             {
-                if (Usuario.JaRespondeu(q.ID))
+                if (Usuario.UsuarioLogado.JaRespondeu(q.ID))
                 {
                     questoesFiltradas.Add(q);
                 }
@@ -124,17 +124,17 @@ namespace StudyFlow
                     card.StateCommon.Color1 = Color.White;
                     card.Cursor = Cursors.Hand;
 
-                    if (Usuario.AcertouOuErrou.ContainsKey(q.ID) == true)
+                    if (Usuario.UsuarioLogado.AcertouOuErrou.ContainsKey(q.ID) == true)
                     {
                         KryptonLabel labelCertoouErrado = new KryptonLabel();
-                        if (Usuario.AcertouOuErrou[q.ID] == true)
+                        if (Usuario.UsuarioLogado.AcertouOuErrou[q.ID] == true)
                         {
                             labelCertoouErrado.Text = "Acertou";
                             labelCertoouErrado.StateCommon.ShortText.Color1 = Color.LightGreen;
                             labelCertoouErrado.Location = new Point(710, 20);
                         }
 
-                        if (Usuario.AcertouOuErrou[q.ID] == false)
+                        if (Usuario.UsuarioLogado.AcertouOuErrou[q.ID] == false)
                         {
                             labelCertoouErrado.Text = "Errou";
                             labelCertoouErrado.StateCommon.ShortText.Color1 = Color.Red;
@@ -219,17 +219,17 @@ namespace StudyFlow
                     labelTema.StateCommon.ShortText.Color1 = Color.FromArgb(32, 0, 177);
                     card.Controls.Add(labelTema);
 
-                    if (Usuario.AcertouOuErrou.ContainsKey(q.ID) == true)
+                    if (Usuario.UsuarioLogado.AcertouOuErrou.ContainsKey(q.ID) == true)
                     {
                         KryptonLabel labelCertoouErrado = new KryptonLabel();
-                        if (Usuario.AcertouOuErrou[q.ID] == true)
+                        if (Usuario.UsuarioLogado.AcertouOuErrou[q.ID] == true)
                         {
                             labelCertoouErrado.Text = "Acertou";
                             labelCertoouErrado.StateCommon.ShortText.Color1 = Color.LightGreen;
                             labelCertoouErrado.Location = new Point(710, 20);
                         }
 
-                        if (Usuario.AcertouOuErrou[q.ID] == false)
+                        if (Usuario.UsuarioLogado.AcertouOuErrou[q.ID] == false)
                         {
                             labelCertoouErrado.Text = "Errou";
                             labelCertoouErrado.StateCommon.ShortText.Color1 = Color.Red;

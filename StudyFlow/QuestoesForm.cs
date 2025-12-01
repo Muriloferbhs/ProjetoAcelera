@@ -157,17 +157,17 @@ namespace StudyFlow
 
                 //acertou ou nao
 
-                if (Usuario.AcertouOuErrou.ContainsKey(q.ID) == true)
+                if (Usuario.UsuarioLogado.AcertouOuErrou.ContainsKey(q.ID) == true)
                 {
                     KryptonLabel labelCertoouErrado = new KryptonLabel();
-                    if (Usuario.AcertouOuErrou[q.ID] == true)
+                    if (Usuario.UsuarioLogado.AcertouOuErrou[q.ID] == true)
                     {
                         labelCertoouErrado.Text = "Acertou";
                         labelCertoouErrado.StateCommon.ShortText.Color1 = Color.LightGreen;
                         labelCertoouErrado.Location = new Point(620, 15);
                     }
 
-                    if (Usuario.AcertouOuErrou[q.ID] == false)
+                    if (Usuario.UsuarioLogado.AcertouOuErrou[q.ID] == false)
                     {
                         labelCertoouErrado.Text = "Errou";
                         labelCertoouErrado.StateCommon.ShortText.Color1 = Color.Red;
@@ -267,13 +267,13 @@ namespace StudyFlow
 
             ///////////////////////////////////////////////////////////////////////////////////////////////
             // Pontuação parcial
-            if (Usuario.ErrosPorQuestao.ContainsKey(questao.ID))
+            if (Usuario.UsuarioLogado.ErrosPorQuestao.ContainsKey(questao.ID))
             {
-                if (Usuario.ErrosPorQuestao[questao.ID] == 1)
+                if (Usuario.UsuarioLogado.ErrosPorQuestao[questao.ID] == 1)
                 {
                     questao.PontuacaoParcial = questao.PontuacaoParcial * 2 / 3;
                 }
-                if (Usuario.ErrosPorQuestao[questao.ID] == 2)
+                if (Usuario.UsuarioLogado.ErrosPorQuestao[questao.ID] == 2)
                 {
                     questao.PontuacaoParcial = questao.PontuacaoParcial * 1 / 3;
                 }
@@ -288,7 +288,7 @@ namespace StudyFlow
             pontParcial.StateCommon.Content.ShortText.Color1 = Color.White;
             pontParcial.StateCommon.Border.Rounding = 8;
 
-            if (Usuario.JaRespondeu(questao.ID) == false)
+            if (Usuario.UsuarioLogado.JaRespondeu(questao.ID) == false)
             {
                 panelQuestao.Controls.Add(pontParcial);
             }
@@ -397,13 +397,13 @@ namespace StudyFlow
                     alternativaSelecionada = buttonAlternativa;
                     respostaDada = alternativaSelecionada.Text;
 
-                    if (!Usuario.JaRespondeu(questao.ID))
+                    if (!Usuario.UsuarioLogado.JaRespondeu(questao.ID))
                     {
 
                         if (respostaDada != questao.Resposta)
                         {
-                            Usuario.SalvarErro(questao.ID);
-                            if (Usuario.ErrosPorQuestao[questao.ID] == 1)
+                            Usuario.UsuarioLogado.SalvarErro(questao.ID);
+                            if (Usuario.UsuarioLogado.ErrosPorQuestao[questao.ID] == 1)
                             {
 
                                 questao.PontuacaoParcial = questao.Pontuacao * 2 / 3;
@@ -422,7 +422,7 @@ namespace StudyFlow
                                 pontParcial.Text = questao.PontuacaoParcial.ToString("F");
                             }
 
-                            else if (Usuario.ErrosPorQuestao[questao.ID] == 2)
+                            else if (Usuario.UsuarioLogado.ErrosPorQuestao[questao.ID] == 2)
                             {
                                 questao.PontuacaoParcial = questao.Pontuacao * 1 / 3;
 
@@ -439,10 +439,10 @@ namespace StudyFlow
                                 pontParcial.Text = questao.PontuacaoParcial.ToString("F");
                             }
 
-                            else if (Usuario.ErrosPorQuestao[questao.ID] == 3)
+                            else if (Usuario.UsuarioLogado.ErrosPorQuestao[questao.ID] == 3)
                             {
                                 questao.PontuacaoParcial = 0;
-                                Usuario.MarcarComoCertaOuErrada(questao.ID, respostaDada, questao.Resposta);
+                                Usuario.UsuarioLogado.MarcarComoCertaOuErrada(questao.ID, respostaDada, questao.Resposta);
                                 buttonAlternativa.StateCommon.Border.Color1 = Color.Red;
                                 buttonAlternativa.StateCommon.Border.Color2 = Color.Red;
                                 buttonAlternativa.OverrideDefault.Border.Color1 = Color.Red;
@@ -455,9 +455,9 @@ namespace StudyFlow
                                 buttonAlternativa.Enabled = false;
                                 pontParcial.Text = "0";
                                 Usuario.UsuarioLogado.Respondidas++;
-                                Usuario.ErrosPorQuestao[questao.ID] = 0;
-                                Usuario.MarcarComoRespondida(questao.ID);
-                                Usuario.MarcarComoCertaOuErrada(questao.ID, respostaDada, questao.Resposta);
+                                Usuario.UsuarioLogado.ErrosPorQuestao[questao.ID] = 0;
+                                Usuario.UsuarioLogado.MarcarComoRespondida(questao.ID);
+                                Usuario.UsuarioLogado.MarcarComoCertaOuErrada(questao.ID, respostaDada, questao.Resposta);
 
                                 foreach (var bloqueio in botoesAlternativas)
                                 {
@@ -484,9 +484,9 @@ namespace StudyFlow
 
                             Usuario.UsuarioLogado.Respondidas++;
                             Usuario.UsuarioLogado.Acertos++;
-                            Usuario.ErrosPorQuestao[questao.ID] = 0;
-                            Usuario.MarcarComoRespondida(questao.ID);
-                            Usuario.MarcarComoCertaOuErrada(questao.ID, respostaDada, questao.Resposta);
+                            Usuario.UsuarioLogado.ErrosPorQuestao[questao.ID] = 0;
+                            Usuario.UsuarioLogado.MarcarComoRespondida(questao.ID);
+                            Usuario.UsuarioLogado.MarcarComoCertaOuErrada(questao.ID, respostaDada, questao.Resposta);
 
                             foreach (var bloqueio in botoesAlternativas)
                             {
@@ -497,12 +497,12 @@ namespace StudyFlow
                         }
                     }
 
-                    else if (Usuario.JaRespondeu(questao.ID))
+                    else if (Usuario.UsuarioLogado.JaRespondeu(questao.ID))
                     {
                         if (respostaDada != questao.Resposta)
                         {
-                            Usuario.SalvarErro(questao.ID);
-                            if (Usuario.ErrosPorQuestao[questao.ID] == 1)
+                            Usuario.UsuarioLogado.SalvarErro(questao.ID);
+                            if (Usuario.UsuarioLogado.ErrosPorQuestao[questao.ID] == 1)
                             {
 
 
@@ -522,7 +522,7 @@ namespace StudyFlow
 
                             }
 
-                            else if (Usuario.ErrosPorQuestao[questao.ID] == 2)
+                            else if (Usuario.UsuarioLogado.ErrosPorQuestao[questao.ID] == 2)
                             {
                                 buttonAlternativa.StateCommon.Border.Color1 = Color.Red;
                                 buttonAlternativa.StateCommon.Border.Color2 = Color.Red;
@@ -538,7 +538,7 @@ namespace StudyFlow
 
                             }
 
-                            else if (Usuario.ErrosPorQuestao[questao.ID] == 3)
+                            else if (Usuario.UsuarioLogado.ErrosPorQuestao[questao.ID] == 3)
                             {
                                 buttonAlternativa.StateCommon.Border.Color1 = Color.Red;
                                 buttonAlternativa.StateCommon.Border.Color2 = Color.Red;
@@ -551,7 +551,7 @@ namespace StudyFlow
 
                                 buttonAlternativa.Enabled = false;
 
-                                Usuario.ErrosPorQuestao[questao.ID] = 0;
+                                Usuario.UsuarioLogado.ErrosPorQuestao[questao.ID] = 0;
 
 
                                 foreach (var bloqueio in botoesAlternativas)
@@ -574,7 +574,7 @@ namespace StudyFlow
                             buttonAlternativa.StateCommon.Back.Color1 = Color.FromArgb(235, 255, 235);
                             buttonAlternativa.Enabled = false;
 
-                            Usuario.ErrosPorQuestao[questao.ID] = 0;
+                            Usuario.UsuarioLogado.ErrosPorQuestao[questao.ID] = 0;
 
                             foreach (var bloqueio in botoesAlternativas)
                             {

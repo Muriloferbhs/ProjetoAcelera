@@ -193,7 +193,7 @@ namespace StudyFlow
 
             //label nome
             KryptonLabel labelNome = new KryptonLabel();
-            labelNome.Text = "Nome do Usuário";
+            labelNome.Text = "Nome do Usuário:";
             labelNome.Location = new Point(440, 85);
             labelNome.StateCommon.ShortText.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             labelNome.StateCommon.ShortText.Color1 = Color.FromArgb(255, 102, 0);
@@ -243,12 +243,12 @@ namespace StudyFlow
             linkLabelSenha.Cursor = Cursors.Hand;
             linkLabelSenha.Font = new Font("Segoe UI", 9F);
             linkLabelSenha.LinkColor = Color.Gray;
-            linkLabelSenha.Location = new Point(725, 228);
+            linkLabelSenha.Location = new Point(681, 228);
             linkLabelSenha.Name = "linkLabelSenha";
             linkLabelSenha.Size = new Size(118, 15);
             linkLabelSenha.TabIndex = 3;
             linkLabelSenha.TabStop = true;
-            linkLabelSenha.Text = "Esqueci minha senha";
+            linkLabelSenha.Text = "Trocar senha";
             linkLabelSenha.VisitedLinkColor = Color.Gray;
             linkLabelSenha.LinkClicked += linkLabelSenha_LinkClicked;
             perfilPanel.Controls.Add(linkLabelSenha);
