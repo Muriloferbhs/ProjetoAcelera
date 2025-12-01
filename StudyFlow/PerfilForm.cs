@@ -396,7 +396,7 @@ namespace StudyFlow
 
             textBoxNome.Text = Usuario.UsuarioLogado.NomeUser;
             textBoxEmail.Text = Usuario.UsuarioLogado.Email;
-            textBoxTel.Text = FormatarTelefone(editTelefone, controler = true);
+            textBoxTel.Text = FormatarTelefone(Usuario.UsuarioLogado.Telefone, controler = true);
             textBoxSobre.Text = Usuario.UsuarioLogado.TextoUser;
 
             textBoxNome.Enabled = false;
@@ -437,7 +437,7 @@ namespace StudyFlow
             if (controler == true)
             {
                 return Convert.ToUInt64(editTelefone).ToString(@"\(00\) 00000\-0000");
-                MessageBox.Show("oi");
+                
             }
 
             else

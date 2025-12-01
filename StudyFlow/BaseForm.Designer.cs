@@ -101,7 +101,22 @@ namespace StudyFlow
             kryptonPictureBoxmenu.Size = new Size(48, 48);
             kryptonPictureBoxmenu.TabIndex = 1;
             kryptonPictureBoxmenu.TabStop = false;
+
+            // Evento de clique normal
             kryptonPictureBoxmenu.Click += kryptonPictureBoxmenu_Click;
+
+            // Evento para efeito de clique (diminuir e voltar ao tamanho)
+            kryptonPictureBoxmenu.MouseDown += (s, e) =>
+            {
+                kryptonPictureBoxmenu.Size = new Size(44, 44);             // diminui tamanho
+                kryptonPictureBoxmenu.Location = new Point(1209, 14);     // ajusta posição
+            };
+
+            kryptonPictureBoxmenu.MouseUp += (s, e) =>
+            {
+                kryptonPictureBoxmenu.Size = new Size(48, 48);            // volta ao tamanho original
+                kryptonPictureBoxmenu.Location = new Point(1211, 15);     // posição original
+            };
             // 
             // pictureBox1
             // 
