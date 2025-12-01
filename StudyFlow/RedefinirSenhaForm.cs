@@ -49,6 +49,7 @@ namespace StudyFlow {
             LoginForm login = new LoginForm();
             login.Show();
             this.Hide();
+            
 
 
         }

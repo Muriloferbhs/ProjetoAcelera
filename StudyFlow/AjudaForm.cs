@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace StudyFlow
 {
@@ -44,34 +45,32 @@ namespace StudyFlow
             textAjuda.StateCommon.Border.Rounding = 8;
             textAjuda.StateCommon.Content.Font = new Font("Segoe UI", 13);
 
-            textAjuda.Text = "PRIMEIROS PASSOS E ACESSO\r\n" +
-                "É necessário realizar um cadastro inicial, e após efetuar o acesso com login e senha, é importante que o email fornecido seja um email válido, para recuperação de senha caso necessário.\r\n" +
-                " \r\nTela Inicial\r\n" +
-                "Ao efetuar login, você será direcionado pala a tela Home, o “hub” de informações, ali você encontrará um Feed de Notícias e Atualidades de Vestibulares para complementar seu conhecimento, estudos e preparação. \r\n" +
-                "Além disso, poderá visualizar o guia de opções localizado na lateral esquerda.\r\n" +
-                "  \r\nGuia de Opções\r\n" +
-                "O menu se encontra na lateral esquerda e é o principal sistema de navegação para todas as ferramentas disponíveis no sistema, você encontrará as opções na seguinte ordem: Home, Perfil, Questões, Resolução, Ajuda.\r\n" +
-                "Home: Tela Inicial, apresentada anteriormente\r\n" +
-                "Perfil: Onde estarão todas as suas informações cadastrais, disponíveis para serem editadas caso seja necessário\r\n" +
-                "Questões: Local onde todas as questões são disponibilizadas\r\nResolução: Local onde todas as resoluções de questões que o usuário já tenha resolvido\r\n" +
-                " \r\n \r\nMÓDULO DE ESTUDO\r\n" +
-                "Como acessar e responder as questões?\r\n" +
-                "1. Clique na aba “Questões” no menu lateral\r\n" +
-                "2. A tela apresentará os quadros de cada área (Linguagens e suas Tecnologias, Matemática e suas Tecnologias, Ciências Humanas, Ciências da Natureza, Enem e Provão Paulista)\r\n" +
-                "3. Clique no quadro desejado para ver a lista de questões daquela área\r\n" +
-                "4. Ao clicar em uma questão da lista, ela será aberta, o usuário deve selecionar a alternativa que julgar correta, clicando sobre o corpo da alternativa\r\n\r\n" +
-                "Atribuição de Pontos\r\n" +
-                "Cada questão possui uma pontuação de acordo com o nível de dificuldade, ao errar uma vez essa pontuação é multiplicada por 0.66, ao errar uma segunda vez a pontuação é multiplicada por 0.33. Além disso, a pessoa tem três tentativas de responder a questão, após a questão é “bloqueada”\r\n" +
-                " \r\nComo visualizar as resoluções comentadas?\r\n" +
-                "\r\n\r\n\r\nACOMPANHAMENTO DE DESEMPENHO\r\n" +
-                "Visualizando o Ranking\r\n" +
-                "Clique na aba “Ranking”, aqui você visualiza a sua posição atual em relação a todos os usuários da plataforma, baseada no seu desempenho e quantidade de questões respondidas. O Ranking mostra a posição, seguido do nome e da pontuação geral de cada usuário.\r\n" +
-                "\r\n\r\n\r\nGERENCIAMENTO E SUPORTE\r\n" +
-                "Meu Perfil\r\n" +
-                "Clique na aba “Perfil” para atualizar ou editar suas informações de cadastro (nome, e-mail, etc.).\r\n" +
-                "\r\nRecuperação de senha\r\n" +
-                "\r\nSuporte e Contato\r\n" +
-                "Caso encontre algum erro, tenha sugestões ou precise de suporte, entre em contato conosco pelo e-mail: nunesdopradosarah@gmail.com\r\n";
+            textAjuda.Text = "O Study Flow é um projeto criado para aproximar o estudante da preparação real para \r\n" +
+"os vestibulares, oferecendo uma experiência de estudo organizada, acessível e motivadora. \r\n" +
+"Ele nasceu da observação das dificuldades enfrentadas por muitos jovens, principalmente \r\n" +
+"da rede pública, que frequentemente não possuem acesso a materiais claros, ferramentas \r\n" +
+"de acompanhamento ou um ambiente que estimule o progresso constante.\r\n" +
+"\r\n" +
+"Durante nossas pesquisas, conversamos com estudantes e professores para entender quais \r\n" +
+"eram os maiores desafios presentes no dia a dia escolar. Percebemos que muitos alunos \r\n" +
+"têm dificuldade em encontrar conteúdos confiáveis, manter uma rotina de estudos e medir \r\n" +
+"seu próprio desempenho. Isso reforçou a necessidade de uma plataforma que reunisse tudo \r\n" +
+"isso de forma simples e eficiente.\r\n" +
+"\r\n" +
+"Com essa visão, buscamos proximidade com a realidade dos estudantes da ETEC de Cachoeira \r\n" +
+"Paulista, onde acompanhamos de perto a rotina dos alunos do 3º ano. Essa experiência foi \r\n" +
+"fundamental para entendermos o que realmente faz diferença no processo de aprendizagem e \r\n" +
+"como uma ferramenta prática poderia ajudar no preparo para provas importantes.\r\n" +
+"\r\n" +
+"A partir dessa vivência, estruturamos um protótipo que reúne questões de vestibulares \r\n" +
+"anteriores, explicações comentadas e um sistema de pontuação e ranking. O objetivo é \r\n" +
+"transformar o estudo em algo mais engajado, dinâmico e prazeroso, permitindo que cada \r\n" +
+"aluno acompanhe sua evolução e identifique os pontos em que precisa melhorar.\r\n" +
+"\r\n" +
+"O Study Flow nasceu como uma forma de unir educação e acesso, oferecendo aos estudantes \r\n" +
+"uma ferramenta que contribui para seus sonhos e metas. Nosso propósito é tornar o estudo \r\n" +
+"mais leve, organizado e motivador, ajudando cada usuário a se sentir preparado e confiante \r\n" +
+"em sua jornada rumo aos vestibulares.\r\n";
 
             textAjuda.ReadOnly = true;
             panelAjuda.Controls.Add(textAjuda);

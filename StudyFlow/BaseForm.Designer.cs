@@ -301,7 +301,7 @@ namespace StudyFlow
             kryptonButuonsobrenos.StateTracking.Content.ShortText.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             kryptonButuonsobrenos.TabIndex = 3;
             kryptonButuonsobrenos.Values.DropDownArrowColor = Color.Empty;
-            kryptonButuonsobrenos.Values.Text = "SOBRE NÓS";
+            kryptonButuonsobrenos.Values.Text = "Sobre Nós";
             kryptonButuonsobrenos.Visible = false;
             kryptonButuonsobrenos.Click += kryptonButuonsobrenos_Click;
             // 

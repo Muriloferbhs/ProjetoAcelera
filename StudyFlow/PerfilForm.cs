@@ -39,6 +39,7 @@ namespace StudyFlow
 
             RecuperarSenhaForm recuperarSenha = new RecuperarSenhaForm();
             recuperarSenha.Show();
+            this.Hide();
             
 
         }
@@ -410,7 +411,7 @@ namespace StudyFlow
 
         private void EntrarModoEdicao()
         {
-            textBoxTel.Text = FormatarTelefone(editTelefone, controler = false);
+            textBoxTel.Text = FormatarTelefone(Usuario.UsuarioLogado.Telefone, controler = false);
             textBoxNome.Enabled = true;
             textBoxEmail.Enabled = true;
             textBoxTel.Enabled = true;

@@ -44,6 +44,15 @@ namespace StudyFlow {
                     redefinirSenha.Show();
                     this.Hide();
 
+                    LoginForm fechaLogin = new LoginForm();
+                    fechaLogin.Close();
+
+                    PerfilForm fechaPerfil = new PerfilForm();
+                    fechaPerfil.Close();
+
+                    
+
+
                     Usuario.UsuarioSenhaEditada = u;
 
                     return;
@@ -72,9 +81,21 @@ namespace StudyFlow {
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
+                DialogResult resultado = MessageBox.Show(
+                    "Deseja realmente sair?",
+                    "Confirmação",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
 
-                this.Hide();
-
+                if (resultado == DialogResult.No)
+                {
+                    e.Cancel = true; // Cancela o fechamento
+                }
+                else
+                {
+                    Application.Exit(); // Fecha toda a aplicação
+                }
             }
         }
 
